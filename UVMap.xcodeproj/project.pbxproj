@@ -14,6 +14,9 @@
 		4C78EE7128DE1D2200306D58 /* UVMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7028DE1D2200306D58 /* UVMapTests.swift */; };
 		4C78EE7B28DE1D2200306D58 /* UVMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7A28DE1D2200306D58 /* UVMapUITests.swift */; };
 		4C78EE7D28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7C28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift */; };
+		4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MapView.swift */; };
+		4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9028DE211B00306D58 /* LoginView.swift */; };
+		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		4C78EE7628DE1D2200306D58 /* UVMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C78EE7A28DE1D2200306D58 /* UVMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVMapUITests.swift; sourceTree = "<group>"; };
 		4C78EE7C28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C78EE8E28DE1F4400306D58 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4C78EE9028DE211B00306D58 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4C78EE9228DE9D2C00306D58 /* InnerBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
-				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4C78EE8928DE1E6500306D58 /* Views */,
 				4C78EE6328DE1D2200306D58 /* Assets.xcassets */,
 				4C78EE6528DE1D2200306D58 /* Preview Content */,
 			);
@@ -125,6 +131,49 @@
 				4C78EE7C28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift */,
 			);
 			path = UVMapUITests;
+			sourceTree = "<group>";
+		};
+		4C78EE8928DE1E6500306D58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4C78EE8D28DE1EA700306D58 /* Login View */,
+				4C78EE8C28DE1E9900306D58 /* Settings View */,
+				4C78EE8B28DE1E8C00306D58 /* Scedule View */,
+				4C78EE8A28DE1E7C00306D58 /* Map View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C78EE8A28DE1E7C00306D58 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				4C78EE8E28DE1F4400306D58 /* MapView.swift */,
+			);
+			path = "Map View";
+			sourceTree = "<group>";
+		};
+		4C78EE8B28DE1E8C00306D58 /* Scedule View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Scedule View";
+			sourceTree = "<group>";
+		};
+		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings View";
+			sourceTree = "<group>";
+		};
+		4C78EE8D28DE1EA700306D58 /* Login View */ = {
+			isa = PBXGroup;
+			children = (
+				4C78EE9028DE211B00306D58 /* LoginView.swift */,
+				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
+			);
+			path = "Login View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
+				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */,
+				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
