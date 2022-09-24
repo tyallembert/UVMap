@@ -17,6 +17,8 @@
 		4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MapView.swift */; };
 		4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9028DE211B00306D58 /* LoginView.swift */; };
 		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
+		4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9428DF650D00306D58 /* SettingsView.swift */; };
+		4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9628DF652E00306D58 /* ScheduleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		4C78EE8E28DE1F4400306D58 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4C78EE9028DE211B00306D58 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4C78EE9228DE9D2C00306D58 /* InnerBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerBox.swift; sourceTree = "<group>"; };
+		4C78EE9428DF650D00306D58 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4C78EE9628DF652E00306D58 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,7 @@
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
 				4C78EE8C28DE1E9900306D58 /* Settings View */,
-				4C78EE8B28DE1E8C00306D58 /* Scedule View */,
+				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
 				4C78EE8A28DE1E7C00306D58 /* Map View */,
 			);
 			path = Views;
@@ -153,16 +157,18 @@
 			path = "Map View";
 			sourceTree = "<group>";
 		};
-		4C78EE8B28DE1E8C00306D58 /* Scedule View */ = {
+		4C78EE8B28DE1E8C00306D58 /* Schedule View */ = {
 			isa = PBXGroup;
 			children = (
+				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
 			);
-			path = "Scedule View";
+			path = "Schedule View";
 			sourceTree = "<group>";
 		};
 		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
+				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */,
+				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
+				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 			);
