@@ -19,6 +19,9 @@
 		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
 		4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9428DF650D00306D58 /* SettingsView.swift */; };
 		4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9628DF652E00306D58 /* ScheduleView.swift */; };
+		4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9C28E223E000306D58 /* BottomNavigation.swift */; };
+		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
+		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		4C78EE9228DE9D2C00306D58 /* InnerBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerBox.swift; sourceTree = "<group>"; };
 		4C78EE9428DF650D00306D58 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4C78EE9628DF652E00306D58 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		4C78EE9C28E223E000306D58 /* BottomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomNavigation.swift; sourceTree = "<group>"; };
+		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
+		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
 				4C78EE8C28DE1E9900306D58 /* Settings View */,
 				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
@@ -153,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE8E28DE1F4400306D58 /* MapView.swift */,
+				4C78EEA028E2263400306D58 /* SearchBar.swift */,
+				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -180,6 +189,14 @@
 				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
 			);
 			path = "Login View";
+			sourceTree = "<group>";
+		};
+		4C78EE9B28E223C900306D58 /* Navigation View */ = {
+			isa = PBXGroup;
+			children = (
+				4C78EE9C28E223E000306D58 /* BottomNavigation.swift */,
+			);
+			path = "Navigation View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +335,10 @@
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
+				4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */,
+				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
+				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
