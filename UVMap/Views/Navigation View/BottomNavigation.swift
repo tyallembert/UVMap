@@ -15,21 +15,33 @@ struct BottomNavigation: View {
             Button(action: {
                 // Do something...
                 }, label: {
-                    Label("",systemImage: "house.fill")
+                    VStack {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                            .font(.system(size: 12))
+                    }
             })
             .frame(maxWidth: .infinity)
             // Schedule Button
             Button(action: {
                 // Do something...
                 }, label: {
-                    Label("",systemImage: "calendar")
+                    VStack {
+                        Image(systemName: "calendar")
+                        Text("Schedule")
+                            .font(.system(size: 12))
+                    }
             })
             .frame(maxWidth: .infinity)
             // Settings Button
             Button(action: {
                 // Do something...
                 }, label: {
-                    Label("",systemImage: "person.fill")
+                    VStack {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                            .font(.system(size: 12))
+                    }
             })
             .frame(maxWidth: .infinity)
         }

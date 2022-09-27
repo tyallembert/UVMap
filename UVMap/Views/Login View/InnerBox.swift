@@ -14,44 +14,16 @@ struct InnerBox: View {
     var body: some View {
         VStack{//inner box
             VStack(alignment: .leading) {
-                Text("NETID")
-                    .fontWeight(.medium)
-                    .offset(x: 8, y: 12)
-                    .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-                TextField("", text: $username)
-                    .padding(7)
-                    .background(Color.white)
-                    .cornerRadius(100)
-                    .shadow(color: .black, radius: 3, x: 1, y: 2)
+                UsernameView(username: $username)
             }
             Spacer()
                 .frame(height: 20)
             VStack(alignment: .leading) {
-                Text("PASSWORD")
-                    .fontWeight(.medium)
-                    .offset(x: 8, y: 12)
-                    .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-                TextField("", text: $password)
-                    .padding(7)
-                    .background(Color.white)
-                    .cornerRadius(100)
-                    .shadow(color: .black, radius: 3, x: 1, y: 2)
+                PasswordView(password: $password)
             }
             Spacer()
                 .frame(height: 20)
-            Button {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            }label: {
-                Text("Login")
-                    .font(.title2)
-                    .fontWeight(.heavy)
-            }
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 200)
-            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-            .cornerRadius(10)
-            .shadow(color: .black, radius: 3, x: 2, y: 3)
+            LoginButton()
 
         }
         .padding(20)
