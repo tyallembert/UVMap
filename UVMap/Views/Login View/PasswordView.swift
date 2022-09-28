@@ -14,7 +14,7 @@ struct PasswordView: View {
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-        TextField("", text: $password)
+        SecureField("", text: $password)
             .padding(7)
             .background(Color.white)
             .cornerRadius(100)

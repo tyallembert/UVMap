@@ -7,11 +7,24 @@
 
 import SwiftUI
 
+
 struct LoginButton: View {
+    let TEMP_USERNAME = "Tyallembert"
+    let TEMP_PASS = "example"
+    @Binding var username: String
+    @Binding var password: String
+    @Binding var loggedIn: Bool
+    
+    func handleButtonClick(){
+        if username == TEMP_USERNAME && password == TEMP_PASS {
+            let _ = print("logged in")
+            loggedIn = true
+        }else{
+            let _ = print("failed to log in")
+        }
+    }
     var body: some View {
-        Button {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-        }label: {
+        Button (action: {handleButtonClick()}){
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)
@@ -25,8 +38,8 @@ struct LoginButton: View {
     }
 }
 
-struct LoginButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginButton()
-    }
-}
+//struct LoginButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginButton()
+//    }
+//}

@@ -11,6 +11,8 @@ struct InnerBox: View {
     @State var username: String = ""
     @State var password: String = ""
     
+    @Binding var loggedIn: Bool
+    
     var body: some View {
         VStack{//inner box
             VStack(alignment: .leading) {
@@ -23,7 +25,7 @@ struct InnerBox: View {
             }
             Spacer()
                 .frame(height: 20)
-            LoginButton()
+            LoginButton(username: $username, password: $password, loggedIn: $loggedIn)
 
         }
         .padding(20)
@@ -35,6 +37,6 @@ struct InnerBox: View {
 
 struct InnerBox_Previews: PreviewProvider {
     static var previews: some View {
-        InnerBox()
+        InnerBox(loggedIn: .constant(false))
     }
 }

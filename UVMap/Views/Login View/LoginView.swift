@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var loggedIn: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -16,7 +18,7 @@ struct LoginView: View {
                     .aspectRatio(geometry.size, contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 VStack {//outer box
-                    InnerBox()
+                    InnerBox(loggedIn: $loggedIn)
                 }
                 .padding(20)
                 .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
@@ -35,6 +37,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(loggedIn: .constant(false))
     }
 }
