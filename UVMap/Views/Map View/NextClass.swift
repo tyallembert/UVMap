@@ -12,7 +12,7 @@ struct NextClass: View {
     
     var body: some View {
         HStack {
-            Text("Next Class: ")
+            Text("Class: ")
             Text(className)
                 .fontWeight(.heavy)
         }

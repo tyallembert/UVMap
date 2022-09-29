@@ -40,3 +40,7 @@ struct LoginView_Previews: PreviewProvider {
         LoginView(loggedIn: .constant(false))
     }
 }
+
+final class loginManager{
+    
+}

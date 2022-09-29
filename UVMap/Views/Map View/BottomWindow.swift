@@ -10,11 +10,26 @@ import SwiftUI
 struct BottomWindow: View {
     var body: some View {
         VStack {
-            NextClass()
-            ClassTime()
             HStack {
-                ClassBuilding()
+                VStack {
+                    HStack {
+                        ClassBuilding()
+                        Spacer()
+                    }
+                    HStack {
+                        NextClass()
+                        Spacer()
+                    }
+                    HStack {
+                        ClassTime()
+                        Spacer()
+                    }
+                }
+                WalkBikeOption()
+                Spacer()
             }
+            StartButton()
+            TripInformation()
         }
     }
 }

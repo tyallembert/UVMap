@@ -11,13 +11,9 @@ struct ClassBuilding: View {
     @State var classroom: String = "Cohen 120"
     var body: some View {
         Text(classroom)
-            .font(.title2)
+            .font(.title)
             .fontWeight(.heavy)
-            .foregroundColor(.white)
-            .padding()
-            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-            .cornerRadius(10)
-            .shadow(color: .black, radius: 3, x: 2, y: 3)
+            .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
     }
 }
 

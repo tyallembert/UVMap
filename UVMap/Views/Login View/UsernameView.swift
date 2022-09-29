@@ -20,6 +20,7 @@ struct UsernameView: View {
             .background(Color.white)
             .cornerRadius(100)
             .shadow(color: .black, radius: 3, x: 1, y: 2)
+            .autocapitalization(.none)
     }
 }
 
