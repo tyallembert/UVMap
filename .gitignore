@@ -88,3 +88,9 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
+# Custom file exceptions
+#
+# Files added here will be manually removed from commits
+*.DS_Store
