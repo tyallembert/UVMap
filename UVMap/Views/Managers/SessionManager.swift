@@ -13,7 +13,7 @@ final class SessionManager: ObservableObject{
         case loggedIn
         case loggedOut
     }
-    @Published private(set) var currentState: CurrentState?
+    @Published private(set) var currentState: CurrentState? = .loggedOut
     var username: String = ""
     var password: String = ""
     

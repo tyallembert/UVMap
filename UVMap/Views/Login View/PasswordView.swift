@@ -15,6 +15,7 @@ struct PasswordView: View {
             .offset(x: 8, y: 12)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
         SecureField("", text: $sessionManager.password)
+            .foregroundColor(Color.black)
             .padding(7)
             .background(Color.white)
             .cornerRadius(100)
