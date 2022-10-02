@@ -27,18 +27,19 @@ struct MapView: View {
                         .background(Color.white
                                     .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
                         .animation(.default)
+                        .transition(AnyTransition.move(edge: .bottom))
                 }else{
                     BottomWindowMinimized()
-                        .cornerRadius(10)
-                        .padding()
+                        .animation(.easeIn)
+                        .transition(AnyTransition.move(edge: .bottom))
                         .background(Color.white
                                     .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
-                        .animation(.easeIn)
                         .onTapGesture {
                             self.showingBottomWindow = true
                         }
                 }
             }
+            .animation(.easeInOut, value: showingBottomWindow)
         }
     }
 }

@@ -15,6 +15,7 @@ struct BottomWindowMinimized: View {
             StartButton()
                 .frame(width: UIScreen.main.bounds.width*0.45)
         }
+        .padding()
         .background()
     }
 }

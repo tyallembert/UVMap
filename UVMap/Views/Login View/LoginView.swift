@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Binding var loggedIn: Bool
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         GeometryReader { geometry in
@@ -18,7 +18,8 @@ struct LoginView: View {
                     .aspectRatio(geometry.size, contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 VStack {//outer box
-                    InnerBox(loggedIn: $loggedIn)
+                    InnerBox()
+//                        .environmentObject(sessionManager)
                 }
                 .padding(20)
                 .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
@@ -35,12 +36,8 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView(loggedIn: .constant(false))
-    }
-}
-
-final class loginManager{
-    
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView(loggedIn: LoginManager())
+//    }
+//}

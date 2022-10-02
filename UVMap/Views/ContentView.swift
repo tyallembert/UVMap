@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var loggedIn: Bool = false
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
-        if loggedIn {
+        switch sessionManager.currentState {
+        case .loggedIn:
             MainNavigation()
-        }else{
-            LoginView(loggedIn: $loggedIn)
+                .transition(.opacity)
+        case .loggedOut:
+            LoginView()
+                .transition(.opacity)
+        default:
+            // Splash Screen
+            Color.green.ignoresSafeArea()
         }
     }
 }

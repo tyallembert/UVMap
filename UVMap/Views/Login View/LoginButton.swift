@@ -9,22 +9,10 @@ import SwiftUI
 
 
 struct LoginButton: View {
-    let TEMP_USERNAME = "Tyallembert"
-    let TEMP_PASS = "example"
-    @Binding var username: String
-    @Binding var password: String
-    @Binding var loggedIn: Bool
+    @EnvironmentObject var sessionManager: SessionManager
     
-    func handleButtonClick(){
-        if username == TEMP_USERNAME && password == TEMP_PASS {
-            let _ = print("logged in")
-            loggedIn = true
-        }else{
-            let _ = print("failed to log in")
-        }
-    }
     var body: some View {
-        Button (action: {handleButtonClick()}){
+        Button (action: {sessionManager.signIn()}){
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)
