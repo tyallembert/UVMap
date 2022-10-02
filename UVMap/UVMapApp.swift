@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct UVMapApp: App {
+    
+    @StateObject private var sessionManager = SessionManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(sessionManager)
         }
     }
 }

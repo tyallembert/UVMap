@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 struct LoginButton: View {
+    @EnvironmentObject var sessionManager: SessionManager
+    
     var body: some View {
-        Button {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-        }label: {
+        Button (action: {sessionManager.signIn()}){
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)
@@ -25,8 +26,8 @@ struct LoginButton: View {
     }
 }
 
-struct LoginButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginButton()
-    }
-}
+//struct LoginButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginButton()
+//    }
+//}

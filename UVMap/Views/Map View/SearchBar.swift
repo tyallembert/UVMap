@@ -12,12 +12,13 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
             TextField("Search for a building", text: $search)
                 .padding(7)
                 .background(Color.white)
                 .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
+                .shadow(color: .black, radius: 3, x: 1, y: 2)
+            Image(systemName: "magnifyingglass")
+                .offset(x: -40)
         }
         .padding()
     }

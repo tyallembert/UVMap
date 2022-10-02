@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct InnerBox: View {
-    @State var username: String = ""
-    @State var password: String = ""
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         VStack{//inner box
             VStack(alignment: .leading) {
-                UsernameView(username: $username)
+                UsernameView()
             }
             Spacer()
                 .frame(height: 20)
             VStack(alignment: .leading) {
-                PasswordView(password: $password)
+                PasswordView()
             }
             Spacer()
                 .frame(height: 20)
@@ -33,8 +32,8 @@ struct InnerBox: View {
     }
 }
 
-struct InnerBox_Previews: PreviewProvider {
-    static var previews: some View {
-        InnerBox()
-    }
-}
+//struct InnerBox_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InnerBox(loggedIn: .constant(false))
+//    }
+//}

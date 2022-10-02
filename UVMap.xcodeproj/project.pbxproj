@@ -11,6 +11,15 @@
 		4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82928E3463C00207EC5 /* UsernameView.swift */; };
 		4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82B28E347BC00207EC5 /* PasswordView.swift */; };
 		4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82D28E34A3000207EC5 /* LoginButton.swift */; };
+		4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83128E4C5F700207EC5 /* NextClass.swift */; };
+		4C36C83428E4C72800207EC5 /* ClassTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83328E4C72800207EC5 /* ClassTime.swift */; };
+		4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */; };
+		4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83728E4CC2500207EC5 /* BottomWindow.swift */; };
+		4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */; };
+		4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83B28E5E46100207EC5 /* StartButton.swift */; };
+		4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83D28E5E65300207EC5 /* TripInformation.swift */; };
+		4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */; };
+		4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C84228E74E1F00207EC5 /* SessionManager.swift */; };
 		4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */; };
 		4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE6128DE1D1E00306D58 /* ContentView.swift */; };
 		4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C78EE6328DE1D2200306D58 /* Assets.xcassets */; };
@@ -50,6 +59,15 @@
 		4C36C82928E3463C00207EC5 /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		4C36C82B28E347BC00207EC5 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		4C36C82D28E34A3000207EC5 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		4C36C83128E4C5F700207EC5 /* NextClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextClass.swift; sourceTree = "<group>"; };
+		4C36C83328E4C72800207EC5 /* ClassTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTime.swift; sourceTree = "<group>"; };
+		4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassBuilding.swift; sourceTree = "<group>"; };
+		4C36C83728E4CC2500207EC5 /* BottomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWindow.swift; sourceTree = "<group>"; };
+		4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkBikeOption.swift; sourceTree = "<group>"; };
+		4C36C83B28E5E46100207EC5 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
+		4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWindowMinimized.swift; sourceTree = "<group>"; };
+		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4C78EE5C28DE1D1E00306D58 /* UVMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVMapApp.swift; sourceTree = "<group>"; };
 		4C78EE6128DE1D1E00306D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C36C84128E74DE900207EC5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		4C78EE5328DE1D1E00306D58 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4C36C84128E74DE900207EC5 /* Managers */,
 				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
 				4C78EE8C28DE1E9900306D58 /* Settings View */,
@@ -168,6 +195,14 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE8E28DE1F4400306D58 /* MapView.swift */,
+				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
+				4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */,
+				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
+				4C36C83128E4C5F700207EC5 /* NextClass.swift */,
+				4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */,
+				4C36C83D28E5E65300207EC5 /* TripInformation.swift */,
+				4C36C83B28E5E46100207EC5 /* StartButton.swift */,
+				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
 				4C78EEA028E2263400306D58 /* SearchBar.swift */,
 				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
 			);
@@ -341,20 +376,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
+				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
+				4C36C83428E4C72800207EC5 /* ClassTime.swift in Sources */,
+				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
+				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
+				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
+				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
 				4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
+				4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +560,7 @@
 				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to accurately guide you to class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,6 +590,7 @@
 				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to accurately guide you to class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
