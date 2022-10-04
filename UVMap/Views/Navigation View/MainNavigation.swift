@@ -10,7 +10,7 @@ import SwiftUI
 struct MainNavigation: View {
     var body: some View {
         TabView{
-            MapView()
+            MainMapView()
                 .tabItem(){
                     Image(systemName: "house.fill")
                     Text("Home")
@@ -30,6 +30,7 @@ struct MainNavigation: View {
         .onAppear(){
             UITabBar.appearance().backgroundColor = UIColor.white
         }
+        .background(Color("BG1"))
     }
 }
 

@@ -10,9 +10,10 @@ import SwiftUI
 
 struct LoginButton: View {
     @EnvironmentObject var sessionManager: SessionManager
+    @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        Button (action: {sessionManager.signIn()}){
+        Button (action: {sessionManager.signIn(database: databaseManager)}){
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)

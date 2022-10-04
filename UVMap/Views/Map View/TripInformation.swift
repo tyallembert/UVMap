@@ -23,10 +23,9 @@ struct TripInformation: View {
                         .offset(x: -30)
                 }
                 .padding()
-                .cornerRadius(15)
-                .background(Color.white
-                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
-                )
+                .background(Color("BG2"))
+                .cornerRadius(10)
+                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
                     VStack {
                         Text("Suggested Leave Time")
@@ -36,10 +35,9 @@ struct TripInformation: View {
                     }
                     .padding()
                     .frame(width: geometry.size.width * 0.42)
-                    .cornerRadius(15)
-                    .background(Color.white
-                        .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
-                    )
+                    .background(Color("BG2"))
+                    .cornerRadius(10)
+                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                     Spacer()
                     VStack {
                         Text("Arrival Time if you leave now")
@@ -48,11 +46,11 @@ struct TripInformation: View {
                             .fontWeight(.heavy)
                     }
                     .padding()
-                    .cornerRadius(15)
                     .frame(width: geometry.size.width * 0.42)
-                    .background(Color.white
-                        .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
-                    )
+                    .background(Color("BG2"))
+                    .cornerRadius(10)
+                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
+//                    .shadow(.inner(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
                 }
             }
             .padding()
