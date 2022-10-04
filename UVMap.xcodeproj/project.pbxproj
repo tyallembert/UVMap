@@ -35,6 +35,18 @@
 		4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9C28E223E000306D58 /* BottomNavigation.swift */; };
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
+		500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A128EA06870085A130 /* DaysTemplate.swift */; };
+		500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* ScheduleChart.swift */; };
+		500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */; };
+		500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */; };
+		500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A928EA0E8B0085A130 /* ClassShell.swift */; };
+		500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */; };
+		50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */; };
+		50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */; };
+		50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */; };
+		50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */; };
+		50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */; };
+		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +98,18 @@
 		4C78EE9C28E223E000306D58 /* BottomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomNavigation.swift; sourceTree = "<group>"; };
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		500DC3A128EA06870085A130 /* DaysTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTemplate.swift; sourceTree = "<group>"; };
+		500DC3A328EA07D40085A130 /* ScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleChart.swift; sourceTree = "<group>"; };
+		500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameSchedule.swift; sourceTree = "<group>"; };
+		500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimeSchedule.swift; sourceTree = "<group>"; };
+		500DC3A928EA0E8B0085A130 /* ClassShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShell.swift; sourceTree = "<group>"; };
+		500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassProfessorSchedule.swift; sourceTree = "<group>"; };
+		50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassBuildingSchedule.swift; sourceTree = "<group>"; };
+		50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayScheduleMenu.swift; sourceTree = "<group>"; };
+		50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayScheduleMenu.swift; sourceTree = "<group>"; };
+		50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayScheduleMenu.swift; sourceTree = "<group>"; };
+		50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayScheduleMenu.swift; sourceTree = "<group>"; };
+		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +237,18 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
+				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
+				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
+				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
+				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
+				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
+				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
+				50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */,
+				50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */,
+				50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */,
+				500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */,
+				500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */,
+				500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */,
 			);
 			path = "Schedule View";
 			sourceTree = "<group>";
@@ -378,19 +414,31 @@
 			files = (
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
+				50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */,
 				4C36C83428E4C72800207EC5 /* ClassTime.swift in Sources */,
 				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
+				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
+				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
+				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
+				500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
+				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
+				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
+				50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MapView.swift in Sources */,
+				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
+				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
+				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
