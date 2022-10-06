@@ -15,13 +15,31 @@ import SwiftUI
 
 struct ScheduleChart: View {
     var body: some View {
-        VStack {
-            Text("Schedule Chart Here")
-            ClassShell()
+        
+        HStack {
+            List {
+                Text("8AM").frame(height: 70)
+                Text("9AM").frame(height: 70)
+                Text("10AM").frame(height: 70)
+                Text("11AM").frame(height: 70)
+                Text("12PM").frame(height: 70)
+                ClassShell()
+                Text("1PM").frame(height: 70)
+                Text("2PM").frame(height: 70)
+                Text("3PM").frame(height: 70)
+                Text("4PM").frame(height: 70)
+                
+
+            }.frame(height: 550)
+                .border(.red)
+                .padding()
         }
         
+        
     }
+    
 }
+
 
 struct ScheduleChart_Previews: PreviewProvider {
     static var previews: some View {
