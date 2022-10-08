@@ -29,6 +29,7 @@ struct ContentView: View {
         .onAppear{
             Auth.auth().addStateDidChangeListener { auth, user in
                 if user != nil {
+                    let _ = print("got through if")
                     sessionManager.currentState = .loggedIn
                 }
             }

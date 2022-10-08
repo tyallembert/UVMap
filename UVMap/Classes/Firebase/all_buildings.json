@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Lafayette Hall",
+        "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
+        "latitude": "44.4778254",
+        "longitude": "-73.1988209",
+        "city": "Burlington",
+        "state": "Vermont",
+        "street": "Old Mill, 94 University Pl"
+    },
+    {
+        "id": 2,
+        "title": "James M. Jeffords Hall",
+        "address": "",
+        "latitude": "44.4754141",
+        "longitude": "-73.1938538",
+        "city": "Burlington",
+        "state": "Vermont",
+        "street": "63 Carrigan Drive"
+    }
+]
