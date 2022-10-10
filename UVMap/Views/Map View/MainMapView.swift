@@ -32,8 +32,9 @@ struct MainMapView: View {
                     BottomWindow()
                         .cornerRadius(10)
                         .padding()
-                        .background(Color("BG1").opacity(0.9)
-                                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
+                        .background(.ultraThinMaterial)
+//                        .background(Color("BG1").opacity(0.9)
+//                                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
                         .animation(.default)
                         .transition(AnyTransition.move(edge: .bottom))
                 }else{

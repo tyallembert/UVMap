@@ -19,7 +19,6 @@ struct LoginView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {//outer box
                     InnerBox()
-//                        .environmentObject(sessionManager)
                 }
                 .padding(20)
                 .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
@@ -36,8 +35,8 @@ struct LoginView: View {
     }
 }
 
-//struct LoginView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginView(loggedIn: LoginManager())
-//    }
-//}
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}
