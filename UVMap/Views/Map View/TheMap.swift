@@ -10,10 +10,24 @@ import MapKit
 
 struct TheMap: View {
     @EnvironmentObject var mapManager: MapManager
+    @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
         VStack {
-            Map(coordinateRegion: $mapManager.region, showsUserLocation: true)
+            Map(coordinateRegion: $mapManager.region,
+                showsUserLocation: true,
+                annotationItems: databaseManager.buildings,
+               annotationContent: { location in
+                MapAnnotation(coordinate: location.coordinate){
+                    BuildingAnnotation()
+                        .scaleEffect(mapManager.activeBuildings.contains(location) ? 1.2 : 0.8)
+                        .opacity(mapManager.activeBuildings.contains(location) ? 1 : 0.7)
+                        .onTapGesture {
+                            mapManager.setActiveBuildings(buildings: [location])
+                        }
+                        .animation(.spring())
+                }
+               })
                 .edgesIgnoringSafeArea(.all)
                 .accentColor(.red)
                 .onAppear {

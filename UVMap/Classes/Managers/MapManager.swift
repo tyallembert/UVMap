@@ -11,15 +11,24 @@ import CoreLocation
 
 class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    //========================================================
+    //                      variables
+    //========================================================
     @Published var mapView = MKMapView()
-    
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965),
         span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
-        
     var locationManager: CLLocationManager = CLLocationManager()
+    @Published var activeBuildings: [Building] = []
     
-    
+    //========================================================
+    //                      functions
+    //========================================================
+    func setActiveBuildings(buildings: [Building]){
+        let _ = print("setting active buildings")
+        self.activeBuildings.removeAll()
+        self.activeBuildings = buildings
+    }
     func checkIfLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -46,6 +55,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 break
         }
     }
+    //makes map center over user location when button is clicked
     func focusLocation(){
 //        guard let _ = region else{return}
 //        let _ = print("focus location function")
