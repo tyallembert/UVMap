@@ -105,10 +105,10 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else{return}
-        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setRegion(region, animated: true)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+//        guard let location = locations.last else{return}
+//        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
+//        mapView.setRegion(region, animated: true)
+//        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
 }
