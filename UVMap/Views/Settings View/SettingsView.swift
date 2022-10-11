@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var databaseManager: DatabaseManager
+    
     var body: some View {
         VStack {
             Text("Settings View")
+            Button{
+                databaseManager.writeBuildings()
+            }label:{
+                Text("Save Buildings")
+            }
         }
     }
 }

@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct UVMapApp: App {
     
+    init(){
+        FirebaseApp.configure()
+    }
+    
     @StateObject private var sessionManager = SessionManager()
+    @StateObject private var databaseManager = DatabaseManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(sessionManager)
+                .environmentObject(databaseManager)
         }
     }
 }

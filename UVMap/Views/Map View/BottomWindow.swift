@@ -9,28 +9,31 @@ import SwiftUI
 
 struct BottomWindow: View {
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    HStack {
-                        ClassBuilding()
-                        Spacer()
+        ScrollView {
+            VStack {
+                HStack {
+                    VStack {
+                        HStack {
+                            ClassBuilding()
+                            Spacer()
+                        }
+                        HStack {
+                            NextClass()
+                            Spacer()
+                        }
+                        HStack {
+                            ClassTime()
+                            Spacer()
+                        }
                     }
-                    HStack {
-                        NextClass()
-                        Spacer()
-                    }
-                    HStack {
-                        ClassTime()
-                        Spacer()
-                    }
+                    WalkBikeOption()
+                    Spacer()
                 }
-                WalkBikeOption()
-                Spacer()
+                StartButton()
+                TripInformation()
             }
-            StartButton()
-            TripInformation()
         }
+        .frame(height: 400)
     }
 }
 
@@ -39,3 +42,5 @@ struct BottomWindow_Previews: PreviewProvider {
         BottomWindow()
     }
 }
+
+

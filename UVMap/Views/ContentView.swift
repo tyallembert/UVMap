@@ -6,21 +6,33 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     @EnvironmentObject var sessionManager: SessionManager
+    @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        switch sessionManager.currentState {
-        case .loggedIn:
-            MainNavigation()
-                .transition(.opacity)
-        case .loggedOut:
-            LoginView()
-                .transition(.opacity)
-        default:
-            // Splash Screen
-            Color.green.ignoresSafeArea()
+        VStack{
+            switch sessionManager.currentState {
+            case .loggedIn:
+                MainNavigation()
+                    .transition(.opacity)
+            case .loggedOut:
+                LoginView()
+                    .transition(.opacity)
+            default:
+                // Splash Screen
+                Color.green.ignoresSafeArea()
+            }
+        }
+        .onAppear{
+            Auth.auth().addStateDidChangeListener { auth, user in
+                if user != nil {
+                    let _ = print("got through if")
+                    sessionManager.currentState = .loggedIn
+                }
+            }
         }
     }
 }

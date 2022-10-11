@@ -32,8 +32,8 @@ struct InnerBox: View {
     }
 }
 
-//struct InnerBox_Previews: PreviewProvider {
-//    static var previews: some View {
-//        InnerBox(loggedIn: .constant(false))
-//    }
-//}
+struct InnerBox_Previews: PreviewProvider {
+    static var previews: some View {
+        InnerBox()
+    }
+}
