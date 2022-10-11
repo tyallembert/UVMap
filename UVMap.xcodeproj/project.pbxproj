@@ -37,12 +37,13 @@
 		4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9C28E223E000306D58 /* BottomNavigation.swift */; };
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
+		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
+		4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */; };
 		4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABE58228F06C600087DD98 /* SearchBarManager.swift */; };
 		4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168228F0B6940069D6C0 /* FirebaseAuth */; };
 		4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168428F0B6940069D6C0 /* FirebaseFirestore */; };
 		4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */; };
 		4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168C28F108FD0069D6C0 /* Building.swift */; };
-		4CE7169328F114860069D6C0 /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CE7169228F114860069D6C0 /* all_buildings.json */; };
 		4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CC28EB2144001C7F24 /* MapManager.swift */; };
 		4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */; };
 /* End PBXBuildFile section */
@@ -98,10 +99,11 @@
 		4C78EE9C28E223E000306D58 /* BottomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomNavigation.swift; sourceTree = "<group>"; };
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
+		4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		4CABE58228F06C600087DD98 /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
 		4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBuildingsFromJSON.swift; sourceTree = "<group>"; };
 		4CE7168C28F108FD0069D6C0 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
-		4CE7169228F114860069D6C0 /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +138,7 @@
 		4C24003128EBB3EF002F7E2D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				4CE7169228F114860069D6C0 /* all_buildings.json */,
+				4CA09D2728F4939400484D6D /* all_buildings.json */,
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
 			);
@@ -239,6 +241,7 @@
 				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
 				4C78EEA028E2263400306D58 /* SearchBar.swift */,
 				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
+				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -412,7 +415,7 @@
 				4C78EE6728DE1D2200306D58 /* Preview Assets.xcassets in Resources */,
 				4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */,
 				4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */,
-				4CE7169328F114860069D6C0 /* all_buildings.json in Resources */,
+				4CA09D2828F4939400484D6D /* all_buildings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +452,7 @@
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,

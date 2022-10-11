@@ -16,7 +16,8 @@ struct BottomWindowMinimized: View {
                 .frame(width: UIScreen.main.bounds.width*0.45)
         }
         .padding()
-        .background()
+        .padding([.bottom], 50)
+        .background(.ultraThinMaterial)
     }
 }
 

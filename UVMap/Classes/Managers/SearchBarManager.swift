@@ -8,5 +8,14 @@
 import SwiftUI
 
 class SearchBarManager{
+    var releventBuildings: [Building]
+    
+    init(releventBuildings: [Building]){
+        self.releventBuildings = releventBuildings
+    }
+    
+    func updateSearch(){
+        
+    }
     
 }

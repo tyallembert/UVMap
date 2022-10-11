@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import MapKit
 
 class DatabaseManager: ObservableObject{
     
@@ -37,11 +38,11 @@ class DatabaseManager: ObservableObject{
         }
     }
     
-    
     // --------------------------------
     //      ===Building Functions===
     // --------------------------------
     func queryBuildings(){
+        self.buildings.removeAll()
         let ref = fireStoreDB.collection("Buildings")
         ref.getDocuments{ snapshot, error in
             guard error == nil else {
@@ -55,11 +56,21 @@ class DatabaseManager: ObservableObject{
                     let id = document.documentID
                     let name = data["name"] as? String ?? ""
                     let address = data["address"] as? String ?? ""
-                    let latitude = data["latitude"] as? String ?? ""
-                    let longitude = data["longitude"] as? String ?? ""
                     
-                    let aBuilding = Building(id: id, name: name, address: address, latitude: latitude, longitude: longitude)
-                    let _ = print("grabbing \(name)")
+                    var coordinate = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+                    if let latitude = Double(data["latitude"] as! Substring){
+                        if let longitude = Double(data["longitude"] as! Substring){
+                            coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                        }else{
+                            let _ = print("longitude not set")
+                        }
+                    }else{
+                        let _ = print("latitude not set")
+                    }
+//                    as? Double ?? 0.0
+//                    let longitude = Double(data["longitude"]) as? Double ?? 0.0
+                    
+                    let aBuilding = Building(id: id, name: name, address: address, coordinate: coordinate)
                     self.buildings.append(aBuilding)
                 }
             }
@@ -68,7 +79,7 @@ class DatabaseManager: ObservableObject{
     //This function is for writing a new building to the database
     func writeBuildings(){
         let newBuildings: [ReadInBuilding] = readBuildingsFromJSON("all_buildings.json")
-//        self.queryBuildings()
+        self.queryBuildings()
         
         for building in newBuildings {
             var buildingInDatabase = false
@@ -82,7 +93,7 @@ class DatabaseManager: ObservableObject{
             for building2 in self.buildings {
                 
                 if !buildingInDatabase {
-                    if building2.latitude.trimmingCharacters(in: .whitespacesAndNewlines) == latitude.trimmingCharacters(in: .whitespacesAndNewlines) && building2.longitude.trimmingCharacters(in: .whitespacesAndNewlines) == longitude.trimmingCharacters(in: .whitespacesAndNewlines) {
+                    if building2.coordinate.latitude == Double(latitude.trimmingCharacters(in: .whitespacesAndNewlines)) && building2.coordinate.longitude == Double(longitude.trimmingCharacters(in: .whitespacesAndNewlines)) {
                         buildingInDatabase = true
                     }else{
                         buildingInDatabase = false
