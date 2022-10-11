@@ -12,11 +12,6 @@ import CoreLocation
 class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     //========================================================
-    //                      constants
-    //========================================================
-    let REGION_RADIUS : CLLocationDistance = 300
-    
-    //========================================================
     //                      variables
     //========================================================
     @Published var mapView = MKMapView()
@@ -37,9 +32,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func checkIfLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
-            locationManagerConfig()
-            mapViewConfig()
-
+            locationManager.delegate = self
         }else{
             //make alert that tells user to turn it on
             print("location not enabled")
@@ -62,43 +55,12 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 break
         }
     }
-    
-    // Takes in coordinates and updates the map view and region
-    func updateMapView(_ cords: CLLocation) {
-        self.region = MKCoordinateRegion(center: cords.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
-    }
-    
-    // Runs Map View init items
-    func mapViewConfig() {
-        // INSTRUCTIONS FOR MAP
-        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
-    }
-    
-    // Runs location manager init items
-    func locationManagerConfig() {
-        // INSTRUCTIONS FOR LOCATION MANAGER
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
-    // sets the valid region for fullscreen view
-    func setRegionFullScreen() {
-        
-    }
-    
-    func setRegionHalfScreen() {
-        
-    }
-
-    
     //makes map center over user location when button is clicked
     func focusLocation(){
-        if let loc = locationManager.location {
-            updateMapView(loc)
-        }
+//        guard let _ = region else{return}
+//        let _ = print("focus location function")
+        mapView.setRegion(self.region, animated: true)
+        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -106,8 +68,10 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else{return}
-        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setRegion(region, animated: true)
+        
+        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 0.5, longitudinalMeters: 0.5)
+        
+        self.mapView.setRegion(self.region, animated: true)
         mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
