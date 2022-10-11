@@ -13,45 +13,41 @@ struct MainMapView: View {
     @State var showingBottomWindow = true
     
     var body: some View {
-        ZStack {
-            TheMap()
-                .onTapGesture {
-                    self.showingBottomWindow = false
-                }
-                .environmentObject(mapManager)
-            
-            VStack {
-                SearchBar()
+        VStack(spacing: 0) {
+            ZStack(alignment: .topLeading) {
+                TheMap()
+                    .onTapGesture {
+                        self.showingBottomWindow = false
+                    }
+                    .environmentObject(mapManager)
                 HStack {
-                    Spacer()
+                    SearchBar()
                     CurrentLocationButton()
                         .environmentObject(mapManager)
-                }
-                Spacer()
-                if showingBottomWindow {
-                    BottomWindow()
-                        .cornerRadius(10)
-                        .padding()
-                        .background(.ultraThinMaterial)
-//                        .background(Color("BG1").opacity(0.9)
-//                                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
-                        .animation(.default)
-                        .transition(AnyTransition.move(edge: .bottom))
-                }else{
-                    BottomWindowMinimized()
-                        .animation(.easeIn)
-                        .transition(AnyTransition.move(edge: .bottom))
-                        .background(Color("BG1").opacity(0.9)
-                                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
-                        .onTapGesture {
-                            self.showingBottomWindow = true
-                        }
+                        .padding(10)
                 }
             }
-            .animation(.easeInOut, value: showingBottomWindow)
+            if showingBottomWindow {
+                BottomWindow()
+                    .cornerRadius(10)
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .transition(AnyTransition.move(edge: .bottom))
+            }else{
+                BottomWindowMinimized()
+//                    .animation(.easeIn(duration: 0.5), value: showingBottomWindow)
+                    .transition(AnyTransition.move(edge: .bottom))
+                    .background(Color("BG1").opacity(0.9)
+                                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
+                    .onTapGesture {
+                        self.showingBottomWindow = true
+                    }
+            }
         }
+        .animation(.easeInOut, value: showingBottomWindow)
     }
 }
+
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
