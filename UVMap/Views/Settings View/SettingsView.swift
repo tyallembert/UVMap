@@ -13,11 +13,6 @@ struct SettingsView: View {
     var body: some View {
         VStack {
             Text("Settings View")
-            Button{
-                databaseManager.writeBuildings()
-            }label:{
-                Text("Save Buildings")
-            }
         }
     }
 }
