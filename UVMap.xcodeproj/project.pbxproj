@@ -11,6 +11,7 @@
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
+		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
@@ -86,6 +87,7 @@
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
+		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */,
 				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
+				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
 				500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
+				3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */,
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,

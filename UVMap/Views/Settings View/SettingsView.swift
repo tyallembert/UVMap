@@ -14,6 +14,7 @@ struct SettingsView: View {
         VStack {
             Text("Settings View")
                 .padding()
+            
             VStack {
                 Text("How early do you like to arrive to class?")
                     
