@@ -13,6 +13,16 @@ struct SettingsView: View {
     var body: some View {
         VStack {
             Text("Settings View")
+                .padding()
+            VStack {
+                Text("How early do you like to arrive to class?")
+                    
+                ArriveShell()
+            }
+            VStack {
+                Text("Prioritize Schedule?")
+                PrioritizeSchedule()
+            }
         }
     }
 }

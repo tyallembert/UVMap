@@ -34,7 +34,6 @@ struct PrioritizeSchedule: View {
                             .foregroundColor(prioritizeYes ? .white: Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
                             .offset(x: 25)
                     }
-                    .padding(24)
                 }
                 .onTapGesture {
                     self.prioritizeYes.toggle()
