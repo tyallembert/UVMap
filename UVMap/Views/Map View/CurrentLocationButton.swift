@@ -9,12 +9,16 @@ import SwiftUI
 
 struct CurrentLocationButton: View {
     @EnvironmentObject var mapManager: MapManager
+    @Binding var followUser: Bool
+    
     
     var body: some View {
         Button {
             mapManager.focusLocation()
         }label: {
-            Image(systemName: "location")
+            let btnImageName = followUser ? "location.fill" : "location"
+
+            Image(systemName: btnImageName)
         }
         .padding()
         .background(Color("BG1"))
@@ -24,6 +28,6 @@ struct CurrentLocationButton: View {
 
 struct CurrentLocationButton_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentLocationButton()
+        CurrentLocationButton(followUser: .constant(false))
     }
 }
