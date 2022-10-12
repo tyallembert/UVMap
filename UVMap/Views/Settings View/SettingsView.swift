@@ -12,8 +12,7 @@ struct SettingsView: View {
     
     var body: some View {
         VStack {
-            Text("Settings View")
-                .padding()
+            TitleBar()
             
             VStack {
                 Text("How early do you like to arrive to class?")
