@@ -12,11 +12,8 @@ struct CurrentLocationButton: View {
     
     
     var body: some View {
-        Button {
-            mapManager.focusLocation()
-        }label: {
+        Button {} label: {
             let btnImageName = mapManager.followUser ? "location.fill" : "location"
-
             Image(systemName: btnImageName)
         }
         .padding()
