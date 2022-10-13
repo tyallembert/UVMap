@@ -395,6 +395,7 @@
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
 				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
+				50E43B9828F8D80F00CDF4D9 /* Lecture.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
