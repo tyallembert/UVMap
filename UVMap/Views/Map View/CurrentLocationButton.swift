@@ -10,11 +10,11 @@ import SwiftUI
 struct CurrentLocationButton: View {
     @EnvironmentObject var mapManager: MapManager
     
+    
     var body: some View {
-        Button {
-            mapManager.focusLocation()
-        }label: {
-            Image(systemName: "location")
+        Button {} label: {
+            let btnImageName = mapManager.followUser ? "location.fill" : "location"
+            Image(systemName: btnImageName)
         }
         .padding()
         .backgroundBlur(radius: 25, opaque: true)
@@ -22,6 +22,9 @@ struct CurrentLocationButton: View {
         .innerShadow(shape: RoundedRectangle(cornerRadius: 10), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 1, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 1)
         .cornerRadius(10)
         .shadow(radius: 5)
+        .onTapGesture {
+            mapManager.focusLocation()
+        }
     }
 }
 
