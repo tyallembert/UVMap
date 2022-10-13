@@ -24,12 +24,9 @@ struct MainMapView: View {
                 HStack {
                     SearchBar()
                     let _ = print(self.updateOnUserMotion)
-                    CurrentLocationButton(followUser: $updateOnUserMotion)
+                    CurrentLocationButton()
                         .environmentObject(mapManager)
                         .padding(10)
-                        .onTapGesture {
-                            self.updateOnUserMotion.toggle()
-                        }
                 }
             }
             if showingBottomWindow {

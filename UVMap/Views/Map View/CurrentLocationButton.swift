@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CurrentLocationButton: View {
     @EnvironmentObject var mapManager: MapManager
-    @Binding var followUser: Bool
     
     
     var body: some View {
@@ -23,6 +22,7 @@ struct CurrentLocationButton: View {
         .padding()
         .background(Color("BG1"))
         .cornerRadius(10)
+        .
     }
 }
 
