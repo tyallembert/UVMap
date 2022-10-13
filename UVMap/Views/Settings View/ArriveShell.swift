@@ -10,16 +10,18 @@ import SwiftUI
 
 struct ArriveShell: View {
     var body: some View {
-        HStack{
+        HStack(spacing: 0){
             //arrive text
             Text("Arrive")
                 .foregroundColor(.white)
+                .font(.body)
             HowEarlyDropDown()
-            Text("before class starts")
+            Text("min before class starts")
                 .foregroundColor(.white)
+                .font(.body)
             //before class starts text
         }.padding()
-            .frame(width: 375, height: 50)
+            .frame(width: 375, height: 50, alignment: .leading)
             .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
             .cornerRadius(50)
     }

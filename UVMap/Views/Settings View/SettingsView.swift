@@ -14,14 +14,22 @@ struct SettingsView: View {
         VStack {
             TitleBar()
             
+            Spacer()
+            
             VStack {
                 Text("How early do you like to arrive to class?")
+                    .font(.title3)
                     
                 ArriveShell()
             }
             VStack {
                 Text("Prioritize Schedule?")
+                    .font(.title3)
                 PrioritizeSchedule()
+            }
+            Spacer()
+            HStack {
+                Text("")
             }
         }
     }
