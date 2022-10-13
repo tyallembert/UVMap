@@ -4,7 +4,6 @@
 //
 //  Created by Ty Allembert on 9/23/22.
 //
-
 import SwiftUI
 import BottomSheet
 
@@ -17,7 +16,7 @@ enum BottomSheetPosition: CGFloat, CaseIterable {
 struct MainMapView: View {
     @State var bottomSheetPosition: BottomSheetPosition = .middle
     @StateObject private var mapManager = MapManager()
-//    @State var showingBottomWindow = true
+    @State var showingBottomWindow = true
     
     var body: some View {
         ZStack(alignment: .bottom) {
