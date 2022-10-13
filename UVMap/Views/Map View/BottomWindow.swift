@@ -8,29 +8,43 @@
 import SwiftUI
 
 struct BottomWindow: View {
+    @EnvironmentObject var mapManager: MapManager
+    @Binding var bottomSheetPosition: BottomSheetPosition
     var body: some View {
         ScrollView {
             VStack {
-                HStack {
-                    VStack {
+                switch bottomSheetPosition{
+                    // MARK: view for when the bottom sheet is pulled up
+                    case .top, .middle:
                         HStack {
-//                            ClassBuilding()
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    ClassBuilding()
+                                        .environmentObject(mapManager)
+                                    Spacer()
+                                }
+                                HStack {
+                                    NextClass()
+                                    Spacer()
+                                }
+                                HStack {
+                                    ClassTime()
+                                    Spacer()
+                                }
+                            }
+                            WalkBikeOption()
                             Spacer()
                         }
+                        StartButton()
+                        TripInformation()
+                    // MARK: view for when the bottom sheet is pulled down
+                    case .bottom:
                         HStack {
-                            NextClass()
-                            Spacer()
+                            ClassBuilding()
+                                .environmentObject(mapManager)
+                            StartButton()
                         }
-                        HStack {
-                            ClassTime()
-                            Spacer()
-                        }
-                    }
-                    WalkBikeOption()
-                    Spacer()
                 }
-                StartButton()
-                TripInformation()
             }
             .padding()
         }
@@ -57,12 +71,14 @@ struct BottomWindow: View {
     }
 }
 
-struct BottomWindow_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomWindow()
-            .background(Color.background)
-            .preferredColorScheme(.dark)
-    }
-}
+//struct BottomWindow_Previews: PreviewProvider {
+//    var bottomSheetPosition: BottomSheetPosition = .middle
+//    static var previews: some View {
+//        BottomWindow(bottomSheetPosition: bottomSheetPosition)
+//            .environmentObject(MapManager())
+//            .background(Color.background)
+//            .preferredColorScheme(.dark)
+//    }
+//}
 
 
