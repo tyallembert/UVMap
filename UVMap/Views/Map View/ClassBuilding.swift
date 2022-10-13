@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ClassBuilding: View {
-    @State var classroom: String = "Cohen 120"
+    @EnvironmentObject var mapManager: MapManager
+    
     var body: some View {
-        Text(classroom)
+        Text(mapManager.getActiveBuilding().name)
             .font(.title)
             .fontWeight(.heavy)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
@@ -20,5 +21,6 @@ struct ClassBuilding: View {
 struct ClassBuilding_Previews: PreviewProvider {
     static var previews: some View {
         ClassBuilding()
+            .environmentObject(MapManager())
     }
 }

@@ -12,6 +12,7 @@ struct TheMap: View {
     @EnvironmentObject var mapManager: MapManager
     @EnvironmentObject var databaseManager: DatabaseManager
     
+    
     var body: some View {
         VStack {
             Map(coordinateRegion: $mapManager.region,
@@ -20,10 +21,10 @@ struct TheMap: View {
                annotationContent: { location in
                 MapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
-                        .scaleEffect(mapManager.activeBuildings.contains(location) ? 1.2 : 0.8)
-                        .opacity(mapManager.activeBuildings.contains(location) ? 1 : 0.7)
+                        .scaleEffect(mapManager.activeBuilding == location ? 1.2 : 0.8)
+                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
                         .onTapGesture {
-                            mapManager.setActiveBuildings(buildings: [location])
+                            mapManager.setActiveBuilding(building: location)
                         }
                         .animation(.spring())
                 }

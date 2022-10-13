@@ -20,9 +20,11 @@ struct CurrentLocationButton: View {
             Image(systemName: btnImageName)
         }
         .padding()
-        .background(Color("BG1"))
+        .backgroundBlur(radius: 25, opaque: true)
+        .background(Color.white.opacity(0.4))
+        .innerShadow(shape: RoundedRectangle(cornerRadius: 10), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 1, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 1)
         .cornerRadius(10)
-        .
+        .shadow(radius: 5)
     }
 }
 

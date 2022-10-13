@@ -22,6 +22,8 @@
 		4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83D28E5E65300207EC5 /* TripInformation.swift */; };
 		4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */; };
 		4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C84228E74E1F00207EC5 /* SessionManager.swift */; };
+		4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B68C528F711CD00532DD2 /* BottomSheet.swift */; };
+		4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C5B68C828F7120300532DD2 /* BottomSheet */; };
 		4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */; };
 		4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE6128DE1D1E00306D58 /* ContentView.swift */; };
 		4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C78EE6328DE1D2200306D58 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
 		4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */; };
 		4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABE58228F06C600087DD98 /* SearchBarManager.swift */; };
+		4CAF024D28F71DA4005F605E /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024C28F71DA4005F605E /* Blur.swift */; };
+		4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024E28F71F2A005F605E /* Extensions.swift */; };
 		4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168228F0B6940069D6C0 /* FirebaseAuth */; };
 		4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168428F0B6940069D6C0 /* FirebaseFirestore */; };
 		4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */; };
@@ -93,6 +97,7 @@
 		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
 		4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWindowMinimized.swift; sourceTree = "<group>"; };
 		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4C5B68C528F711CD00532DD2 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		4C78EE5C28DE1D1E00306D58 /* UVMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVMapApp.swift; sourceTree = "<group>"; };
 		4C78EE6128DE1D1E00306D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +119,8 @@
 		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
 		4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		4CABE58228F06C600087DD98 /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
+		4CAF024C28F71DA4005F605E /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		4CAF024E28F71F2A005F605E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBuildingsFromJSON.swift; sourceTree = "<group>"; };
 		4CE7168C28F108FD0069D6C0 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */,
+				4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */,
 				4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
+				4CAF024B28F71D91005F605E /* Components */,
 				4CE7168A28F107F10069D6C0 /* Classes */,
 				4C78EE8928DE1E6500306D58 /* Views */,
 				4C78EE6328DE1D2200306D58 /* Assets.xcassets */,
@@ -266,6 +275,7 @@
 				4C78EEA028E2263400306D58 /* SearchBar.swift */,
 				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
 				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
+				4C5B68C528F711CD00532DD2 /* BottomSheet.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -319,6 +329,15 @@
 			path = "Navigation View";
 			sourceTree = "<group>";
 		};
+		4CAF024B28F71D91005F605E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF024C28F71DA4005F605E /* Blur.swift */,
+				4CAF024E28F71F2A005F605E /* Extensions.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		4CE7168A28F107F10069D6C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +375,7 @@
 			packageProductDependencies = (
 				4CE7168228F0B6940069D6C0 /* FirebaseAuth */,
 				4CE7168428F0B6940069D6C0 /* FirebaseFirestore */,
+				4C5B68C828F7120300532DD2 /* BottomSheet */,
 			);
 			productName = UVMap;
 			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMap.app */;
@@ -431,6 +451,7 @@
 			mainGroup = 4C78EE5328DE1D1E00306D58;
 			packageReferences = (
 				4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 4C78EE5D28DE1D1E00306D58 /* Products */;
 			projectDirPath = "";
@@ -478,6 +499,7 @@
 			files = (
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
+				4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */,
 				50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */,
 				4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */,
 				4C36C83428E4C72800207EC5 /* ClassTime.swift in Sources */,
@@ -498,6 +520,7 @@
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
+				4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */,
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
 				50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */,
@@ -517,6 +540,7 @@
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,
+				4CAF024D28F71DA4005F605E /* Blur.swift in Sources */,
 				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
 				4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */,
 			);
@@ -851,6 +875,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wouter125/BottomSheet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -862,6 +894,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4C5B68C828F7120300532DD2 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
 		4CE7168228F0B6940069D6C0 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
