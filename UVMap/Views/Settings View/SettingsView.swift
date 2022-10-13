@@ -16,13 +16,13 @@ struct SettingsView: View {
             
             Spacer()
             
-            VStack {
+            VStack(alignment: .leading, spacing: 10){
                 Text("How early do you like to arrive to class?")
                     .font(.title3)
                     
                 ArriveShell()
             }
-            VStack {
+            VStack(alignment: .leading, spacing: 10){
                 Text("Prioritize Schedule?")
                     .font(.title3)
                 PrioritizeSchedule()
