@@ -11,7 +11,7 @@ struct SettingsView: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 15) {
             TitleBar()
             
             Spacer()
@@ -27,11 +27,16 @@ struct SettingsView: View {
                     .font(.title3)
                 PrioritizeSchedule()
             }
+            VStack(alignment: .leading, spacing: 10){
+                Text("Theme")
+                    .font(.title3)
+                ThemePicker()
+            }
             Spacer()
             HStack {
                 Text("")
             }
-        }
+        }.padding()
     }
 }
 

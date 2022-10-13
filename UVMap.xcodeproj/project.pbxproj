@@ -10,6 +10,7 @@
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
+		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
 		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
@@ -86,6 +87,7 @@
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
+		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
 		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
 				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
+				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
 				3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
+				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,

@@ -16,13 +16,14 @@ struct ArriveShell: View {
                 .foregroundColor(.white)
                 .font(.body)
             HowEarlyDropDown()
-            Text("min before class starts")
+            Text("min before class")
                 .foregroundColor(.white)
                 .font(.body)
+                .frame(width: .infinity, alignment: .leading)
             //before class starts text
         }.padding()
             .frame(width: 375, height: 50, alignment: .leading)
-            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
+            .background(Color("AccentColor"))
             .cornerRadius(50)
     }
 }
