@@ -10,14 +10,20 @@ import SwiftUI
 struct MondayScheduleMenu: View {
     var body: some View {
         VStack {
-            Text("M")
+            VStack{
+                Text("M").frame(height: 50, alignment: .top)
+            }
+            
         }.padding()
             .frame(width: 52, height: 60)
-            .background(.white)
-            .cornerRadius(20)
+            .background(Color("AccentColor"))
+            .cornerRadius(15)
+            .shadow(color: .black.opacity(0.3), radius: 3, y: -5)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke((Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(1)), lineWidth: 3))
+                    .stroke(Color(.black).opacity(0.5))
+                    )
+                
                 }
             }
                 
@@ -26,3 +32,5 @@ struct MondayScheduleMenu: View {
                         MondayScheduleMenu()
                     }
                 }
+
+//(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(1)), lineWidth: 3)

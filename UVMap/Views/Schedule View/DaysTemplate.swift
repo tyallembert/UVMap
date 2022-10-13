@@ -18,7 +18,7 @@ struct DaysTemplate: View {
             WednesdayScheduleMenu()
             ThursdayScheduleMenu()
             FridayScheduleMenu()
-        }
+        }.frame(width: 300)
     }
 }
 
