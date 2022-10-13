@@ -11,6 +11,7 @@ struct MainMapView: View {
     
     @StateObject private var mapManager = MapManager()
     @State var showingBottomWindow = true
+    @State var updateOnUserMotion: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -22,6 +23,7 @@ struct MainMapView: View {
                     .environmentObject(mapManager)
                 HStack {
                     SearchBar()
+                    let _ = print(self.updateOnUserMotion)
                     CurrentLocationButton()
                         .environmentObject(mapManager)
                         .padding(10)
