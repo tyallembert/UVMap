@@ -167,6 +167,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C11E85128F85CAA00710092 /* Add Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Add Class";
+			sourceTree = "<group>";
+		};
 		4C24003128EBB3EF002F7E2D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +290,7 @@
 		4C78EE8B28DE1E8C00306D58 /* Schedule View */ = {
 			isa = PBXGroup;
 			children = (
+				4C11E85128F85CAA00710092 /* Add Class */,
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,

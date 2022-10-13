@@ -15,25 +15,39 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     //                      constants
     //========================================================
     let REGION_RADIUS : CLLocationDistance = 300
+    let LATITUDE_OFFSET : Double = 0.0007 // makes the users cented location at the top of the screen
     
     //========================================================
     //                      variables
     //========================================================
+
     @Published var mapView = MKMapView()
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965),
         span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
     var locationManager: CLLocationManager = CLLocationManager()
-    @Published var activeBuildings: [Building] = []
+    @Published var activeBuildingsFromSearch: [Building] = []
+    @Published var activeBuilding: Building?
     
-    //========================================================
-    //                      functions
-    //========================================================
-    func setActiveBuildings(buildings: [Building]){
-        let _ = print("setting active buildings")
-        self.activeBuildings.removeAll()
-        self.activeBuildings = buildings
+//========================================================
+//                      functions
+//========================================================
+    //--------------------------------------
+    //          building functions
+    //--------------------------------------
+    func setActiveBuilding(building: Building){
+        self.activeBuilding = building
     }
+    func getActiveBuilding() -> Building {
+        if let activeBuilding = self.activeBuilding {
+            return activeBuilding
+        }else{
+            return Building(id: "0", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
+        }
+    }
+    //--------------------------------------
+    //          user functions
+    //--------------------------------------
     func checkIfLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -56,7 +70,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             case .denied:
                 print("alert user they have denied permission earlier and that they need to allow location in settings")
             case .authorizedAlways, .authorizedWhenInUse:
-                region = MKCoordinateRegion(center: manager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+            region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude - LATITUDE_OFFSET, longitude: manager.location!.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
                 let _ = print(manager.location!.coordinate)
             default:
                 break
@@ -65,7 +79,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {
-        self.region = MKCoordinateRegion(center: cords.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
+        self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cords.coordinate.latitude - LATITUDE_OFFSET, longitude: cords.coordinate.longitude), latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
         mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
