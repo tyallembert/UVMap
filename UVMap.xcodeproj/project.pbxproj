@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85228F85F1F00710092 /* AddClassView.swift */; };
+		4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85428F8601200710092 /* ClassSearchBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C11E85228F85F1F00710092 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
+		4C11E85428F8601200710092 /* ClassSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 		4C11E85128F85CAA00710092 /* Add Class */ = {
 			isa = PBXGroup;
 			children = (
+				4C11E85228F85F1F00710092 /* AddClassView.swift */,
+				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
 			);
 			path = "Add Class";
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
 				4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */,
@@ -520,6 +527,7 @@
 				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
 				500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
+				4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */,
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
@@ -710,7 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = L8596W57HC;
+				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -742,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = L8596W57HC;
+				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
