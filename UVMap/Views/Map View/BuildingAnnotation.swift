@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct BuildingAnnotation: View {
+    let gradientWithFourColors = Gradient(colors: [
+        Color("AccentColor"),
+        Color(red: 250, green: 250, blue: 250)
+        ]
+    )
+
     var body: some View {
         ZStack {
             Circle()
-                .fill(Color("AccentColor"))
+                .fill(RadialGradient(gradient: gradientWithFourColors, center: .center, startRadius: 10, endRadius: 55))
                 .frame(width: 30, height: 30)
             Image(systemName: "graduationcap.fill")
                 .resizable()
