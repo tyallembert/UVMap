@@ -11,6 +11,15 @@
 		4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85428F8601200710092 /* ClassSearchBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
+		4C28FF5728FDC48A00D75A1A /* ClassesToBeAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF5628FDC48A00D75A1A /* ClassesToBeAdded.swift */; };
+		4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF5828FDC4E100D75A1A /* AddOneClass.swift */; };
+		4C28FF5B28FDD2DE00D75A1A /* ClassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */; };
+		4C28FF5D28FDD31600D75A1A /* SingleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF5C28FDD31600D75A1A /* SingleClass.swift */; };
+		4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */; };
+		4C28FF6128FEF5DF00D75A1A /* all_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C28FF6028FEF5DF00D75A1A /* all_classes.json */; };
+		4C28FF6328FF95CE00D75A1A /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF6228FF95CE00D75A1A /* SearchResults.swift */; };
+		4C28FF6528FF962600D75A1A /* OneSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF6428FF962600D75A1A /* OneSearchResult.swift */; };
+		4C28FF67290029D500D75A1A /* AddClassSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28FF66290029D500D75A1A /* AddClassSubmit.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
 		4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82928E3463C00207EC5 /* UsernameView.swift */; };
 		4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82B28E347BC00207EC5 /* PasswordView.swift */; };
@@ -38,7 +47,6 @@
 		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
 		4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9428DF650D00306D58 /* SettingsView.swift */; };
 		4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9628DF652E00306D58 /* ScheduleView.swift */; };
-		4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9C28E223E000306D58 /* BottomNavigation.swift */; };
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
 		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
@@ -88,6 +96,15 @@
 		4C11E85428F8601200710092 /* ClassSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4C28FF5628FDC48A00D75A1A /* ClassesToBeAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesToBeAdded.swift; sourceTree = "<group>"; };
+		4C28FF5828FDC4E100D75A1A /* AddOneClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOneClass.swift; sourceTree = "<group>"; };
+		4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassManager.swift; sourceTree = "<group>"; };
+		4C28FF5C28FDD31600D75A1A /* SingleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleClass.swift; sourceTree = "<group>"; };
+		4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDatabaseManager.swift; sourceTree = "<group>"; };
+		4C28FF6028FEF5DF00D75A1A /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
+		4C28FF6228FF95CE00D75A1A /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		4C28FF6428FF962600D75A1A /* OneSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSearchResult.swift; sourceTree = "<group>"; };
+		4C28FF66290029D500D75A1A /* AddClassSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassSubmit.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
 		4C36C82928E3463C00207EC5 /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		4C36C82B28E347BC00207EC5 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
@@ -117,7 +134,6 @@
 		4C78EE9228DE9D2C00306D58 /* InnerBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerBox.swift; sourceTree = "<group>"; };
 		4C78EE9428DF650D00306D58 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4C78EE9628DF652E00306D58 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
-		4C78EE9C28E223E000306D58 /* BottomNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomNavigation.swift; sourceTree = "<group>"; };
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
@@ -175,7 +191,12 @@
 			isa = PBXGroup;
 			children = (
 				4C11E85228F85F1F00710092 /* AddClassView.swift */,
+				4C28FF6428FF962600D75A1A /* OneSearchResult.swift */,
+				4C28FF6228FF95CE00D75A1A /* SearchResults.swift */,
+				4C28FF66290029D500D75A1A /* AddClassSubmit.swift */,
 				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
+				4C28FF5828FDC4E100D75A1A /* AddOneClass.swift */,
+				4C28FF5628FDC48A00D75A1A /* ClassesToBeAdded.swift */,
 			);
 			path = "Add Class";
 			sourceTree = "<group>";
@@ -183,7 +204,9 @@
 		4C24003128EBB3EF002F7E2D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				4C28FF6028FEF5DF00D75A1A /* all_classes.json */,
 				4CA09D2728F4939400484D6D /* all_buildings.json */,
+				4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */,
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
 			);
@@ -196,6 +219,7 @@
 				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
 				4CF841CC28EB2144001C7F24 /* MapManager.swift */,
 				4CABE58228F06C600087DD98 /* SearchBarManager.swift */,
+				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -337,7 +361,6 @@
 		4C78EE9B28E223C900306D58 /* Navigation View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE9C28E223E000306D58 /* BottomNavigation.swift */,
 				4C36C82728E3427300207EC5 /* MainNavigation.swift */,
 			);
 			path = "Navigation View";
@@ -366,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
+				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -484,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C78EE6728DE1D2200306D58 /* Preview Assets.xcassets in Resources */,
+				4C28FF6128FEF5DF00D75A1A /* all_classes.json in Resources */,
 				4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */,
 				4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */,
 				4CA09D2828F4939400484D6D /* all_buildings.json in Resources */,
@@ -513,12 +538,14 @@
 			files = (
 				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
+				4C28FF67290029D500D75A1A /* AddClassSubmit.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
 				4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */,
 				50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */,
 				4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */,
 				4C36C83428E4C72800207EC5 /* ClassTime.swift in Sources */,
 				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
+				4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
@@ -528,9 +555,13 @@
 				500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
 				4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */,
+				4C28FF6528FF962600D75A1A /* OneSearchResult.swift in Sources */,
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
+				4C28FF5728FDC48A00D75A1A /* ClassesToBeAdded.swift in Sources */,
+				4C28FF5D28FDD31600D75A1A /* SingleClass.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
@@ -546,18 +577,19 @@
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
+				4C28FF5B28FDD2DE00D75A1A /* ClassManager.swift in Sources */,
 				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */,
 				4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
-				4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,
 				4CAF024D28F71DA4005F605E /* Blur.swift in Sources */,
 				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
+				4C28FF6328FF95CE00D75A1A /* SearchResults.swift in Sources */,
 				4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

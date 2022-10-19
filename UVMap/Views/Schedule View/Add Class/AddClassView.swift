@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct AddClassView: View {
-    @State var classSearch: String = ""
+    @StateObject var classManager: ClassManager = ClassManager()
+    
     var body: some View {
-        VStack {
-            ClassSearchBar()
+        ZStack {
+            VStack(spacing: 0) {
+                SearchResults()
+                    .environmentObject(classManager)
+                ClassesToBeAdded()
+                    .environmentObject(classManager)
+                
+            }
+                .frame(maxHeight: .infinity, alignment: .top)
+            VStack {
+                Spacer()
+                AddClassSubmit()
+                    .padding(.bottom, 100)
+            }
         }
     }
 }

@@ -8,26 +8,44 @@
 import SwiftUI
 
 struct ClassSearchBar: View {
-    @State var classSearch: String = ""
+    @EnvironmentObject var classManager: ClassManager
+    @Binding var searchActive: Bool
     var body: some View {
-        ZStack {
+        HStack {
             HStack{
                 Image(systemName: "magnifyingglass")
-                TextField("Search for class", text: $classSearch)
+                TextField("Search for class", text: $classManager.searchText)
+                    .onChange(of: classManager.searchText) {_ in
+                        classManager.filterClasses()
+                    }
+                    .onTapGesture {
+                        withAnimation{
+                            searchActive = true
+                        }
+                    }
             }
-            .padding(7)
-            .backgroundBlur(radius: 25, opaque: true)
-            .background(Color.white.opacity(0.4))
-            .innerShadow(shape: RoundedRectangle(cornerRadius: 100), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 0.7)
-            .cornerRadius(100)
-            .shadow(radius: 5)
+                .padding(7)
+                .backgroundBlur(radius: 25, opaque: true)
+                .background(Color.white.opacity(0.4))
+                .innerShadow(shape: RoundedRectangle(cornerRadius: 100), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 0.7)
+                .cornerRadius(100)
+                .shadow(radius: 5)
+            if searchActive {
+                Button{
+                    withAnimation{
+                        searchActive = false
+                        hideKeyboard()
+                    }
+                }label: {
+                    Text("Cancel")
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ClassSearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        ClassSearchBar()
+        ClassSearchBar(searchActive: .constant(false))
     }
 }
