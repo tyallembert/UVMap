@@ -28,6 +28,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager = CLLocationManager()
     @Published var activeBuildingsFromSearch: [Building] = []
     @Published var activeBuilding: Building?
+    @Published var followUser: Bool = true
     
 //========================================================
 //                      functions
@@ -48,18 +49,12 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     //--------------------------------------
     //          user functions
     //--------------------------------------
-    func checkIfLocationEnabled() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-            locationManagerConfig()
-            mapViewConfig()
-
-        }else{
-            //make alert that tells user to turn it on
-            print("location not enabled")
-        }
+    func initMap() {
+        locationManager = CLLocationManager()
+        locationManagerConfig()
+        mapViewConfig()
     }
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
         switch manager.authorizationStatus {
             
@@ -70,7 +65,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             case .denied:
                 print("alert user they have denied permission earlier and that they need to allow location in settings")
             case .authorizedAlways, .authorizedWhenInUse:
-            region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude - LATITUDE_OFFSET, longitude: manager.location!.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+
+                initMap()
+                region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude - LATITUDE_OFFSET, longitude: manager.location!.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
                 let _ = print(manager.location!.coordinate)
             default:
                 break
@@ -108,21 +105,48 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     
+    func checkAtCurrentRegion() -> Bool {
+        return (mapView.region.center.latitude != self.region.center.latitude ||
+                mapView.region.center.longitude != self.region.center.latitude ||
+                mapView.region.span.latitudeDelta != self.region.span.latitudeDelta ||
+                mapView.region.span.longitudeDelta != self.region.span.longitudeDelta ) ? false : true
+    }
+    
     //makes map center over user location when button is clicked
     func focusLocation(){
-        if let loc = locationManager.location {
-            updateMapView(loc)
+        followUser = true
+        
+        if followUser {
+            if let loc = locationManager.location {
+                updateMapView(loc)
+            }
         }
     }
+        
+    func checkMoved() {
+        if !followUser {
+            return
+        }
+        
+        if !checkAtCurrentRegion() {
+            followUser = false
+        }
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else{return}
-        self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setRegion(region, animated: true)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
-    }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if followUser  {
+            guard let location = locations.last else{return}
+            self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
+            mapView.setRegion(region, animated: true)
+            mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+        }
+        else {
+            
+        }
+    }
 }
