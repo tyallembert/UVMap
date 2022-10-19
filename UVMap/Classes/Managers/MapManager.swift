@@ -65,6 +65,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             case .denied:
                 print("alert user they have denied permission earlier and that they need to allow location in settings")
             case .authorizedAlways, .authorizedWhenInUse:
+
                 initMap()
                 region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude - LATITUDE_OFFSET, longitude: manager.location!.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
                 let _ = print(manager.location!.coordinate)
