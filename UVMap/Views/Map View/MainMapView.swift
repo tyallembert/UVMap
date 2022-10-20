@@ -4,47 +4,40 @@
 //
 //  Created by Ty Allembert on 9/23/22.
 //
-
 import SwiftUI
+import BottomSheet
+
+enum BottomSheetPosition: CGFloat, CaseIterable {
+    case top = 0.83 //702/844
+    case middle = 0.385 //325/844
+    case bottom = 0.230 //325/844
+}
 
 struct MainMapView: View {
-    
+    @State var bottomSheetPosition: BottomSheetPosition = .middle
     @StateObject private var mapManager = MapManager()
-    @State var showingBottomWindow = true
+//    @State var showingBottomWindow = true
     
     var body: some View {
-        VStack(spacing: 0) {
-            ZStack(alignment: .topLeading) {
-                TheMap()
-                    .onTapGesture {
-                        self.showingBottomWindow = false
-                    }
+        ZStack(alignment: .bottom) {
+//            Image("Login")
+//                .resizable()
+//                .ignoresSafeArea()
+            TheMap()
+                .environmentObject(mapManager)
+            VStack(alignment: .leading) {
+                SearchBar()
+                CurrentLocationButton()
                     .environmentObject(mapManager)
-                HStack {
-                    SearchBar()
-                    CurrentLocationButton()
+                    .padding()
+                // MARK: draggable bottom sheet
+                BottomSheetView(position: $bottomSheetPosition){}content: {
+                    BottomWindow(bottomSheetPosition: $bottomSheetPosition)
+                        .shadow(radius: 5)
                         .environmentObject(mapManager)
-                        .padding(10)
                 }
             }
-            if showingBottomWindow {
-                BottomWindow()
-                    .cornerRadius(10)
-                    .padding()
-                    .background(.ultraThinMaterial)
-                    .transition(AnyTransition.move(edge: .bottom))
-            }else{
-                BottomWindowMinimized()
-//                    .animation(.easeIn(duration: 0.5), value: showingBottomWindow)
-                    .transition(AnyTransition.move(edge: .bottom))
-                    .background(Color("BG1").opacity(0.9)
-                                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
-                    .onTapGesture {
-                        self.showingBottomWindow = true
-                    }
-            }
         }
-        .animation(.easeInOut, value: showingBottomWindow)
     }
 }
 
@@ -52,5 +45,6 @@ struct MainMapView: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MainMapView()
+            .environmentObject(MapManager())
     }
 }
