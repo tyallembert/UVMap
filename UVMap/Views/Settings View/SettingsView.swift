@@ -11,14 +11,32 @@ struct SettingsView: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        VStack {
-            Text("Settings View")
-            Button{
-                databaseManager.writeBuildings()
-            }label:{
-                Text("Save Buildings")
+        VStack(alignment: .leading, spacing: 15) {
+            TitleBar()
+            
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: 10){
+                Text("How early do you like to arrive to class?")
+                    .font(.title3)
+                    
+                ArriveShell()
             }
-        }
+            VStack(alignment: .leading, spacing: 10){
+                Text("Prioritize Schedule?")
+                    .font(.title3)
+                PrioritizeSchedule()
+            }
+            VStack(alignment: .leading, spacing: 10){
+                Text("Theme")
+                    .font(.title3)
+                ThemePicker()
+            }
+            Spacer()
+            HStack {
+                Text("")
+            }
+        }.padding()
     }
 }
 
