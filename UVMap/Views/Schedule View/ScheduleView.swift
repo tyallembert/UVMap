@@ -15,6 +15,7 @@ struct ScheduleView: View {
     var body: some View {
         VStack {
             TitleBarSchedule()
+//                .edgesIgnoringSafeArea(.top)
             Spacer()
             DaysTemplate()
             ScheduleChart()

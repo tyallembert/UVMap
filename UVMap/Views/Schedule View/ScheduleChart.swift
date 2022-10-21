@@ -34,6 +34,9 @@ struct ScheduleChart: View {
                 }.frame(height: 550)
                     .border(.black.opacity(0.8))
                     .shadow(color: .black.opacity(0.1), radius: 3, y: -3)
+                    .cornerRadius(15)
+            
+       .border(Color.black, width: 2)
                     .padding()
                     .offset(y:-55)
             }
