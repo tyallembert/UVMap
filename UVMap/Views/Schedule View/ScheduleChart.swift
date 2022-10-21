@@ -17,23 +17,28 @@ struct ScheduleChart: View {
     var body: some View {
         
         HStack {
-            List {
-                Text("8AM").frame(height: 70)
-                Text("9AM").frame(height: 70)
-                Text("10AM").frame(height: 70)
-                Text("11AM").frame(height: 70)
-                Text("12PM").frame(height: 70)
-                ClassShell()
-                Text("1PM").frame(height: 70)
-                Text("2PM").frame(height: 70)
-                Text("3PM").frame(height: 70)
-                Text("4PM").frame(height: 70)
-                
+            //ZStack{
+                List {
+                    Text("8AM").frame(height: 70)
+                    ClassShell()
+                    Text("9AM").frame(height: 70)
+                    Text("10AM").frame(height: 70)
+                    Text("11AM").frame(height: 70)
+                    Text("12PM").frame(height: 70)
+                    Text("1PM").frame(height: 70)
+                    Text("2PM").frame(height: 70)
+                    Text("3PM").frame(height: 70)
+                    Text("4PM").frame(height: 70)
+                    
 
-            }.frame(height: 550)
-                .border(.red)
-                .padding()
-        }
+                }.frame(height: 550)
+                    .border(.black.opacity(0.8))
+                    .shadow(color: .black.opacity(0.1), radius: 3, y: -3)
+                    .padding()
+                    .offset(y:-55)
+            }
+            
+        //}
         
         
     }

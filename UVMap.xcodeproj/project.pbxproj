@@ -78,6 +78,8 @@
 		50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */; };
 		50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */; };
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
+		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
+		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,8 @@
 		50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
+		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +338,7 @@
 			children = (
 				4C11E85128F85CAA00710092 /* Add Class */,
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
+				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
 				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
@@ -408,6 +413,7 @@
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
 				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
+				50E43B9828F8D80F00CDF4D9 /* Lecture.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -570,6 +576,7 @@
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
+				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
 				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
@@ -594,6 +601,7 @@
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
 				50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */,
+				50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
