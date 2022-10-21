@@ -12,6 +12,7 @@ class SessionManager: ObservableObject{
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
+    @Published var selectedNavElement = 1
     @Published var currentState: CurrentState?
     var username: String = ""
     var password: String = ""

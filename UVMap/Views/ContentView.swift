@@ -18,6 +18,7 @@ struct ContentView: View {
             case .loggedIn:
                 MainNavigation()
                     .transition(.opacity)
+                    .environmentObject(sessionManager)
             case .loggedOut:
                 LoginView()
                     .transition(.opacity)
