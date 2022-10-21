@@ -19,7 +19,6 @@ struct ArriveShell: View {
             Text("min before class")
                 .foregroundColor(.white)
                 .font(.body)
-                .frame(width: .infinity, alignment: .leading)
             //before class starts text
         }.padding()
             .frame(width: 375, height: 50, alignment: .leading)

@@ -11,32 +11,34 @@ struct SettingsView: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            TitleBar()
+        VStack{
             
-            Spacer()
+            TitleBar().edgesIgnoringSafeArea(.top)
             
-            VStack(alignment: .leading, spacing: 10){
-                Text("How early do you like to arrive to class?")
-                    .font(.title3)
+            VStack(alignment: .leading, spacing: 15) {
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("How early do you like to arrive to class?")
+                        .font(.title3)
                     
-                ArriveShell()
-            }
-            VStack(alignment: .leading, spacing: 10){
-                Text("Prioritize Schedule?")
-                    .font(.title3)
-                PrioritizeSchedule()
-            }
-            VStack(alignment: .leading, spacing: 10){
-                Text("Theme")
-                    .font(.title3)
-                ThemePicker()
-            }
-            Spacer()
-            HStack {
-                Text("")
-            }
-        }.padding()
+                    ArriveShell()
+                }
+                VStack(alignment: .leading, spacing: 10){
+                    Text("Prioritize Schedule?")
+                        .font(.title3)
+                    PrioritizeSchedule()
+                }
+                VStack(alignment: .leading, spacing: 10){
+                    Text("Theme")
+                        .font(.title3)
+                    ThemePicker()
+                }
+                Spacer()
+                //HStack {
+                //    Text("")
+                //}
+            }.padding()
+        }.background(Color("BG2"))
     }
 }
 
