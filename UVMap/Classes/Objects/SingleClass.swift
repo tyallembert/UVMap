@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SingleClass: ObservableObject {
+class SingleClass: Codable, ObservableObject {
     var CRN: String
     var building: String
     var course: String

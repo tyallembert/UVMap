@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct AddClassSubmit: View {
+    @EnvironmentObject var classManager: ClassManager
     var body: some View {
         Button {
-            
+            classManager.saveClassesLocally()
         }label: {
             Text("Add Classes")
                 .font(.title2)

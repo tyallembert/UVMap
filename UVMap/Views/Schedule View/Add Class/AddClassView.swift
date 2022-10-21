@@ -22,7 +22,13 @@ struct AddClassView: View {
                 .frame(maxHeight: .infinity, alignment: .top)
             VStack {
                 Spacer()
+                Button{
+                    classManager.retrieveStudentsClassses()
+                }label: {
+                    Text("Check Classes")
+                }
                 AddClassSubmit()
+                    .environmentObject(classManager)
                     .padding(.bottom, 100)
             }
         }
