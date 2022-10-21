@@ -30,7 +30,7 @@ struct TheMap: View {
                 }
                })
                 .edgesIgnoringSafeArea(.all)
-                .accentColor(.red)
+                .accentColor(Color("AccentColor"))
                 .onAppear {
                     mapManager.initMap()
                 }
