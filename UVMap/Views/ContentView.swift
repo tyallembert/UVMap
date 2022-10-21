@@ -32,6 +32,8 @@ struct ContentView: View {
                 if user != nil {
                     let _ = print("got through if")
                     sessionManager.currentState = .loggedIn
+                } else {
+                    sessionManager.currentState = .loggedOut
                 }
             }
         }
