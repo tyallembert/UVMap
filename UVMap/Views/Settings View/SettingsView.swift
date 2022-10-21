@@ -13,7 +13,9 @@ struct SettingsView: View {
     var body: some View {
         VStack{
             
-            TitleBar().edgesIgnoringSafeArea(.top)
+            TitleBar()
+                .padding(.top)
+                .edgesIgnoringSafeArea(.top)
             
             VStack(alignment: .leading, spacing: 15) {
                 
@@ -34,9 +36,6 @@ struct SettingsView: View {
                     ThemePicker()
                 }
                 Spacer()
-                //HStack {
-                //    Text("")
-                //}
             }.padding()
         }.background(Color("BG2"))
     }
