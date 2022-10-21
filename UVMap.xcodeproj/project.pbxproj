@@ -49,6 +49,7 @@
 		4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9628DF652E00306D58 /* ScheduleView.swift */; };
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
+		4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99F98829032DBC006060CB /* NavigationBar.swift */; };
 		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
 		4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */; };
 		4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CABE58228F06C600087DD98 /* SearchBarManager.swift */; };
@@ -136,6 +137,7 @@
 		4C78EE9628DF652E00306D58 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4C99F98829032DBC006060CB /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
 		4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
 		4CABE58228F06C600087DD98 /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				4C36C82728E3427300207EC5 /* MainNavigation.swift */,
+				4C99F98829032DBC006060CB /* NavigationBar.swift */,
 			);
 			path = "Navigation View";
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
 				4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
+				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,

@@ -13,24 +13,26 @@ struct AddClassView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
+                NavigationLink(destination: ScheduleView(), tag: 1, selection: $classManager.submitClicked) {
+                    EmptyView()
+                }
                 SearchResults()
                     .environmentObject(classManager)
                 ClassesToBeAdded()
                     .environmentObject(classManager)
                 
             }
-                .frame(maxHeight: .infinity, alignment: .top)
+            .frame(maxHeight: .infinity, alignment: .top)
             VStack {
                 Spacer()
-                Button{
-                    classManager.retrieveStudentsClassses()
-                }label: {
-                    Text("Check Classes")
-                }
                 AddClassSubmit()
                     .environmentObject(classManager)
                     .padding(.bottom, 100)
             }
+        }
+        .onAppear{
+            classManager.studentsClasses = classManager.retrieveStudentsClassses()
+            classManager.submitClicked = 0
         }
     }
 }
