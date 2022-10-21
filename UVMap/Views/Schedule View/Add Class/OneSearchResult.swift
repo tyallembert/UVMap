@@ -17,7 +17,7 @@ struct OneSearchResult: View {
             Spacer()
             Text(singleClass.days)
             Text("\(singleClass.startTime)-\(singleClass.endTime)")
-            if classManager.classesToBeAdded.contains(where: {$0.CRN == singleClass.CRN}) {
+            if classManager.studentsClasses.contains(where: {$0.CRN == singleClass.CRN}) {
                 Button{
                     classManager.removeClass(course: singleClass)
                 }label: {

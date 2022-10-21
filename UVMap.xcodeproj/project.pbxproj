@@ -217,7 +217,7 @@
 			path = "Add Class";
 			sourceTree = "<group>";
 		};
-		4C24003128EBB3EF002F7E2D /* Firebase */ = {
+		4C24003128EBB3EF002F7E2D /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				4C28FF6028FEF5DF00D75A1A /* all_classes.json */,
@@ -226,7 +226,7 @@
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
 			);
-			path = Firebase;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		4C36C84128E74DE900207EC5 /* Managers */ = {
@@ -264,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
+				4C24003128EBB3EF002F7E2D /* Database */,
 				4CAF024B28F71D91005F605E /* Components */,
 				4CE7168A28F107F10069D6C0 /* Classes */,
 				4C78EE8928DE1E6500306D58 /* Views */,
@@ -403,7 +404,6 @@
 			children = (
 				4CE7168B28F108E70069D6C0 /* Objects */,
 				4C36C84128E74DE900207EC5 /* Managers */,
-				4C24003128EBB3EF002F7E2D /* Firebase */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

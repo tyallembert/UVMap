@@ -15,11 +15,11 @@ struct ClassesToBeAdded: View {
                 .font(.title2)
                 .frame(maxWidth: .infinity, alignment: .leading)
             ScrollView {
-                if classManager.classesToBeAdded.isEmpty{
+                if classManager.studentsClasses.isEmpty{
                     Text("Search for a class")
                         .foregroundColor(Color.gray)
                 }else{
-                    ForEach(classManager.classesToBeAdded, id: \.self.CRN) { course in
+                    ForEach(classManager.studentsClasses, id: \.self.CRN) { course in
                         AddOneClass()
                             .environmentObject(course)
                             .environmentObject(classManager)
