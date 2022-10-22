@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct SignUpInnerBoxes: View {
+    @EnvironmentObject var sessionManager: SessionManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            FirstNameView()
+            Spacer()
+                .frame(height: 20)
+            LastNameView()
+            Spacer()
+                .frame(height: 20)
+            UsernameView()
+            Spacer()
+                .frame(height: 20)
+            PasswordView()
+            Spacer()
+                .frame(height: 20)
+            PasswordView()
+            Spacer()
+                .frame(height: 20)
+            SignUpButton()
+        }
+        .padding(20)
+        .frame(height: 350)
+        .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
+        .cornerRadius(25)
     }
 }
 

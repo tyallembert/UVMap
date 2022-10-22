@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0958ED3228F85E7E008BD4E6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED3128F85E7E008BD4E6 /* SignUpView.swift */; };
+		0958ED362902E944008BD4E6 /* SignUpInnerBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */; };
+		0958ED382902EF21008BD4E6 /* FirstNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED372902EF21008BD4E6 /* FirstNameView.swift */; };
+		0958ED3A2902EF39008BD4E6 /* LastNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED392902EF39008BD4E6 /* LastNameView.swift */; };
+		0958ED3C2902F481008BD4E6 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED3B2902F481008BD4E6 /* SignUpButton.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
@@ -82,6 +87,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0958ED3128F85E7E008BD4E6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInnerBoxes.swift; sourceTree = "<group>"; };
+		0958ED372902EF21008BD4E6 /* FirstNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameView.swift; sourceTree = "<group>"; };
+		0958ED392902EF39008BD4E6 /* LastNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameView.swift; sourceTree = "<group>"; };
+		0958ED3B2902F481008BD4E6 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
@@ -167,6 +177,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0958ED3028F85E25008BD4E6 /* SignUp View */ = {
+			isa = PBXGroup;
+			children = (
+				0958ED3128F85E7E008BD4E6 /* SignUpView.swift */,
+				0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */,
+				0958ED372902EF21008BD4E6 /* FirstNameView.swift */,
+				0958ED392902EF39008BD4E6 /* LastNameView.swift */,
+				0958ED3B2902F481008BD4E6 /* SignUpButton.swift */,
+			);
+			path = "SignUp View";
+			sourceTree = "<group>";
+		};
 		4C24003128EBB3EF002F7E2D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +271,7 @@
 		4C78EE8928DE1E6500306D58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0958ED3028F85E25008BD4E6 /* SignUp View */,
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
 				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
@@ -262,7 +285,6 @@
 		4C78EE8A28DE1E7C00306D58 /* Map View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
 				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
 				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
 				4C36C83F28E61F7F00207EC5 /* BottomWindowMinimized.swift */,
@@ -283,6 +305,7 @@
 		4C78EE8B28DE1E8C00306D58 /* Schedule View */ = {
 			isa = PBXGroup;
 			children = (
+				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
@@ -520,6 +543,7 @@
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
+				0958ED3C2902F481008BD4E6 /* SignUpButton.swift in Sources */,
 				4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */,
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
@@ -528,15 +552,19 @@
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
+				0958ED382902EF21008BD4E6 /* FirstNameView.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
+				0958ED3A2902EF39008BD4E6 /* LastNameView.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */,
 				4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */,
+				0958ED362902E944008BD4E6 /* SignUpInnerBoxes.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
 				4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */,
+				0958ED3228F85E7E008BD4E6 /* SignUpView.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,
