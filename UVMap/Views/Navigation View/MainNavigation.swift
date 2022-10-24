@@ -18,14 +18,13 @@ struct MainNavigation: View {
             case 1:
                 MainMapView()
             case 2:
-                AddClassView()
-//                SettingsView()
+                SettingsView()
             case 3:
                 AddClassView()
             default:
                 MainMapView()
             }
-            
+            // Style of Nav Bar
             NavigationBar()
         }
 }
