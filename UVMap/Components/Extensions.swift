@@ -51,3 +51,20 @@ extension View {
                 #selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
 }
+
+extension View {
+    func roundedTextField(inFocus: Bool) -> some View {
+        self
+            .foregroundColor(Color.black)
+            .padding(7)
+            .background (
+                RoundedRectangle(cornerRadius: 20)
+                    .strokeBorder(inFocus ? Color("AccentColor"): Color.clear, lineWidth: 2)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: Color.black, radius: 3, x: 1, y: 2)
+                    .scaleEffect(x: inFocus ? 1.08: 1)
+            )
+            .autocapitalization(.none)
+    }
+}
