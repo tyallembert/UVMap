@@ -18,6 +18,7 @@ struct ContentView: View {
             case .loggedIn:
                 MainNavigation()
                     .transition(.opacity)
+                    .environmentObject(sessionManager)
             case .loggedOut:
                 LoginView()
                     .transition(.opacity)
@@ -29,7 +30,6 @@ struct ContentView: View {
         .onAppear{
             Auth.auth().addStateDidChangeListener { auth, user in
                 if user != nil {
-                    let _ = print("got through if")
                     sessionManager.currentState = .loggedIn
                 } else {
                     sessionManager.currentState = .loggedOut

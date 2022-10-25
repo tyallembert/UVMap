@@ -8,53 +8,24 @@
 import SwiftUI
 
 struct MainNavigation: View {
-    @State var selectedNavElement = 1
-    var tabBarImageNames = ["calendar", "house.fill", "person"]
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         ZStack{
-            switch selectedNavElement {
+            switch sessionManager.selectedNavElement {
             case 0:
                 ScheduleView()
             case 1:
                 MainMapView()
             case 2:
+                SettingsView()
+            case 3:
                 AddClassView()
-//                SettingsView()
             default:
                 MainMapView()
             }
-            
-            VStack {
-                Spacer()
-                HStack{
-                    ForEach(0..<3) {element in
-                        Spacer()
-                        Button(action: {
-                            selectedNavElement = element
-                        }, label: {
-                            ZStack {
-                                if element == 1{//the home button
-                                    Circle()
-                                        .fill(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-                                        .frame(height: 70)
-                                        .offset(y: -20)
-                                        .shadow(color: Color.black, radius: 3, y: 3)
-                                }
-                                Image(systemName: tabBarImageNames[element])
-                                    .foregroundColor(selectedNavElement == element ? Color(.white): Color("TXT1"))
-                                    .offset(y: element == 1 ? -20: 0)
-                            }
-                        })
-                        Spacer()
-                    }
-                }
-                .padding()
-                .frame(height: 70)
-                .background(.ultraThinMaterial)
-                .shadow(radius: 4)
-            }
-            .ignoresSafeArea()
+            // Style of Nav Bar
+            NavigationBar()
         }
 }
 

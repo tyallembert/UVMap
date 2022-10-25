@@ -12,7 +12,13 @@ class SessionManager: ObservableObject{
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
+  
+    @Published var selectedNavElement = 1
     @Published var currentState: CurrentState?
+    
+    @Published var usernameInFocus: Bool = false
+    @Published var passwordInFocus: Bool = false
+
     var username: String = ""
     var password: String = ""
     

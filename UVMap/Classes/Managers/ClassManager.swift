@@ -13,6 +13,7 @@ class ClassManager: ObservableObject{
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
+    @Published var submitClicked:Int?
     
     init(){
         // in the future this will call the databaseManager.queryClasses() function
@@ -57,7 +58,7 @@ class ClassManager: ObservableObject{
 // MARK: Schedule functions
 // ===========================
     //===Read from Json file===
-    func retrieveStudentsClassses(){
+    func retrieveStudentsClassses() -> [SingleClass]{
         let fileName = "userClasses.json"
         let data: Data
 
@@ -72,8 +73,7 @@ class ClassManager: ObservableObject{
         do {
             let decoder = JSONDecoder()
 //            return try decoder.decode(T.self, from: data)
-            studentsClasses = try decoder.decode([SingleClass].self, from: data)
-            print(studentsClasses.map({$0.course}))
+            return try decoder.decode([SingleClass].self, from: data)
         } catch {
             fatalError("Couldn't parse \(fileName):\n\(error)")
         }
@@ -95,7 +95,7 @@ class ClassManager: ObservableObject{
             let data = try encoder.encode(studentsClasses)
             try data.write(to: filePath)
             print(String(data: data, encoding: .utf8)!)
-            retrieveStudentsClassses()
+            studentsClasses = retrieveStudentsClassses()
         } catch {
             fatalError("Cannot save to file:\n\(error)")
         }
