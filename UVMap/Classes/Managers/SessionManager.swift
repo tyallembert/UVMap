@@ -12,6 +12,7 @@ class SessionManager: ObservableObject{
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
+  
     @Published var selectedNavElement = 1
     @Published var currentState: CurrentState?
     
@@ -20,7 +21,7 @@ class SessionManager: ObservableObject{
     
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
-    
+
     var username: String = ""
     var password: String = ""
     
