@@ -34,7 +34,8 @@ class ClassManager: ObservableObject{
         if searchText.isEmpty {
             searchResults = allClasses
         } else {
-            searchResults = allClasses.filter { $0.subject.contains(searchText) }
+            searchResults = allClasses.filter { ($0.subject + $0.number).lowercased().hasPrefix(searchText.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+            }
         }
     }
     func addClass(course: SingleClass){
