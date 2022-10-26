@@ -16,11 +16,13 @@ struct SearchResults: View {
                 .padding()
                 .environmentObject(classManager)
             ScrollView {
-                ForEach(classManager.searchResults, id: \.self.CRN) { course in
-                    OneSearchResult()
-                        .environmentObject(course)
-                        .environmentObject(classManager)
-                    Divider()
+                LazyVStack {
+                    ForEach(classManager.searchResults, id: \.self.CRN) { course in
+                        OneSearchResult()
+                            .environmentObject(course)
+                            .environmentObject(classManager)
+                        Divider()
+                    }
                 }
             }
             .frame(height: searchActive ? 250: 0)

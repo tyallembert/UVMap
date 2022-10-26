@@ -18,11 +18,7 @@ class ClassManager: ObservableObject{
     init(){
         // in the future this will call the databaseManager.queryClasses() function
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
-        allClasses = [SingleClass(CRN: "235425", building: "Cohen", course: "CS 275", title: "Mobile Development", days: "T/Th", startTime: "10:05", endTime: "11:20", room: "Cohen 120", section: "A"),
-                      SingleClass(CRN: "235426", building: "Cohen", course: "CS 201", title: "Mobile Development", days: "T/Th", startTime: "10:05", endTime: "11:20", room: "Cohen 120", section: "A"),
-                      SingleClass(CRN: "235427", building: "Cohen", course: "CS 224", title: "Mobile Development", days: "T/Th", startTime: "10:05", endTime: "11:20", room: "Cohen 120", section: "A"),
-                      SingleClass(CRN: "235428", building: "Cohen", course: "CS 008", title: "Mobile Development", days: "T/Th", startTime: "10:05", endTime: "11:20", room: "Cohen 120", section: "A"),
-                      SingleClass(CRN: "235429", building: "Cohen", course: "ARTS 001", title: "Mobile Development", days: "T/Th", startTime: "10:05", endTime: "11:20", room: "Cohen 120", section: "A")]
+        allClasses = []
         //have this call a function that reads in students classes from local json file
         //maybe have a backup copy of their schedule saved on firebase incase they delete the app
         //have settings button that says "recover schedule" or something
@@ -38,7 +34,8 @@ class ClassManager: ObservableObject{
         if searchText.isEmpty {
             searchResults = allClasses
         } else {
-            searchResults = allClasses.filter { $0.course.contains(searchText) }
+            searchResults = allClasses.filter { ($0.subject + $0.number).lowercased().hasPrefix(searchText.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+            }
         }
     }
     func addClass(course: SingleClass){
@@ -58,16 +55,21 @@ class ClassManager: ObservableObject{
 // MARK: Schedule functions
 // ===========================
     //===Read from Json file===
-    func retrieveStudentsClassses() -> [SingleClass]{
-        let fileName = "userClasses.json"
+    func retrieveClasssesLocally(fileName: String) -> [SingleClass]{
         let data: Data
-
-        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
-
+        
+//        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
+        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
+        else{
+            print("Couldn't find \(fileName) in main bundle.")
+            return []
+        }
+        
         do {
             data = try Data(contentsOf: filePath)
         } catch {
-            fatalError("Couldn't load \(fileName) from main bundle:\n\(error)")
+            print("Couldn't load \(fileName) from main bundle:\n\(error)")
+            return []
         }
 
         do {
@@ -95,7 +97,7 @@ class ClassManager: ObservableObject{
             let data = try encoder.encode(studentsClasses)
             try data.write(to: filePath)
             print(String(data: data, encoding: .utf8)!)
-            studentsClasses = retrieveStudentsClassses()
+            studentsClasses = retrieveClasssesLocally(fileName: "userClasses.json")
         } catch {
             fatalError("Cannot save to file:\n\(error)")
         }

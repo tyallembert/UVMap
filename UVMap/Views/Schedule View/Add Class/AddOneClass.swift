@@ -13,7 +13,7 @@ struct AddOneClass: View {
     var body: some View {
         HStack{
             VStack(alignment: .leading) {
-                Text("\(singleClass.course)-\(singleClass.section)")
+                Text("\(singleClass.subject) \(singleClass.number)-\(singleClass.section)")
                     .font(.system(size: 25, weight: .bold))
                 Text("\(singleClass.building)")
                     .font(.system(size: 20, weight: .semibold))
