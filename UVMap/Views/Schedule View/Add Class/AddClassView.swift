@@ -11,31 +11,30 @@ struct AddClassView: View {
     @StateObject var classManager: ClassManager = ClassManager()
     
     var body: some View {
-        ZStack {
+        VStack {
             VStack(spacing: 0) {
                 SearchResults()
                     .environmentObject(classManager)
                 ClassesToBeAdded()
                     .environmentObject(classManager)
-                
-            }
-            .frame(maxHeight: .infinity, alignment: .top)
-            VStack {
-                Spacer()
-                Button{
-                    let _ = print(classManager.allClasses.count)
-                }label: {
-                    Text("Click for class count")
-                }
                 AddClassSubmit()
                     .environmentObject(classManager)
                     .padding(.bottom, 100)
+                
             }
+            .frame(maxHeight: .infinity, alignment: .top)
+//            VStack {
+////                Spacer()
+//                AddClassSubmit()
+//                    .environmentObject(classManager)
+//                    .padding(.bottom, 100)
+//            }
         }
+        .background(Color.backgroundGradient)
         .onAppear{
-            classManager.studentsClasses = classManager.retrieveClasssesLocally(fileName: "userClasses")
+            classManager.studentsClasses = classManager.retrieveClasssesLocally(fileName: "student_classes")
             classManager.allClasses = classManager.retrieveClasssesLocally(fileName: "all_classes")
-            classManager.submitClicked = 0
+            classManager.getTodaysClasses()
         }
     }
 }

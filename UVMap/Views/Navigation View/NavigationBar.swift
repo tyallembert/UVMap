@@ -23,12 +23,14 @@ struct NavigationBar: View {
                             if element == 1{//the home button
                                 Circle()
                                     .fill(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                                    .innerShadow(shape: Circle(), color: Color.innerShadow, lineWidth: 2, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.7)
                                     .frame(height: 70)
                                     .offset(y: -20)
                                     .shadow(color: Color.black, radius: 3, y: 3)
                             }
                             Image(systemName: tabBarImageNames[element])
-                                .foregroundColor(sessionManager.selectedNavElement == element ? Color(.white): Color("TXT1"))
+                                .foregroundColor(
+                                    element == 1 ? Color.white: Color.textGreenWhite)
                                 .offset(y: element == 1 ? -20: 0)
                         }
                     })
@@ -47,5 +49,6 @@ struct NavigationBar: View {
 struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBar()
+            .environmentObject(SessionManager())
     }
 }

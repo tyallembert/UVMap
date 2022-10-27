@@ -10,13 +10,12 @@ import Foundation
 class ClassManager: ObservableObject{
     @Published var allClasses: [SingleClass]
     @Published var studentsClasses: [SingleClass]
+    @Published var todaysClasses: [SingleClass]
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
-    @Published var submitClicked:Int?
     
     init(){
-        // in the future this will call the databaseManager.queryClasses() function
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
         allClasses = []
         //have this call a function that reads in students classes from local json file
@@ -24,6 +23,7 @@ class ClassManager: ObservableObject{
         //have settings button that says "recover schedule" or something
         studentsClasses = []
         searchResults = []
+        todaysClasses = []
         searchText = ""
     }
     
@@ -54,11 +54,43 @@ class ClassManager: ObservableObject{
 // ===========================
 // MARK: Schedule functions
 // ===========================
+    func getTodaysClasses(){
+        let date = Date()
+        let calendar = Calendar.current
+        let currentDay = calendar.component(.weekday, from: date)
+        let _ = print("Today is: \(currentDay)")
+        
+        var dayOfWeek: String = ""
+        switch currentDay{
+        case 1:
+            dayOfWeek = "m"
+        case 2:
+            dayOfWeek = "m"
+        case 3:
+            dayOfWeek = "t"
+        case 4:
+            dayOfWeek = "w"
+        case 5:
+            dayOfWeek = "r"
+        case 6:
+            dayOfWeek = "f"
+        case 7:
+            dayOfWeek = "m"
+        default:
+            dayOfWeek = ""
+        }
+        
+        for aClass in studentsClasses {
+            if (aClass.days.lowercased().contains(dayOfWeek)) && (!todaysClasses.contains{ $0 == aClass}) {
+                todaysClasses.append(aClass)
+            }
+        }
+        print(todaysClasses)
+    }
     //===Read from Json file===
     func retrieveClasssesLocally(fileName: String) -> [SingleClass]{
         let data: Data
         
-//        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
         guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
         else{
             print("Couldn't find \(fileName) in main bundle.")
@@ -77,7 +109,8 @@ class ClassManager: ObservableObject{
 //            return try decoder.decode(T.self, from: data)
             return try decoder.decode([SingleClass].self, from: data)
         } catch {
-            fatalError("Couldn't parse \(fileName):\n\(error)")
+            print("File is Empty: \(error)")
+            return []
         }
     }
     // Helper function to save locally
@@ -90,14 +123,19 @@ class ClassManager: ObservableObject{
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        let fileName = "userClasses.json"
-        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
+        let fileName = "student_classes"
+        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
+        else{
+            print("Couldn't find \(fileName) in main bundle.")
+            return
+        }
+//        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
         
         do {
             let data = try encoder.encode(studentsClasses)
             try data.write(to: filePath)
             print(String(data: data, encoding: .utf8)!)
-            studentsClasses = retrieveClasssesLocally(fileName: "userClasses.json")
+            studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
         } catch {
             fatalError("Cannot save to file:\n\(error)")
         }
