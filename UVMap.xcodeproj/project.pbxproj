@@ -13,6 +13,8 @@
 		0958ED3A2902EF39008BD4E6 /* LastNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED392902EF39008BD4E6 /* LastNameView.swift */; };
 		0958ED3C2902F481008BD4E6 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED3B2902F481008BD4E6 /* SignUpButton.swift */; };
 		09765CEB290ACBF00046B3E5 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEA290ACBF00046B3E5 /* EmailView.swift */; };
+		09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */; };
+		09765CEF290ACE8C0046B3E5 /* SignUpRetypePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
@@ -94,6 +96,8 @@
 		0958ED392902EF39008BD4E6 /* LastNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameView.swift; sourceTree = "<group>"; };
 		0958ED3B2902F481008BD4E6 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		09765CEA290ACBF00046B3E5 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
+		09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRetypePasswordView.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				0958ED392902EF39008BD4E6 /* LastNameView.swift */,
 				0958ED3B2902F481008BD4E6 /* SignUpButton.swift */,
 				09765CEA290ACBF00046B3E5 /* EmailView.swift */,
+				09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */,
+				09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */,
 			);
 			path = "SignUp View";
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
+				09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
 				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
 				09765CEB290ACBF00046B3E5 /* EmailView.swift in Sources */,
@@ -542,6 +549,7 @@
 				4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */,
 				4C36C84028E61F7F00207EC5 /* BottomWindowMinimized.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
+				09765CEF290ACE8C0046B3E5 /* SignUpRetypePasswordView.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
