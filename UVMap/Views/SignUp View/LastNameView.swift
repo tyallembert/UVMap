@@ -11,7 +11,7 @@ struct LastNameView: View {
     @EnvironmentObject var sessionsManager: SessionManager
     
     var body: some View {
-        Text("First Name")
+        Text("Last Name")
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
@@ -23,7 +23,6 @@ struct LastNameView: View {
             .shadow(color: .black, radius: 3, x: 1, y: 2)
             .autocapitalization(.none)
     }
-}
 }
 
 struct LastNameView_Previews: PreviewProvider {
