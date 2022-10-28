@@ -10,10 +10,16 @@ import SwiftUI
 struct ClassNameSchedule: View {
     
     var className: String = "CS 275"
+//    Lecture l1(name: "CS 275",
+//               time: "8:30am - 9:20am",
+//               professor: "Jason Hibbeler",
+//               building: "Cohen 120")
     
+        
+
     var body: some View {
         HStack {
-            Text(className)
+            Text(className) // replace this with l1.getName?
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
         }

@@ -51,7 +51,7 @@ struct BottomWindow: View {
         .backgroundBlur(radius: 25, opaque: true)
         .background(Color.bottomSheetBackground)
         .clipShape(RoundedRectangle(cornerRadius: 35))
-        .innerShadow(shape: RoundedRectangle(cornerRadius: 35), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 1)
+        .innerShadow(shape: RoundedRectangle(cornerRadius: 35), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.8)
         .overlay{
             // MARK: bottom sheet seperator
             Divider()
