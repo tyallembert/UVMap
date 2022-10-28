@@ -22,6 +22,10 @@ class ClassManager: ObservableObject{
         searchResults = []
         classesToBeAdded = []
         searchText = ""
+        
+        //date week init
+        fetchCurrentWeek()
+        
     }
     func filterClasses(){
         if searchText.isEmpty {
@@ -42,4 +46,45 @@ class ClassManager: ObservableObject{
             }
         }
     }
+    
+    // SCHEDULE STUFF:
+    // Data & Time implementation
+    
+    @Published var currentWeek: [Date] = []
+    
+    
+    func fetchCurrentWeek() {
+        
+        let today = Date()
+        let calendar = Calendar.current
+        let week = calendar.dateInterval(of: .weekOfMonth, for: today)
+        
+        guard let firstWeekDay = week?.start else {
+            return
+        }
+        
+        (1...7).forEach { day in
+            if let weekday = calendar.date(byAdding: .day, value: day, to: firstWeekDay){
+                currentWeek.append(weekday)
+            }
+        }
+        
+        
+    }
+    
+    // extracting date
+    func extractDate(date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
+    
+    //source: https://www.youtube.com/watch?v=nKHrsrmA4lM //
+    
+    
+    
+    
+    
+    
 }

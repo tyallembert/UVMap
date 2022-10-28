@@ -11,19 +11,47 @@
 import SwiftUI
 
 struct DaysTemplate: View {
+    @EnvironmentObject var classManager: ClassManager
+    
     var body: some View {
-        HStack {
-            MondayScheduleMenu()
-            TuesdayScheduleMenu()
-            WednesdayScheduleMenu()
-            ThursdayScheduleMenu()
-            FridayScheduleMenu()
-        }.frame(width: 300)
+        GeometryReader { geometry in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(classManager.currentWeek,id: \.self){day in
+                        
+                        VStack {
+                            // MAKE THESE ALL BUTTONS TO SEPARATE LIST FILES
+                            //"MondayChart" "TuesdayChart", ..........
+                            
+                            // they all will be styled the same exactly but will have different classes pulled from ClassManager
+                            Text(classManager.extractDate(date: day, format: "dd"))
+                            Text(classManager.extractDate(date: day, format: "EEE"))
+                        }
+                    }
+                    
+                    
+                    
+
+
+                }
+                .padding()
+                .frame(width: geometry.size.width/*, height: geometry.size.height*/)
+            }
+        }
+
+//        HStack {
+//            MondayScheduleMenu()
+//            TuesdayScheduleMenu()
+//            WednesdayScheduleMenu()
+//            ThursdayScheduleMenu()
+//            FridayScheduleMenu()
+//        }.frame(width: 300)
     }
 }
 
 struct DaysTemplate_Previews: PreviewProvider {
     static var previews: some View {
         DaysTemplate()
+            .environmentObject(ClassManager())
     }
 }

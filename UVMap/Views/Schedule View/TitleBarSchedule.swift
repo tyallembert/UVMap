@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitleBarSchedule: View {
     
-    var title = "Schedule"
+   @State var title = "Schedule"
     
     var body: some View {
         NavigationView {
