@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct StartButton: View {
+    @EnvironmentObject var mapManager: MapManager
+    
     func handleStartClicked() {
         print("clicked")
+        mapManager.buildRouting()
+        
     }
     var body: some View {
         Button (action: {handleStartClicked()}){

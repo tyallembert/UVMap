@@ -74,6 +74,34 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    func buildRouting() {
+        if let loc = locationManager.location {
+            let origin = loc
+            let end = getActiveBuilding()
+            let request = MKDirections.Request()
+            request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
+            request.destination = MKMapItem(placemark: MKPlacemark(coordinate: end.coordinate))
+            request.requestsAlternateRoutes = true
+            request.transportType = .walking
+            
+            let directions = MKDirections(request: request)
+            directions.calculate { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                
+                let route = unwrappedResponse.routes[0]
+                
+    
+                print(route.polyline)
+                mapView.addOverlay(route.polyline, level: .aboveRoads)
+                print(route.distance)
+                
+                    
+                    
+            }
+            
+        }
+    }
+    
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {
         self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cords.coordinate.latitude - LATITUDE_OFFSET, longitude: cords.coordinate.longitude), latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
@@ -150,3 +178,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
 }
+
+//extension MKMapView {
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+//        renderer.strokeColor = .red
+//        return renderer
+//    }
+//}
