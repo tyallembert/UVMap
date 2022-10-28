@@ -13,6 +13,7 @@
 		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
 		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
+		3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA51ED2902F24600E85CE0 /* settingsManager.swift */; };
 		4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85228F85F1F00710092 /* AddClassView.swift */; };
 		4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85428F8601200710092 /* ClassSearchBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
@@ -104,6 +105,7 @@
 		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
 		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
+		3FDA51ED2902F24600E85CE0 /* settingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsManager.swift; sourceTree = "<group>"; };
 		4C11E85228F85F1F00710092 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
 		4C11E85428F8601200710092 /* ClassSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				4CF841CC28EB2144001C7F24 /* MapManager.swift */,
 				4CABE58228F06C600087DD98 /* SearchBarManager.swift */,
 				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
+				3FDA51ED2902F24600E85CE0 /* settingsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
+				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,
 				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
 				4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */,
