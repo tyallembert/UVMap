@@ -16,20 +16,22 @@ import SwiftUI
 struct MondayScheduleChart: View {
     var body: some View {
         
-        ZStack{
-            List {
-                Text("8AM").frame(height: 70)
-                Text("9AM").frame(height: 70)
-                Text("10AM").frame(height: 70)
-                Text("11AM").frame(height: 70)
-                Text("12PM").frame(height: 70)
-                Text("1PM").frame(height: 70)
-                Text("2PM").frame(height: 70)
-                Text("3PM").frame(height: 70)
-                Text("4PM").frame(height: 70)
+        List {
+            ZStack {
+                VStack {
+                    Text("8AM").frame(height: 70)
+                    Text("9AM").frame(height: 70)
+                    Text("10AM").frame(height: 70)
+                    Text("11AM").frame(height: 70)
+                    Text("12PM").frame(height: 70)
+                    Text("1PM").frame(height: 70)
+                    Text("2PM").frame(height: 70)
+                    Text("3PM").frame(height: 70)
+                    Text("4PM").frame(height: 70)
+                }
+                ClassShell().offset(y: 50)
             }
-            ClassShell().offset(y: 50)
-        }.background(.white)
+        }
     }
 }
 
