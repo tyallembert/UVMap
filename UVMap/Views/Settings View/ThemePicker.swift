@@ -17,8 +17,7 @@ struct ThemePicker: View{
                 Text("System Default").tag(1)
                 Text("Dark Mode").tag(2)
                 Text("Light Mode").tag(3)
-            }.accentColor(.white).padding()
-        }.background(Color("AccentColor"))
+            }.accentColor(.white).padding().frame(width:200)        }.background(Color("AccentColor")).cornerRadius(25)
     }
 }
 
