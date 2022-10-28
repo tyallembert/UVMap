@@ -12,6 +12,9 @@ struct InnerBox: View {
     
     var body: some View {
         VStack{//inner box
+            if sessionManager.isError {
+                ErrorMessage()
+            }
             VStack(alignment: .leading) {
                 UsernameView()
             }

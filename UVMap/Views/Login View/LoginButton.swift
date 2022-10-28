@@ -13,17 +13,17 @@ struct LoginButton: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        Button (action: {sessionManager.signIn(database: databaseManager)}){
+        Button {sessionManager.signIn(database: databaseManager)} label:{
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 200)
+                .background(Color("AccentColor"))
+                .cornerRadius(10)
+                .shadow(color: .black, radius: 3, x: 2, y: 3)
         }
-        .foregroundColor(.white)
-        .padding()
-        .frame(width: 200)
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-        .cornerRadius(10)
-        .shadow(color: .black, radius: 3, x: 2, y: 3)
     }
 }
 

@@ -16,26 +16,25 @@ struct SearchResults: View {
                 .padding()
                 .environmentObject(classManager)
             ScrollView {
-                ForEach(classManager.searchResults, id: \.self.CRN) { course in
-                    OneSearchResult()
-                        .environmentObject(course)
-                        .environmentObject(classManager)
-                    Divider()
+                LazyVStack {
+                    ForEach(classManager.searchResults, id: \.self.CRN) { course in
+                        OneSearchResult()
+                            .environmentObject(course)
+                            .environmentObject(classManager)
+                        Divider()
+                    }
                 }
             }
             .frame(height: searchActive ? 250: 0)
-                .cornerRadius(10)
-                .backgroundBlur(radius: 15, opaque: true)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .background{
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
-                        .shadow(radius: 3)
-                }
-                .offset(y: -5)
-                .onAppear{
-                    classManager.filterClasses()
-                }
+            .backgroundBlur(radius: 15, opaque: true)
+            .background(Color.white.opacity(0.4))
+            .innerShadow(shape: RoundedRectangle(cornerRadius: 10), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.7)
+            .cornerRadius(10)
+            .offset(y: -5)
+            .shadow(color: .black.opacity(0.3),radius: 7)
+            .onAppear{
+                classManager.filterClasses()
+            }
         }
         .padding()
     }

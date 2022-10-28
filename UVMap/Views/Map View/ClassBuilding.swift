@@ -15,6 +15,7 @@ struct ClassBuilding: View {
             .font(.title)
             .fontWeight(.heavy)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+            .shadow(color: .white, radius: 0.5)
     }
 }
 

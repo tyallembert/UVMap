@@ -11,20 +11,30 @@ struct AddClassView: View {
     @StateObject var classManager: ClassManager = ClassManager()
     
     var body: some View {
-        ZStack {
+        VStack {
             VStack(spacing: 0) {
                 SearchResults()
                     .environmentObject(classManager)
                 ClassesToBeAdded()
                     .environmentObject(classManager)
+                AddClassSubmit()
+                    .environmentObject(classManager)
+                    .padding(.bottom, 100)
                 
             }
-                .frame(maxHeight: .infinity, alignment: .top)
-            VStack {
-                Spacer()
-                AddClassSubmit()
-                    .padding(.bottom, 100)
-            }
+            .frame(maxHeight: .infinity, alignment: .top)
+//            VStack {
+////                Spacer()
+//                AddClassSubmit()
+//                    .environmentObject(classManager)
+//                    .padding(.bottom, 100)
+//            }
+        }
+        .background(Color.backgroundGradient)
+        .onAppear{
+            classManager.studentsClasses = classManager.retrieveClasssesLocally(fileName: "student_classes")
+            classManager.allClasses = classManager.retrieveClasssesLocally(fileName: "all_classes")
+            classManager.getTodaysClasses()
         }
     }
 }

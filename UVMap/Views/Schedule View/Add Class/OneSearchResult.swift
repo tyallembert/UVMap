@@ -12,12 +12,12 @@ struct OneSearchResult: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {
         HStack {
-            Text(singleClass.course)
+            Text("\(singleClass.subject) \(singleClass.number)")
                 .font(.system(size: 20, weight: .semibold))
             Spacer()
             Text(singleClass.days)
             Text("\(singleClass.startTime)-\(singleClass.endTime)")
-            if classManager.classesToBeAdded.contains(where: {$0.CRN == singleClass.CRN}) {
+            if classManager.studentsClasses.contains(where: {$0.CRN == singleClass.CRN}) {
                 Button{
                     classManager.removeClass(course: singleClass)
                 }label: {
