@@ -19,4 +19,8 @@ class SessionManager: ObservableObject{
     func signIn(database: DatabaseManager){
         database.signIn(netID: username, password: password)
     }
+    
+    func signUp(database: DatabaseManager) {
+       // database.signUp()
+    }
 }

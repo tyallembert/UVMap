@@ -13,7 +13,7 @@ struct SignUpInnerBoxes: View {
     var body: some View {
         VStack {
             Group {
-                FirstNameView()
+                    FirstNameView()
                 Spacer()
                     .frame(height: 20)
                 LastNameView()

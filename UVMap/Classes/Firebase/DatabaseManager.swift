@@ -38,6 +38,12 @@ class DatabaseManager: ObservableObject{
         }
     }
     
+    func signUp(firstName: String, lastName: String, email: String, password: String) {
+        ////////////////////////////////////
+        // TODO: Tate will implement this //
+        ////////////////////////////////////
+    }
+    
     // --------------------------------
     //      ===Building Functions===
     // --------------------------------

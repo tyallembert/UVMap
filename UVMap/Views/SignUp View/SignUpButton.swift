@@ -12,7 +12,7 @@ struct SignUpButton: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        Button (action: {sessionManager.signIn(database: databaseManager)} ) {
+        Button (action: { sessionManager.signIn(database: databaseManager) } ) {
             Text("Sign Up")
                 .font(.title2)
                 .fontWeight(.heavy)
