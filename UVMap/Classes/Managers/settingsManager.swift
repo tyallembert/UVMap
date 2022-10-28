@@ -8,7 +8,9 @@
 import Foundation
 
 class SettingsManager: ObservableObject{
-    //@Published var theme: State
+    @Published var theme: Int
+    @Published var prioritizeSchedule: Bool
+    @Published var howEarly: Int
     
     init(){
         

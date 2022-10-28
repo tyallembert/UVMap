@@ -38,13 +38,13 @@ struct SettingsView: View {
                     
                 }.padding()
             }
-        }
+        }.background(Color.backgroundLighter)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            //.environment(\.colorScheme, .dark)
+            .environment(\.colorScheme, .dark)
     }
 }

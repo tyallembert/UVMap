@@ -26,7 +26,8 @@ struct HowEarlyDropDown: View {
                 Text("30").tag(30)
             }
         }.padding()
-            .background(.white)
+            .background(Color.backgroundLighter)
+            .accentColor(Color.textGreenWhite)
             .frame(width:150, height: 50)
             
     }
@@ -34,6 +35,6 @@ struct HowEarlyDropDown: View {
 
 struct HowEarlyDropDown_Previews: PreviewProvider {
     static var previews: some View {
-        HowEarlyDropDown()
+        HowEarlyDropDown().environment(\.colorScheme, .dark)
     }
 }

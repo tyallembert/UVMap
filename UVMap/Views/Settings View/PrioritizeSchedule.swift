@@ -20,18 +20,18 @@ struct PrioritizeSchedule: View {
                     ZStack{
                         Circle()
                             .frame(width:40, height:40)
-                            .foregroundColor(.white)
+                            .foregroundColor(.backgroundLighter)
                             .shadow(color: .black.opacity(0.50), radius: 4, x: 0, y: 0)
                             .offset(x: prioritizeYes ? -25: 25)
                         //image in the circle
                         //Need to switch to text instead of image
                         Text("Yes")
-                            .foregroundColor(prioritizeYes ? Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255): .white)
+                            .foregroundColor(prioritizeYes ? Color.textGreenWhite: .white)
                             .offset(x: -25)
                         // image outside of the circle
                         //Need to switch to text instead of image
                         Text("No")
-                            .foregroundColor(prioritizeYes ? .white: Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                            .foregroundColor(prioritizeYes ? .white: Color.textGreenWhite)
                             .offset(x: 25)
                     }
                 }
@@ -47,5 +47,6 @@ struct PrioritizeSchedule: View {
 struct PrioritizeSchedule_Previews: PreviewProvider {
     static var previews: some View {
         PrioritizeSchedule()
+            //.environment(\.colorScheme, .dark)
     }
 }
