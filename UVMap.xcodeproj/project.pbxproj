@@ -38,6 +38,7 @@
 		4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83B28E5E46100207EC5 /* StartButton.swift */; };
 		4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83D28E5E65300207EC5 /* TripInformation.swift */; };
 		4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C84228E74E1F00207EC5 /* SessionManager.swift */; };
+		4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C434D73290C25FD005BB4F6 /* TopSchedule.swift */; };
 		4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A229082B2700C5DE09 /* all_classes.json */; };
 		4C47B7A52909863F00C5DE09 /* student_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A42909863F00C5DE09 /* student_classes.json */; };
 		4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B68C528F711CD00532DD2 /* BottomSheet.swift */; };
@@ -134,6 +135,7 @@
 		4C36C83B28E5E46100207EC5 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
 		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4C434D73290C25FD005BB4F6 /* TopSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSchedule.swift; sourceTree = "<group>"; };
 		4C47B7A229082B2700C5DE09 /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
 		4C47B7A42909863F00C5DE09 /* student_classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = student_classes.json; sourceTree = "<group>"; };
 		4C5B68C528F711CD00532DD2 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
+				4C434D73290C25FD005BB4F6 /* TopSchedule.swift */,
 				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
 				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
 				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
@@ -628,6 +631,7 @@
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
+				4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,

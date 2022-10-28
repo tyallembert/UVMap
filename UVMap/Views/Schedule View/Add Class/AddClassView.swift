@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddClassView: View {
-    @StateObject var classManager: ClassManager = ClassManager()
+    @EnvironmentObject var classManager: ClassManager
     
     var body: some View {
         VStack {
