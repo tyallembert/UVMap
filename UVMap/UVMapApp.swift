@@ -25,7 +25,7 @@ struct UVMapApp: App {
             ContentView()
                 .environmentObject(sessionManager)
                 .environmentObject(databaseManager)
-                .environmentObject(settingsManager)
+                //.environmentObject(settingsManager)
         }
     }
 }

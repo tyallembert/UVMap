@@ -8,7 +8,7 @@
 import Foundation
 
 class SettingsManager: ObservableObject{
-    @Published var theme: State
+    //@Published var theme: State
     
     init(){
         
