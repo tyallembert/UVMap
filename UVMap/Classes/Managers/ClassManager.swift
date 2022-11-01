@@ -81,6 +81,10 @@ class ClassManager: ObservableObject{
         }
         
         for aClass in studentsClasses {
+            print("------------------")
+            print("checking a class")
+            print("days: \(aClass.days.lowercased())")
+            print("days: \(dayOfWeek)")
             if (aClass.days.lowercased().contains(dayOfWeek)) && (!todaysClasses.contains{ $0 == aClass}) {
                 todaysClasses.append(aClass)
             }

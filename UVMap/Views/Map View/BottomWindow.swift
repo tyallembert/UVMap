@@ -16,6 +16,7 @@ struct BottomWindow: View {
                 switch bottomSheetPosition{
                     // MARK: view for when the bottom sheet is pulled up
                     case .top, .middle:
+                        TopSchedule()
                         HStack {
                             VStack(alignment: .leading) {
                                 HStack {
