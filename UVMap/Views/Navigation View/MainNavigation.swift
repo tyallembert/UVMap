@@ -18,8 +18,8 @@ struct MainNavigation: View {
             case 1:
                 MainMapView()
             case 2:
-                //                SettingsView()
-                AddClassView()
+                SettingsView()
+                //AddClassView()
             case 3:
                 AddClassView()
             default:

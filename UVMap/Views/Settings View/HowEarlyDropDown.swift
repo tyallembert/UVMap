@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HowEarlyDropDown: View {
+    @EnvironmentObject var settingsManager: SettingsManager
     
-    @State var howEarly = 10
+    @Binding var howEarly: Int
     
     var body: some View {
         VStack {
@@ -35,6 +36,6 @@ struct HowEarlyDropDown: View {
 
 struct HowEarlyDropDown_Previews: PreviewProvider {
     static var previews: some View {
-        HowEarlyDropDown().environment(\.colorScheme, .dark)
+        HowEarlyDropDown(howEarly: .constant(10))//.environment(\.colorScheme, .dark)
     }
 }

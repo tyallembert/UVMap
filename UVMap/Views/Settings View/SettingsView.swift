@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var databaseManager: DatabaseManager
+    @StateObject var settingsManager: SettingsManager = SettingsManager()
     var body: some View {
         ZStack{
             VStack{
@@ -23,28 +23,34 @@ struct SettingsView: View {
                             .font(.title3)
                         
                         ArriveShell()
+                            .environmentObject(settingsManager)
                     }
                     VStack(alignment: .leading, spacing: 10){
                         Text("Prioritize Schedule?")
                             .font(.title3)
                         PrioritizeSchedule()
+                            .environmentObject(settingsManager)
                     }
                     VStack(alignment: .leading, spacing: 10){
                         Text("Theme")
                             .font(.title3)
                         ThemePicker()
+                            .environmentObject(settingsManager)
                     }
                     Spacer()
                     
                 }.padding()
             }
-        }.background(Color.backgroundLighter)
+        }
+        .background(Color.backgroundLighter)
+        .onAppear{settingsManager.settings = settingsManager.retrieveClasssesLocally(fileName:"settings")
+        }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environment(\.colorScheme, .dark)
+            //.environment(\.colorScheme, .dark)
     }
 }

@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SettingsManager: ObservableObject{
-    @Published var theme: Int
-    @Published var prioritizeSchedule: Bool
-    @Published var howEarly: Int
+    struct Settings: Codable {
+        var settingsTheme: String
+        var prioritizeSchedule: Bool
+        var howEarly: Int
+    }
+    @Published var settings: [Settings]
+    @Environment(\.colorScheme) var deviceTheme: ColorScheme
     
     //===Read from Json file===
-    func retrieveClasssesLocally(fileName: String) -> [SingleClass]{
+    func retrieveClasssesLocally(fileName: String) -> [Settings]{
         let data: Data
         
         guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
@@ -32,7 +37,7 @@ class SettingsManager: ObservableObject{
         do {
             let decoder = JSONDecoder()
 //            return try decoder.decode(T.self, from: data)
-            return try decoder.decode([SingleClass].self, from: data)
+            return try decoder.decode([Settings].self, from: data)
         } catch {
             print("File is Empty: \(error)")
             return []
@@ -40,6 +45,6 @@ class SettingsManager: ObservableObject{
     }
     
     init(){
-        
+        settings = []
     }
 }
