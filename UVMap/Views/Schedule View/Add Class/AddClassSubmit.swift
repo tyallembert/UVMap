@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AddClassSubmit: View {
+    @EnvironmentObject var classManager: ClassManager
+    @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
         Button {
-            
+            classManager.saveClassesLocally()
+            sessionManager.selectedNavElement = 0
         }label: {
-            Text("Add Classes")
+            Text("Update Schedule")
                 .font(.title2)
                 .fontWeight(.heavy)
         }

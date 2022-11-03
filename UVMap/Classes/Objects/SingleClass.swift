@@ -8,38 +8,63 @@
 import Foundation
 import SwiftUI
 
-class SingleClass: ObservableObject {
-    var CRN: String
-    var building: String
-    var course: String
+class SingleClass: Codable, Identifiable, ObservableObject {
+    enum CodingKeys: CodingKey {
+        case CRN
+        case subject
+        case number
+        case section
+        case title
+        case building
+        case room
+        case days
+        case startTime
+        case endTime
+        case instructor
+        case email
+    }
+    
+    var id: UUID = UUID()
+    var CRN: Int
+    var subject: String
+    var number: String
+    var section: String
     var title: String
+    var building: String
+    var room: String
     var days: String
     var startTime: String
     var endTime: String
-    var room: String
-    var section: String
+    var instructor: String
+    var email: String
     
     init(
-        CRN: String,
-        building: String,
-        course: String,
+        CRN: Int,
+        subject: String,
+        number: String,
+        section: String,
         title: String,
+        building: String,
+        room: String,
         days: String,
         startTime: String,
         endTime: String,
-        room: String,
-        section: String
-      ) {
-          self.CRN = CRN
-          self.building = building
-          self.course = course
-          self.title = title
-          self.days = days
-          self.startTime = startTime
-          self.endTime = endTime
-          self.room = room
-          self.section = section
-      }
+        instructor: String,
+        email: String
+    ) {
+        self.CRN = CRN
+        self.subject = subject
+        self.number = number
+        self.section = section
+        self.title = title
+        self.building = building
+        self.room = room
+        self.days = days
+        self.startTime = startTime
+        self.endTime = endTime
+        self.instructor = instructor
+        self.email = email
+    }
     static func ==(lhs: SingleClass, rhs: SingleClass) -> Bool {
         return lhs.CRN == rhs.CRN
     }

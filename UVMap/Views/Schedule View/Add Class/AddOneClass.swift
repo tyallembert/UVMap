@@ -13,7 +13,7 @@ struct AddOneClass: View {
     var body: some View {
         HStack{
             VStack(alignment: .leading) {
-                Text("\(singleClass.course)-\(singleClass.section)")
+                Text("\(singleClass.subject) \(singleClass.number)-\(singleClass.section)")
                     .font(.system(size: 25, weight: .bold))
                 Text("\(singleClass.building)")
                     .font(.system(size: 20, weight: .semibold))
@@ -37,7 +37,7 @@ struct AddOneClass: View {
         .frame(maxWidth: 350)
         .background{
             RoundedRectangle(cornerRadius: 10)
-                .fill(.white)
+                .fill(Color.backgroundLighter)
                 .shadow(color: Color.black, radius: 3, x: 2, y: 3)
         }
     }
@@ -47,5 +47,6 @@ struct AddOneClass_Previews: PreviewProvider {
     static var previews: some View {
         AddOneClass()
             .environmentObject(ClassManager())
+            .environmentObject(SingleClass(CRN: 762345, subject: "Example", number: "201", section: "A", title: "Example Class", building: "Building", room: "120", days: "M/W/F", startTime: "10:30", endTime: "12:30", instructor: "Jason Hibbeler", email: "Example"))
     }
 }

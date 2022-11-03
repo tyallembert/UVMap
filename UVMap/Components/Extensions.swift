@@ -8,12 +8,18 @@
 import SwiftUI
 
 extension Color {
-    static let background = LinearGradient(gradient: Gradient(colors: [Color("Background 1"), Color("Background 2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-    static let bottomSheetBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.26), Color("Background 2").opacity(0.26)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-    static let navBarBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.1), Color("Background 2").opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    static let backgroundGradient = LinearGradient(gradient: Gradient(colors: [Color("BG1"), Color("BG2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    static let backgroundLighter = Color("BG1")
+    static let backgroundDarker = Color("BG2")
+    static let textBlackWhite = Color("TXT1")
+    static let textGreenWhite = Color("TXT2")
+    static let innerShadow = LinearGradient(gradient: Gradient(stops: [.init(color: .white, location: 0), .init(color: .clear, location: 0.2)]), startPoint: .top, endPoint: .bottom)
+    
+   
+    static let bottomSheetBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.26), Color("BG2").opacity(0.26)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    static let navBarBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.1), Color("BG2").opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
     static let tabBarBackground = LinearGradient(gradient: Gradient(colors: [Color("Tab Bar Background 1").opacity(0.26), Color("Tab Bar Background 2").opacity(0.26)]), startPoint: .top, endPoint: .bottom)
     static let weatherWidgetBackground = LinearGradient(gradient: Gradient(colors: [Color("Weather Widget Background 1"), Color("Weather Widget Background 2")]), startPoint: .leading, endPoint: .trailing)
-    static let bottomSheetBorderMiddle = LinearGradient(gradient: Gradient(stops: [.init(color: .white, location: 0), .init(color: .clear, location: 0.2)]), startPoint: .top, endPoint: .bottom)
     static let bottomSheetBorderTop = LinearGradient(gradient: Gradient(colors: [.white.opacity(0), .white.opacity(0.5), .white.opacity(0)]), startPoint: .leading, endPoint: .trailing)
     static let underline = LinearGradient(gradient: Gradient(colors: [.white.opacity(0), .white, .white.opacity(0)]), startPoint: .leading, endPoint: .trailing)
     static let tabBarBorder = Color("Tab Bar Border").opacity(0.5)
@@ -50,4 +56,21 @@ extension View {
             UIApplication.shared.sendAction(
                 #selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
+}
+
+extension View {
+    func roundedTextField(inFocus: Bool) -> some View {
+        self
+            .foregroundColor(Color.black)
+            .padding(7)
+            .background (
+                RoundedRectangle(cornerRadius: 20)
+                    .strokeBorder(inFocus ? Color("AccentColor"): Color.clear, lineWidth: 2)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: Color.black, radius: 3, x: 1, y: 2)
+                    .scaleEffect(x: inFocus ? 1.08: 1)
+            )
+            .autocapitalization(.none)
+    }
 }

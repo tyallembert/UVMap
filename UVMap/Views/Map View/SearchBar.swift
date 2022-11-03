@@ -19,7 +19,7 @@ struct SearchBar: View {
             .padding(7)
             .backgroundBlur(radius: 25, opaque: true)
             .background(Color.white.opacity(0.4))
-            .innerShadow(shape: RoundedRectangle(cornerRadius: 100), color: Color.bottomSheetBorderMiddle, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 0.7)
+            .innerShadow(shape: RoundedRectangle(cornerRadius: 100), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 0.7)
             .cornerRadius(100)
             .shadow(radius: 5)
         }

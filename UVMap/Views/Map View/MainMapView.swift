@@ -8,7 +8,7 @@ import SwiftUI
 import BottomSheet
 
 enum BottomSheetPosition: CGFloat, CaseIterable {
-    case top = 0.83 //702/844
+    case top = 0.75 //633/844
     case middle = 0.385 //325/844
     case bottom = 0.230 //325/844
 }
