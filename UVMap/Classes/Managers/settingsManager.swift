@@ -10,7 +10,7 @@ import SwiftUI
 
 class SettingsManager: ObservableObject{
     struct Settings: Codable {
-        var settingsTheme: String
+        var settingsTheme: Int
         var prioritizeSchedule: Bool
         var howEarly: Int
     }

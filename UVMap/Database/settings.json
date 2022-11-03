@@ -1,6 +1,6 @@
 [
     {
-        "theme": .light
+        "theme": 2
         "prioritize": true
         "howEarly": 10
     }

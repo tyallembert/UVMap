@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct ThemePicker: View{
-    @State var theme = 1
+    @EnvironmentObject var settingsManager:
+    SettingsManager
+    @Binding var theme: Int
     
     var body: some View {
         VStack {
@@ -17,12 +19,18 @@ struct ThemePicker: View{
                 Text("System Default").tag(1)
                 Text("Dark Mode").tag(2)
                 Text("Light Mode").tag(3)
-            }.accentColor(.white).padding().frame(width:200)        }.background(Color("AccentColor")).cornerRadius(25)
+            }
+            .accentColor(.white)
+            .padding()
+            .frame(width:200)
+        }
+        .background(Color("AccentColor"))
+        .cornerRadius(25)
     }
 }
 
 struct ThemePicker_Previews: PreviewProvider {
     static var previews: some View {
-        ThemePicker()
+        ThemePicker(theme: .constant(2))
     }
 }

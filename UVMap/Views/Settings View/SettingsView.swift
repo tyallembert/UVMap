@@ -34,7 +34,7 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 10){
                         Text("Theme")
                             .font(.title3)
-                        ThemePicker()
+                        ThemePicker(theme: $settingsManager.settings[0].settingsTheme)
                             .environmentObject(settingsManager)
                     }
                     Spacer()

@@ -10,14 +10,14 @@ import SwiftUI
 
 struct ArriveShell: View {
     @EnvironmentObject var settingsManager: SettingsManager
-    @State var howEarly: Int = settingsManager.settings[2]
+    //@State var howEarly: Int = settingsManager.settings[0].howEarly
     var body: some View {
         HStack(spacing: 0){
             //arrive text
             Text("Arrive")
                 .foregroundColor(.white)
                 .font(.body)
-            HowEarlyDropDown(howEarly: .constant(howEarly))
+            HowEarlyDropDown(howEarly: $settingsManager.settings[0].howEarly)
                 .environmentObject(settingsManager)
             Text("min before class")
                 .foregroundColor(.white)
