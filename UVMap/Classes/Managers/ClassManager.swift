@@ -175,13 +175,16 @@ class ClassManager: ObservableObject{
         
     }
     
-    func fetchCurrentDay() -> Int {
-        let today = Date()
-        let calendar = Calendar.current
+    func fetchCurrentDay() -> String {
+        //let today = Date()
+        //let calendar = Calendar.current
 //        let day = calendar.dateInterval(of: .day, for: today)
         //let day = calendar.date(from: today)
-        
-        return calendar.component(.day, from: today)
+        let f = DateFormatter()
+
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
+        // from https://stackoverflow.com/questions/41068860/get-weekday-from-date-swift-3
+        // return calendar.component(.day, from: today)
     }
     
     // extracting date

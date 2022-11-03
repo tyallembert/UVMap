@@ -30,14 +30,17 @@ struct DaysTemplate: View {
                             //______________________
                             
                             
+                            
+                            // IMPLEMENT SWITCH STATEMENT HERE
+                            
                             Button {
                                 MondayScheduleChart()
                             } label: {
-                                Text("\(classManager.fetchCurrentDay())")
+                                Text(classManager.fetchCurrentDay())
                             }
-                                //                                    Text(classManager.extractDate(date: day, format: "EEE"))
-//                                Text(classManager.fetchCurrentDay())
-
+                            //                                    Text(classManager.extractDate(date: day, format: "EEE"))
+                            //                                Text(classManager.fetchCurrentDay())
+                            
                         }
                     }
                     
@@ -46,11 +49,11 @@ struct DaysTemplate: View {
                     //_____________________
                 }
             }
-        
-        .padding()
-        .frame(width: geometry.size.width, height: 100)
+            
+            .padding()
+            .frame(width: geometry.size.width, height: 100)
+        }
     }
-}
 }
 //        HStack {
 //            MondayScheduleMenu()
