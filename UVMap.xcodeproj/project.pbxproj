@@ -71,7 +71,7 @@
 		4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CC28EB2144001C7F24 /* MapManager.swift */; };
 		4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */; };
 		500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A128EA06870085A130 /* DaysTemplate.swift */; };
-		500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* ScheduleChart.swift */; };
+		500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */; };
 		500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */; };
 		500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */; };
 		500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A928EA0E8B0085A130 /* ClassShell.swift */; };
@@ -168,7 +168,7 @@
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationButton.swift; sourceTree = "<group>"; };
 		500DC3A128EA06870085A130 /* DaysTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTemplate.swift; sourceTree = "<group>"; };
-		500DC3A328EA07D40085A130 /* ScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleChart.swift; sourceTree = "<group>"; };
+		500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayScheduleChart.swift; sourceTree = "<group>"; };
 		500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameSchedule.swift; sourceTree = "<group>"; };
 		500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimeSchedule.swift; sourceTree = "<group>"; };
 		500DC3A928EA0E8B0085A130 /* ClassShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShell.swift; sourceTree = "<group>"; };
@@ -352,7 +352,7 @@
 				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
-				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
+				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
@@ -589,7 +589,7 @@
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
-				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
+				500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
@@ -798,7 +798,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = XLHN8GCUVW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -812,7 +812,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = hey.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -830,7 +830,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = XLHN8GCUVW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -844,7 +844,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = hey.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

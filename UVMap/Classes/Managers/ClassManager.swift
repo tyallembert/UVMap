@@ -25,6 +25,11 @@ class ClassManager: ObservableObject{
         searchResults = []
         todaysClasses = []
         searchText = ""
+        
+        //date week init
+        fetchCurrentWeek()
+//        fetchCurrentDay()
+        
     }
     
 // ===========================
@@ -144,4 +149,57 @@ class ClassManager: ObservableObject{
     func saveClassesToFirebase(){
         
     }
+    
+    // SCHEDULE STUFF:
+    // Data & Time implementation
+    
+    @Published var currentWeek: [Date] = []
+//    @Published var day: DateInterval
+    
+    func fetchCurrentWeek() {
+        
+        let today = Date()
+        let calendar = Calendar.current
+        let week = calendar.dateInterval(of: .weekOfMonth, for: today)
+        
+        guard let firstWeekDay = week?.start else {
+            return
+        }
+        
+        (1...7).forEach { day in
+            if let weekday = calendar.date(byAdding: .day, value: day, to: firstWeekDay){
+                currentWeek.append(weekday)
+            }
+        }
+        
+        
+    }
+    
+    func fetchCurrentDay() -> String {
+        //let today = Date()
+        //let calendar = Calendar.current
+//        let day = calendar.dateInterval(of: .day, for: today)
+        //let day = calendar.date(from: today)
+        let f = DateFormatter()
+
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
+        // from https://stackoverflow.com/questions/41068860/get-weekday-from-date-swift-3
+        // return calendar.component(.day, from: today)
+    }
+    
+    // extracting date
+    func extractDate(date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
+    
+    //source: https://www.youtube.com/watch?v=nKHrsrmA4lM //
+    
+    
+    
+    
+    
+    
 }
