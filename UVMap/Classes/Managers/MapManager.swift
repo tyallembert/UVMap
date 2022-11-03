@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
     //========================================================
     //                      constants
@@ -74,6 +74,13 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.fillColor = UIColor.red.withAlphaComponent(0.5)
+            renderer.strokeColor = UIColor.red.withAlphaComponent(0.8)
+            return renderer
+    }
+    
     func buildRouting() {
         if let loc = locationManager.location {
             let origin = loc
@@ -81,7 +88,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             let request = MKDirections.Request()
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
             request.destination = MKMapItem(placemark: MKPlacemark(coordinate: end.coordinate))
-            request.requestsAlternateRoutes = true
+            request.requestsAlternateRoutes = false
             request.transportType = .walking
             
             let directions = MKDirections(request: request)
@@ -90,13 +97,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 
                 let route = unwrappedResponse.routes[0]
                 
-    
                 print(route.polyline)
                 mapView.addOverlay(route.polyline, level: .aboveRoads)
+                mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
                 print(route.distance)
                 
-                    
-                    
             }
             
         }
@@ -105,13 +110,14 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {
         self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cords.coordinate.latitude - LATITUDE_OFFSET, longitude: cords.coordinate.longitude), latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+//        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
     // Runs Map View init items
     func mapViewConfig() {
         // INSTRUCTIONS FOR MAP
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+        mapView.delegate = self
     }
     
     // Runs location manager init items
@@ -130,6 +136,10 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func setRegionHalfScreen() {
         
+    }
+    
+    func getMapView() -> MKMapView {
+        return self.mapView
     }
 
     
@@ -178,11 +188,3 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
 }
-
-//extension MKMapView {
-//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
-//        renderer.strokeColor = .red
-//        return renderer
-//    }
-//}

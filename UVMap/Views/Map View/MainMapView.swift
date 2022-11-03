@@ -23,7 +23,6 @@ struct MainMapView: View {
 //            Image("Login")
 //                .resizable()
 //                .ignoresSafeArea()
-            TheMap()
                 .environmentObject(mapManager)
             VStack(alignment: .leading) {
                 SearchBar()
