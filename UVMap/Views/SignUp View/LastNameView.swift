@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LastNameView: View {
-    @EnvironmentObject var sessionsManager: SessionManager
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         Text("Last Name")
@@ -27,6 +27,6 @@ struct LastNameView: View {
 
 struct LastNameView_Previews: PreviewProvider {
     static var previews: some View {
-        LastNameView(lastName: $lastName)
+        LastNameView().environmentObject(SessionManager())
     }
 }

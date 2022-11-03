@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpRetypePasswordView: View {
-    @EnvironmentObject var sessionsManager: SessionManager
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         Text("Re-enter Password")
@@ -27,6 +27,6 @@ struct SignUpRetypePasswordView: View {
 
 struct SignUpRetypePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpRetypePasswordView(signUpRetpyePassword: $signUpRetypePassword)
+        SignUpRetypePasswordView().environmentObject(SessionManager())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpPasswordView: View {
-    @EnvironmentObject var sessionsManager: SessionManager
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         Text("Password")
@@ -27,6 +27,6 @@ struct SignUpPasswordView: View {
 
 struct SignUpPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpPasswordView(signUpPassword: $signUpPassword)
+        SignUpPasswordView().environmentObject(SessionManager())
     }
 }

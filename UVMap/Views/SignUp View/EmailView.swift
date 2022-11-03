@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EmailView: View {
-    @EnvironmentObject var sessionsManager: SessionManager
+    @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
         Text("UVM Email")
