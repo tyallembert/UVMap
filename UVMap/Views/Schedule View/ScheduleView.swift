@@ -17,7 +17,6 @@ struct ScheduleView: View {
     var body: some View {
         VStack {
             TitleBarSchedule().border(.red)
-            Spacer()
             DaysTemplate()
             MondayScheduleChart()
             

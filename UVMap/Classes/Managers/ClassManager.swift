@@ -25,6 +25,7 @@ class ClassManager: ObservableObject{
         
         //date week init
         fetchCurrentWeek()
+//        fetchCurrentDay()
         
     }
     func filterClasses(){
@@ -51,7 +52,7 @@ class ClassManager: ObservableObject{
     // Data & Time implementation
     
     @Published var currentWeek: [Date] = []
-    
+//    @Published var day: DateInterval
     
     func fetchCurrentWeek() {
         
@@ -70,6 +71,15 @@ class ClassManager: ObservableObject{
         }
         
         
+    }
+    
+    func fetchCurrentDay() -> Int {
+        let today = Date()
+        let calendar = Calendar.current
+//        let day = calendar.dateInterval(of: .day, for: today)
+        //let day = calendar.date(from: today)
+        
+        return calendar.component(.day, from: today)
     }
     
     // extracting date

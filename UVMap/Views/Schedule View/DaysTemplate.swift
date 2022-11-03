@@ -25,20 +25,33 @@ struct DaysTemplate: View {
                             
                             // they all will be styled the same exactly but will have different classes pulled from ClassManager
                             Text(classManager.extractDate(date: day, format: "dd"))
-                            Text(classManager.extractDate(date: day, format: "EEE"))
+                            //                            Text(classManager.extractDate(date: day, format: "EEE"))
+                            
+                            //______________________
+                            
+                            
+                            Button {
+                                MondayScheduleChart()
+                            } label: {
+                                Text("\(classManager.fetchCurrentDay())")
+                            }
+                                //                                    Text(classManager.extractDate(date: day, format: "EEE"))
+//                                Text(classManager.fetchCurrentDay())
+
                         }
                     }
                     
                     
                     
-
-
+                    //_____________________
                 }
-                .padding()
-                .frame(width: geometry.size.width/*, height: geometry.size.height*/)
             }
-        }
-
+        
+        .padding()
+        .frame(width: geometry.size.width, height: 100)
+    }
+}
+}
 //        HStack {
 //            MondayScheduleMenu()
 //            TuesdayScheduleMenu()
@@ -46,8 +59,6 @@ struct DaysTemplate: View {
 //            ThursdayScheduleMenu()
 //            FridayScheduleMenu()
 //        }.frame(width: 300)
-    }
-}
 
 struct DaysTemplate_Previews: PreviewProvider {
     static var previews: some View {

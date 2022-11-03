@@ -14,8 +14,9 @@ struct TitleBarSchedule: View {
     var body: some View {
         NavigationView {
             VStack{
+                Spacer()
                 HStack{
-                    Text("Schedule")
+                    Text("Schedule").frame(height: 40)
                         .foregroundColor(.white)
                         .font(.largeTitle)
                         .padding()
@@ -28,8 +29,10 @@ struct TitleBarSchedule: View {
                     }
                     
                 }
-            }.padding(30)
+    
+            }.padding(20)
                 .foregroundColor(.white)
+                .frame(height: 100)
                 .font(.largeTitle)
                 .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
             
