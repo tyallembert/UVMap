@@ -75,13 +75,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         }
     }
     
-//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//            let renderer = MKPolylineRenderer(overlay: overlay)
-//            renderer.fillColor = UIColor.red.withAlphaComponent(0.5)
-//            renderer.strokeColor = UIColor.red.withAlphaComponent(0.8)
-//            return renderer
-//    }
-    
     func buildRoutes() {
         if let loc = locationManager.location {
             let origin = loc
@@ -95,14 +88,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             let directions = MKDirections(request: request)
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
-                
                 routes = unwrappedResponse.routes
-                
-//                    print(route.polyline)
-//                    mapView.addOverlay(route.polyline, level: .aboveRoads)
-//                    mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-//                    print(route.distance)
-                    
                 }
         }
         
@@ -111,7 +97,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {
         self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cords.coordinate.latitude - LATITUDE_OFFSET, longitude: cords.coordinate.longitude), latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-//        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
     // Runs Map View init items
@@ -129,9 +114,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
-    
-
-    
+        
     func checkAtCurrentRegion() -> Bool {
         return (mapView.region.center.latitude != self.region.center.latitude ||
                 mapView.region.center.longitude != self.region.center.latitude ||

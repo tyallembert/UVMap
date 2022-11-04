@@ -23,7 +23,7 @@ struct TheMap: View {
                 userTrackingMode: $userTrackingMode,
                 annotationItems: databaseManager.buildings,
                 annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinate){
+                ViewMapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
                         .scaleEffect(mapManager.activeBuilding == location ? 1.2 : 0.8)
                         .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
