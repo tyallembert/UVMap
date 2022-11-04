@@ -17,12 +17,15 @@ struct UVMapApp: App {
     
     @StateObject private var sessionManager = SessionManager()
     @StateObject private var databaseManager = DatabaseManager()
+    @StateObject private var settingsManager =
+        SettingsManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(sessionManager)
                 .environmentObject(databaseManager)
+//                .environmentObject(settingsManager)
         }
     }
 }

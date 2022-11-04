@@ -29,5 +29,6 @@ struct ClassNameSchedule: View {
 struct ClassNameSchedule_Previews: PreviewProvider {
     static var previews: some View {
         ClassNameSchedule()
+        
     }
 }

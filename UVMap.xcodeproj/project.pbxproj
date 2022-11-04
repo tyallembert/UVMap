@@ -14,6 +14,7 @@
 		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
 		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
+		3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA51ED2902F24600E85CE0 /* settingsManager.swift */; };
 		4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85228F85F1F00710092 /* AddClassView.swift */; };
 		4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85428F8601200710092 /* ClassSearchBar.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
@@ -38,6 +39,7 @@
 		4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83B28E5E46100207EC5 /* StartButton.swift */; };
 		4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83D28E5E65300207EC5 /* TripInformation.swift */; };
 		4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C84228E74E1F00207EC5 /* SessionManager.swift */; };
+		4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C434D73290C25FD005BB4F6 /* TopSchedule.swift */; };
 		4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A229082B2700C5DE09 /* all_classes.json */; };
 		4C47B7A52909863F00C5DE09 /* student_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A42909863F00C5DE09 /* student_classes.json */; };
 		4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B68C528F711CD00532DD2 /* BottomSheet.swift */; };
@@ -70,7 +72,7 @@
 		4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CC28EB2144001C7F24 /* MapManager.swift */; };
 		4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */; };
 		500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A128EA06870085A130 /* DaysTemplate.swift */; };
-		500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* ScheduleChart.swift */; };
+		500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */; };
 		500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */; };
 		500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */; };
 		500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A928EA0E8B0085A130 /* ClassShell.swift */; };
@@ -109,6 +111,7 @@
 		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
 		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
+		3FDA51ED2902F24600E85CE0 /* settingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsManager.swift; sourceTree = "<group>"; };
 		4C11E85228F85F1F00710092 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
 		4C11E85428F8601200710092 /* ClassSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchBar.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		4C36C83B28E5E46100207EC5 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
 		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4C434D73290C25FD005BB4F6 /* TopSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSchedule.swift; sourceTree = "<group>"; };
 		4C47B7A229082B2700C5DE09 /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
 		4C47B7A42909863F00C5DE09 /* student_classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = student_classes.json; sourceTree = "<group>"; };
 		4C5B68C528F711CD00532DD2 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
@@ -165,7 +169,7 @@
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationButton.swift; sourceTree = "<group>"; };
 		500DC3A128EA06870085A130 /* DaysTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTemplate.swift; sourceTree = "<group>"; };
-		500DC3A328EA07D40085A130 /* ScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleChart.swift; sourceTree = "<group>"; };
+		500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayScheduleChart.swift; sourceTree = "<group>"; };
 		500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameSchedule.swift; sourceTree = "<group>"; };
 		500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimeSchedule.swift; sourceTree = "<group>"; };
 		500DC3A928EA0E8B0085A130 /* ClassShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShell.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				4CF841CC28EB2144001C7F24 /* MapManager.swift */,
 				4CABE58228F06C600087DD98 /* SearchBarManager.swift */,
 				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
+				3FDA51ED2902F24600E85CE0 /* settingsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
+				4C434D73290C25FD005BB4F6 /* TopSchedule.swift */,
 				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
 				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
 				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
@@ -348,7 +354,7 @@
 				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
-				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
+				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
@@ -587,7 +593,7 @@
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
-				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
+				500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
@@ -607,6 +613,7 @@
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
+				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,
 				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
 				4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */,
@@ -628,6 +635,7 @@
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
+				4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,
@@ -794,7 +802,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = L8596W57HC;
+				DEVELOPMENT_TEAM = XLHN8GCUVW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -808,7 +816,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcmcgowa.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = hey.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -826,7 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = L8596W57HC;
+				DEVELOPMENT_TEAM = XLHN8GCUVW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -840,7 +848,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcmcgowa.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = hey.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HowEarlyDropDown: View {
     
-    @State var howEarly = -1
+    @State var howEarly = 10
     
     var body: some View {
         VStack {
