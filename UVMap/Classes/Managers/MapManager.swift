@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
     //========================================================
     //                      constants
@@ -29,6 +29,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var activeBuildingsFromSearch: [Building] = []
     @Published var activeBuilding: Building?
     @Published var followUser: Bool = true
+    @Published var routes: [MKRoute] = []
     
 //========================================================
 //                      functions
@@ -74,16 +75,35 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    func buildRoutes() {
+        if let loc = locationManager.location {
+            let origin = loc
+            let end = getActiveBuilding()
+            let request = MKDirections.Request()
+            request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
+            request.destination = MKMapItem(placemark: MKPlacemark(coordinate: end.coordinate))
+            request.requestsAlternateRoutes = false
+            request.transportType = .walking
+            
+            let directions = MKDirections(request: request)
+            directions.calculate { [unowned self] response, error in
+                guard let unwrappedResponse = response else { return }
+                routes = unwrappedResponse.routes
+                }
+        }
+        
+    }
+    
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {
         self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cords.coordinate.latitude - LATITUDE_OFFSET, longitude: cords.coordinate.longitude), latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
     // Runs Map View init items
     func mapViewConfig() {
         // INSTRUCTIONS FOR MAP
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+        mapView.delegate = self
     }
     
     // Runs location manager init items
@@ -94,17 +114,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
-    
-    // sets the valid region for fullscreen view
-    func setRegionFullScreen() {
         
-    }
-    
-    func setRegionHalfScreen() {
-        
-    }
-
-    
     func checkAtCurrentRegion() -> Bool {
         return (mapView.region.center.latitude != self.region.center.latitude ||
                 mapView.region.center.longitude != self.region.center.latitude ||
@@ -141,7 +151,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if followUser  {
             guard let location = locations.last else{return}
-            self.region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude - LATITUDE_OFFSET, longitude: location.coordinate.longitude)
+            self.region = MKCoordinateRegion(center: center, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
             mapView.setRegion(region, animated: true)
             mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
         }
