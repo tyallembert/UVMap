@@ -31,26 +31,26 @@ struct TopSchedule: View {
                     }
                     Spacer()
                 }
-                ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
-                    Spacer()
-                    Button{
-                        //set the route to this building
-                    }label: {
-                        HStack(alignment: .center) {
-                            Text(course.building)
-                                .font(.system(size: 17, weight: .semibold))
-                            Text(course.startTime)
-                                .font(.system(size: 13))
-                        }
-                        .padding(7)
-                        .background{
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.backgroundLighter)
-                                .shadow(color: .black.opacity(0.7), radius: 2)
-                        }
-                    }
-                    Spacer()
-                }
+//                ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
+//                    Spacer()
+//                    Button{
+//                        //set the route to this building
+//                    }label: {
+//                        HStack(alignment: .center) {
+//                            Text(course.building)
+//                                .font(.system(size: 17, weight: .semibold))
+//                            Text(course.startTime)
+//                                .font(.system(size: 13))
+//                        }
+//                        .padding(7)
+//                        .background{
+//                            RoundedRectangle(cornerRadius: 10)
+//                                .fill(Color.backgroundLighter)
+//                                .shadow(color: .black.opacity(0.7), radius: 2)
+//                        }
+//                    }
+//                    Spacer()
+//                }
             }
             .padding(.vertical)
         }

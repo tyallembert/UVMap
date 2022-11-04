@@ -14,6 +14,7 @@ class ClassManager: ObservableObject{
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
+    @Published var searchActive: Bool
     
     init(){
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
@@ -25,6 +26,7 @@ class ClassManager: ObservableObject{
         searchResults = []
         todaysClasses = []
         searchText = ""
+        searchActive = false
         
         //date week init
         fetchCurrentWeek()
