@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -185,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */,
+				045C393F2914510E003BD700 /* Map in Frameworks */,
 				4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */,
 				4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */,
 			);
@@ -444,6 +446,7 @@
 				4CE7168228F0B6940069D6C0 /* FirebaseAuth */,
 				4CE7168428F0B6940069D6C0 /* FirebaseFirestore */,
 				4C5B68C828F7120300532DD2 /* BottomSheet */,
+				045C393E2914510E003BD700 /* Map */,
 			);
 			productName = UVMap;
 			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMap.app */;
@@ -520,6 +523,7 @@
 			packageReferences = (
 				4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */,
 			);
 			productRefGroup = 4C78EE5D28DE1D1E00306D58 /* Products */;
 			projectDirPath = "";
@@ -790,7 +794,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = L8596W57HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -804,7 +808,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmcgowa.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -822,7 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = L8596W57HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -836,7 +840,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmcgowa.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -963,6 +967,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pauljohanneskraft/Map";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Wouter125/BottomSheet";
@@ -982,6 +994,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045C393E2914510E003BD700 /* Map */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */;
+			productName = Map;
+		};
 		4C5B68C828F7120300532DD2 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */;
