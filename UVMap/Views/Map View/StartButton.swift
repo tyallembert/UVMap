@@ -12,7 +12,7 @@ struct StartButton: View {
     
     func handleStartClicked() {
         print("clicked")
-        mapManager.buildRouting()
+        mapManager.buildRoutes()
         
     }
     var body: some View {

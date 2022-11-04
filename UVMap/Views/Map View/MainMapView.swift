@@ -20,9 +20,7 @@ struct MainMapView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-//            Image("Login")
-//                .resizable()
-//                .ignoresSafeArea()
+            TheMap()
                 .environmentObject(mapManager)
             VStack(alignment: .leading) {
                 SearchBar()

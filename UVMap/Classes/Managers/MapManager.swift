@@ -29,6 +29,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var activeBuildingsFromSearch: [Building] = []
     @Published var activeBuilding: Building?
     @Published var followUser: Bool = true
+    @Published var routes: [MKRoute] = []
     
 //========================================================
 //                      functions
@@ -81,7 +82,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             return renderer
     }
     
-    func buildRouting() {
+    func buildRoutes() {
         if let loc = locationManager.location {
             let origin = loc
             let end = getActiveBuilding()
@@ -95,16 +96,16 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
                 
-                let route = unwrappedResponse.routes[0]
+                routes = unwrappedResponse.routes
                 
-                print(route.polyline)
-                mapView.addOverlay(route.polyline, level: .aboveRoads)
-                mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-                print(route.distance)
-                
-            }
-            
+//                    print(route.polyline)
+//                    mapView.addOverlay(route.polyline, level: .aboveRoads)
+//                    mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+//                    print(route.distance)
+                    
+                }
         }
+        
     }
     
     // Takes in coordinates and updates the map view and region
@@ -129,18 +130,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         locationManager.startUpdatingLocation()
     }
     
-    // sets the valid region for fullscreen view
-    func setRegionFullScreen() {
-        
-    }
-    
-    func setRegionHalfScreen() {
-        
-    }
-    
-    func getMapView() -> MKMapView {
-        return self.mapView
-    }
 
     
     func checkAtCurrentRegion() -> Bool {
