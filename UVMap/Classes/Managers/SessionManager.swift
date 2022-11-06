@@ -8,7 +8,7 @@
 import Foundation
 
 // This function manages the login process
-class SessionManager: ObservableObject{
+class SessionManager: ObservableObject {
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
@@ -16,15 +16,16 @@ class SessionManager: ObservableObject{
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
-    var username: String = ""
+    var netID: String = ""
     var password: String = ""
+    var retypePassword: String = ""
     
     func signUp(database: DatabaseManager) {
-        database.signUp(firstName: firstName, lastName: lastName, email: email, password: password)
+        database.signUp(firstName: firstName, lastName: lastName, email: email, netID: netID, password: password, retypePassword: retypePassword)
     }
     
     func signIn(database: DatabaseManager) {
-        database.signIn(netID: username, password: password)
+        database.signIn(netID: netID, password: password)
     }
     
 }

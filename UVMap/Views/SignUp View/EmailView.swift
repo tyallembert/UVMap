@@ -27,6 +27,6 @@ struct EmailView: View {
 
 struct EmailView_Previews: PreviewProvider {
     static var previews: some View {
-        EmailView(email: $email)
+        EmailView().environmentObject(SessionManager())
     }
 }

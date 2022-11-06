@@ -15,6 +15,7 @@
 		09765CEB290ACBF00046B3E5 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEA290ACBF00046B3E5 /* EmailView.swift */; };
 		09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */; };
 		09765CEF290ACE8C0046B3E5 /* SignUpRetypePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */; };
+		09B4C9AE29184A52001C3929 /* NetIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B4C9AD29184A52001C3929 /* NetIDView.swift */; };
 		4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */; };
 		4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24003228EBB41B002F7E2D /* DatabaseManager.swift */; };
 		4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C82728E3427300207EC5 /* MainNavigation.swift */; };
@@ -98,6 +99,7 @@
 		09765CEA290ACBF00046B3E5 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRetypePasswordView.swift; sourceTree = "<group>"; };
+		09B4C9AD29184A52001C3929 /* NetIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetIDView.swift; sourceTree = "<group>"; };
 		4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C24003228EBB41B002F7E2D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4C36C82728E3427300207EC5 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				0958ED3128F85E7E008BD4E6 /* SignUpView.swift */,
 				0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */,
 				0958ED372902EF21008BD4E6 /* FirstNameView.swift */,
+				09B4C9AD29184A52001C3929 /* NetIDView.swift */,
 				0958ED392902EF39008BD4E6 /* LastNameView.swift */,
 				0958ED3B2902F481008BD4E6 /* SignUpButton.swift */,
 				09765CEA290ACBF00046B3E5 /* EmailView.swift */,
@@ -539,6 +542,7 @@
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
+				09B4C9AE29184A52001C3929 /* NetIDView.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,

@@ -1,21 +1,21 @@
 //
-//  SignUpPasswordView.swift
+//  NetIDView.swift
 //  UVMap
 //
-//  Created by Tate Osborne on 10/27/22.
+//  Created by Tate Osborne on 11/6/22.
 //
 
 import SwiftUI
 
-struct SignUpPasswordView: View {
+struct NetIDView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
-        Text("Password")
+        Text("NetID")
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-        TextField("", text: $sessionManager.password)
+        TextField("", text: $sessionManager.netID)
             .foregroundColor(Color.black)
             .padding(7)
             .background(Color.white)
@@ -25,8 +25,8 @@ struct SignUpPasswordView: View {
     }
 }
 
-struct SignUpPasswordView_Previews: PreviewProvider {
+struct NetIDView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpPasswordView().environmentObject(SessionManager())
+        NetIDView().environmentObject(SessionManager())
     }
 }
