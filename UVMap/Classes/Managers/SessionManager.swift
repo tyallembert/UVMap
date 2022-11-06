@@ -12,7 +12,17 @@ class SessionManager: ObservableObject {
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
-    @Published var currentState: CurrentState? = .loggedOut
+    
+  
+    @Published var selectedNavElement = 1
+    @Published var currentState: CurrentState?
+    
+    @Published var usernameInFocus: Bool = false
+    @Published var passwordInFocus: Bool = false
+    
+    @Published var isError: Bool = false
+    @Published var errorMessage: String = ""
+
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
@@ -20,12 +30,27 @@ class SessionManager: ObservableObject {
     var password: String = ""
     var retypePassword: String = ""
     
+    var username: String = ""
+    var password: String = ""
+   
     func signUp(database: DatabaseManager) {
         database.signUp(firstName: firstName, lastName: lastName, email: email, netID: netID, password: password, retypePassword: retypePassword)
     }
-    
-    func signIn(database: DatabaseManager) {
-        database.signIn(netID: netID, password: password)
+ 
+    func signIn(database: DatabaseManager){
+    usernameInFocus = false
+    passwordInFocus = false
+        if username.isEmpty {
+            errorMessage = "Email is empty"
+            isError = true
+            return
+        }
+        if password.isEmpty {
+            errorMessage = "Password is empty"
+            isError = true
+            return
+        }
+        database.signIn(netID: username, password: password)
     }
     
 }

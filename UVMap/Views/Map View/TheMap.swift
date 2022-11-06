@@ -26,14 +26,15 @@ struct TheMap: View {
                         .onTapGesture {
                             mapManager.setActiveBuilding(building: location)
                         }
-                        .animation(.spring())
+                        .animation(.spring(), value: mapManager.activeBuilding)
                 }
                })
                 .edgesIgnoringSafeArea(.all)
-                .accentColor(.red)
+                .accentColor(Color("AccentColor"))
                 .onAppear {
-                    mapManager.checkIfLocationEnabled()
+                    mapManager.initMap()
                 }
+                .gesture(DragGesture().onChanged({_ in mapManager.checkMoved()}))
         }
     }
 }
