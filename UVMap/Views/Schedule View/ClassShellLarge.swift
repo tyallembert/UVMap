@@ -1,17 +1,17 @@
 //
-//  ClassShell.swift
+//  ClassShellLarge.swift
 //  UVMap
 //
-//  Created by nate lalor on 10/2/22.
+//  Created by nate lalor on 11/3/22.
 //
 
 // //////////////////////////////////////////////// //
-// THIS IS A CLASS SHELL MEANT FOR: Mon/Wed/Fri CLASSES (50 minute classes) //
+// THIS IS A CLASS SHELL MEANT FOR: Tues/Thurs Classes (1 hr 15 minute classes)  //
 // //////////////////////////////////////////////// //
 
 import SwiftUI
 
-struct ClassShell: View {
+struct ClassShellLarge: View {
     var body: some View {
         HStack{
             //LHS
@@ -28,7 +28,7 @@ struct ClassShell: View {
                 
         //Green styling on HStack
         }.padding()
-        .frame(width: 300, height: 100)
+        .frame(width: 300, height: 145)
         .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
         .cornerRadius(25)
         
@@ -36,8 +36,8 @@ struct ClassShell: View {
     }
 }
 
-struct ClassShell_Previews: PreviewProvider {
+struct ClassShellLarge_Previews: PreviewProvider {
     static var previews: some View {
-        ClassShell()
+        ClassShellLarge()
     }
 }

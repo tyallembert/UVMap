@@ -186,6 +186,22 @@ class ClassManager: ObservableObject{
         // from https://stackoverflow.com/questions/41068860/get-weekday-from-date-swift-3
         // return calendar.component(.day, from: today)
     }
+    func fetchYesterday() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 2]
+    }
+    func fetchBeforeYesterday() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 3]
+    }
+    func fetchTomorrow() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date())]
+    }
+    func fetchAfterTomorrow() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) + 1]
+    }
     
     // extracting date
     func extractDate(date: Date, format: String) -> String {
