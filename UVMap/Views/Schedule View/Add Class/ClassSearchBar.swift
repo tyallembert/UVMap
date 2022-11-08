@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ClassSearchBar: View {
     @EnvironmentObject var classManager: ClassManager
-    @Binding var searchActive: Bool
     var body: some View {
         HStack {
             HStack{
@@ -20,7 +19,7 @@ struct ClassSearchBar: View {
                     }
                     .onTapGesture {
                         withAnimation{
-                            searchActive = true
+                            classManager.searchActive = true
                         }
                     }
             }
@@ -30,10 +29,10 @@ struct ClassSearchBar: View {
                 .innerShadow(shape: RoundedRectangle(cornerRadius: 100), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.7)
                 .cornerRadius(100)
                 .shadow(radius: 5)
-            if searchActive {
+            if classManager.searchActive {
                 Button{
                     withAnimation{
-                        searchActive = false
+                        classManager.searchActive = false
                         hideKeyboard()
                     }
                 }label: {
@@ -47,6 +46,6 @@ struct ClassSearchBar: View {
 
 struct ClassSearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        ClassSearchBar(searchActive: .constant(false))
+        ClassSearchBar()
     }
 }

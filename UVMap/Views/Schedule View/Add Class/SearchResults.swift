@@ -9,10 +9,9 @@ import SwiftUI
 
 struct SearchResults: View {
     @EnvironmentObject var classManager: ClassManager
-    @State var searchActive: Bool = false
     var body: some View {
         VStack {
-            ClassSearchBar(searchActive: $searchActive)
+            ClassSearchBar()
                 .padding()
                 .environmentObject(classManager)
             ScrollView {
@@ -25,7 +24,7 @@ struct SearchResults: View {
                     }
                 }
             }
-            .frame(height: searchActive ? 250: 0)
+            .frame(height: classManager.searchActive ? 250: 0)
             .backgroundBlur(radius: 15, opaque: true)
             .background(Color.white.opacity(0.4))
             .innerShadow(shape: RoundedRectangle(cornerRadius: 10), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.7)

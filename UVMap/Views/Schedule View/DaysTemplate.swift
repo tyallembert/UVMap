@@ -76,8 +76,9 @@ struct DaysTemplate: View {
             }
             
             .padding()
-            .frame(width: geometry.size.width, height: 100)
-        }//geometry reader end
+
+            .frame(width: geometry.size.width)
+        }
     }
 }
 

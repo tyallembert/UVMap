@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -64,6 +65,7 @@
 		4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */; };
 		4CAF024D28F71DA4005F605E /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024C28F71DA4005F605E /* Blur.swift */; };
 		4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024E28F71F2A005F605E /* Extensions.swift */; };
+		4CD538832915881100926C2E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD538822915881100926C2E /* LoadingView.swift */; };
 		4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168228F0B6940069D6C0 /* FirebaseAuth */; };
 		4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168428F0B6940069D6C0 /* FirebaseFirestore */; };
 		4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */; };
@@ -165,6 +167,7 @@
 		4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		4CAF024C28F71DA4005F605E /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		4CAF024E28F71F2A005F605E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4CD538822915881100926C2E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBuildingsFromJSON.swift; sourceTree = "<group>"; };
 		4CE7168C28F108FD0069D6C0 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */,
+				045C393F2914510E003BD700 /* Map in Frameworks */,
 				4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */,
 				4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */,
 			);
@@ -318,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4CD53881291587F800926C2E /* Loading screen */,
 				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
 				4C78EE8C28DE1E9900306D58 /* Settings View */,
@@ -417,6 +422,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		4CD53881291587F800926C2E /* Loading screen */ = {
+			isa = PBXGroup;
+			children = (
+				4CD538822915881100926C2E /* LoadingView.swift */,
+			);
+			path = "Loading screen";
+			sourceTree = "<group>";
+		};
 		4CE7168A28F107F10069D6C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +469,7 @@
 				4CE7168228F0B6940069D6C0 /* FirebaseAuth */,
 				4CE7168428F0B6940069D6C0 /* FirebaseFirestore */,
 				4C5B68C828F7120300532DD2 /* BottomSheet */,
+				045C393E2914510E003BD700 /* Map */,
 			);
 			productName = UVMap;
 			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMap.app */;
@@ -532,6 +546,7 @@
 			packageReferences = (
 				4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */,
 			);
 			productRefGroup = 4C78EE5D28DE1D1E00306D58 /* Products */;
 			projectDirPath = "";
@@ -636,6 +651,7 @@
 				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */,
 				4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */,
+				4CD538832915881100926C2E /* LoadingView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
@@ -979,6 +995,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pauljohanneskraft/Map";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Wouter125/BottomSheet";
@@ -998,6 +1022,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045C393E2914510E003BD700 /* Map */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */;
+			productName = Map;
+		};
 		4C5B68C828F7120300532DD2 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */;
