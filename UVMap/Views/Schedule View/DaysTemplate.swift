@@ -12,56 +12,75 @@ import SwiftUI
 
 struct DaysTemplate: View {
     @EnvironmentObject var classManager: ClassManager
+    //@State var dayButton: String = classManager.extractDate(date: day, format: "EEE")
+    // is this published??? or what?
     
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(classManager.currentWeek,id: \.self){day in
-                        
                         VStack {
-                            // MAKE THESE ALL BUTTONS TO SEPARATE LIST FILES
-                            //"MondayChart" "TuesdayChart", ..........
-                            
-                            // they all will be styled the same exactly but will have different classes pulled from ClassManager
                             Text(classManager.extractDate(date: day, format: "dd"))
-                            //                            Text(classManager.extractDate(date: day, format: "EEE"))
-                            
-                            //______________________
-                            
-                            
-                            
-                            // IMPLEMENT SWITCH STATEMENT HERE
-                            
-                            Button {
-                                MondayScheduleChart()
-                            } label: {
-                                Text(classManager.fetchCurrentDay())
-                            }
-                            //                                    Text(classManager.extractDate(date: day, format: "EEE"))
-                            //                                Text(classManager.fetchCurrentDay())
-                            
+                            Text(classManager.extractDate(date: day, format: "EEE"))
                         }
                     }
+                    //
+                    // for help in switch, look at:
+                        // MAIN NAVIATION and MAIN MENU BAR (or whatever file is with main navigation)
+                    
+//
+//                    switch dayButton {
+//                          case "Mon":
+//                             LINK TO MONDAY
+//                          case "Tue":
+//                             LINK TO TUESDAY
+//                          case "Wed":
+//                              LINK TO WEDNESDAY
+//                          case "Thu":
+//                              LINK TO THURSDAY
+//                          case "FRI:
+//                              LINK TO FRIDAY
+////                    }
                     
                     
+                    // MONDAY BUTTON
+//                    Button {
+//                        MondayScheduleChart()
+//                    } label: {
+//                        Text(classManager.fetchBeforeYesterday())
+//                    }
                     
-                    //_____________________
+                    // TUESDAY BUTTON
+
+                    
+                    // WEDNESDAY BUTTON
+                    
+                    
+                    // THURSDAY BUTTON
+                    
+                    
+                    // FRIDAY BUTTON
+//
+//
+//
+//                    Text(classManager.fetchYesterday())
+//                    Text(classManager.fetchCurrentDay())
+//                    Text(classManager.fetchTomorrow())
+//                    Text(classManager.fetchAfterTomorrow())
+//
+//
+                    
+                    
                 }
             }
             
             .padding()
+
             .frame(width: geometry.size.width)
         }
     }
 }
-//        HStack {
-//            MondayScheduleMenu()
-//            TuesdayScheduleMenu()
-//            WednesdayScheduleMenu()
-//            ThursdayScheduleMenu()
-//            FridayScheduleMenu()
-//        }.frame(width: 300)
 
 struct DaysTemplate_Previews: PreviewProvider {
     static var previews: some View {

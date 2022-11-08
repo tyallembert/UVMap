@@ -84,6 +84,8 @@
 		50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */; };
 		50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */; };
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
+		50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F43291420030078C231 /* ClassShellLarge.swift */; };
+		50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F45291425410078C231 /* ClassShellLargeLarge.swift */; };
 		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
 		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -182,6 +184,8 @@
 		50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
+		50B55F43291420030078C231 /* ClassShellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLarge.swift; sourceTree = "<group>"; };
+		50B55F45291425410078C231 /* ClassShellLargeLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLargeLarge.swift; sourceTree = "<group>"; };
 		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -356,8 +360,10 @@
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
 				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
+				50B55F43291420030078C231 /* ClassShellLarge.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
 				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
+				50B55F45291425410078C231 /* ClassShellLargeLarge.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
@@ -601,6 +607,7 @@
 				3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */,
 				4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
+				50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */,
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
@@ -622,6 +629,7 @@
 				4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */,
 				4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
+				50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,

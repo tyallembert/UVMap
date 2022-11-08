@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassTimeSchedule: View {
     
-    @State var classTime: String = "8:30am - 9:20am"
+    @State var classTime: String = "8:30am - 9:45am"
     
     var body: some View {
         HStack {
