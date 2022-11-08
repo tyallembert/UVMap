@@ -18,22 +18,25 @@ struct ClassShell: View {
         HStack(alignment: .top){
             //LHS
             VStack(alignment: .leading) {
-                ClassNameSchedule()
+                ClassNameSchedule(className: $singleClass.title)
                 ClassTimeSchedule()
-                ClassProfessorSchedule()
+                    .environmentObject(singleClass)
+                ClassProfessorSchedule(classProfessor: $singleClass.instructor)
                 
             }
             Spacer()
             
             //RHS
-            ClassBuildingSchedule().frame(width: 120)
+            ClassBuildingSchedule()
+                .environmentObject(singleClass)
+                .frame(width: 120)
                 
         //Green styling on HStack
-        }.padding()
+        }
+            .padding()
             .frame(width: 300, height: classManager.getClassShellHeight(course: singleClass))
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
-        .cornerRadius(25)
-        Spacer()
+            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
+            .cornerRadius(25)
         
     }
 }

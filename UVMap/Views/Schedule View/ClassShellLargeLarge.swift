@@ -15,9 +15,9 @@ struct ClassShellLargeLarge: View {
         HStack{
             //LHS
             VStack(alignment: .leading) {
-                ClassNameSchedule()
-                ClassTimeSchedule()
-                ClassProfessorSchedule()
+//                ClassNameSchedule()
+//                ClassTimeSchedule()
+//                ClassProfessorSchedule()
                 
             }
             Spacer()
