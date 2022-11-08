@@ -28,47 +28,25 @@ struct MondayScheduleChart: View {
                     Text("2PM").frame(height: 100)
                     Text("3PM").frame(height: 100)
                     Text("4PM").frame(height: 100)
+                    Text("5PM").frame(height: 100)
                 }
                 
-                ForEach(classManager.studentsClasses, id: \.self.CRN) { course in
-                    ClassShell()
-                        .environmentObject(classManager)
-                        .environmentObject(course)
+                VStack{
+                    ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
+                            ClassShell()
+                                .environmentObject(classManager)
+                                .environmentObject(course)
+                                .frame(alignment: .topTrailing)
+                                .offset(y: classManager.getOffset(singleClass: course))
+                    }
+                    Spacer()
                 }
+                .frame(maxHeight: .infinity)
                 
-//                ClassShell().offset(x: 50, y: -350) // 8:30 - 9:20
-//                ClassShell().offset(x: 50, y: -200) // 9:40 - 10:30
-//                ClassShell().offset(x: 50, y: -140) // 10:50 - 11:40
-//                ClassShell().offset(x: 50, y: -35) // 12:00 - 12:50
-//                ClassShell().offset(x: 50, y: 70)  // 1:10 - 2:00
-//                ClassShell().offset(x: 50, y: 175) // 2:20 - 3:10
-                
-                // MON / WED / FRI OFFSET PRESETS        (unit of change: 130)
-                //              ClassShell().offset(x: 50, y: -350) // 8:30 - 9:20
-                //              ClassShell().offset(x: 50, y: -220) // 9:40 - 10:30
-                //              ClassShell().offset(x: 50, y: -90) // 10:50 - 11:40
-                //              ClassShell().offset(x: 50, y: 40) // 12:00 - 12:50
-                //              ClassShell().offset(x: 50, y: 170)  // 1:10 - 2:00
-                //              ClassShell().offset(x: 50, y: 300) // 2:20 - 3:10
-                
-                // TUES / THURS OFFSET PRESENTS    (unit of change: 175)
-                ClassShellLarge().offset(x:50, y: -330) // 8:30 - 9:45
-                ClassShellLarge().offset(x:50, y: -155) // 10:05 - 11:20
-                ClassShellLarge().offset(x:50, y: 20) // 11:40 - 12:55
-                ClassShellLarge().offset(x:50, y: 195) // 1:15 - 2:30
-                ClassShellLarge().offset(x:50, y: 370) // 2:50 - 4:05
-                
-                // THESE ^^^^^^^^ CLASSSHELL()S ARE TOO SMALL. Make a bigger version for Tues/thurs classes?
-                
-                
-                
-            }       // UP NEXT:
+            }
+            .border(.red)
             // MAKE LIST LABELS MORE SPACED OUT
             // SO CLASSES LINE UP BETTER (last one is like a full hour ahead)
-            VStack {
-                Text("5PM").frame(height: 100)
-                Text("6PM").frame(height: 100)
-            }
         }
     }
 }
@@ -77,5 +55,6 @@ struct MondayScheduleChart: View {
 struct ScheduleChart_Previews: PreviewProvider {
     static var previews: some View {
         MondayScheduleChart()
+            .environmentObject(ClassManager())
     }
 }

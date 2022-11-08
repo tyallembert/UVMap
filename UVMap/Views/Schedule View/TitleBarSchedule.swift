@@ -12,7 +12,7 @@ struct TitleBarSchedule: View {
    @State var title = "Schedule"
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack{
                 Spacer()
                 HStack{
@@ -35,7 +35,7 @@ struct TitleBarSchedule: View {
 //                .frame(maxHeight: 100)
                 .background(Color.backgroundGreen)
             
-        }
+//        }
     }
 }
 

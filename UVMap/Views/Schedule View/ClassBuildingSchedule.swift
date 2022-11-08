@@ -9,18 +9,21 @@ import SwiftUI
 
 struct ClassBuildingSchedule: View {
     
-    @State var classroom: String = "Cohen 120"
+    @EnvironmentObject var singleClass: SingleClass
     
     var body: some View {
-        Text(classroom)
-            .font(.title)
-            .fontWeight(.heavy)
-            .foregroundColor(.white)
+        VStack {
+            Text(singleClass.building)
+            Text(singleClass.room)
+        }
+        .font(.system(size: 25, weight: .heavy))
+        .foregroundColor(.white)
     }
 }
 
 struct ClassBuildingSchedule_Previews: PreviewProvider {
     static var previews: some View {
         ClassBuildingSchedule()
+//            .environmentObject(SingleClass(from: <#Decoder#>))
     }
 }

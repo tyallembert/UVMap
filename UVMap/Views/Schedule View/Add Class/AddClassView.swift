@@ -29,7 +29,7 @@ struct AddClassView: View {
         .onAppear{
             classManager.studentsClasses = classManager.retrieveClasssesLocally(fileName: "student_classes")
             classManager.allClasses = classManager.retrieveClasssesLocally(fileName: "all_classes")
-            classManager.getTodaysClasses()
+            classManager.getTodaysClasses(date: Date())
         }
     }
 }
