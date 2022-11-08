@@ -24,7 +24,7 @@ struct ContentView: View {
                     .transition(.opacity)
             default:
                 // Splash Screen
-                Color.green.ignoresSafeArea()
+                LoadingView()
             }
         }
         .onAppear{

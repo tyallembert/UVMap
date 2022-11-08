@@ -14,6 +14,7 @@ class ClassManager: ObservableObject{
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
+    @Published var searchActive: Bool
     
     init(){
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
@@ -25,6 +26,10 @@ class ClassManager: ObservableObject{
         searchResults = []
         todaysClasses = []
         searchText = ""
+        searchActive = false
+        
+//        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
+        studentsClasses = [SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "8:30", endTime: "9:30", instructor: "Jason", email: "example")]
         
         //date week init
         fetchCurrentWeek()
@@ -95,6 +100,17 @@ class ClassManager: ObservableObject{
             }
         }
         print(todaysClasses)
+    }
+    //===Changes the height of the class object===
+    func getClassShellHeight(course: SingleClass) -> CGFloat{
+        let timeFormat = DateFormatter()
+        timeFormat.dateFormat = "hh:mm"
+        let startTime = timeFormat.date(from: course.startTime)
+        let endTime = timeFormat.date(from: course.endTime)
+        
+        let classLength = (endTime!.timeIntervalSince(startTime!))/60 * 5/3
+        
+        return classLength
     }
     //===Read from Json file===
     func retrieveClasssesLocally(fileName: String) -> [SingleClass]{

@@ -16,14 +16,12 @@ struct ScheduleView: View {
     
     var body: some View {
         VStack {
-            TitleBarSchedule().border(.red)
+            TitleBarSchedule()
+                .ignoresSafeArea()
+                .frame(height: 100)
             DaysTemplate()
+                .frame(height: 60)
             MondayScheduleChart()
-            
-            Spacer()
-            HStack{
-                Text("")
-            }
             
         }
     }
