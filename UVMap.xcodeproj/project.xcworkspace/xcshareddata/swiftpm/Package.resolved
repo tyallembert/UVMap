@@ -91,6 +91,15 @@
       }
     },
     {
+      "identity" : "map",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pauljohanneskraft/Map",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3301884b87bc2ebf5325992e4bee8b075c1e12eb"
+      }
+    },
+    {
       "identity" : "nanopb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",

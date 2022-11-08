@@ -6,20 +6,24 @@
 //
 
 import SwiftUI
+import Map
 import MapKit
+
 
 struct TheMap: View {
     @EnvironmentObject var mapManager: MapManager
     @EnvironmentObject var databaseManager: DatabaseManager
     
-    
+    @State private var userTrackingMode = MKUserTrackingMode.follow
+
     var body: some View {
         VStack {
             Map(coordinateRegion: $mapManager.region,
-                showsUserLocation: true,
+                type: .standard,
+                userTrackingMode: $userTrackingMode,
                 annotationItems: databaseManager.buildings,
-               annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinate){
+                annotationContent: { location in
+                ViewMapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
                         .scaleEffect(mapManager.activeBuilding == location ? 1.2 : 0.8)
                         .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
@@ -28,19 +32,33 @@ struct TheMap: View {
                         }
                         .animation(.spring(), value: mapManager.activeBuilding)
                 }
-               })
-                .edgesIgnoringSafeArea(.all)
-                .accentColor(Color("AccentColor"))
-                .onAppear {
-                    mapManager.initMap()
-                }
-                .gesture(DragGesture().onChanged({_ in mapManager.checkMoved()}))
+               },
+                overlays: mapManager.routes.map { $0.polyline },
+                overlayContent: { overlay in
+                    RendererMapOverlay(overlay: overlay) { mapView, overlay in
+                        guard let polyline = overlay as? MKPolyline else {
+                            assertionFailure("Unknown overlay type encountered.")
+                            return MKOverlayRenderer(overlay: overlay)
+                        }
+                        let renderer = MKPolylineRenderer(polyline: polyline)
+                        renderer.lineWidth = 3
+                        renderer.strokeColor = UIColor(named: "UVM_Gold")
+                        return renderer
+                    }
+                })
+            .edgesIgnoringSafeArea(.all)
+            .accentColor(Color("AccentColor"))
+            .onAppear {
+                mapManager.initMap()
+            }
+            .gesture(DragGesture().onChanged({_ in mapManager.checkMoved()}))
         }
     }
 }
 
-struct TheMap_Previews: PreviewProvider {
-    static var previews: some View {
-        TheMap()
-    }
-}
+//
+//struct TheMap_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MapView()
+//    }
+//}
