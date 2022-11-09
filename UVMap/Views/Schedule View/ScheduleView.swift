@@ -15,16 +15,16 @@ struct ScheduleView: View {
     @EnvironmentObject var classManager: ClassManager
     
     var body: some View {
-        VStack {
-            TitleBarSchedule().border(.red)
-            DaysTemplate()
-            MondayScheduleChart()
-            
-            Spacer()
-            HStack{
-                Text("")
+        NavigationView {
+            VStack {
+                TitleBarSchedule()
+                    .ignoresSafeArea()
+                    .frame(height: 100)
+                DaysTemplate()
+                    .frame(height: 60)
+                MondayScheduleChart()
+                
             }
-            
         }
     }
 }

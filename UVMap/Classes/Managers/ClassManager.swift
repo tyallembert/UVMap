@@ -14,6 +14,7 @@ class ClassManager: ObservableObject{
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
+    @Published var searchActive: Bool
     
     init(){
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
@@ -25,6 +26,13 @@ class ClassManager: ObservableObject{
         searchResults = []
         todaysClasses = []
         searchText = ""
+        searchActive = false
+        
+//        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
+        studentsClasses = [
+            SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "8:30", endTime: "9:30", instructor: "Jason", email: "example"),
+            SingleClass(CRN: 6328675, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
+        ]
         
         //date week init
         fetchCurrentWeek()
@@ -59,8 +67,7 @@ class ClassManager: ObservableObject{
 // ===========================
 // MARK: Schedule functions
 // ===========================
-    func getTodaysClasses(){
-        let date = Date()
+    func getTodaysClasses(date: Date){
         let calendar = Calendar.current
         let currentDay = calendar.component(.weekday, from: date)
         let _ = print("Today is: \(currentDay)")
@@ -84,17 +91,45 @@ class ClassManager: ObservableObject{
         default:
             dayOfWeek = ""
         }
-        
+        todaysClasses = []
         for aClass in studentsClasses {
             print("------------------")
             print("checking a class")
+            print("Title: \(aClass.title)")
             print("days: \(aClass.days.lowercased())")
-            print("days: \(dayOfWeek)")
-            if (aClass.days.lowercased().contains(dayOfWeek)) && (!todaysClasses.contains{ $0 == aClass}) {
+            print("day: \(dayOfWeek)")
+            if (aClass.days.lowercased().contains(dayOfWeek)) {
+                print("adding: \(aClass.title)")
                 todaysClasses.append(aClass)
             }
         }
-        print(todaysClasses)
+        for day in todaysClasses{
+            print(day.title)
+        }
+    }
+    //===Changes the height of the class object===
+    func getClassShellHeight(course: SingleClass) -> CGFloat{
+        let timeFormat = DateFormatter()
+        timeFormat.dateFormat = "HH:mm"
+        let startTime = timeFormat.date(from: course.startTime)
+        let endTime = timeFormat.date(from: course.endTime)
+        
+        let classLength = (endTime!.timeIntervalSince(startTime!))/60 * 5/3
+        
+        return classLength
+    }
+    func getOffset(singleClass: SingleClass) -> CGFloat{
+        let startTime = singleClass.startTime
+        
+        //divides into [hours, minutes]
+        let rawDivision = startTime.components(separatedBy: ":")
+        //since 8 is first time on calendar, minus 8 then multiply by 100 for every hour after since each hour is seperated by 100. We also add 50 because the 8 is 50 points below the top
+        let hour = (Double(rawDivision[0])! - 8) * 100 + 50
+        print("hour: \(hour)")
+        //Here we converts the minutes from in terms of 60(minutes in an hour) to 100(each hour is 100 points in height)
+        let minutes = Double(rawDivision[1])! * 5/3
+        print("minutes: \(minutes)")
+        return hour + minutes
     }
     //===Read from Json file===
     func retrieveClasssesLocally(fileName: String) -> [SingleClass]{
@@ -186,9 +221,27 @@ class ClassManager: ObservableObject{
         //let day = calendar.date(from: today)
         let f = DateFormatter()
 
+        print(f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1])
+        
         return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
         // from https://stackoverflow.com/questions/41068860/get-weekday-from-date-swift-3
         // return calendar.component(.day, from: today)
+    }
+    func fetchYesterday() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 2]
+    }
+    func fetchBeforeYesterday() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 3]
+    }
+    func fetchTomorrow() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date())]
+    }
+    func fetchAfterTomorrow() -> String {
+        let f = DateFormatter()
+        return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) + 1]
     }
     
     // extracting date

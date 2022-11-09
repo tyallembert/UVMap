@@ -8,15 +8,19 @@
 import SwiftUI
 
 extension Color {
+    // Backgrounds
     static let backgroundGradient = LinearGradient(gradient: Gradient(colors: [Color("BG1"), Color("BG2")]), startPoint: .topLeading, endPoint: .bottomTrailing)
     static let backgroundLighter = Color("BG1")
     static let backgroundDarker = Color("BG2")
+    static let backgroundGreen = Color("AccentColor")
+    //Text
     static let textBlackWhite = Color("TXT1")
     static let textGreenWhite = Color("TXT2")
     static let innerShadow = LinearGradient(gradient: Gradient(stops: [.init(color: .white, location: 0), .init(color: .clear, location: 0.2)]), startPoint: .top, endPoint: .bottom)
+    static let bottomSheetBackground = LinearGradient(gradient: Gradient(colors: [Color("BG1").opacity(0.4), Color("BG2").opacity(0.4)]), startPoint: .topLeading, endPoint: .bottomTrailing)
     
-   
-    static let bottomSheetBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.26), Color("BG2").opacity(0.26)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    
     static let navBarBackground = LinearGradient(gradient: Gradient(colors: [Color("Background 1").opacity(0.1), Color("BG2").opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
     static let tabBarBackground = LinearGradient(gradient: Gradient(colors: [Color("Tab Bar Background 1").opacity(0.26), Color("Tab Bar Background 2").opacity(0.26)]), startPoint: .top, endPoint: .bottom)
     static let weatherWidgetBackground = LinearGradient(gradient: Gradient(colors: [Color("Weather Widget Background 1"), Color("Weather Widget Background 2")]), startPoint: .leading, endPoint: .trailing)
@@ -73,4 +77,12 @@ extension View {
             )
             .autocapitalization(.none)
     }
+}
+
+extension Date {
+
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+
 }

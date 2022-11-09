@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ClassTimeSchedule: View {
     
-    @State var classTime: String = "8:30am - 9:20am"
+    @EnvironmentObject var singleClass: SingleClass
     
     var body: some View {
         HStack {
-            Text(classTime)
+            Text("\(singleClass.startTime)-\(singleClass.endTime)")
                 .fontWeight(.medium)
                 .foregroundColor(.white)
         }

@@ -18,50 +18,27 @@ struct DaysTemplate: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(classManager.currentWeek,id: \.self){day in
-                        
-                        VStack {
-                            // MAKE THESE ALL BUTTONS TO SEPARATE LIST FILES
-                            //"MondayChart" "TuesdayChart", ..........
-                            
-                            // they all will be styled the same exactly but will have different classes pulled from ClassManager
-                            Text(classManager.extractDate(date: day, format: "dd"))
-                            //                            Text(classManager.extractDate(date: day, format: "EEE"))
-                            
-                            //______________________
-                            
-                            
-                            
-                            // IMPLEMENT SWITCH STATEMENT HERE
-                            
-                            Button {
-                                MondayScheduleChart()
-                            } label: {
-                                Text(classManager.fetchCurrentDay())
+                        Spacer()
+                        Button{
+                            classManager.getTodaysClasses(date: day)
+                        }label: {
+                            VStack {
+                                Text(classManager.extractDate(date: day, format: "dd"))
+                                Text(classManager.extractDate(date: day, format: "EEE"))
                             }
-                            //                                    Text(classManager.extractDate(date: day, format: "EEE"))
-                            //                                Text(classManager.fetchCurrentDay())
-                            
                         }
+                        Spacer()
                     }
-                    
-                    
-                    
-                    //_____________________
+
                 }
             }
             
             .padding()
-            .frame(width: geometry.size.width, height: 100)
+
+            .frame(width: geometry.size.width)
         }
     }
 }
-//        HStack {
-//            MondayScheduleMenu()
-//            TuesdayScheduleMenu()
-//            WednesdayScheduleMenu()
-//            ThursdayScheduleMenu()
-//            FridayScheduleMenu()
-//        }.frame(width: 300)
 
 struct DaysTemplate_Previews: PreviewProvider {
     static var previews: some View {
