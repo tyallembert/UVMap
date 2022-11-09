@@ -7,15 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0958ED3228F85E7E008BD4E6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED3128F85E7E008BD4E6 /* SignUpView.swift */; };
-		0958ED362902E944008BD4E6 /* SignUpInnerBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */; };
-		0958ED382902EF21008BD4E6 /* FirstNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED372902EF21008BD4E6 /* FirstNameView.swift */; };
-		0958ED3A2902EF39008BD4E6 /* LastNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED392902EF39008BD4E6 /* LastNameView.swift */; };
-		0958ED3C2902F481008BD4E6 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958ED3B2902F481008BD4E6 /* SignUpButton.swift */; };
-		09765CEB290ACBF00046B3E5 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEA290ACBF00046B3E5 /* EmailView.swift */; };
-		09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */; };
-		09765CEF290ACE8C0046B3E5 /* SignUpRetypePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */; };
-		09B4C9AE29184A52001C3929 /* NetIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B4C9AD29184A52001C3929 /* NetIDView.swift */; };
+		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -73,6 +65,7 @@
 		4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */; };
 		4CAF024D28F71DA4005F605E /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024C28F71DA4005F605E /* Blur.swift */; };
 		4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024E28F71F2A005F605E /* Extensions.swift */; };
+		4CD538832915881100926C2E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD538822915881100926C2E /* LoadingView.swift */; };
 		4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168228F0B6940069D6C0 /* FirebaseAuth */; };
 		4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168428F0B6940069D6C0 /* FirebaseFirestore */; };
 		4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */; };
@@ -80,7 +73,7 @@
 		4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CC28EB2144001C7F24 /* MapManager.swift */; };
 		4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */; };
 		500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A128EA06870085A130 /* DaysTemplate.swift */; };
-		500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* ScheduleChart.swift */; };
+		500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */; };
 		500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */; };
 		500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */; };
 		500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3A928EA0E8B0085A130 /* ClassShell.swift */; };
@@ -91,6 +84,8 @@
 		50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */; };
 		50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */; };
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
+		50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F43291420030078C231 /* ClassShellLarge.swift */; };
+		50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F45291425410078C231 /* ClassShellLargeLarge.swift */; };
 		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
 		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -113,15 +108,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0958ED3128F85E7E008BD4E6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInnerBoxes.swift; sourceTree = "<group>"; };
-		0958ED372902EF21008BD4E6 /* FirstNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameView.swift; sourceTree = "<group>"; };
-		0958ED392902EF39008BD4E6 /* LastNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameView.swift; sourceTree = "<group>"; };
-		0958ED3B2902F481008BD4E6 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
-		09765CEA290ACBF00046B3E5 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
-		09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
-		09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRetypePasswordView.swift; sourceTree = "<group>"; };
-		09B4C9AD29184A52001C3929 /* NetIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetIDView.swift; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
@@ -181,12 +167,13 @@
 		4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		4CAF024C28F71DA4005F605E /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		4CAF024E28F71F2A005F605E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4CD538822915881100926C2E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBuildingsFromJSON.swift; sourceTree = "<group>"; };
 		4CE7168C28F108FD0069D6C0 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationButton.swift; sourceTree = "<group>"; };
 		500DC3A128EA06870085A130 /* DaysTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTemplate.swift; sourceTree = "<group>"; };
-		500DC3A328EA07D40085A130 /* ScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleChart.swift; sourceTree = "<group>"; };
+		500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayScheduleChart.swift; sourceTree = "<group>"; };
 		500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameSchedule.swift; sourceTree = "<group>"; };
 		500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimeSchedule.swift; sourceTree = "<group>"; };
 		500DC3A928EA0E8B0085A130 /* ClassShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShell.swift; sourceTree = "<group>"; };
@@ -197,6 +184,8 @@
 		50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
+		50B55F43291420030078C231 /* ClassShellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLarge.swift; sourceTree = "<group>"; };
+		50B55F45291425410078C231 /* ClassShellLargeLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLargeLarge.swift; sourceTree = "<group>"; };
 		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */,
+				045C393F2914510E003BD700 /* Map in Frameworks */,
 				4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */,
 				4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */,
 			);
@@ -229,23 +219,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0958ED3028F85E25008BD4E6 /* SignUp View */ = {
-			isa = PBXGroup;
-			children = (
-				0958ED3128F85E7E008BD4E6 /* SignUpView.swift */,
-				0958ED352902E944008BD4E6 /* SignUpInnerBoxes.swift */,
-				0958ED372902EF21008BD4E6 /* FirstNameView.swift */,
-				09B4C9AD29184A52001C3929 /* NetIDView.swift */,
-				0958ED392902EF39008BD4E6 /* LastNameView.swift */,
-				0958ED3B2902F481008BD4E6 /* SignUpButton.swift */,
-				09765CEA290ACBF00046B3E5 /* EmailView.swift */,
-				09765CEC290ACE6F0046B3E5 /* SignUpPasswordView.swift */,
-				09765CEE290ACE8B0046B3E5 /* SignUpRetypePasswordView.swift */,
-			);
-			path = "SignUp View";
-			sourceTree = "<group>";
-		};
-		4C24003128EBB3EF002F7E2D /* Firebase */ = {
 		4C11E85128F85CAA00710092 /* Add Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,8 +321,8 @@
 		4C78EE8928DE1E6500306D58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0958ED3028F85E25008BD4E6 /* SignUp View */,
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
+				4CD53881291587F800926C2E /* Loading screen */,
 				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
 				4C78EE8C28DE1E9900306D58 /* Settings View */,
@@ -383,13 +356,14 @@
 		4C78EE8B28DE1E8C00306D58 /* Schedule View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
 				4C11E85128F85CAA00710092 /* Add Class */,
 				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
 				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
+				50B55F43291420030078C231 /* ClassShellLarge.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
-				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
+				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
+				50B55F45291425410078C231 /* ClassShellLargeLarge.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
@@ -448,6 +422,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		4CD53881291587F800926C2E /* Loading screen */ = {
+			isa = PBXGroup;
+			children = (
+				4CD538822915881100926C2E /* LoadingView.swift */,
+			);
+			path = "Loading screen";
+			sourceTree = "<group>";
+		};
 		4CE7168A28F107F10069D6C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +469,7 @@
 				4CE7168228F0B6940069D6C0 /* FirebaseAuth */,
 				4CE7168428F0B6940069D6C0 /* FirebaseFirestore */,
 				4C5B68C828F7120300532DD2 /* BottomSheet */,
+				045C393E2914510E003BD700 /* Map */,
 			);
 			productName = UVMap;
 			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMap.app */;
@@ -563,6 +546,7 @@
 			packageReferences = (
 				4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */,
 			);
 			productRefGroup = 4C78EE5D28DE1D1E00306D58 /* Products */;
 			projectDirPath = "";
@@ -623,17 +607,15 @@
 				3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */,
 				4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
+				50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */,
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
-				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
-				09B4C9AE29184A52001C3929 /* NetIDView.swift in Sources */,
+				500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
-				09765CED290ACE6F0046B3E5 /* SignUpPasswordView.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
 				500DC3A628EA09F60085A130 /* ClassNameSchedule.swift in Sources */,
-				09765CEB290ACBF00046B3E5 /* EmailView.swift in Sources */,
 				500DC3A828EA0D580085A130 /* ClassTimeSchedule.swift in Sources */,
 				4C36C82828E3427300207EC5 /* MainNavigation.swift in Sources */,
 				3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */,
@@ -643,17 +625,16 @@
 				4C28FF5728FDC48A00D75A1A /* ClassesToBeAdded.swift in Sources */,
 				4C28FF5D28FDD31600D75A1A /* SingleClass.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
-				09765CEF290ACE8C0046B3E5 /* SignUpRetypePasswordView.swift in Sources */,
 				3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */,
 				4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */,
 				4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
+				50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,
 				4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */,
 				4C36C83A28E4CC9500207EC5 /* WalkBikeOption.swift in Sources */,
-				0958ED3C2902F481008BD4E6 /* SignUpButton.swift in Sources */,
 				4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */,
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
@@ -663,21 +644,17 @@
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
 				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
-				0958ED382902EF21008BD4E6 /* FirstNameView.swift in Sources */,
 				3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
-				0958ED3A2902EF39008BD4E6 /* LastNameView.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				4C28FF5B28FDD2DE00D75A1A /* ClassManager.swift in Sources */,
 				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */,
 				4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */,
-				0958ED362902E944008BD4E6 /* SignUpInnerBoxes.swift in Sources */,
+				4CD538832915881100926C2E /* LoadingView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
-				4C78EE9D28E223E000306D58 /* BottomNavigation.swift in Sources */,
-				0958ED3228F85E7E008BD4E6 /* SignUpView.swift in Sources */,
 				4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
@@ -859,7 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = bundleID.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -891,7 +868,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = bundleID.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1018,6 +995,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pauljohanneskraft/Map";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Wouter125/BottomSheet";
@@ -1037,6 +1022,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045C393E2914510E003BD700 /* Map */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */;
+			productName = Map;
+		};
 		4C5B68C828F7120300532DD2 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */;
