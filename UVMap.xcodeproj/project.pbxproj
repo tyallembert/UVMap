@@ -10,6 +10,7 @@
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
 		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
+		3F649F88291C04BF006C2168 /* saveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F649F87291C04BF006C2168 /* saveButton.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
 		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
 		3FB14DE7290C305400DFC8A4 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FB14DE6290C305400DFC8A4 /* settings.json */; };
@@ -106,6 +107,7 @@
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
 		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		3F649F87291C04BF006C2168 /* saveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveButton.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
 		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		3FB14DE6290C305400DFC8A4 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
 				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
 				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
+				3F649F87291C04BF006C2168 /* saveButton.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
+				3F649F88291C04BF006C2168 /* saveButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
