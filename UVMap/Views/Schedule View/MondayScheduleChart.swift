@@ -58,7 +58,6 @@ struct MondayScheduleChart: View {
                 ClassShellLarge().offset(x:50, y: 195) // 1:15 - 2:30
                 ClassShellLarge().offset(x:50, y: 370) // 2:50 - 4:05
                 
-                // THESE ^^^^^^^^ CLASSSHELL()S ARE TOO SMALL. Make a bigger version for Tues/thurs classes?
                 
                 
                 

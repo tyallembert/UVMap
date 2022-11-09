@@ -102,7 +102,7 @@ class ClassManager: ObservableObject{
         print(todaysClasses)
     }
     //===Changes the height of the class object===
-    func getClassShellHeight(course: SingleClass) -> CGFloat{
+    func getClassShellHeight(course: SingleClass) -> Double {
         let timeFormat = DateFormatter()
         timeFormat.dateFormat = "hh:mm"
         let startTime = timeFormat.date(from: course.startTime)
@@ -194,7 +194,7 @@ class ClassManager: ObservableObject{
         
         
     }
-    
+
     func fetchCurrentDay() -> String {
         //let today = Date()
         //let calendar = Calendar.current

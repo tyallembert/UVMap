@@ -12,7 +12,7 @@ import SwiftUI
 
 struct DaysTemplate: View {
     @EnvironmentObject var classManager: ClassManager
-    //@State var dayButton: String = classManager.extractDate(date: day, format: "EEE")
+//    @State var dayButton: String = classManager.extractDate(date: day, format: "EEE")
     // is this published??? or what?
     
     var body: some View {
@@ -25,6 +25,10 @@ struct DaysTemplate: View {
                             Text(classManager.extractDate(date: day, format: "EEE"))
                         }
                     }
+                    
+                    
+                    
+                    
                     //
                     // for help in switch, look at:
                         // MAIN NAVIATION and MAIN MENU BAR (or whatever file is with main navigation)
@@ -41,6 +45,8 @@ struct DaysTemplate: View {
 //                              LINK TO THURSDAY
 //                          case "FRI:
 //                              LINK TO FRIDAY
+                    //      default:
+                    //          LINK TO MONDAY
 ////                    }
                     
                     
