@@ -15,36 +15,31 @@ import SwiftUI
 
 struct MondayScheduleChart: View {
     @EnvironmentObject var classManager: ClassManager
+    var times = ["8AM", "9AM", "10AM", "11AM","12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]
     var body: some View {
         List {
             ZStack(alignment: .leading) {
                 VStack {
-                    Text("8AM").frame(height: 100)
-                    Text("9AM").frame(height: 100)
-                    Text("10AM").frame(height: 100)
-                    Text("11AM").frame(height: 100)
-                    Text("12PM").frame(height: 100)
-                    Text("1PM").frame(height: 100)
-                    Text("2PM").frame(height: 100)
-                    Text("3PM").frame(height: 100)
-                    Text("4PM").frame(height: 100)
-                    Text("5PM").frame(height: 100)
+                    ForEach(times, id: \.self){ time in
+                        Text(time).frame(height: 100)
+                    }
                 }
                 
                 VStack{
-                    ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
-                            ClassShell()
-                                .environmentObject(classManager)
-                                .environmentObject(course)
-                                .frame(alignment: .topTrailing)
-                                .offset(y: classManager.getOffset(singleClass: course))
+                    ZStack {
+                        ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
+                                ClassShell()
+                                    .environmentObject(classManager)
+                                    .environmentObject(course)
+                                    .frame(alignment: .topTrailing)
+                                    .offset(y: classManager.getOffset(singleClass: course))
+                        }
                     }
                     Spacer()
                 }
                 .frame(maxHeight: .infinity)
                 
             }
-            .border(.red)
             // MAKE LIST LABELS MORE SPACED OUT
             // SO CLASSES LINE UP BETTER (last one is like a full hour ahead)
         }

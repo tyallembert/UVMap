@@ -31,7 +31,7 @@ class ClassManager: ObservableObject{
 //        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
         studentsClasses = [
             SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "8:30", endTime: "9:30", instructor: "Jason", email: "example"),
-            SingleClass(CRN: 6328674, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
+            SingleClass(CRN: 6328675, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
         ]
         
         //date week init
@@ -91,23 +91,26 @@ class ClassManager: ObservableObject{
         default:
             dayOfWeek = ""
         }
-        
+        todaysClasses = []
         for aClass in studentsClasses {
             print("------------------")
             print("checking a class")
             print("Title: \(aClass.title)")
             print("days: \(aClass.days.lowercased())")
             print("day: \(dayOfWeek)")
-            if (aClass.days.lowercased().contains(dayOfWeek)) && (!todaysClasses.contains{ $0 == aClass}) {
+            if (aClass.days.lowercased().contains(dayOfWeek)) {
+                print("adding: \(aClass.title)")
                 todaysClasses.append(aClass)
             }
         }
-        print(todaysClasses)
+        for day in todaysClasses{
+            print(day.title)
+        }
     }
     //===Changes the height of the class object===
     func getClassShellHeight(course: SingleClass) -> CGFloat{
         let timeFormat = DateFormatter()
-        timeFormat.dateFormat = "hh:mm"
+        timeFormat.dateFormat = "HH:mm"
         let startTime = timeFormat.date(from: course.startTime)
         let endTime = timeFormat.date(from: course.endTime)
         
@@ -118,12 +121,14 @@ class ClassManager: ObservableObject{
     func getOffset(singleClass: SingleClass) -> CGFloat{
         let startTime = singleClass.startTime
         
-        print("Class title: \(singleClass.title)")
-        
+        //divides into [hours, minutes]
         let rawDivision = startTime.components(separatedBy: ":")
-        let hour = (Double(rawDivision[0])! - 8) * 100
+        //since 8 is first time on calendar, minus 8 then multiply by 100 for every hour after since each hour is seperated by 100. We also add 50 because the 8 is 50 points below the top
+        let hour = (Double(rawDivision[0])! - 8) * 100 + 50
+        print("hour: \(hour)")
+        //Here we converts the minutes from in terms of 60(minutes in an hour) to 100(each hour is 100 points in height)
         let minutes = Double(rawDivision[1])! * 5/3
-        print("offset is: \(hour + minutes)")
+        print("minutes: \(minutes)")
         return hour + minutes
     }
     //===Read from Json file===
