@@ -15,6 +15,7 @@ class ClassManager: ObservableObject{
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
     @Published var searchActive: Bool
+    @Published var activeDay: Date
     
     init(){
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
@@ -27,6 +28,7 @@ class ClassManager: ObservableObject{
         todaysClasses = []
         searchText = ""
         searchActive = false
+        activeDay = Date()
         
 //        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
         studentsClasses = [
@@ -68,6 +70,7 @@ class ClassManager: ObservableObject{
 // MARK: Schedule functions
 // ===========================
     func getTodaysClasses(date: Date){
+        activeDay = date
         let calendar = Calendar.current
         let currentDay = calendar.component(.weekday, from: date)
         let _ = print("Today is: \(currentDay)")
@@ -89,7 +92,7 @@ class ClassManager: ObservableObject{
         case 7:
             dayOfWeek = "m"
         default:
-            dayOfWeek = ""
+            dayOfWeek = "m"
         }
         todaysClasses = []
         for aClass in studentsClasses {

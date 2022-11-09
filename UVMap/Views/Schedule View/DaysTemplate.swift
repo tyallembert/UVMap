@@ -26,6 +26,13 @@ struct DaysTemplate: View {
                                 Text(classManager.extractDate(date: day, format: "dd"))
                                 Text(classManager.extractDate(date: day, format: "EEE"))
                             }
+                            .background{
+                                if classManager.activeDay == day{
+                                    Color.backgroundGreen
+                                }else{
+                                    Color.clear
+                                }
+                            }
                         }
                         Spacer()
                     }
