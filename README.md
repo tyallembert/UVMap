@@ -1,6 +1,7 @@
 # UVMap
 ### iOS Mobile App - SwiftUI
 
+
 ### Revolutionizing UVM traveling
 The University of Vermont has a large and beautiful campus. To fully take advantage of that, UVMap is designed to be a student's best friend. Much like Google Maps & Apple Maps, UVMap seamlessly provides mapping and travel assistance to fulfill your navigation dreams. Utilizing Apple Mapkit algorithms and presentation, UVMap brings the same convenience back to the University of Vermont campus. 
 
