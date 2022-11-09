@@ -1,5 +1,5 @@
 # UVMap
-## iOS Mobile App - SwiftUI
+### iOS Mobile App - SwiftUI
 
 ### Revolutionizing UVM traveling
 The University of Vermont has a large and beautiful campus. To fully take advantage of that, UVMap is designed to be a student's best friend. Much like Google Maps & Apple Maps, UVMap seamlessly provides mapping and travel assistance to fulfill your navigation dreams. Utilizing Apple Mapkit algorithms and presentation, UVMap brings the same convenience back to the University of Vermont campus. 
@@ -9,7 +9,7 @@ Beyond just navigation, this app is loaded with functionality to fully support s
 ### Development
 On the development side, UVMap is using Swift: SwiftUI which provide for all Apple mobile devices. Additionally, the implementation of our Google Firebase backend allows for just protection against anyone outside of the University. 
 
-As with any project, it was a long and tedious process to outline and brainstorm the ins-and-outs of this application. Here are some links to our design outline and our initial application proposal: [Figma](https://www.figma.com/file/vqD6cYHCv0PdiUmZf1oRUv/UVM-Campus-Map?node-id=0%3A1) [Initial Outline](https://docs.google.com/document/d/11JWAbMhSizdrMW7WXjY1DpU7D2wC4u9dvIvxqTwhVOM/edit)
+As with any project, it was a long and tedious process to outline and brainstorm the ins-and-outs of this application. Here are some links to our design outline and our initial application proposal: [Figma](https://www.figma.com/file/vqD6cYHCv0PdiUmZf1oRUv/UVM-Campus-Map?node-id=0%3A1) | [Initial Outline](https://docs.google.com/document/d/11JWAbMhSizdrMW7WXjY1DpU7D2wC4u9dvIvxqTwhVOM/edit)
 
 We've exercised agile development methodologies, including elements of Scrum management, CI/CD development, and more primarily through Github and Jira. 
 
