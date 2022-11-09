@@ -27,9 +27,6 @@ struct TheMap: View {
                     BuildingAnnotation()
                         .scaleEffect(mapManager.activeBuilding == location ? 1.2 : 0.8)
                         .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
-                        .onTapGesture {
-                            mapManager.setActiveBuilding(building: location)
-                        }
                         .animation(.spring(), value: mapManager.activeBuilding)
                 }
                },

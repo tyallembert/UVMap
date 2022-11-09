@@ -30,6 +30,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var activeBuilding: Building?
     @Published var followUser: Bool = true
     @Published var routes: [MKRoute] = []
+    @Published var searchText: String
+    @Published var searchResults: [Building]
+    @Published var buildings: [Building] = []
     
 //========================================================
 //                      functions
@@ -46,6 +49,19 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         }else{
             return Building(id: "0", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
         }
+    }
+    
+    func filterBuildings() -> [Building] {
+        if searchText.isEmpty {
+            activeBuildingsFromSearch = buildings
+        } else {
+            activeBuildingsFromSearch = buildings.filter { ($0.name).lowercased().contains(searchText.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+        }
+    }
+    
+    func setBuildings(_ buildings: [Building]) {
+        self.buildings = buildings
     }
     //--------------------------------------
     //          user functions
