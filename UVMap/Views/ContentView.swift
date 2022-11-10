@@ -20,7 +20,7 @@ struct ContentView: View {
                     .transition(.opacity)
                     .environmentObject(sessionManager)
             case .loggedOut:
-                LoginView()
+                SignUpView()
                     .transition(.opacity)
             default:
                 // Splash Screen

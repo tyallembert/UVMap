@@ -8,10 +8,11 @@
 import Foundation
 
 // This function manages the login process
-class SessionManager: ObservableObject{
+class SessionManager: ObservableObject {
     enum CurrentState {
         case loggedIn, loggedOut, loading
     }
+    
   
     @Published var selectedNavElement = 1
     @Published var currentState: CurrentState?
@@ -22,9 +23,19 @@ class SessionManager: ObservableObject{
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
 
-    var username: String = ""
+    var firstName: String = ""
+    var lastName: String = ""
+    var email: String = ""
+    var netID: String = ""
     var password: String = ""
+    var retypePassword: String = ""
     
+    var username: String = ""
+   
+    func signUp(database: DatabaseManager) {
+        database.signUp(firstName: firstName, lastName: lastName, email: email, netID: netID, password: password, retypePassword: retypePassword)
+    }
+ 
     func signIn(database: DatabaseManager){
     usernameInFocus = false
     passwordInFocus = false
@@ -40,4 +51,5 @@ class SessionManager: ObservableObject{
         }
         database.signIn(netID: username, password: password)
     }
+    
 }

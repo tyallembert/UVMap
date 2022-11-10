@@ -23,7 +23,7 @@ class DatabaseManager: ObservableObject{
     // --------------------------------
     //      ===User Functions===
     // --------------------------------
-    func insertNewUser(netID: String, password: String){
+    func signUp(firstName: String, lastName: String, email: String, netID: String, password: String, retypePassword: String) {
         Auth.auth().createUser(withEmail: netID, password: password) { result, error in
             if let error = error {
                 print(error.localizedDescription)

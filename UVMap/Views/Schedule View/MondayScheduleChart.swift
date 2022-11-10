@@ -15,13 +15,17 @@ import SwiftUI
 
 struct MondayScheduleChart: View {
     @EnvironmentObject var classManager: ClassManager
-    var times = ["8AM", "9AM", "10AM", "11AM","12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]
+    var times = ["8AM", "9AM", "10AM", "11AM","12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM"]
     var body: some View {
         List {
             ZStack(alignment: .leading) {
                 VStack {
                     ForEach(times, id: \.self){ time in
-                        Text(time).frame(height: 100)
+                        ZStack(alignment: .leading) {
+                            Divider()
+                            Text(time)
+                                .frame(height: 100)
+                        }
                     }
                 }
                 
