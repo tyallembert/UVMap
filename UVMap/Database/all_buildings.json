@@ -222,7 +222,7 @@
     {
         "id": 21,
         "title": "Roy L. Patrick Memorial Gymnasium",
-        "abbreviation": "",
+        "abbreviation": "PATGYM",
         "address": "97 Spear St, Burlington, VT 05405, United States",
         "latitude": "44.4705972",
         "longitude": "-73.1948048",
@@ -231,20 +231,9 @@
         "street": "97 Spear St"
     },
     {
-        "id": 22,
-        "title": "Vermont Real Estate Company",
-        "abbreviation": "",
-        "address": "431 Pine St Suite 118, Burlington, VT 05401, United States",
-        "latitude": "44.467797",
-        "longitude": "-73.2154755",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "431 Pine St Suite 118"
-    },
-    {
         "id": 23,
         "title": "Stafford Hall",
-        "abbreviation": "",
+        "abbreviation": "STAFFO",
         "address": "",
         "latitude": "44.4763678",
         "longitude": "-73.1943548",
@@ -266,7 +255,7 @@
     {
         "id": 25,
         "title": "Terrill Building",
-        "abbreviation": "",
+        "abbreviation": "TERRIL",
         "address": "570 Main St, Burlington, VT 05405, United States",
         "latitude": "44.4761487",
         "longitude": "-73.1961484",
@@ -277,7 +266,7 @@
     {
         "id": 26,
         "title": "Mann Hall Trinity Campus UVM",
-        "abbreviation": "",
+        "abbreviation": "MANN",
         "address": "208 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.4825311",
         "longitude": "-73.1935046",
@@ -288,7 +277,7 @@
     {
         "id": 27,
         "title": "Morrill Hall",
-        "abbreviation": "",
+        "abbreviation": "MORRIL",
         "address": "",
         "latitude": "44.4765866",
         "longitude": "-73.1983747",
@@ -299,7 +288,7 @@
     {
         "id": 28,
         "title": "Fleming Museum of Art",
-        "abbreviation": "",
+        "abbreviation": "FLEMIN",
         "address": "61 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.479914",
         "longitude": "-73.197112",
@@ -310,7 +299,7 @@
     {
         "id": 29,
         "title": "Harris & Millis Halls UVM",
-        "abbreviation": "",
+        "abbreviation": "HARRIS",
         "address": "67 Spear St, South Burlington, VT 05403, United States",
         "latitude": "44.4717399",
         "longitude": "-73.193847",
@@ -321,7 +310,7 @@
     {
         "id": 30,
         "title": "Pomeroy Hall",
-        "abbreviation": "",
+        "abbreviation": "POMERO",
         "address": "",
         "latitude": "44.4759607",
         "longitude": "-73.1993318",
@@ -353,7 +342,7 @@
     },
     {
         "id": 33,
-        "title": "70 S Williams St",
+        "title": "Philosophy Department",
         "abbreviation": "",
         "address": "",
         "latitude": "44.4787138",
@@ -365,7 +354,7 @@
     {
         "id": 34,
         "title": "Southwick Hall",
-        "abbreviation": "",
+        "abbreviation": "SOUTHW",
         "address": "",
         "latitude": "44.4696061",
         "longitude": "-73.1978833",
@@ -376,7 +365,7 @@
     {
         "id": 35,
         "title": "UVM Grossman School of Business (Ifshin Hall)",
-        "abbreviation": "",
+        "abbreviation": "IFSHIN",
         "address": "55 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.4792867",
         "longitude": "-73.1974721",
@@ -387,7 +376,7 @@
     {
         "id": 36,
         "title": "Delehanty Hall Trinity Campus UVM",
-        "abbreviation": "",
+        "abbreviation": "DELEHA",
         "address": "Delehanty Hall, 180 Colchester Ave, Burlington, VT 05401, United States",
         "latitude": "44.482663",
         "longitude": "-73.194165",
@@ -409,7 +398,7 @@
     {
         "id": 38,
         "title": "Gutterson Fieldhouse",
-        "abbreviation": "",
+        "abbreviation": "GUTRSN",
         "address": "147 Spear St, Burlington, VT 05405, United States",
         "latitude": "44.4693674",
         "longitude": "-73.1934625",
