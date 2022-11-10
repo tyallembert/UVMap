@@ -47,6 +47,7 @@ struct TheMap: View {
             .accentColor(Color("AccentColor"))
             .onAppear {
                 mapManager.initMap()
+                mapManager.setBuildings(databaseManager.buildings)
             }
             .gesture(DragGesture().onChanged({_ in mapManager.checkMoved()}))
         }

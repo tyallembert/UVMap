@@ -30,9 +30,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var activeBuilding: Building?
     @Published var followUser: Bool = true
     @Published var routes: [MKRoute] = []
-    @Published var searchText: String
-    @Published var searchResults: [Building]
+    @Published var searchText: String = ""
     @Published var buildings: [Building] = []
+    @Published var searchActive: Bool = false
     
 //========================================================
 //                      functions
@@ -47,11 +47,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let activeBuilding = self.activeBuilding {
             return activeBuilding
         }else{
-            return Building(id: "0", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
+            return Building(id: "zero", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
         }
     }
     
-    func filterBuildings() -> [Building] {
+    func filterBuildings() {
         if searchText.isEmpty {
             activeBuildingsFromSearch = buildings
         } else {
@@ -63,6 +63,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     func setBuildings(_ buildings: [Building]) {
         self.buildings = buildings
     }
+    
+    
     //--------------------------------------
     //          user functions
     //--------------------------------------
@@ -106,8 +108,13 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
                 guard let unwrappedResponse = response else { return }
                 routes = unwrappedResponse.routes
                 }
+            
         }
         
+    }
+    
+    func getTravelTime() -> TimeInterval? {
+        return routes[0].expectedTravelTime
     }
     
     // Takes in coordinates and updates the map view and region
