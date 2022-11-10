@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct Button<Label> where Label : View {
-    @EnvironmentObject var settingsManager:
-    SettingsManager
+struct saveButton: View {
+    //@EnvironmentObject var settingsManager: SettingsManager
     
+    init(){
+        print("Save Button")
+    }
     var body: some View {
-        Button(settingsManager: SettingsManager().saveSettingsLocally() )
+        Button(action: {SettingsManager().saveSettingsLocally()}){ Text("Save")}
     }
 }

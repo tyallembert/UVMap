@@ -41,12 +41,7 @@ struct SettingsView: View {
                     
                 }.padding()
             }
-            Button("Save", action: {
-                SettingsManager().saveSettingsLocally()
-            }
-            )
-            
-            
+            saveButton()
         }
         .background(Color.backgroundLighter)
         .onAppear{settingsManager.settings = settingsManager.retrieveSettingsLocally(fileName:"settings")
