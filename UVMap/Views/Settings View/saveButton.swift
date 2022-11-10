@@ -15,6 +15,6 @@ struct saveButton: View {
         print("Save Button")
     }
     var body: some View {
-        Button(action: {SettingsManager().saveSettingsLocally()}){ Text("Save")}
+        Button(action: {print("Clicked")}){ Text("Save")}.foregroundColor(.white)//SettingsManager().saveSettingsLocally()
     }
 }

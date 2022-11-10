@@ -17,7 +17,7 @@ struct ArriveShell: View {
             Text("Arrive")
                 .foregroundColor(.white)
                 .font(.body)
-            HowEarlyDropDown(howEarly: $settingsManager.settings[0].howEarly)
+            HowEarlyDropDown()
                 .environmentObject(settingsManager)
             Text("min before class")
                 .foregroundColor(.white)

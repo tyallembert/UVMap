@@ -11,11 +11,11 @@ import SwiftUI
 struct ThemePicker: View{
     @EnvironmentObject var settingsManager:
     SettingsManager
-    @Binding var theme: Int
+    //@Binding var theme: Int
     
     var body: some View {
         VStack {
-            Picker(selection: $theme, label: Text("Theme")) {
+            Picker(selection: $settingsManager.theme, label: Text("Theme")) {
                 Text("System Default").tag(1)
                 Text("Dark Mode").tag(2)
                 Text("Light Mode").tag(3)
@@ -31,6 +31,6 @@ struct ThemePicker: View{
 
 struct ThemePicker_Previews: PreviewProvider {
     static var previews: some View {
-        ThemePicker(theme: .constant(2))
+        ThemePicker()
     }
 }

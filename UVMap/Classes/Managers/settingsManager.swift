@@ -15,7 +15,17 @@ class SettingsManager: ObservableObject{
         var howEarly: Int
     }
     @Published var settings: [Settings]
+    @Published var theme: Int
+    @Published var prioritize: Bool
+    @Published var early: Int
     @Environment(\.colorScheme) var deviceTheme: ColorScheme
+    
+    init(){
+        settings = []
+        theme = 1
+        early = 10
+        prioritize = false
+    }
     
     //===Read from Json file===
     func retrieveSettingsLocally(fileName: String) -> [Settings]{
@@ -73,7 +83,5 @@ class SettingsManager: ObservableObject{
         
     }
     
-    init(){
-        settings = []
-    }
+    
 }

@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     @StateObject var settingsManager: SettingsManager = SettingsManager()
     var body: some View {
-        ZStack{
+        ZStack(alignment: .trailing){
+            
             VStack{
                 TitleBar()
                     .padding(.top)
@@ -34,14 +35,14 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 10){
                         Text("Theme")
                             .font(.title3)
-                        ThemePicker(theme: $settingsManager.settings[0].settingsTheme)
+                        ThemePicker()
                             .environmentObject(settingsManager)
                     }
                     Spacer()
                     
                 }.padding()
             }
-            saveButton()
+            
         }
         .background(Color.backgroundLighter)
         .onAppear{settingsManager.settings = settingsManager.retrieveSettingsLocally(fileName:"settings")
@@ -52,6 +53,6 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            //.environment(\.colorScheme, .dark)
+            .environment(\.colorScheme, .dark)
     }
 }
