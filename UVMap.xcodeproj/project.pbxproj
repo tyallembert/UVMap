@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
+		0991E185291D815200BAE1E8 /* SignUp View in Resources */ = {isa = PBXBuildFile; fileRef = 0991E184291D815100BAE1E8 /* SignUp View */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -108,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0991E184291D815100BAE1E8 /* SignUp View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SignUp View"; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		4C78EE8928DE1E6500306D58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0991E184291D815100BAE1E8 /* SignUp View */,
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
 				4CD53881291587F800926C2E /* Loading screen */,
 				4C78EE9B28E223C900306D58 /* Navigation View */,
@@ -564,6 +567,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0991E185291D815200BAE1E8 /* SignUp View in Resources */,
 				4C78EE6728DE1D2200306D58 /* Preview Assets.xcassets in Resources */,
 				4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */,
 				4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */,

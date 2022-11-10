@@ -24,7 +24,7 @@
     {
         "id": 3,
         "title": "Williams Hall UVM",
-        "abbreviation": "",
+        "abbreviation": "WILLMS",
         "address": "72 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.478646",
         "longitude": "-73.198926",
@@ -35,7 +35,7 @@
     {
         "id": 4,
         "title": "STEM Discovery Hall",
-        "abbreviation": "",
+        "abbreviation": "DISCOV",
         "address": "82 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4783832",
         "longitude": "-73.1976914",
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "title": "Living/Learning Center",
-        "abbreviation": "",
+        "abbreviation": "L/L-A",
         "address": "",
         "latitude": "44.4737065",
         "longitude": "-73.1947957",
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "title": "Kalkin Hall",
-        "abbreviation": "",
+        "abbreviation": "KALKIN",
         "address": "",
         "latitude": "44.4793853",
         "longitude": "-73.1974382",
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "title": "Aiken Center",
-        "abbreviation": "",
+        "abbreviation": "AIKEN",
         "address": "",
         "latitude": "44.4759431",
         "longitude": "-73.195196",
@@ -90,7 +90,7 @@
     {
         "id": 9,
         "title": "Waterman Bldg",
-        "abbreviation": "",
+        "abbreviation": "WATERM",
         "address": "",
         "latitude": "44.4782586",
         "longitude": "-73.201147",
@@ -101,7 +101,7 @@
     {
         "id": 10,
         "title": "Southwick Music Hall UVM",
-        "abbreviation": "",
+        "abbreviation": "SOUTHW",
         "address": "392 S Prospect St, Burlington, VT 05401, United States",
         "latitude": "44.4695497",
         "longitude": "-73.1976328",
@@ -112,7 +112,7 @@
     {
         "id": 11,
         "title": "Innovation Hall",
-        "abbreviation": "",
+        "abbreviation": "INNOV",
         "address": "University of Vermont, 82 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4784713",
         "longitude": "-73.1975745",
@@ -123,7 +123,7 @@
     {
         "id": 12,
         "title": "John Dewey Hall",
-        "abbreviation": "",
+        "abbreviation": "DEWEY",
         "address": "",
         "latitude": "44.4810472",
         "longitude": "-73.2002558",
@@ -145,7 +145,7 @@
     {
         "id": 14,
         "title": "Cohen Hall for the Integrative Creative Arts",
-        "abbreviation": "",
+        "abbreviation": "COHEN",
         "address": "14 S Williams St, Burlington, VT 05401, United States",
         "latitude": "44.4803186",
         "longitude": "-73.202916",
@@ -156,7 +156,7 @@
     {
         "id": 15,
         "title": "Marsh Life Sciences Building",
-        "abbreviation": "",
+        "abbreviation": "MARSH",
         "address": "109 Carrigan Drive, Burlington, VT 05405, United States",
         "latitude": "44.4768232",
         "longitude": "-73.1956637",
@@ -167,7 +167,7 @@
     {
         "id": 16,
         "title": "Votey Hall",
-        "abbreviation": "",
+        "abbreviation": "VOTEY",
         "address": "",
         "latitude": "44.479373",
         "longitude": "-73.1981081",
@@ -176,20 +176,9 @@
         "street": "33 Colchester Ave"
     },
     {
-        "id": 17,
-        "title": "Marsh Hall",
-        "abbreviation": "",
-        "address": "",
-        "latitude": "44.4727395",
-        "longitude": "-73.1935786",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "31 Spear St"
-    },
-    {
         "id": 18,
         "title": "Given Medical Bldg",
-        "abbreviation": "",
+        "abbreviation": "GIVN E",
         "address": "",
         "latitude": "44.477757",
         "longitude": "-73.1936467",
@@ -211,7 +200,7 @@
     {
         "id": 20,
         "title": "Old Mill Building UVM",
-        "abbreviation": "",
+        "abbreviation": "OLDMIL",
         "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4778218",
         "longitude": "-73.1988305",

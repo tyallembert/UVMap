@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// change
 struct EmailView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
