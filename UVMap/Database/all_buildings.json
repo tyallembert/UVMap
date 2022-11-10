@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Lafayette Hall",
+        "abbreviation": "LAFAYE",
         "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4778254",
         "longitude": "-73.1988209",
@@ -12,6 +13,7 @@
     {
         "id": 2,
         "title": "James M. Jeffords Hall",
+        "abbreviation": "JEFFRD",
         "address": "",
         "latitude": "44.4754141",
         "longitude": "-73.1938538",
@@ -22,6 +24,7 @@
     {
         "id": 3,
         "title": "Williams Hall UVM",
+        "abbreviation": "",
         "address": "72 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.478646",
         "longitude": "-73.198926",
@@ -32,6 +35,7 @@
     {
         "id": 4,
         "title": "STEM Discovery Hall",
+        "abbreviation": "",
         "address": "82 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4783832",
         "longitude": "-73.1976914",
@@ -42,6 +46,7 @@
     {
         "id": 5,
         "title": "Living/Learning Center",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4737065",
         "longitude": "-73.1947957",
@@ -52,6 +57,7 @@
     {
         "id": 6,
         "title": "UVM Medical Center",
+        "abbreviation": "",
         "address": "111 Colchester Ave, Burlington, VT 05401, United States",
         "latitude": "44.4796617",
         "longitude": "-73.1942467",
@@ -62,6 +68,7 @@
     {
         "id": 7,
         "title": "Kalkin Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4793853",
         "longitude": "-73.1974382",
@@ -72,6 +79,7 @@
     {
         "id": 8,
         "title": "Aiken Center",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4759431",
         "longitude": "-73.195196",
@@ -82,6 +90,7 @@
     {
         "id": 9,
         "title": "Waterman Bldg",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4782586",
         "longitude": "-73.201147",
@@ -92,6 +101,7 @@
     {
         "id": 10,
         "title": "Southwick Music Hall UVM",
+        "abbreviation": "",
         "address": "392 S Prospect St, Burlington, VT 05401, United States",
         "latitude": "44.4695497",
         "longitude": "-73.1976328",
@@ -102,6 +112,7 @@
     {
         "id": 11,
         "title": "Innovation Hall",
+        "abbreviation": "",
         "address": "University of Vermont, 82 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4784713",
         "longitude": "-73.1975745",
@@ -112,6 +123,7 @@
     {
         "id": 12,
         "title": "John Dewey Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4810472",
         "longitude": "-73.2002558",
@@ -122,6 +134,7 @@
     {
         "id": 13,
         "title": "Billings Ira Allen Lecture Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4796408",
         "longitude": "-73.1989157",
@@ -132,6 +145,7 @@
     {
         "id": 14,
         "title": "Cohen Hall for the Integrative Creative Arts",
+        "abbreviation": "",
         "address": "14 S Williams St, Burlington, VT 05401, United States",
         "latitude": "44.4803186",
         "longitude": "-73.202916",
@@ -142,6 +156,7 @@
     {
         "id": 15,
         "title": "Marsh Life Sciences Building",
+        "abbreviation": "",
         "address": "109 Carrigan Drive, Burlington, VT 05405, United States",
         "latitude": "44.4768232",
         "longitude": "-73.1956637",
@@ -152,6 +167,7 @@
     {
         "id": 16,
         "title": "Votey Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.479373",
         "longitude": "-73.1981081",
@@ -162,6 +178,7 @@
     {
         "id": 17,
         "title": "Marsh Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4727395",
         "longitude": "-73.1935786",
@@ -172,6 +189,7 @@
     {
         "id": 18,
         "title": "Given Medical Bldg",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.477757",
         "longitude": "-73.1936467",
@@ -182,6 +200,7 @@
     {
         "id": 19,
         "title": "Royall Tyler Theatre",
+        "abbreviation": "",
         "address": "116 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4774226",
         "longitude": "-73.1978492",
@@ -192,6 +211,7 @@
     {
         "id": 20,
         "title": "Old Mill Building UVM",
+        "abbreviation": "",
         "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
         "latitude": "44.4778218",
         "longitude": "-73.1988305",
@@ -202,6 +222,7 @@
     {
         "id": 21,
         "title": "Roy L. Patrick Memorial Gymnasium",
+        "abbreviation": "",
         "address": "97 Spear St, Burlington, VT 05405, United States",
         "latitude": "44.4705972",
         "longitude": "-73.1948048",
@@ -212,6 +233,7 @@
     {
         "id": 22,
         "title": "Vermont Real Estate Company",
+        "abbreviation": "",
         "address": "431 Pine St Suite 118, Burlington, VT 05401, United States",
         "latitude": "44.467797",
         "longitude": "-73.2154755",
@@ -222,6 +244,7 @@
     {
         "id": 23,
         "title": "Stafford Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4763678",
         "longitude": "-73.1943548",
@@ -232,6 +255,7 @@
     {
         "id": 24,
         "title": "University Heights",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4714715",
         "longitude": "-73.1962875",
@@ -242,6 +266,7 @@
     {
         "id": 25,
         "title": "Terrill Building",
+        "abbreviation": "",
         "address": "570 Main St, Burlington, VT 05405, United States",
         "latitude": "44.4761487",
         "longitude": "-73.1961484",
@@ -252,6 +277,7 @@
     {
         "id": 26,
         "title": "Mann Hall Trinity Campus UVM",
+        "abbreviation": "",
         "address": "208 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.4825311",
         "longitude": "-73.1935046",
@@ -262,6 +288,7 @@
     {
         "id": 27,
         "title": "Morrill Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4765866",
         "longitude": "-73.1983747",
@@ -272,6 +299,7 @@
     {
         "id": 28,
         "title": "Fleming Museum of Art",
+        "abbreviation": "",
         "address": "61 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.479914",
         "longitude": "-73.197112",
@@ -282,6 +310,7 @@
     {
         "id": 29,
         "title": "Harris & Millis Halls UVM",
+        "abbreviation": "",
         "address": "67 Spear St, South Burlington, VT 05403, United States",
         "latitude": "44.4717399",
         "longitude": "-73.193847",
@@ -292,6 +321,7 @@
     {
         "id": 30,
         "title": "Pomeroy Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4759607",
         "longitude": "-73.1993318",
@@ -302,6 +332,7 @@
     {
         "id": 31,
         "title": "Health Science Research Facility",
+        "abbreviation": "",
         "address": "Burlington, VT 05405, United States",
         "latitude": "44.4773697",
         "longitude": "-73.1939557",
@@ -312,6 +343,7 @@
     {
         "id": 32,
         "title": "Benedict House",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4797699",
         "longitude": "-73.2007737",
@@ -322,6 +354,7 @@
     {
         "id": 33,
         "title": "70 S Williams St",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4787138",
         "longitude": "-73.2028101",
@@ -332,6 +365,7 @@
     {
         "id": 34,
         "title": "Southwick Hall",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.4696061",
         "longitude": "-73.1978833",
@@ -342,6 +376,7 @@
     {
         "id": 35,
         "title": "UVM Grossman School of Business (Ifshin Hall)",
+        "abbreviation": "",
         "address": "55 Colchester Ave, Burlington, VT 05405, United States",
         "latitude": "44.4792867",
         "longitude": "-73.1974721",
@@ -352,6 +387,7 @@
     {
         "id": 36,
         "title": "Delehanty Hall Trinity Campus UVM",
+        "abbreviation": "",
         "address": "Delehanty Hall, 180 Colchester Ave, Burlington, VT 05401, United States",
         "latitude": "44.482663",
         "longitude": "-73.194165",
@@ -362,6 +398,7 @@
     {
         "id": 37,
         "title": "Wheeler House",
+        "abbreviation": "",
         "address": "",
         "latitude": "44.476784",
         "longitude": "-73.2015639",
@@ -372,6 +409,7 @@
     {
         "id": 38,
         "title": "Gutterson Fieldhouse",
+        "abbreviation": "",
         "address": "147 Spear St, Burlington, VT 05405, United States",
         "latitude": "44.4693674",
         "longitude": "-73.1934625",

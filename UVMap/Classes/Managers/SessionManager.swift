@@ -31,7 +31,6 @@ class SessionManager: ObservableObject {
     var retypePassword: String = ""
     
     var username: String = ""
-    var password: String = ""
    
     func signUp(database: DatabaseManager) {
         database.signUp(firstName: firstName, lastName: lastName, email: email, netID: netID, password: password, retypePassword: retypePassword)
