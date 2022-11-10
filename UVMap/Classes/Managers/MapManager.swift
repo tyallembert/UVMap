@@ -33,6 +33,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var searchText: String = ""
     @Published var buildings: [Building] = []
     @Published var searchActive: Bool = false
+    @Published var startText: String = "Start"
+    @State var eta: Int?
+    
+    
+    
     
 //========================================================
 //                      functions
@@ -93,7 +98,14 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         }
     }
     
-    func buildRoutes() {
+    func cancelRoutes() {
+        routes.removeAll()
+        startText = "Start"
+    }
+    
+    func buildRoutes(completion: @escaping (Int) -> Void){
+        var eta : Int = 0
+        @State var isEtaUpdated : Bool = false
         if let loc = locationManager.location {
             let origin = loc
             let end = getActiveBuilding()
@@ -107,15 +119,17 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
                 routes = unwrappedResponse.routes
-                }
-            
+//                let val = routes[0].expectedTravelTime
+//                let _ = print(val)
+//                let _ = print(val / 60.0)
+//                let _ = print(ceil(val / 60.0))
+                eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
+                startText = "ETA: \(eta)m"
+                completion(eta)
+            }
         }
-        
     }
     
-    func getTravelTime() -> TimeInterval? {
-        return routes[0].expectedTravelTime
-    }
     
     // Takes in coordinates and updates the map view and region
     func updateMapView(_ cords: CLLocation) {

@@ -11,13 +11,13 @@ struct StartButton: View {
     @EnvironmentObject var mapManager: MapManager
     
     func handleStartClicked() {
-        print("clicked")
-        mapManager.buildRoutes()
+        mapManager.buildRoutes { eta in
+        }
         
     }
     var body: some View {
         Button (action: {handleStartClicked()}){
-            Text("Start")
+            Text(mapManager.startText)
                 .font(.title2)
                 .fontWeight(.heavy)
         }

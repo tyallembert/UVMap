@@ -32,6 +32,7 @@ struct MainMapView: View {
                 CurrentLocationButton()
                     .environmentObject(mapManager)
                     .padding()
+                
                 // MARK: draggable bottom sheet
                 BottomSheetView(position: $bottomSheetPosition){}content: {
                     BottomWindow(bottomSheetPosition: $bottomSheetPosition)
