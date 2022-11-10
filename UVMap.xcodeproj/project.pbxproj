@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040185BC291C0700003C0DB3 /* BuildingSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */; };
+		040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BD291C0795003C0DB3 /* OneBuildingResult.swift */; };
 		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
+		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -117,6 +120,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSearchResults.swift; sourceTree = "<group>"; };
+		040185BD291C0795003C0DB3 /* OneBuildingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBuildingResult.swift; sourceTree = "<group>"; };
+		049E3F7B291D920F003D8ACB /* EndRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRouteButton.swift; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
@@ -384,6 +390,9 @@
 				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
 				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 				4C5B68C528F711CD00532DD2 /* BottomSheet.swift */,
+				040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */,
+				040185BD291C0795003C0DB3 /* OneBuildingResult.swift */,
+				049E3F7B291D920F003D8ACB /* EndRouteButton.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -631,6 +640,7 @@
 			files = (
 				4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */,
 				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
+				049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */,
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C28FF67290029D500D75A1A /* AddClassSubmit.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
@@ -665,11 +675,13 @@
 				4C28FF5D28FDD31600D75A1A /* SingleClass.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
 				3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */,
+				040185BC291C0700003C0DB3 /* BuildingSearchResults.swift in Sources */,
 				4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */,
 				4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */,
 				4C7859F2291D880200C0C2F7 /* SignUpView.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
 				50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */,
+				040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,
@@ -866,7 +878,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = L8596W57HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -880,7 +892,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bundleID.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -898,7 +910,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = L8596W57HC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -912,7 +924,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bundleID.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

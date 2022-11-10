@@ -16,7 +16,8 @@ class DatabaseManager: ObservableObject{
     @Published var buildings: [Building] = []
     
     init(){
-        self.queryBuildings()
+//        self.queryBuildings()
+        self.buildBuildingsLocally()
     }
     
     // --------------------------------
@@ -41,6 +42,29 @@ class DatabaseManager: ObservableObject{
     // --------------------------------
     //      ===Building Functions===
     // --------------------------------
+    func buildBuildingsLocally() {
+        self.buildings.removeAll()
+        let newBuildings: [ReadInBuilding] = readBuildingsFromJSON("all_buildings.json")
+        
+        
+        for building in newBuildings {
+            let id = String(building.id)
+            let name = building.title
+            let address = building.address
+            let latitude = building.latitude
+            let longitude = building.longitude
+            var coordinate = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+            if let latitude = Double(latitude){
+                if let longitude = Double(longitude){
+                    coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                }
+            }
+            
+            let aBuilding = Building(id: id, name: name, address: address, coordinate: coordinate)
+            self.buildings.append(aBuilding)
+        }
+    }
+    
     func queryBuildings(){
         self.buildings.removeAll()
         let ref = fireStoreDB.collection("Buildings")

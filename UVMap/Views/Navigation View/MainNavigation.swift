@@ -10,6 +10,7 @@ import SwiftUI
 struct MainNavigation: View {
     @EnvironmentObject var sessionManager: SessionManager
     @StateObject var classManager: ClassManager = ClassManager()
+    @StateObject var mapManager: MapManager = MapManager()
     
     var body: some View {
         ZStack{
@@ -20,6 +21,7 @@ struct MainNavigation: View {
             case 1:
                 MainMapView()
                     .environmentObject(classManager)
+                    .environmentObject(mapManager)
             case 2:
                 //                SettingsView()
                 AddClassView()
@@ -30,6 +32,7 @@ struct MainNavigation: View {
             default:
                 MainMapView()
                     .environmentObject(classManager)
+                    .environmentObject(mapManager)
             }
             // Style of Nav Bar
             NavigationBar()

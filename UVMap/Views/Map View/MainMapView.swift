@@ -14,19 +14,25 @@ enum BottomSheetPosition: CGFloat, CaseIterable {
 }
 
 struct MainMapView: View {
+    @EnvironmentObject var mapManager: MapManager
     @State var bottomSheetPosition: BottomSheetPosition = .middle
-    @StateObject private var mapManager = MapManager()
+    
+    @StateObject private var databaseManager = DatabaseManager()
 //    @State var showingBottomWindow = true
     
     var body: some View {
         ZStack(alignment: .bottom) {
             TheMap()
                 .environmentObject(mapManager)
+                .environmentObject(databaseManager)
             VStack(alignment: .leading) {
-                SearchBar()
+                BuildingSearchResults()
+                    .environmentObject(mapManager)
+                    .environmentObject(databaseManager)
                 CurrentLocationButton()
                     .environmentObject(mapManager)
                     .padding()
+                
                 // MARK: draggable bottom sheet
                 BottomSheetView(position: $bottomSheetPosition){}content: {
                     BottomWindow(bottomSheetPosition: $bottomSheetPosition)
