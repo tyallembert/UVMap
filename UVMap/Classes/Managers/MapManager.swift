@@ -196,5 +196,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         else {
             
         }
+        
+        if !routes.isEmpty {
+            buildRoutes{eta in}
+        }
     }
 }
