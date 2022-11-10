@@ -35,6 +35,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var searchActive: Bool = false
     @Published var startText: String = "Start"
     @State var eta: Int?
+    @Published var endLocation: Building?
     
     
     
@@ -109,6 +110,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let loc = locationManager.location {
             let origin = loc
             let end = getActiveBuilding()
+            endLocation = end
+            
             let request = MKDirections.Request()
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
             request.destination = MKMapItem(placemark: MKPlacemark(coordinate: end.coordinate))
@@ -186,8 +189,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else{return}
         if followUser  {
-            guard let location = locations.last else{return}
+//            guard let location = locations.last else{return}
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude - LATITUDE_OFFSET, longitude: location.coordinate.longitude)
             self.region = MKCoordinateRegion(center: center, latitudinalMeters: REGION_RADIUS, longitudinalMeters: REGION_RADIUS)
             mapView.setRegion(region, animated: true)
@@ -198,7 +202,27 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         }
         
         if !routes.isEmpty {
-            buildRoutes{eta in}
+            var ended = false
+            if let end = endLocation {
+                let endCord = end.coordinate
+                let lattRange = (endCord.latitude - 0.0002)...(endCord.latitude + 0.0002)
+                let longRange = (endCord.longitude - 0.0002)...(endCord.longitude + 0.0002)
+                
+                if lattRange.contains(location.coordinate.latitude) && longRange.contains(location.coordinate.longitude) {
+                    cancelRoutes()
+                    ended = true
+                }
+            }
+            
+            if !ended {
+                buildRoutes{eta in}
+            }
+            
+            
+
+            
+            
+            
         }
     }
 }
