@@ -67,7 +67,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     }
     
     func setBuildings(_ buildings: [Building]) {
-        self.buildings = buildings
+        if self.buildings.isEmpty {
+            self.buildings = buildings
+        }
     }
     
     

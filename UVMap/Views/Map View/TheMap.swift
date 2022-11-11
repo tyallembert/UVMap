@@ -21,13 +21,13 @@ struct TheMap: View {
             Map(coordinateRegion: $mapManager.region,
                 type: .standard,
                 userTrackingMode: $userTrackingMode,
-                annotationItems: databaseManager.buildings,
+                annotationItems: mapManager.buildings,
                 annotationContent: { location in
                 ViewMapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
-                        .scaleEffect(mapManager.activeBuilding == location ? 1.2 : 0.8)
-                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
-                        .animation(.spring(), value: mapManager.activeBuilding)
+//                        .scaleEffect(mapManager.activeBuilding == location ? 1.4 : 1.0)
+//                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
+//                        .animation(.spring(), value: mapManager.activeBuilding)
                 }
                },
                 overlays: mapManager.routes.map { $0.polyline },
