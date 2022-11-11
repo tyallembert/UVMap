@@ -16,7 +16,7 @@ struct EndRouteButton: View {
             mapManager.cancelRoutes()
         } label: {
             Label("End Route", systemImage: "exclamationmark.octagon")
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
         }
         .padding()
         .backgroundBlur(radius: 25, opaque: true)
