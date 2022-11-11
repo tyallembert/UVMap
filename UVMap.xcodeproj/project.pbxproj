@@ -11,6 +11,7 @@
 		040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BD291C0795003C0DB3 /* OneBuildingResult.swift */; };
 		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
+		049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -63,7 +64,6 @@
 		4C78EE7128DE1D2200306D58 /* UVMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7028DE1D2200306D58 /* UVMapTests.swift */; };
 		4C78EE7B28DE1D2200306D58 /* UVMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7A28DE1D2200306D58 /* UVMapUITests.swift */; };
 		4C78EE7D28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7C28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift */; };
-		4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
 		4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9028DE211B00306D58 /* LoginView.swift */; };
 		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
 		4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9428DF650D00306D58 /* SettingsView.swift */; };
@@ -638,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */,
 				4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */,
 				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
 				049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */,
@@ -693,10 +694,8 @@
 				50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */,
 				4C7859ED291D880200C0C2F7 /* SignUpPasswordView.swift in Sources */,
 				50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */,
-				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				4C7859EF291D880200C0C2F7 /* LastNameView.swift in Sources */,
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
-				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
 				3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
@@ -886,6 +885,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -918,6 +918,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
