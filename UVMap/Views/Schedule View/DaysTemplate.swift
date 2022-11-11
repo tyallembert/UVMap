@@ -18,7 +18,7 @@ struct DaysTemplate: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(classManager.currentWeek,id: \.self){day in
-                        Spacer()
+                        Spacer().frame(width: 1)
                         Button{
                             classManager.getTodaysClasses(date: day)
                         }label: {
@@ -26,10 +26,12 @@ struct DaysTemplate: View {
                                 Text(classManager.extractDate(date: day, format: "dd"))
                                 Text(classManager.extractDate(date: day, format: "EEE"))
                             }
+                            .padding(5)
                             .background(classManager.activeDay == day ? Color.backgroundGreen :Color.white)
                             .foregroundColor(classManager.activeDay == day ? Color.white :Color.backgroundGreen)
+                            .cornerRadius(5)
                         }
-                        Spacer()
+                        Spacer().frame(width: 1)
                     }
 
                 }

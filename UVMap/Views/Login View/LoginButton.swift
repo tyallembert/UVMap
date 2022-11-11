@@ -13,7 +13,10 @@ struct LoginButton: View {
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        Button {sessionManager.signIn(database: databaseManager)} label:{
+        Button {
+            sessionManager.signIn(database: databaseManager)
+            
+        } label:{
             Text("Login")
                 .font(.title2)
                 .fontWeight(.heavy)

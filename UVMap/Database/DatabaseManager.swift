@@ -31,14 +31,6 @@ class DatabaseManager: ObservableObject{
         }
     }
     
-    func signIn(netID: String, password: String){
-        Auth.auth().signIn(withEmail: netID, password: password) { result, error in
-            if let error = error {
-                print("ERROR: \(error.localizedDescription)")
-            }
-        }
-    }
-    
     // --------------------------------
     //      ===Building Functions===
     // --------------------------------
