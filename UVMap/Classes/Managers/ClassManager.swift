@@ -208,7 +208,7 @@ class ClassManager: ObservableObject{
             return
         }
         
-        (1...7).forEach { day in
+        (1...5).forEach { day in
             if let weekday = calendar.date(byAdding: .day, value: day, to: firstWeekDay){
                 currentWeek.append(weekday)
             }
