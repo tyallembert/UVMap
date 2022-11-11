@@ -25,6 +25,7 @@ struct SearchBar: View {
                                 mapManager.searchActive = true
                             }
                         }
+                        .disableAutocorrection(true)
                 }
                 
                 .padding(7)

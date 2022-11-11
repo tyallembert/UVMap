@@ -20,10 +20,10 @@ struct StartButton: View {
             Text(mapManager.startText)
                 .font(.title2)
                 .fontWeight(.heavy)
+                .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
         }
         .foregroundColor(.white)
         .padding()
-        .frame(maxWidth: UIScreen.main.bounds.width*0.9)
         .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
         .cornerRadius(10)
         .shadow(color: .black, radius: 3, x: 2, y: 3)
