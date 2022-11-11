@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 // This function manages the login process
 class SessionManager: ObservableObject {
@@ -33,7 +34,11 @@ class SessionManager: ObservableObject {
     var username: String = ""
    
     func signUp(database: DatabaseManager) {
-        database.signUp(firstName: firstName, lastName: lastName, email: email, netID: netID, password: password, retypePassword: retypePassword)
+        Auth.auth().createUser(withEmail: netID, password: password) { result, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
  
     func signIn(database: DatabaseManager){
@@ -49,7 +54,13 @@ class SessionManager: ObservableObject {
             isError = true
             return
         }
-        database.signIn(netID: username, password: password)
+        Auth.auth().signIn(withEmail: username, password: password) { result, error in
+            if let error = error {
+                print("ERROR: \(error.localizedDescription)")
+                self.errorMessage = error.localizedDescription
+                self.isError = true
+            }
+        }
     }
     
 }
