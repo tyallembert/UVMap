@@ -11,6 +11,7 @@
 		040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BD291C0795003C0DB3 /* OneBuildingResult.swift */; };
 		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
+		049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -637,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */,
 				4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */,
 				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
 				049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */,
