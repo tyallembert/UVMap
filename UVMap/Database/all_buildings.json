@@ -1,398 +1,1143 @@
 [
     {
         "id": 1,
-        "title": "Lafayette Hall",
-        "abbreviation": "LAFAYE",
-        "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.4778254",
-        "longitude": "-73.1988209",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "Old Mill, 94 University Pl"
+        "title": "Alumni House",
+        "abbreviation": "",
+        "latitude": "44.47464152",
+        "longitude": "-73.20275984"
     },
     {
         "id": 2,
-        "title": "James M. Jeffords Hall",
-        "abbreviation": "JEFFRD",
-        "address": "",
-        "latitude": "44.4754141",
-        "longitude": "-73.1938538",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "63 Carrigan Drive"
+        "title": "Alumni House Pavilion",
+        "abbreviation": "",
+        "latitude": "44.47483156",
+        "longitude": "-73.20297897"
     },
     {
         "id": 3,
-        "title": "Williams Hall UVM",
-        "abbreviation": "WILLMS",
-        "address": "72 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.478646",
-        "longitude": "-73.198926",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "72 University Pl"
+        "title": "Grasse Mount",
+        "abbreviation": "",
+        "latitude": "44.47569795",
+        "longitude": "-73.20300105"
     },
     {
         "id": 4,
-        "title": "STEM Discovery Hall",
-        "abbreviation": "DISCOV",
-        "address": "82 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.4783832",
-        "longitude": "-73.1976914",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "82 University Pl"
+        "title": "Jacobs House",
+        "abbreviation": "",
+        "latitude": "44.47688905",
+        "longitude": "-73.20273214"
     },
     {
         "id": 5,
-        "title": "Living/Learning Center",
-        "abbreviation": "L/L-A",
-        "address": "",
-        "latitude": "44.4737065",
-        "longitude": "-73.1947957",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "Bittersweet",
+        "abbreviation": "",
+        "latitude": "44.47658896",
+        "longitude": "-73.20091213"
     },
     {
         "id": 6,
-        "title": "UVM Medical Center",
+        "title": "Allen House",
         "abbreviation": "",
-        "address": "111 Colchester Ave, Burlington, VT 05401, United States",
-        "latitude": "44.4796617",
-        "longitude": "-73.1942467",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "111 Colchester Ave"
+        "latitude": "44.47652035",
+        "longitude": "-73.20017014"
     },
     {
         "id": 7,
-        "title": "Kalkin Hall",
-        "abbreviation": "KALKIN",
-        "address": "",
-        "latitude": "44.4793853",
-        "longitude": "-73.1974382",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "479 Main Street",
+        "abbreviation": "",
+        "latitude": "44.47621726",
+        "longitude": "-73.19997774"
     },
     {
         "id": 8,
-        "title": "Aiken Center",
-        "abbreviation": "AIKEN",
-        "address": "",
-        "latitude": "44.4759431",
-        "longitude": "-73.195196",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "481 Main Street",
+        "abbreviation": "",
+        "latitude": "44.47621855",
+        "longitude": "-73.19965999"
     },
     {
         "id": 9,
-        "title": "Waterman Bldg",
-        "abbreviation": "WATERM",
-        "address": "",
-        "latitude": "44.4782586",
-        "longitude": "-73.201147",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "85 S Prospect St"
+        "title": "Pomeroy Hall",
+        "abbreviation": "",
+        "latitude": "44.47648094",
+        "longitude": "-73.19920308"
     },
     {
         "id": 10,
-        "title": "Southwick Music Hall UVM",
-        "abbreviation": "SOUTHW",
-        "address": "392 S Prospect St, Burlington, VT 05401, United States",
-        "latitude": "44.4695497",
-        "longitude": "-73.1976328",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "392 S Prospect St"
+        "title": "172 South Prospect Street",
+        "abbreviation": "",
+        "latitude": "44.47583304",
+        "longitude": "-73.19986384"
     },
     {
         "id": 11,
-        "title": "Innovation Hall",
-        "abbreviation": "INNOV",
-        "address": "University of Vermont, 82 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.4784713",
-        "longitude": "-73.1975745",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "University of Vermont, 82 University Pl"
+        "title": "Wadhams House",
+        "abbreviation": "",
+        "latitude": "44.4754566",
+        "longitude": "-73.20021767"
     },
     {
         "id": 12,
-        "title": "John Dewey Hall",
-        "abbreviation": "DEWEY",
-        "address": "",
-        "latitude": "44.4810472",
-        "longitude": "-73.2002558",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "2 Colchester Ave"
+        "title": "Admissions Visitor Center",
+        "abbreviation": "",
+        "latitude": "44.4757281",
+        "longitude": "-73.19964838"
     },
     {
         "id": 13,
-        "title": "Billings Ira Allen Lecture Hall",
+        "title": "Clement House",
         "abbreviation": "",
-        "address": "",
-        "latitude": "44.4796408",
-        "longitude": "-73.1989157",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "26 University Pl"
+        "latitude": "44.47499091",
+        "longitude": "-73.20013536"
     },
     {
         "id": 14,
-        "title": "Cohen Hall for the Integrative Creative Arts",
-        "abbreviation": "COHEN",
-        "address": "14 S Williams St, Burlington, VT 05401, United States",
-        "latitude": "44.4803186",
-        "longitude": "-73.202916",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "14 S Williams St"
+        "title": "Englesby House",
+        "abbreviation": "",
+        "latitude": "44.47797219",
+        "longitude": "-73.20274614"
     },
     {
         "id": 15,
-        "title": "Marsh Life Sciences Building",
-        "abbreviation": "MARSH",
-        "address": "109 Carrigan Drive, Burlington, VT 05405, United States",
-        "latitude": "44.4768232",
-        "longitude": "-73.1956637",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "109 Carrigan Drive"
+        "title": "439 College Street",
+        "abbreviation": "",
+        "latitude": "44.47787148",
+        "longitude": "-73.20205658"
     },
     {
         "id": 16,
-        "title": "Votey Hall",
-        "abbreviation": "VOTEY",
-        "address": "",
-        "latitude": "44.479373",
-        "longitude": "-73.1981081",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "33 Colchester Ave"
+        "title": "109 South Prospect Street Annex",
+        "abbreviation": "",
+        "latitude": "44.47794383",
+        "longitude": "-73.20146801"
+    },
+    {
+        "id": 17,
+        "title": "Wheeler House",
+        "abbreviation": "",
+        "latitude": "44.4773961",
+        "longitude": "-73.20152101"
     },
     {
         "id": 18,
-        "title": "Given Medical Bldg",
-        "abbreviation": "GIVN E",
-        "address": "",
-        "latitude": "44.477757",
-        "longitude": "-73.1936467",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "89 Beaumont Ave"
+        "title": "Pierce-Spaulding House",
+        "abbreviation": "",
+        "latitude": "44.47744491",
+        "longitude": "-73.20091398"
     },
     {
         "id": 19,
-        "title": "Royall Tyler Theatre",
+        "title": "Waterman Building",
         "abbreviation": "",
-        "address": "116 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.4774226",
-        "longitude": "-73.1978492",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "116 University Pl"
+        "latitude": "44.47871966",
+        "longitude": "-73.20100546"
     },
     {
         "id": 20,
-        "title": "Old Mill Building UVM",
-        "abbreviation": "OLDMIL",
-        "address": "Old Mill, 94 University Pl, Burlington, VT 05405, United States",
-        "latitude": "44.4778218",
-        "longitude": "-73.1988305",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "Old Mill, 94 University Pl"
+        "title": "438 College Street",
+        "abbreviation": "",
+        "latitude": "44.47873689",
+        "longitude": "-73.20203431"
     },
     {
         "id": 21,
-        "title": "Roy L. Patrick Memorial Gymnasium",
-        "abbreviation": "PATGYM",
-        "address": "97 Spear St, Burlington, VT 05405, United States",
-        "latitude": "44.4705972",
-        "longitude": "-73.1948048",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "97 Spear St"
+        "title": "Booth House",
+        "abbreviation": "",
+        "latitude": "44.47876178",
+        "longitude": "-73.20267148"
+    },
+    {
+        "id": 22,
+        "title": "440 College Street",
+        "abbreviation": "",
+        "latitude": "44.479254",
+        "longitude": "-73.20215308"
     },
     {
         "id": 23,
-        "title": "Stafford Hall",
-        "abbreviation": "STAFFO",
-        "address": "",
-        "latitude": "44.4763678",
-        "longitude": "-73.1943548",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "70 South Williams Street",
+        "abbreviation": "",
+        "latitude": "44.47920339",
+        "longitude": "-73.20268138"
     },
     {
         "id": 24,
-        "title": "University Heights",
+        "title": "Nicholson Building",
         "abbreviation": "",
-        "address": "",
-        "latitude": "44.4714715",
-        "longitude": "-73.1962875",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "latitude": "44.47956898",
+        "longitude": "-73.20073506"
     },
     {
         "id": 25,
-        "title": "Terrill Building",
-        "abbreviation": "TERRIL",
-        "address": "570 Main St, Burlington, VT 05405, United States",
-        "latitude": "44.4761487",
-        "longitude": "-73.1961484",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "570 Main St"
+        "title": "Benedict House",
+        "abbreviation": "",
+        "latitude": "44.48025949",
+        "longitude": "-73.20081664"
     },
     {
         "id": 26,
-        "title": "Mann Hall Trinity Campus UVM",
-        "abbreviation": "MANN",
-        "address": "208 Colchester Ave, Burlington, VT 05405, United States",
-        "latitude": "44.4825311",
-        "longitude": "-73.1935046",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "208 Colchester Ave"
+        "title": "34 South Williams Street",
+        "abbreviation": "",
+        "latitude": "44.48039986",
+        "longitude": "-73.20278287"
     },
     {
         "id": 27,
-        "title": "Morrill Hall",
-        "abbreviation": "MORRIL",
-        "address": "",
-        "latitude": "44.4765866",
-        "longitude": "-73.1983747",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "Cohen Hall",
+        "abbreviation": "COHEN",
+        "latitude": "44.48093066",
+        "longitude": "-73.2028302"
     },
     {
         "id": 28,
-        "title": "Fleming Museum of Art",
-        "abbreviation": "FLEMIN",
-        "address": "61 Colchester Ave, Burlington, VT 05405, United States",
-        "latitude": "44.479914",
-        "longitude": "-73.197112",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "61 Colchester Ave"
+        "title": "UVM Medical Center",
+        "abbreviation": "",
+        "latitude": "44.48078942",
+        "longitude": "-73.20139734"
     },
     {
         "id": 29,
-        "title": "Harris & Millis Halls UVM",
-        "abbreviation": "HARRIS",
-        "address": "67 Spear St, South Burlington, VT 05403, United States",
-        "latitude": "44.4717399",
-        "longitude": "-73.193847",
-        "city": "South Burlington",
-        "state": "Vermont",
-        "street": "67 Spear St"
+        "title": "Jeanne Mance Hall",
+        "abbreviation": "",
+        "latitude": "44.48168343",
+        "longitude": "-73.20277437"
     },
     {
         "id": 30,
-        "title": "Pomeroy Hall",
-        "abbreviation": "POMERO",
-        "address": "",
-        "latitude": "44.4759607",
-        "longitude": "-73.1993318",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "489 Main St"
+        "title": "Dewey Hall",
+        "abbreviation": "DEWEY",
+        "latitude": "44.48153089",
+        "longitude": "-73.20037361"
     },
     {
         "id": 31,
-        "title": "Health Science Research Facility",
+        "title": "Outing Club Main Campus",
         "abbreviation": "",
-        "address": "Burlington, VT 05405, United States",
-        "latitude": "44.4773697",
-        "longitude": "-73.1939557",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "latitude": "44.48158574",
+        "longitude": "-73.19985456"
     },
     {
         "id": 32,
-        "title": "Benedict House",
+        "title": "Pearl House",
         "abbreviation": "",
-        "address": "",
-        "latitude": "44.4797699",
-        "longitude": "-73.2007737",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "31 S Prospect St"
+        "latitude": "44.48089703",
+        "longitude": "-73.19957119"
     },
     {
         "id": 33,
-        "title": "Philosophy Department",
+        "title": "23 Mansfield Avenue",
         "abbreviation": "",
-        "address": "",
-        "latitude": "44.4787138",
-        "longitude": "-73.2028101",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "70 S Williams St"
+        "latitude": "44.4815553",
+        "longitude": "-73.19910868"
     },
     {
         "id": 34,
-        "title": "Southwick Hall",
-        "abbreviation": "SOUTHW",
-        "address": "",
-        "latitude": "44.4696061",
-        "longitude": "-73.1978833",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": ""
+        "title": "Henry Lord House",
+        "abbreviation": "",
+        "latitude": "44.48095531",
+        "longitude": "-73.19905935"
     },
     {
         "id": 35,
-        "title": "UVM Grossman School of Business (Ifshin Hall)",
-        "abbreviation": "IFSHIN",
-        "address": "55 Colchester Ave, Burlington, VT 05405, United States",
-        "latitude": "44.4792867",
-        "longitude": "-73.1974721",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "55 Colchester Ave"
+        "title": "Mansfield House",
+        "abbreviation": "",
+        "latitude": "44.4807417",
+        "longitude": "-73.19858323"
     },
     {
         "id": 36,
-        "title": "Delehanty Hall Trinity Campus UVM",
-        "abbreviation": "DELEHA",
-        "address": "Delehanty Hall, 180 Colchester Ave, Burlington, VT 05401, United States",
-        "latitude": "44.482663",
-        "longitude": "-73.194165",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "Delehanty Hall, 180 Colchester Ave"
+        "title": "Billings-Ira Allen Lecture Hall",
+        "abbreviation": "BLLNGS",
+        "latitude": "44.48022225",
+        "longitude": "-73.19891573"
     },
     {
         "id": 37,
-        "title": "Wheeler House",
-        "abbreviation": "",
-        "address": "",
-        "latitude": "44.476784",
-        "longitude": "-73.2015639",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "133 S Prospect St"
+        "title": "Ira Allen Chappel",
+        "abbreviation": "BLLNGS",
+        "latitude": "44.48035842",
+        "longitude": "-73.19918438"
     },
     {
         "id": 38,
-        "title": "Gutterson Fieldhouse",
+        "title": "Torrey Hall",
+        "abbreviation": "",
+        "latitude": "44.48023711",
+        "longitude": "-73.19853756"
+    },
+    {
+        "id": 39,
+        "title": "Perkins Building",
+        "abbreviation": "PERKIN",
+        "latitude": "44.47987732",
+        "longitude": "-73.19781336"
+    },
+    {
+        "id": 40,
+        "title": "Fleming Museum",
+        "abbreviation": "FLEMIN",
+        "latitude": "44.47996535",
+        "longitude": "-73.19711062"
+    },
+    {
+        "id": 41,
+        "title": "Billings Library",
+        "abbreviation": "BLLNGS",
+        "latitude": "44.47932365",
+        "longitude": "-73.19913705"
+    },
+    {
+        "id": 42,
+        "title": "Votey Hall",
+        "abbreviation": "VOTEY",
+        "latitude": "44.47964237",
+        "longitude": "-73.19808241"
+    },
+    {
+        "id": 43,
+        "title": "Ifshin Hall",
+        "abbreviation": "IFSHIN",
+        "latitude": "44.47932029",
+        "longitude": "-73.19747173"
+    },
+    {
+        "id": 44,
+        "title": "Kalkin Hall",
+        "abbreviation": "KALKIN",
+        "latitude": "44.47932029",
+        "longitude": "-73.19747173"
+    },
+    {
+        "id": 45,
+        "title": "Williams Hall",
+        "abbreviation": "WILLMS",
+        "latitude": "44.47882939",
+        "longitude": "-73.19896894"
+    },
+    {
+        "id": 46,
+        "title": "Discovery Hall",
+        "abbreviation": "DISCOV",
+        "latitude": "44.47893404",
+        "longitude": "-73.1976056"
+    },
+    {
+        "id": 47,
+        "title": "Innovation Hall",
+        "abbreviation": "INNOV",
+        "latitude": "44.47886903",
+        "longitude": "-73.19766036"
+    },
+    {
+        "id": 48,
+        "title": "Lafayette Hall",
+        "abbreviation": "LAFAYE",
+        "latitude": "44.47782721",
+        "longitude": "-73.19837594"
+    },
+    {
+        "id": 49,
+        "title": "Old Mill Annex",
+        "abbreviation": "OLDMIL",
+        "latitude": "44.47789657",
+        "longitude": "-73.19864164"
+    },
+    {
+        "id": 50,
+        "title": "Old Mill",
+        "abbreviation": "OLDMIL",
+        "latitude": "44.47779875",
+        "longitude": "-73.19885265"
+    },
+    {
+        "id": 51,
+        "title": "Central Campus Residence Hall",
+        "abbreviation": "",
+        "latitude": "44.47842825",
+        "longitude": "-73.19645886"
+    },
+    {
+        "id": 52,
+        "title": "Royall Tyler Theatre",
+        "abbreviation": "",
+        "latitude": "44.47782034",
+        "longitude": "-73.19793506"
+    },
+    {
+        "id": 53,
+        "title": "Howe Library",
+        "abbreviation": "",
+        "latitude": "44.47782765",
+        "longitude": "-73.19680056"
+    },
+    {
+        "id": 54,
+        "title": "Morrill Hall",
+        "abbreviation": "MORRIL",
+        "latitude": "44.47716808",
+        "longitude": "-73.19833181"
+    },
+    {
+        "id": 55,
+        "title": "UVM Medical Center - Main Campus",
+        "abbreviation": "",
+        "latitude": "44.47937277",
+        "longitude": "-73.19485567"
+    },
+    {
+        "id": 56,
+        "title": "Converse Hall",
+        "abbreviation": "",
+        "latitude": "44.47881114",
+        "longitude": "-73.19460581"
+    },
+    {
+        "id": 57,
+        "title": "Larner Learning Commons",
+        "abbreviation": "",
+        "latitude": "44.47834014",
+        "longitude": "-73.19375239"
+    },
+    {
+        "id": 58,
+        "title": "Medical Education Center",
+        "abbreviation": "",
+        "latitude": "44.47803234",
+        "longitude": "-73.19370505"
+    },
+    {
+        "id": 59,
+        "title": "Given Complex",
+        "abbreviation": "GIVN E",
+        "latitude": "44.47742209",
+        "longitude": "-73.19380541"
+    },
+    {
+        "id": 60,
+        "title": "Rowell Hall",
+        "abbreviation": "ROWELL",
+        "latitude": "44.47775835",
+        "longitude": "-73.19459085"
+    },
+    {
+        "id": 61,
+        "title": "Health Science Research Facility",
+        "abbreviation": "",
+        "latitude": "44.47688034",
+        "longitude": "-73.1939145"
+    },
+    {
+        "id": 62,
+        "title": "Hills Agricultural Science Building",
+        "abbreviation": "",
+        "latitude": "44.47700177",
+        "longitude": "-73.19472176"
+    },
+    {
+        "id": 63,
+        "title": "Marsh Life Sciences",
+        "abbreviation": "MARSH",
+        "latitude": "44.47673089",
+        "longitude": "-73.19554647"
+    },
+    {
+        "id": 64,
+        "title": "Stafford Hall",
+        "abbreviation": "STAFFO",
+        "latitude": "44.47637594",
+        "longitude": "-73.19435085"
+    },
+    {
+        "id": 65,
+        "title": "Joseph E. Carrigan Wing",
+        "abbreviation": "",
+        "latitude": "44.4764351",
+        "longitude": "-73.19510139"
+    },
+    {
+        "id": 66,
+        "title": "Terrill Building",
+        "abbreviation": "TERRIL",
+        "latitude": "44.47617667",
+        "longitude": "-73.19613555"
+    },
+    {
+        "id": 67,
+        "title": "Dudley H. Davis Center",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 68,
+        "title": "Aiken Center",
+        "abbreviation": "AIKEN",
+        "latitude": "44.47594627",
+        "longitude": "-73.19520611"
+    },
+    {
+        "id": 69,
+        "title": "Stafford Greenhouse",
+        "abbreviation": "STAFFO",
+        "latitude": "44.47588088",
+        "longitude": "-73.19461703"
+    },
+    {
+        "id": 70,
+        "title": "James M. Jeffords Hall",
+        "abbreviation": "JEFFRD",
+        "latitude": "44.47549479",
+        "longitude": "-73.1938665"
+    },
+    {
+        "id": 71,
+        "title": "Nolin House",
+        "abbreviation": "",
+        "latitude": "44.47509693",
+        "longitude": "-73.19642078"
+    },
+    {
+        "id": 72,
+        "title": "Pedestrian Underpass",
+        "abbreviation": "",
+        "latitude": "44.47493283",
+        "longitude": "-73.19622753"
+    },
+    {
+        "id": 73,
+        "title": "Adams Building",
+        "abbreviation": "",
+        "latitude": "44.47472736",
+        "longitude": "-73.19610191"
+    },
+    {
+        "id": 74,
+        "title": "Johnson House",
+        "abbreviation": "",
+        "latitude": "44.47454258",
+        "longitude": "-73.19560138"
+    },
+    {
+        "id": 75,
+        "title": "Living/Learning Commons A",
+        "abbreviation": "L/L-A",
+        "latitude": "44.47346607",
+        "longitude": "-73.19425353"
+    },
+    {
+        "id": 76,
+        "title": "Living/Learning Commons B",
+        "abbreviation": "L/L-B",
+        "latitude": "44.47392008",
+        "longitude": "-73.19431278"
+    },
+    {
+        "id": 77,
+        "title": "Living/Learning Commons C",
+        "abbreviation": "L/L-C",
+        "latitude": "44.47410022",
+        "longitude": "-73.19499282"
+    },
+    {
+        "id": 78,
+        "title": "Living/Learning Commons D",
+        "abbreviation": "L/L-D",
+        "latitude": "44.4735157",
+        "longitude": "-73.1951551"
+    },
+    {
+        "id": 79,
+        "title": "Living/Learning Commons E",
+        "abbreviation": "L/L-E",
+        "latitude": "44.47312418",
+        "longitude": "-73.19474553"
+    },
+    {
+        "id": 80,
+        "title": "Tupper Hall",
+        "abbreviation": "",
+        "latitude": "44.47311851",
+        "longitude": "-73.19369116"
+    },
+    {
+        "id": 81,
+        "title": "Austin Hall",
+        "abbreviation": "",
+        "latitude": "44.47270268",
+        "longitude": "-73.19418223"
+    },
+    {
+        "id": 82,
+        "title": "Marsh Hall",
+        "abbreviation": "MARSH",
+        "latitude": "44.47276608",
+        "longitude": "-73.19343484"
+    },
+    {
+        "id": 83,
+        "title": "University Heights North 1",
+        "abbreviation": "",
+        "latitude": "44.47288451",
+        "longitude": "-73.19567622"
+    },
+    {
+        "id": 84,
+        "title": "University Heights North 2 & 3",
+        "abbreviation": "",
+        "latitude": "44.47246917",
+        "longitude": "-73.1957245"
+    },
+    {
+        "id": 85,
+        "title": "University Heights South 2 & 3",
+        "abbreviation": "",
+        "latitude": "44.47210934",
+        "longitude": "-73.19557429"
+    },
+    {
+        "id": 86,
+        "title": "University Heights South 1",
+        "abbreviation": "",
+        "latitude": "44.47174951",
+        "longitude": "-73.19533558"
+    },
+    {
+        "id": 87,
+        "title": "Catholic Center",
+        "abbreviation": "",
+        "latitude": "44.4716672",
+        "longitude": "-73.19734992"
+    },
+    {
+        "id": 88,
+        "title": "Interfaith Center",
+        "abbreviation": "",
+        "latitude": "44.47111214",
+        "longitude": "-73.19743038"
+    },
+    {
+        "id": 89,
+        "title": "Millis Hall",
+        "abbreviation": "HARRIS",
+        "latitude": "44.47209977",
+        "longitude": "-73.19398642"
+    },
+    {
+        "id": 90,
+        "title": "Harris-Millis Commons",
+        "abbreviation": "HARRIS",
+        "latitude": "44.47173419",
+        "longitude": "-73.19384159"
+    },
+    {
+        "id": 91,
+        "title": "Harris Hall",
+        "abbreviation": "HARRIS",
+        "latitude": "44.4713533",
+        "longitude": "-73.19379867"
+    },
+    {
+        "id": 92,
+        "title": "Patrick Gymnasium",
+        "abbreviation": "PATGYM",
+        "latitude": "44.4704793",
+        "longitude": "-73.19480148"
+    },
+    {
+        "id": 93,
+        "title": "Gutterson Parking Garage",
         "abbreviation": "GUTRSN",
-        "address": "147 Spear St, Burlington, VT 05405, United States",
-        "latitude": "44.4693674",
-        "longitude": "-73.1934625",
-        "city": "Burlington",
-        "state": "Vermont",
-        "street": "147 Spear St"
+        "latitude": "44.47041008",
+        "longitude": "-73.19297019"
+    },
+    {
+        "id": 94,
+        "title": "Gutterson Field House",
+        "abbreviation": "GUTRSN",
+        "latitude": "44.46932405",
+        "longitude": "-73.19456044"
+    },
+    {
+        "id": 95,
+        "title": "Redstone Hall",
+        "abbreviation": "",
+        "latitude": "44.47011315",
+        "longitude": "-73.19795755"
+    },
+    {
+        "id": 96,
+        "title": "Music Building",
+        "abbreviation": "SOUTHW",
+        "latitude": "44.46991384",
+        "longitude": "-73.19750156"
+    },
+    {
+        "id": 97,
+        "title": "Southwick Hall",
+        "abbreviation": "SOUTHW",
+        "latitude": "44.46959658",
+        "longitude": "-73.19790055"
+    },
+    {
+        "id": 98,
+        "title": "Coolidge Hall",
+        "abbreviation": "",
+        "latitude": "44.46918982",
+        "longitude": "-73.19800885"
+    },
+    {
+        "id": 99,
+        "title": "Redstone Lofts North",
+        "abbreviation": "",
+        "latitude": "44.46888882",
+        "longitude": "-73.19749586"
+    },
+    {
+        "id": 100,
+        "title": "Redstone Lofts South",
+        "abbreviation": "",
+        "latitude": "44.4680631",
+        "longitude": "-73.19633309"
+    },
+    {
+        "id": 101,
+        "title": "Robinson Hall",
+        "abbreviation": "",
+        "latitude": "44.46911254",
+        "longitude": "-73.1994737"
+    },
+    {
+        "id": 102,
+        "title": "Slade Hall",
+        "abbreviation": "",
+        "latitude": "44.46875052",
+        "longitude": "-73.19984989"
+    },
+    {
+        "id": 103,
+        "title": "Patterson Hall",
+        "abbreviation": "",
+        "latitude": "44.46850647",
+        "longitude": "-73.19934261"
+    },
+    {
+        "id": 104,
+        "title": "Wright Hall",
+        "abbreviation": "",
+        "latitude": "44.46806716",
+        "longitude": "-73.19939391"
+    },
+    {
+        "id": 105,
+        "title": "Christie Hall",
+        "abbreviation": "",
+        "latitude": "44.46771735",
+        "longitude": "-73.19930841"
+    },
+    {
+        "id": 106,
+        "title": "Wilks Hall",
+        "abbreviation": "",
+        "latitude": "44.46722109",
+        "longitude": "-73.19925141"
+    },
+    {
+        "id": 107,
+        "title": "Davis Hall",
+        "abbreviation": "",
+        "latitude": "44.46689974",
+        "longitude": "-73.19876122"
+    },
+    {
+        "id": 108,
+        "title": "Wing Hall",
+        "abbreviation": "",
+        "latitude": "44.46721702",
+        "longitude": "-73.19823684"
+    },
+    {
+        "id": 109,
+        "title": "Hamilton Hall",
+        "abbreviation": "",
+        "latitude": "44.46772955",
+        "longitude": "-73.19825394"
+    },
+    {
+        "id": 110,
+        "title": "Simpson Hall",
+        "abbreviation": "",
+        "latitude": "44.4681051",
+        "longitude": "-73.19794041"
+    },
+    {
+        "id": 111,
+        "title": "Mason Hall",
+        "abbreviation": "",
+        "latitude": "44.46852219",
+        "longitude": "-73.19827539"
+    },
+    {
+        "id": 112,
+        "title": "Redstone Apartments",
+        "abbreviation": "",
+        "latitude": "44.46658933",
+        "longitude": "-73.19993134"
+    },
+    {
+        "id": 113,
+        "title": "460 S Prospect Street",
+        "abbreviation": "",
+        "latitude": "44.46766048",
+        "longitude": "-73.20035802"
+    },
+    {
+        "id": 114,
+        "title": "466 S Prospect Street",
+        "abbreviation": "",
+        "latitude": "44.46740399",
+        "longitude": "-73.20036607"
+    },
+    {
+        "id": 115,
+        "title": "474 S Prospect Street",
+        "abbreviation": "",
+        "latitude": "44.46720109",
+        "longitude": "-73.20046531"
+    },
+    {
+        "id": 116,
+        "title": "50 Fletcher Place",
+        "abbreviation": "",
+        "latitude": "44.48262328",
+        "longitude": "-73.19615683"
+    },
+    {
+        "id": 117,
+        "title": "Ira Allen School",
+        "abbreviation": "BLLNGS",
+        "latitude": "44.48235536",
+        "longitude": "-73.19530925"
+    },
+    {
+        "id": 118,
+        "title": "Delehanty Hall",
+        "abbreviation": "",
+        "latitude": "44.48279551",
+        "longitude": "-73.19427392"
+    },
+    {
+        "id": 119,
+        "title": "Mann Hall",
+        "abbreviation": "",
+        "latitude": "44.48254673",
+        "longitude": "-73.19350144"
+    },
+    {
+        "id": 120,
+        "title": "St. Joseph's Villa",
+        "abbreviation": "",
+        "latitude": "44.48286057",
+        "longitude": "-73.19280407"
+    },
+    {
+        "id": 121,
+        "title": "Farrell Hall",
+        "abbreviation": "",
+        "latitude": "44.48325478",
+        "longitude": "-73.19359264"
+    },
+    {
+        "id": 122,
+        "title": "The Cottages",
+        "abbreviation": "",
+        "latitude": "44.48337725",
+        "longitude": "-73.19099089"
+    },
+    {
+        "id": 123,
+        "title": "Mcauley Hall",
+        "abbreviation": "",
+        "latitude": "44.48335906",
+        "longitude": "-73.19175746"
+    },
+    {
+        "id": 124,
+        "title": "Mercy Hall",
+        "abbreviation": "",
+        "latitude": "44.48382504",
+        "longitude": "-73.19267532"
+    },
+    {
+        "id": 125,
+        "title": "Mccann Hall",
+        "abbreviation": "",
+        "latitude": "44.4846632",
+        "longitude": "-73.19275579"
+    },
+    {
+        "id": 126,
+        "title": "Richardson Hall",
+        "abbreviation": "",
+        "latitude": "44.48468234",
+        "longitude": "-73.19331369"
+    },
+    {
+        "id": 127,
+        "title": "Hunt Hall",
+        "abbreviation": "",
+        "latitude": "44.48495024",
+        "longitude": "-73.1930401"
+    },
+    {
+        "id": 128,
+        "title": "Sichel Hall",
+        "abbreviation": "",
+        "latitude": "44.48482777",
+        "longitude": "-73.19363555"
+    },
+    {
+        "id": 129,
+        "title": "Ready Hall",
+        "abbreviation": "",
+        "latitude": "44.48512246",
+        "longitude": "-73.19349071"
+    },
+    {
+        "id": 130,
+        "title": "Heli-Pad",
+        "abbreviation": "",
+        "latitude": "44.47334799",
+        "longitude": "-73.18880077"
+    },
+    {
+        "id": 131,
+        "title": "UVM Rescue",
+        "abbreviation": "",
+        "latitude": "44.47402932",
+        "longitude": "-73.18978863"
+    },
+    {
+        "id": 132,
+        "title": "284 East Avenue",
+        "abbreviation": "",
+        "latitude": "44.47461328",
+        "longitude": "-73.18979375"
+    },
+    {
+        "id": 133,
+        "title": "Library Research Annex",
+        "abbreviation": "",
+        "latitude": "44.47465708",
+        "longitude": "-73.18926181"
+    },
+    {
+        "id": 134,
+        "title": "280 East Avenue",
+        "abbreviation": "",
+        "latitude": "44.47478482",
+        "longitude": "-73.18885774"
+    },
+    {
+        "id": 135,
+        "title": "Virtue Field",
+        "abbreviation": "",
+        "latitude": "44.46856341",
+        "longitude": "-73.19405316"
+    },
+    {
+        "id": 136,
+        "title": "UVM Outdoor Track",
+        "abbreviation": "",
+        "latitude": "44.46737973",
+        "longitude": "-73.19307848"
+    },
+    {
+        "id": 137,
+        "title": "Field Hockey Field",
+        "abbreviation": "",
+        "latitude": "44.4686651",
+        "longitude": "-73.19312408"
+    },
+    {
+        "id": 138,
+        "title": "Atheltic Field",
+        "abbreviation": "",
+        "latitude": "44.46916206",
+        "longitude": "-73.19627266"
+    },
+    {
+        "id": 139,
+        "title": "Rugby Pitch",
+        "abbreviation": "",
+        "latitude": "44.47305235",
+        "longitude": "-73.18934238"
+    },
+    {
+        "id": 140,
+        "title": "Centennial Field",
+        "abbreviation": "",
+        "latitude": "44.48223908",
+        "longitude": "-73.18837244"
+    },
+    {
+        "id": 141,
+        "title": "Centennial Woods Parking Lot",
+        "abbreviation": "",
+        "latitude": "44.4750701",
+        "longitude": "-73.18482675"
+    },
+    {
+        "id": 142,
+        "title": "Benedict Auditorium",
+        "abbreviation": "",
+        "latitude": "44.47665305",
+        "longitude": "-73.19511884"
+    },
+    {
+        "id": 143,
+        "title": "Simpson Dining Hall",
+        "abbreviation": "",
+        "latitude": "44.4681051",
+        "longitude": "-73.19794041"
+    },
+    {
+        "id": 144,
+        "title": "Harris-Millis Dining Hall",
+        "abbreviation": "",
+        "latitude": "44.47173419",
+        "longitude": "-73.19384159"
+    },
+    {
+        "id": 145,
+        "title": "Grundle",
+        "abbreviation": "",
+        "latitude": "44.47173419",
+        "longitude": "-73.19384159"
+    },
+    {
+        "id": 146,
+        "title": "Central Dining Hall",
+        "abbreviation": "",
+        "latitude": "44.4781704",
+        "longitude": "-73.19639405"
+    },
+    {
+        "id": 147,
+        "title": "Trinity Dining Hall",
+        "abbreviation": "",
+        "latitude": "44.48337552",
+        "longitude": "-73.19166247"
+    },
+    {
+        "id": 148,
+        "title": "University Event Services",
+        "abbreviation": "",
+        "latitude": "44.48286057",
+        "longitude": "-73.19280407"
+    },
+    {
+        "id": 149,
+        "title": "Marche",
+        "abbreviation": "",
+        "latitude": "44.47351653",
+        "longitude": "-73.19462936"
+    },
+    {
+        "id": 150,
+        "title": "FeelGood",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 151,
+        "title": "Cat Pause",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 152,
+        "title": "Henderson's Cafe",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 153,
+        "title": "The Marketplace",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 154,
+        "title": "New World Tortilla",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 155,
+        "title": "Dairy Bar",
+        "abbreviation": "",
+        "latitude": "44.47583418",
+        "longitude": "-73.19639736"
+    },
+    {
+        "id": 156,
+        "title": "Campus Perk",
+        "abbreviation": "",
+        "latitude": "44.47914058",
+        "longitude": "-73.19752693"
+    },
+    {
+        "id": 157,
+        "title": "Given Bistro",
+        "abbreviation": "",
+        "latitude": "44.47771206",
+        "longitude": "-73.19351023"
+    },
+    {
+        "id": 158,
+        "title": "Northside Dining",
+        "abbreviation": "",
+        "latitude": "44.48337552",
+        "longitude": "-73.19166247"
+    },
+    {
+        "id": 159,
+        "title": "Redstone Market",
+        "abbreviation": "",
+        "latitude": "44.46825977",
+        "longitude": "-73.19805499"
+    },
+    {
+        "id": 160,
+        "title": "Redstone Dining Hall",
+        "abbreviation": "",
+        "latitude": "44.4681051",
+        "longitude": "-73.19794041"
+    },
+    {
+        "id": 161,
+        "title": "The Skinny Pancake",
+        "abbreviation": "",
+        "latitude": "44.47351653",
+        "longitude": "-73.19462936"
+    },
+    {
+        "id": 177,
+        "title": "Soccer Field",
+        "abbreviation": "",
+        "latitude": "44.46856341",
+        "longitude": "-73.19405316"
+    },
+    {
+        "id": 178,
+        "title": "Moulton Winder Field",
+        "abbreviation": "",
+        "latitude": "44.4686651",
+        "longitude": "-73.19312408"
     }
 ]
