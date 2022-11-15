@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BottomWindow: View {
     @EnvironmentObject var mapManager: MapManager
+    @EnvironmentObject var classManager: ClassManager
     @Binding var bottomSheetPosition: BottomSheetPosition
     var body: some View {
         ScrollView {

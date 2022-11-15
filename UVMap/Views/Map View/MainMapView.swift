@@ -15,6 +15,7 @@ enum BottomSheetPosition: CGFloat, CaseIterable {
 
 struct MainMapView: View {
     @EnvironmentObject var mapManager: MapManager
+    @EnvironmentObject var classManager: ClassManager
     @State var bottomSheetPosition: BottomSheetPosition = .middle
     
     @StateObject private var databaseManager = DatabaseManager()

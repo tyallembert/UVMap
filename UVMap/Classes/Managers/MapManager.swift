@@ -71,7 +71,25 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             self.buildings = buildings
         }
     }
-    
+    // returns the building after clicking one of the buildings in the side scroll menu bar
+    func getBuildingFromString(buildingString: String) -> Building{
+        var theBuilding: Building = buildings[0]
+        for aBuilding in buildings {
+            if aBuilding.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines).contains(buildingString.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)){
+                theBuilding = aBuilding
+            }
+        }
+        return theBuilding
+    }
+    //--------------------------------------
+    //          Route Calculations
+    //--------------------------------------
+    func calculateLeaveTime(){
+        
+    }
+    func calculateArrivalTime(){
+        
+    }
     
     //--------------------------------------
     //          user functions

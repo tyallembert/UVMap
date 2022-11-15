@@ -9,50 +9,40 @@ import SwiftUI
 
 struct TopSchedule: View {
     @EnvironmentObject var classManager: ClassManager
+    @EnvironmentObject var mapManager: MapManager
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                
-                // MARK: this loop is just for testing(below)
-                
-                ForEach((1...5), id: \.self) { course in
-                    Spacer()
-                    HStack(alignment: .center) {
-                        Text("Cohen")
-                            .font(.system(size: 17, weight: .semibold))
-                        Text("8:30")
-                            .font(.system(size: 13))
+        VStack(alignment: .leading, spacing: 0) {
+            Text("Todays Schedule:")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(Color.textGreenWhite)
+                .offset(x: 20, y: 5)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
+                        Spacer()
+                        Button{
+                            mapManager.setActiveBuilding(building: mapManager.getBuildingFromString(buildingString: course.building))
+                        }label: {
+                            HStack(alignment: .center) {
+                                Text(course.subject)
+                                    .font(.system(size: 17, weight: .semibold))
+                                Text(course.number)
+                                    .font(.system(size: 17, weight: .semibold))
+                                Text(course.startTime)
+                                    .font(.system(size: 13))
+                            }
+                            .padding(7)
+                            .background{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.backgroundLighter)
+                                    .shadow(color: .black.opacity(0.7), radius: 2)
+                            }
+                        }
+                        Spacer()
                     }
-                    .padding(7)
-                    .background{
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.backgroundLighter)
-                            .shadow(color: .black.opacity(0.7), radius: 2)
-                    }
-                    Spacer()
                 }
-//                ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
-//                    Spacer()
-//                    Button{
-//                        //set the route to this building
-//                    }label: {
-//                        HStack(alignment: .center) {
-//                            Text(course.building)
-//                                .font(.system(size: 17, weight: .semibold))
-//                            Text(course.startTime)
-//                                .font(.system(size: 13))
-//                        }
-//                        .padding(7)
-//                        .background{
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .fill(Color.backgroundLighter)
-//                                .shadow(color: .black.opacity(0.7), radius: 2)
-//                        }
-//                    }
-//                    Spacer()
-//                }
+                .padding(.vertical)
             }
-            .padding(.vertical)
         }
     }
 }
@@ -61,5 +51,6 @@ struct TopSchedule_Previews: PreviewProvider {
     static var previews: some View {
         TopSchedule()
             .environmentObject(ClassManager())
+            .environmentObject(MapManager())
     }
 }
