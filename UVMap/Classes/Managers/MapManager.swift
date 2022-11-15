@@ -53,7 +53,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let activeBuilding = self.activeBuilding {
             return activeBuilding
         }else{
-            return Building(id: "zero", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
+            return Building(id: "zero", name: "University of Vermont", abbreviation: "", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
         }
     }
     
