@@ -20,11 +20,11 @@ class SettingsManager: ObservableObject{
     @Published var early: Int
     @Environment(\.colorScheme) var deviceTheme: ColorScheme
     
-    init(){
+    init(theme: Int = 1, early: Int = 10, prioritize: Bool = false){
         settings = []
-        theme = 1
-        early = 10
-        prioritize = false
+        self.theme = theme
+        self.early = early
+        self.prioritize = prioritize
     }
     
     //===Read from Json file===
@@ -63,6 +63,15 @@ class SettingsManager: ObservableObject{
     func saveSettingsLocally(){
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
+        
+        var newSettings = Settings()
+        newSettings.howEarly = early
+        newSettings.settingsTheme = theme
+        newSettings.prioritizeSchedule = prioritize
+        
+        let jsonData = try! JSONEncoder().encode(newSettings)
+        
+        //let saveSettings: Settings = [saveTheme, saveEarly, savePrioritize]
         
         let fileName = "settings"
         guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
