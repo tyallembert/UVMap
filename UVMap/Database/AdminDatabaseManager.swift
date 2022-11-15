@@ -67,7 +67,7 @@ class AdminDatabaseManager: ObservableObject{
             var buildingInDatabase = false
             
             let name = building.title
-            let address = building.address
+//            let address = building.address
             let latitude = building.latitude
             let longitude = building.longitude
             //checks latitude and longitude to see if that coordinate
@@ -85,7 +85,7 @@ class AdminDatabaseManager: ObservableObject{
             //add to database if it isn't already in there
             if !buildingInDatabase {
                 let ref = fireStoreDB.collection("Buildings").document()
-                ref.setData(["name": name, "address": address, "latitude": latitude, "longitude": longitude]) {error in
+                ref.setData(["name": name, "latitude": latitude, "longitude": longitude]) {error in
                     if let error = error {
                         print(error.localizedDescription)
                     }
