@@ -33,7 +33,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var searchText: String = ""
     @Published var buildings: [Building] = []
     @Published var searchActive: Bool = false
-    @Published var startText: String = "Start"
+    @Published var etaText: String = "ETA : 0m"
+    @Published var hasRoute: Bool = false
     @State var eta: Int?
     @Published var endLocation: Building?
     
@@ -103,7 +104,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     
     func cancelRoutes() {
         routes.removeAll()
-        startText = "Start"
+        etaText = "ETA : 0m"
+        hasRoute = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -129,7 +131,8 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
 //                let _ = print(val / 60.0)
 //                let _ = print(ceil(val / 60.0))
                 eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
-                startText = "ETA: \(eta)m"
+                etaText = "ETA: \(eta)m"
+                hasRoute = true
                 completion(eta)
             }
         }

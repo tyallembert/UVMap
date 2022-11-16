@@ -12,6 +12,7 @@
 		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
 		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
 		049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
+		04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D01C2925367300DB02EB /* EtaButton.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558D28F5BCC400F06DD3 /* ArrivalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
@@ -123,6 +124,7 @@
 		040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSearchResults.swift; sourceTree = "<group>"; };
 		040185BD291C0795003C0DB3 /* OneBuildingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBuildingResult.swift; sourceTree = "<group>"; };
 		049E3F7B291D920F003D8ACB /* EndRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRouteButton.swift; sourceTree = "<group>"; };
+		04E4D01C2925367300DB02EB /* EtaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtaButton.swift; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalSettings.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */,
 				040185BD291C0795003C0DB3 /* OneBuildingResult.swift */,
 				049E3F7B291D920F003D8ACB /* EndRouteButton.swift */,
+				04E4D01C2925367300DB02EB /* EtaButton.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* MondayScheduleChart.swift in Sources */,
 				4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */,
+				04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */,
 				4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,

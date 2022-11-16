@@ -17,7 +17,7 @@ struct StartButton: View {
     }
     var body: some View {
         Button (action: {handleStartClicked()}){
-            Text(mapManager.startText)
+            Text("Start")
                 .font(.title2)
                 .fontWeight(.heavy)
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.9)

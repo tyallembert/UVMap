@@ -36,14 +36,24 @@ struct BottomWindow: View {
                             WalkBikeOption()
                             Spacer()
                         }
-                        StartButton()
+                        if mapManager.hasRoute {
+                            EndRouteButton()
+                        }
+                        else {
+                            StartButton()
+                        }
                         TripInformation()
                     // MARK: view for when the bottom sheet is pulled down
                     case .bottom:
                         HStack {
                             ClassBuilding()
                                 .environmentObject(mapManager)
-                            StartButton()
+                            if mapManager.hasRoute {
+                                EndRouteButton()
+                            }
+                            else {
+                                StartButton()
+                            }
                         }
                 }
             }
