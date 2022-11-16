@@ -16,7 +16,7 @@ struct BottomWindow: View {
                 switch bottomSheetPosition{
                     // MARK: view for when the bottom sheet is pulled up
                     case .top, .middle:
-                        TopSchedule()
+                        if mapManager.routes.isEmpty { TopSchedule() }
                         HStack {
                             VStack(alignment: .leading) {
                                 HStack {
@@ -33,15 +33,18 @@ struct BottomWindow: View {
                                     Spacer()
                                 }
                             }
-                            WalkBikeOption()
+                            if mapManager.routes.isEmpty {
+                                WalkBikeOption()
+                                    .environmentObject(mapManager)
+                            }
                             Spacer()
                         }
-                        if !mapManager.routes.isEmpty {
-                            EndRouteButton()
+                        if mapManager.routes.isEmpty {
+                            StartButton()
                                 .environmentObject(mapManager)
                         }
                         else {
-                            StartButton()
+                            EndRouteButton()
                                 .environmentObject(mapManager)
                         }
                         TripInformation()
@@ -50,12 +53,12 @@ struct BottomWindow: View {
                         HStack {
                             ClassBuilding()
                                 .environmentObject(mapManager)
-                            if !mapManager.routes.isEmpty {
-                                EndRouteButton()
+                            if mapManager.routes.isEmpty {
+                                StartButton()
                                     .environmentObject(mapManager)
                             }
                             else {
-                                StartButton()
+                                EndRouteButton()
                                     .environmentObject(mapManager)
                             }
                         }
