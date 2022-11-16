@@ -140,7 +140,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
                     let avgLat = (origin.coordinate.latitude + end.coordinate.latitude) / 2.0
                     let avgLong = (origin.coordinate.longitude + end.coordinate.longitude) / 2.0
                     
-                    var center = CLLocationCoordinate2D(latitude: avgLat, longitude: avgLong)
+                    let center = CLLocationCoordinate2D(latitude: avgLat, longitude: avgLong)
                     let distanceBetween = origin.distance(from: CLLocation(latitude: end.coordinate.latitude, longitude: end.coordinate.longitude)) * 1.55
                     self.region = MKCoordinateRegion(center: center, latitudinalMeters: max(distanceBetween, REGION_RADIUS), longitudinalMeters: max(distanceBetween, REGION_RADIUS))
                     haveShownRouteOverview = true
