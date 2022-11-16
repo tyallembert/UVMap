@@ -15,7 +15,7 @@ struct EtaButton: View {
         Button(role: .destructive) {
             mapManager.cancelRoutes()
         } label: {
-            Label("\(mapManager.etaText)", systemImage: "exclamationmark.octagon")
+            Label("\(mapManager.etaText)", systemImage: "location.circle")
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                 .font(.title2)
         }
