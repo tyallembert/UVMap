@@ -14,44 +14,45 @@ class SettingsManager: ObservableObject{
         var prioritizeSchedule: Bool
         var howEarly: Int
     }
-    @Published var settings: [Settings]
+    var newSettings: Settings
+    
+    //Published var settings: [Settings]
     @Published var theme: Int
     @Published var prioritize: Bool
     @Published var early: Int
     @Environment(\.colorScheme) var deviceTheme: ColorScheme
     
     init(theme: Int = 1, early: Int = 10, prioritize: Bool = false){
-        settings = []
         self.theme = theme
         self.early = early
         self.prioritize = prioritize
+        newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
     }
     
     //===Read from Json file===
-    func retrieveSettingsLocally(fileName: String) -> [Settings]{
+    func retrieveSettingsLocally(fileName: String) -> Settings?{
         let data: Data
         
         guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
         else{
             print("Couldn't find \(fileName) in main bundle.")
-            return []
+            return nil
         }
         
         do {
             data = try Data(contentsOf: filePath)
         } catch {
             print("Couldn't load \(fileName) from main bundle:\n\(error)")
-            return []
+            return nil
         }
 
         do {
             let decoder = JSONDecoder()
 //            return try decoder.decode(T.self, from: data)
-            return try decoder.decode([Settings].self, from: data)
+            return try decoder.decode(Settings.self, from: data)
         } catch {
             print("File is Empty: \(error)")
-            return []
-        }
+            return nil        }
     }
     
     // Helper function to save locally
@@ -61,15 +62,13 @@ class SettingsManager: ObservableObject{
     }
     //===Save to Json file===
     func saveSettingsLocally(){
+        
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        var newSettings = Settings()
-        newSettings.howEarly = early
-        newSettings.settingsTheme = theme
-        newSettings.prioritizeSchedule = prioritize
+        var newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
         
-        let jsonData = try! JSONEncoder().encode(newSettings)
+        //let jsonData = try! JSONEncoder().encode(settings)
         
         //let saveSettings: Settings = [saveTheme, saveEarly, savePrioritize]
         
@@ -82,14 +81,17 @@ class SettingsManager: ObservableObject{
 //        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
         
         do {
-            let data = try encoder.encode(settings)
+            let data = try encoder.encode(newSettings)
             try data.write(to: filePath)
             print(String(data: data, encoding: .utf8)!)
-            settings = retrieveSettingsLocally(fileName: "settings")
+            if retrieveSettingsLocally(fileName: "settings") != nil {
+                print("Files saved")
+            } else {
+                print("File not saved")
+            }
         } catch {
             fatalError("Cannot save to file:\n\(error)")
         }
-        
     }
     
     

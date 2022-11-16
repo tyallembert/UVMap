@@ -45,10 +45,9 @@ struct SettingsView: View {
             
         }
         .background(Color.backgroundLighter)
-        .onAppear{settingsManager.settings = settingsManager.retrieveSettingsLocally(fileName:"settings")
         }
     }
-}
+
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {

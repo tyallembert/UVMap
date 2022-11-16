@@ -11,6 +11,7 @@ import Firebase
 struct ContentView: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager
+    @EnvironmentObject var settingsManager: SettingsManager
     
     var body: some View {
         VStack{
@@ -31,6 +32,12 @@ struct ContentView: View {
             Auth.auth().addStateDidChangeListener { auth, user in
                 if user != nil {
                     sessionManager.currentState = .loggedIn
+                    
+                    settingsManager.newSettings = settingsManager.retrieveSettingsLocally(fileName:"settings")// ?? settingsManager.init//{
+//                        print("Settings Retrieved")
+//                    } else {
+//                        print("Settings not retrieved")
+//                    }
                 } else {
                     sessionManager.currentState = .loggedOut
                 }
