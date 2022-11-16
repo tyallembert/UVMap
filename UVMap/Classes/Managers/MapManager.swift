@@ -37,6 +37,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var userWalking: Bool = true
     @State var eta: Int?
     @Published var endLocation: Building?
+    @Published var bottomSheetPosition: BottomSheetPosition = .middle
+    
+    private var haveShownRouteOverview: Bool = false
     
     
     
@@ -105,6 +108,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     func cancelRoutes() {
         routes.removeAll()
         etaText = "ETA : 0m"
+        bottomSheetPosition = .middle
+        if let loc = locationManager.location {
+            updateMapView(loc)
+        }
+        haveShownRouteOverview = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -121,14 +129,22 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             request.requestsAlternateRoutes = false
             request.transportType = .walking
             
+            bottomSheetPosition = .bottom
+            
             let directions = MKDirections(request: request)
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
                 routes = unwrappedResponse.routes
-//                let val = routes[0].expectedTravelTime
-//                let _ = print(val)
-//                let _ = print(val / 60.0)
-//                let _ = print(ceil(val / 60.0))
+
+                if !haveShownRouteOverview {
+                    let avgLat = (origin.coordinate.latitude + end.coordinate.latitude) / 2.0
+                    let avgLong = (origin.coordinate.longitude + end.coordinate.longitude) / 2.0
+                    
+                    var center = CLLocationCoordinate2D(latitude: avgLat, longitude: avgLong)
+                    let distanceBetween = origin.distance(from: CLLocation(latitude: end.coordinate.latitude, longitude: end.coordinate.longitude)) * 1.55
+                    self.region = MKCoordinateRegion(center: center, latitudinalMeters: max(distanceBetween, REGION_RADIUS), longitudinalMeters: max(distanceBetween, REGION_RADIUS))
+                    haveShownRouteOverview = true
+                }
                 eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
                 if !userWalking {
                     eta = Int(ceil(Double(eta) / 3.0))
@@ -223,12 +239,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             if !ended {
                 buildRoutes{eta in}
             }
-            
-            
-
-            
-            
-            
         }
     }
 }

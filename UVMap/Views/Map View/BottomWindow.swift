@@ -42,10 +42,16 @@ struct BottomWindow: View {
                         if mapManager.routes.isEmpty {
                             StartButton()
                                 .environmentObject(mapManager)
+                                .onAppear {
+                                    bottomSheetPosition = mapManager.bottomSheetPosition
+                                }
                         }
                         else {
                             EndRouteButton()
                                 .environmentObject(mapManager)
+                                .onAppear {
+                                    bottomSheetPosition = mapManager.bottomSheetPosition
+                                }
                         }
                         TripInformation()
                     // MARK: view for when the bottom sheet is pulled down
@@ -56,10 +62,16 @@ struct BottomWindow: View {
                             if mapManager.routes.isEmpty {
                                 StartButton()
                                     .environmentObject(mapManager)
+                                    .onAppear {
+                                        bottomSheetPosition = mapManager.bottomSheetPosition
+                                    }
                             }
                             else {
                                 EndRouteButton()
                                     .environmentObject(mapManager)
+                                    .onAppear {
+                                        bottomSheetPosition = mapManager.bottomSheetPosition
+                                    }
                             }
                         }
                 }
