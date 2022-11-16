@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WalkBikeOption: View {
+    @EnvironmentObject var mapManager : MapManager
     @State var userWalking: Bool = true
     var body: some View {
         ZStack {
@@ -35,6 +36,10 @@ struct WalkBikeOption: View {
                 }
                 .onTapGesture {
                     self.userWalking.toggle()
+                    mapManager.userWalking = userWalking
+                }
+                .onAppear {
+                    mapManager.userWalking = userWalking
                 }
             }
         }

@@ -34,6 +34,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var buildings: [Building] = []
     @Published var searchActive: Bool = false
     @Published var etaText: String = "ETA : 0m"
+    @Published var userWalking: Bool = true
     @State var eta: Int?
     @Published var endLocation: Building?
     
@@ -129,6 +130,9 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
 //                let _ = print(val / 60.0)
 //                let _ = print(ceil(val / 60.0))
                 eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
+                if !userWalking {
+                    eta = Int(ceil(Double(eta) / 3.0))
+                }
                 etaText = "ETA: \(eta)m"
                 completion(eta)
             }
