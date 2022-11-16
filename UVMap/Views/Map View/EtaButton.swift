@@ -18,9 +18,6 @@ struct EtaButton: View {
             Label("\(mapManager.etaText)", systemImage: "exclamationmark.octagon")
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                 .font(.title2)
-                if #available(iOS 16, *) {
-                    self.fontWeight(.heavy)
-                }
         }
         .padding()
         .backgroundBlur(radius: 25, opaque: true)
