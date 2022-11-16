@@ -49,7 +49,7 @@ struct BuildingSearchResults: View {
                 .padding(5)
             }
             else {
-                EndRouteButton()
+                EtaButton()
                     .padding()
             }
         }
