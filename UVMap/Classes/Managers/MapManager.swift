@@ -40,6 +40,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var bottomSheetPosition: BottomSheetPosition = .middle
     
     private var haveShownRouteOverview: Bool = false
+    private var hasTimeElapsedForRefocus: Bool = false
     
     
     
@@ -113,6 +114,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             updateMapView(loc)
         }
         haveShownRouteOverview = false
+        hasTimeElapsedForRefocus = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -144,6 +146,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
                     let distanceBetween = origin.distance(from: CLLocation(latitude: end.coordinate.latitude, longitude: end.coordinate.longitude)) * 1.55
                     self.region = MKCoordinateRegion(center: center, latitudinalMeters: max(distanceBetween, REGION_RADIUS), longitudinalMeters: max(distanceBetween, REGION_RADIUS))
                     haveShownRouteOverview = true
+                    followUser = false
                 }
                 eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
                 if !userWalking {
@@ -220,7 +223,12 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
         }
         else {
-            
+            if haveShownRouteOverview {
+                // Recenters the view after 3.5 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                    self.focusLocation()
+                }
+            }
         }
         
         if !routes.isEmpty {
