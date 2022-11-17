@@ -33,12 +33,13 @@ func readBuildingsFromJSON<T: Decodable>(_ filename: String) -> T {
 struct ReadInBuilding: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
-    var address: String
+    var abbreviation: String
+//    var address: String
     var latitude: String
     var longitude: String
-    var city: String
-    var state: String
-    var street: String
+//    var city: String
+//    var state: String
+//    var street: String
 }
 
 func readCoursesFromJSON<T: Decodable>(_ filename: String) -> T {

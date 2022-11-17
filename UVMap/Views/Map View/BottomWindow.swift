@@ -17,7 +17,7 @@ struct BottomWindow: View {
                 switch bottomSheetPosition{
                     // MARK: view for when the bottom sheet is pulled up
                     case .top, .middle:
-                        TopSchedule()
+                        if mapManager.routes.isEmpty { TopSchedule() }
                         HStack {
                             VStack(alignment: .leading) {
                                 HStack {
@@ -34,17 +34,34 @@ struct BottomWindow: View {
                                     Spacer()
                                 }
                             }
-                            WalkBikeOption()
+                            if mapManager.routes.isEmpty {
+                                WalkBikeOption()
+                                    .environmentObject(mapManager)
+                            }
                             Spacer()
                         }
-                        StartButton()
+                        if mapManager.routes.isEmpty {
+                            StartButton(bottomSheetPosition: $bottomSheetPosition)
+                                .environmentObject(mapManager)
+                        }
+                        else {
+                            EndRouteButton(bottomSheetPosition: $bottomSheetPosition)
+                                .environmentObject(mapManager)
+                        }
                         TripInformation()
                     // MARK: view for when the bottom sheet is pulled down
                     case .bottom:
                         HStack {
                             ClassBuilding()
                                 .environmentObject(mapManager)
-                            StartButton()
+                            if mapManager.routes.isEmpty {
+                                StartButton(bottomSheetPosition: $bottomSheetPosition)
+                                    .environmentObject(mapManager)
+                            }
+                            else {
+                                EndRouteButton(bottomSheetPosition: $bottomSheetPosition)
+                                    .environmentObject(mapManager)
+                            }
                         }
                 }
             }

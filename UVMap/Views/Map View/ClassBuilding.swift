@@ -14,7 +14,7 @@ struct ClassBuilding: View {
         Text(mapManager.getActiveBuilding().name)
             .font(.title)
             .fontWeight(.heavy)
-            .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+            .foregroundColor(Color("TXT2"))
             .shadow(color: .white, radius: 0.5)
     }
 }

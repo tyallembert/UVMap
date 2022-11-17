@@ -33,9 +33,14 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var searchText: String = ""
     @Published var buildings: [Building] = []
     @Published var searchActive: Bool = false
-    @Published var startText: String = "Start"
+    @Published var etaText: String = "ETA : 0m"
+    @Published var userWalking: Bool = true
     @State var eta: Int?
     @Published var endLocation: Building?
+    @Published var bottomSheetPosition: BottomSheetPosition = .middle
+    
+    private var haveShownRouteOverview: Bool = false
+    private var hasTimeElapsedForRefocus: Bool = false
     
     
     
@@ -53,7 +58,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let activeBuilding = self.activeBuilding {
             return activeBuilding
         }else{
-            return Building(id: "zero", name: "University of Vermont", address: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
+            return Building(id: "zero", name: "University of Vermont", abbreviation: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
         }
     }
     
@@ -121,7 +126,13 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     
     func cancelRoutes() {
         routes.removeAll()
-        startText = "Start"
+        etaText = "ETA : 0m"
+        bottomSheetPosition = .middle
+        if let loc = locationManager.location {
+            updateMapView(loc)
+        }
+        haveShownRouteOverview = false
+        hasTimeElapsedForRefocus = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -130,7 +141,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let loc = locationManager.location {
             let origin = loc
             let end = getActiveBuilding()
-            endLocation = end
             
             let request = MKDirections.Request()
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
@@ -138,16 +148,28 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             request.requestsAlternateRoutes = false
             request.transportType = .walking
             
+            bottomSheetPosition = .bottom
+            
             let directions = MKDirections(request: request)
             directions.calculate { [unowned self] response, error in
                 guard let unwrappedResponse = response else { return }
                 routes = unwrappedResponse.routes
-//                let val = routes[0].expectedTravelTime
-//                let _ = print(val)
-//                let _ = print(val / 60.0)
-//                let _ = print(ceil(val / 60.0))
+
+                if !haveShownRouteOverview {
+                    let avgLat = (origin.coordinate.latitude + end.coordinate.latitude) / 2.0
+                    let avgLong = (origin.coordinate.longitude + end.coordinate.longitude) / 2.0
+                    
+                    let center = CLLocationCoordinate2D(latitude: avgLat, longitude: avgLong)
+                    let distanceBetween = origin.distance(from: CLLocation(latitude: end.coordinate.latitude, longitude: end.coordinate.longitude)) * 1.55
+                    self.region = MKCoordinateRegion(center: center, latitudinalMeters: max(distanceBetween, REGION_RADIUS), longitudinalMeters: max(distanceBetween, REGION_RADIUS))
+                    haveShownRouteOverview = true
+                    followUser = false
+                }
                 eta = Int(ceil(routes[0].expectedTravelTime / 60.0))
-                startText = "ETA: \(eta)m"
+                if !userWalking {
+                    eta = Int(ceil(Double(eta) / 3.0))
+                }
+                etaText = "ETA: \(eta)m"
                 completion(eta)
             }
         }
@@ -218,31 +240,29 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
         }
         else {
-            
+            if haveShownRouteOverview {
+                // Recenters the view after 3.5 seconds
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                    self.focusLocation()
+                }
+            }
         }
         
         if !routes.isEmpty {
             var ended = false
-            if let end = endLocation {
-                let endCord = end.coordinate
-                let lattRange = (endCord.latitude - 0.0002)...(endCord.latitude + 0.0002)
-                let longRange = (endCord.longitude - 0.0002)...(endCord.longitude + 0.0002)
-                
-                if lattRange.contains(location.coordinate.latitude) && longRange.contains(location.coordinate.longitude) {
-                    cancelRoutes()
-                    ended = true
-                }
+            let endCord = getActiveBuilding().coordinate
+            let lattRange = (endCord.latitude - 0.0002)...(endCord.latitude + 0.0002)
+            let longRange = (endCord.longitude - 0.0002)...(endCord.longitude + 0.0002)
+            
+            if lattRange.contains(location.coordinate.latitude) && longRange.contains(location.coordinate.longitude) {
+                cancelRoutes()
+                ended = true
             }
             
             if !ended {
+                // calls async buildRoutes function
                 buildRoutes{eta in}
             }
-            
-            
-
-            
-            
-            
         }
     }
 }
