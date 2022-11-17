@@ -14,7 +14,7 @@ As with any project, it was a long and tedious process to outline and brainstorm
 
 We've exercised agile development methodologies, including elements of Scrum management, CI/CD development, and more primarily through Github and Jira. 
 
-#####Want to get a sneak peak into the ins-and-outs of the app? We built a website for that!
+##### Want to get a sneak peak into the ins-and-outs of the app? We built a website for that!
 
 Website: https://uvmaps.dev/
 
