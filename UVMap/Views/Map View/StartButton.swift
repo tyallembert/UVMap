@@ -12,8 +12,8 @@ struct StartButton: View {
     @Binding var bottomSheetPosition: BottomSheetPosition
     
     func handleStartClicked() {
-        mapManager.buildRoutes { eta in
-        }
+        // async function call to buildRoutes
+        mapManager.buildRoutes { eta in }
         bottomSheetPosition = mapManager.bottomSheetPosition
         
     }
