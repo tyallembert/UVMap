@@ -21,7 +21,7 @@ struct EtaButton: View {
         }
         .padding()
         .backgroundBlur(radius: 25, opaque: true)
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+        .background(Color.backgroundGreen)
         .foregroundColor(.white)
 //        .innerShadow(shape: RoundedRectangle(cornerRadius: 10), color: Color.innerShadow, lineWidth: 1, offsetX: 1, offsetY: 1, blur: 0, blendMode: .overlay, opacity: 1)
         .cornerRadius(10)

@@ -26,7 +26,7 @@ struct StartButton: View {
         }
         .foregroundColor(.white)
         .padding()
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+        .background(Color.backgroundGreen)
         .cornerRadius(10)
         .shadow(color: .black, radius: 3, x: 2, y: 3)
     }

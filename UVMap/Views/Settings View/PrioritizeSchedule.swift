@@ -16,7 +16,7 @@ struct PrioritizeSchedule: View {
                 ZStack {
                     Capsule()
                         .frame(width:90,height:44)
-                        .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                        .foregroundColor(Color.backgroundGreen)
                     ZStack{
                         Circle()
                             .frame(width:40, height:40)
@@ -26,12 +26,12 @@ struct PrioritizeSchedule: View {
                         //image in the circle
                         //Need to switch to text instead of image
                         Text("Yes")
-                            .foregroundColor(prioritizeYes ? Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255): .white)
+                            .foregroundColor(prioritizeYes ? Color.backgroundGreen: .white)
                             .offset(x: -25)
                         // image outside of the circle
                         //Need to switch to text instead of image
                         Text("No")
-                            .foregroundColor(prioritizeYes ? .white: Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                            .foregroundColor(prioritizeYes ? .white: Color.backgroundGreen)
                             .offset(x: 25)
                     }
                 }
