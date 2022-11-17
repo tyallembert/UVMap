@@ -14,9 +14,11 @@ As with any project, it was a long and tedious process to outline and brainstorm
 
 We've exercised agile development methodologies, including elements of Scrum management, CI/CD development, and more primarily through Github and Jira. 
 
-**_Want to get a sneak peak into the ins-and-outs of the app? We built a website for that!_**  Website: https://uvmaps.dev/
-
+---
+**Want to get a sneak peak into the ins-and-outs of the app? We built a website for that!**  
+Website: https://uvmaps.dev/
 Website Repository: https://github.com/tyallembert/UVMap_Website
+---
 
 ### UVMap is built by students, for students.
 We are a small development team of students located here, at the University of Vermont. Coming together as a group project, our main goals were convenience and support. Whether you are a first year stepping foot on campus for the first time, a transfer student still orienting yourself, or any other student who doesn't want to worry about the hastles of navigation, we built this app for you!
