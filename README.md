@@ -16,8 +16,10 @@ We've exercised agile development methodologies, including elements of Scrum man
 
 ---
 **Want to get a sneak peak into the ins-and-outs of the app? We built a website for that!**  
+
 Website: https://uvmaps.dev/
 Website Repository: https://github.com/tyallembert/UVMap_Website
+
 ---
 
 ### UVMap is built by students, for students.
