@@ -22,6 +22,9 @@ struct ContentView: View {
             case .loggedOut:
                 LoginView()
                     .transition(.opacity)
+            case .signUp:
+                SignUpView()
+                    .transition(.opacity)
             default:
                 // Splash Screen
                 LoadingView()

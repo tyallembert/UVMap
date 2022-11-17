@@ -13,13 +13,13 @@
 
 import SwiftUI
 
-struct MondayScheduleChart: View {
+struct ScheduleChart: View {
     @EnvironmentObject var classManager: ClassManager
     var times = ["8AM", "9AM", "10AM", "11AM","12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM"]
     var body: some View {
-        List {
-            ZStack(alignment: .leading) {
-                VStack {
+        ScrollView {
+            ZStack(alignment: .trailing) {
+                VStack(alignment: .leading, spacing: 0) {
                     ForEach(times, id: \.self){ time in
                         ZStack(alignment: .leading) {
                             Divider()
@@ -35,25 +35,32 @@ struct MondayScheduleChart: View {
                                 ClassShell()
                                     .environmentObject(classManager)
                                     .environmentObject(course)
-                                    .frame(alignment: .topTrailing)
+                                    .frame(alignment: .top)
                                     .offset(y: classManager.getOffset(singleClass: course))
                         }
                     }
                     Spacer()
                 }
-                .frame(maxHeight: .infinity)
+                .frame(width: 280, alignment: .leading)
                 
             }
-            // MAKE LIST LABELS MORE SPACED OUT
-            // SO CLASSES LINE UP BETTER (last one is like a full hour ahead)
+            .frame(maxWidth: 350, alignment: .center)
+            .padding()
+            .background{
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.backgroundGradient)
+                    .shadow(radius: 5)
+            }
+            .padding()
         }
+        .padding(0)
     }
 }
 
 
 struct ScheduleChart_Previews: PreviewProvider {
     static var previews: some View {
-        MondayScheduleChart()
+        ScheduleChart()
             .environmentObject(ClassManager())
     }
 }

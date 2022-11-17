@@ -12,11 +12,11 @@ struct TitleBarSchedule: View {
    @State var title = "Schedule"
     
     var body: some View {
-//        NavigationView {
             VStack{
                 Spacer()
                 HStack{
-                    Text("Schedule").frame(height: 40)
+                    Text("Schedule")
+                        .frame(height: 40)
                         .foregroundColor(.white)
                         .font(.largeTitle)
                         .padding()
@@ -30,12 +30,10 @@ struct TitleBarSchedule: View {
                     
                 }
     
-            }.padding()
+            }
+            .padding()
                 .foregroundColor(.white)
-//                .frame(maxHeight: 100)
                 .background(Color.backgroundGreen)
-            
-//        }
     }
 }
 

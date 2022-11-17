@@ -34,7 +34,7 @@ struct ClassShell: View {
         //Green styling on HStack
         }
             .padding()
-            .frame(width: 300, height: classManager.getClassShellHeight(course: singleClass))
+            .frame( height: classManager.getClassShellHeight(course: singleClass))
             .background(Color.backgroundGreen.opacity(0.8))
             .cornerRadius(25)
         

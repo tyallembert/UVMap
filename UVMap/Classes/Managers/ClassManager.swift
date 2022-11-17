@@ -11,6 +11,7 @@ class ClassManager: ObservableObject{
     @Published var allClasses: [SingleClass]
     @Published var studentsClasses: [SingleClass]
     @Published var todaysClasses: [SingleClass]
+    @Published var activeClass: SingleClass?
     //Add class variables
     @Published var searchResults: [SingleClass]
     @Published var searchText: String
@@ -36,6 +37,7 @@ class ClassManager: ObservableObject{
             SingleClass(CRN: 6328675, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
         ]
         
+        getTodaysClasses(date: Date())
         //date week init
         fetchCurrentWeek()
 //        fetchCurrentDay()
@@ -96,18 +98,17 @@ class ClassManager: ObservableObject{
         }
         todaysClasses = []
         for aClass in studentsClasses {
-            print("------------------")
-            print("checking a class")
-            print("Title: \(aClass.title)")
-            print("days: \(aClass.days.lowercased())")
-            print("day: \(dayOfWeek)")
             if (aClass.days.lowercased().contains(dayOfWeek)) {
-                print("adding: \(aClass.title)")
                 todaysClasses.append(aClass)
             }
         }
-        for day in todaysClasses{
-            print(day.title)
+    }
+    func getActiveClassFromBuilding(building: Building){
+        for aCourse in todaysClasses{
+            //change building.name to the building abbreviation
+            if building.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == aCourse.building.lowercased().trimmingCharacters(in: .whitespacesAndNewlines){
+                activeClass = aCourse
+            }
         }
     }
     //===Changes the height of the class object===

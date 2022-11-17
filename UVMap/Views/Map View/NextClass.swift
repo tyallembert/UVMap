@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct NextClass: View {
-    @State var className: String = "CS 275"
+    @EnvironmentObject var classManager: ClassManager
+//    @Binding var building: Building
     
     var body: some View {
         HStack {
             Text("Class: ")
-            Text(className)
+//            Text("\(classManager.activeClass?.title)")
+            Text("CS 275")
                 .fontWeight(.heavy)
         }
     }
 }
 
-struct NextClass_Previews: PreviewProvider {
-    static var previews: some View {
-        NextClass()
-    }
-}
+//struct NextClass_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NextClass()
+//    }
+//}

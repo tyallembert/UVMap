@@ -36,11 +36,16 @@ struct DaysTemplate: View {
 
                 }
             }
-            
-            .padding()
-
-            .frame(width: geometry.size.width)
+            .padding(5)
+            .overlay(
+                Rectangle()
+                    .frame(width: nil, height: 1, alignment: .bottom)
+                    .foregroundColor(Color.accentColor)
+                , alignment: .bottom
+            )
+            .frame(width: geometry.size.width, alignment: .center)
         }
+        .frame(height: 55)
     }
 }
 

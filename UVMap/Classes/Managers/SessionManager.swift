@@ -11,7 +11,7 @@ import Firebase
 // This function manages the login process
 class SessionManager: ObservableObject {
     enum CurrentState {
-        case loggedIn, loggedOut, loading
+        case loggedIn, loggedOut, signUp, loading
     }
     
   
