@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject var settingsManager: SettingsManager = SettingsManager()
+    @StateObject var settingsManager = SettingsManager()// = SettingsManager()
+    @State var howEarly: Int = settingsManager.early//SettingsManager().early
     var body: some View {
         ZStack(alignment: .trailing){
             
@@ -23,7 +24,7 @@ struct SettingsView: View {
                         Text("How early do you like to arrive to class?")
                             .font(.title3)
                         
-                        ArriveShell()
+                        ArriveShell(howEarly: $howEarly)
                             .environmentObject(settingsManager)
                     }
                     VStack(alignment: .leading, spacing: 10){
@@ -49,9 +50,9 @@ struct SettingsView: View {
     }
 
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-            .environment(\.colorScheme, .dark)
-    }
-}
+//struct SettingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SettingsView()
+//            .environment(\.colorScheme, .dark)
+//    }
+//}

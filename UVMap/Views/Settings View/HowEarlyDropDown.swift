@@ -10,11 +10,11 @@ import SwiftUI
 struct HowEarlyDropDown: View {
     @EnvironmentObject var settingsManager: SettingsManager
     
-    //@Binding var howEarly: Int
+    @Binding var howEarly: Int
     
     var body: some View {
         VStack {
-            Picker(selection: $settingsManager.early, label: Text("How early do you want to arrive to class?")) {
+            Picker(selection: $howEarly, label: Text("How early do you want to arrive to class?")) {
                 Text("1").tag(1)
                 Text("2").tag(2)
                 Text("3").tag(3)
@@ -29,13 +29,12 @@ struct HowEarlyDropDown: View {
         }.padding()
             .background(Color.backgroundLighter)
             .accentColor(Color.textGreenWhite)
-            .frame(width:150, height: 50)
-            
+            .frame(width:150, height: 50)            
     }
 }
 
-struct HowEarlyDropDown_Previews: PreviewProvider {
-    static var previews: some View {
-        HowEarlyDropDown()//.environment(\.colorScheme, .dark)
-    }
-}
+//struct HowEarlyDropDown_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HowEarlyDropDown(howEarly: $howEarly)//.environment(\.colorScheme, .dark)
+//    }
+//}

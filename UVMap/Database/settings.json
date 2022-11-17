@@ -2,6 +2,6 @@
     {
         "theme": 2
         "prioritize": true
-        "howEarly": 10
+        "howEarly": 5
     }
 ]

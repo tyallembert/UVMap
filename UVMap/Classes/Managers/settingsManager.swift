@@ -16,7 +16,7 @@ class SettingsManager: ObservableObject{
     }
     var newSettings: Settings
     
-    //Published var settings: [Settings]
+    @Published var settings: [Settings] = []
     @Published var theme: Int
     @Published var prioritize: Bool
     @Published var early: Int
@@ -27,6 +27,7 @@ class SettingsManager: ObservableObject{
         self.early = early
         self.prioritize = prioritize
         newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
+        self.settings.append(newSettings)
     }
     
     //===Read from Json file===
@@ -66,7 +67,9 @@ class SettingsManager: ObservableObject{
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        var newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
+        print("Originial settings: \(self.settings)")
+        var changedSettings = Settings(settingsTheme: self.theme, prioritizeSchedule: self.prioritize, howEarly: self.early)
+        print("ChangedSettings: \(changedSettings)")
         
         //let jsonData = try! JSONEncoder().encode(settings)
         
@@ -86,6 +89,8 @@ class SettingsManager: ObservableObject{
             print(String(data: data, encoding: .utf8)!)
             if retrieveSettingsLocally(fileName: "settings") != nil {
                 print("Files saved")
+                self.newSettings = changedSettings
+                self.settings = [changedSettings]
             } else {
                 print("File not saved")
             }

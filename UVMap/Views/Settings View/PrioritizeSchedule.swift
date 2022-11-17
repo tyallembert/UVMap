@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct PrioritizeSchedule: View {
-    @State var prioritizeYes: Bool = true
+    @EnvironmentObject var settingsManager: SettingsManager
+    @State var prioritizeYes: Bool = false
     var body: some View {
         ZStack {
             VStack (){
