@@ -248,13 +248,13 @@
 		4C11E85128F85CAA00710092 /* Add Class */ = {
 			isa = PBXGroup;
 			children = (
-				4C11E85228F85F1F00710092 /* AddClassView.swift */,
-				4C28FF6428FF962600D75A1A /* OneSearchResult.swift */,
-				4C28FF6228FF95CE00D75A1A /* SearchResults.swift */,
 				4C28FF66290029D500D75A1A /* AddClassSubmit.swift */,
-				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
+				4C11E85228F85F1F00710092 /* AddClassView.swift */,
 				4C28FF5828FDC4E100D75A1A /* AddOneClass.swift */,
 				4C28FF5628FDC48A00D75A1A /* ClassesToBeAdded.swift */,
+				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
+				4C28FF6428FF962600D75A1A /* OneSearchResult.swift */,
+				4C28FF6228FF95CE00D75A1A /* SearchResults.swift */,
 			);
 			path = "Add Class";
 			sourceTree = "<group>";
@@ -262,12 +262,12 @@
 		4C24003128EBB3EF002F7E2D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				4C47B7A229082B2700C5DE09 /* all_classes.json */,
-				4C47B7A42909863F00C5DE09 /* student_classes.json */,
-				4CA09D2728F4939400484D6D /* all_buildings.json */,
 				4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */,
+				4CA09D2728F4939400484D6D /* all_buildings.json */,
+				4C47B7A229082B2700C5DE09 /* all_classes.json */,
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
+				4C47B7A42909863F00C5DE09 /* student_classes.json */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -275,10 +275,10 @@
 		4C36C84128E74DE900207EC5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
+				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
 				4CF841CC28EB2144001C7F24 /* MapManager.swift */,
 				4CABE58228F06C600087DD98 /* SearchBarManager.swift */,
-				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
+				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
 				3FDA51ED2902F24600E85CE0 /* settingsManager.swift */,
 			);
 			path = Managers;
@@ -287,15 +287,15 @@
 		4C7859E1291D880200C0C2F7 /* SignUp View */ = {
 			isa = PBXGroup;
 			children = (
-				4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */,
 				4C7859E3291D880200C0C2F7 /* EmailView.swift */,
-				4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */,
-				4C7859E5291D880200C0C2F7 /* SignUpButton.swift */,
+				4C7859EA291D880200C0C2F7 /* FirstNameView.swift */,
 				4C7859E6291D880200C0C2F7 /* LastNameView.swift */,
 				4C7859E7291D880200C0C2F7 /* NetIDView.swift */,
+				4C7859E5291D880200C0C2F7 /* SignUpButton.swift */,
 				4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */,
+				4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */,
+				4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */,
 				4C7859E9291D880200C0C2F7 /* SignUpView.swift */,
-				4C7859EA291D880200C0C2F7 /* FirstNameView.swift */,
 			);
 			path = "SignUp View";
 			sourceTree = "<group>";
@@ -303,10 +303,10 @@
 		4C78EE5328DE1D1E00306D58 = {
 			isa = PBXGroup;
 			children = (
+				4C78EE5D28DE1D1E00306D58 /* Products */,
 				4C78EE5E28DE1D1E00306D58 /* UVMap */,
 				4C78EE6F28DE1D2200306D58 /* UVMapTests */,
 				4C78EE7928DE1D2200306D58 /* UVMapUITests */,
-				4C78EE5D28DE1D1E00306D58 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,14 +323,14 @@
 		4C78EE5E28DE1D1E00306D58 /* UVMap */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
-				4C24003128EBB3EF002F7E2D /* Database */,
-				4CAF024B28F71D91005F605E /* Components */,
-				4CE7168A28F107F10069D6C0 /* Classes */,
-				4C78EE8928DE1E6500306D58 /* Views */,
 				4C78EE6328DE1D2200306D58 /* Assets.xcassets */,
+				4CE7168A28F107F10069D6C0 /* Classes */,
+				4CAF024B28F71D91005F605E /* Components */,
+				4C24003128EBB3EF002F7E2D /* Database */,
 				4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */,
 				4C78EE6528DE1D2200306D58 /* Preview Content */,
+				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
+				4C78EE8928DE1E6500306D58 /* Views */,
 			);
 			path = UVMap;
 			sourceTree = "<group>";
@@ -364,13 +364,13 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
-				4C7859E1291D880200C0C2F7 /* SignUp View */,
 				4CD53881291587F800926C2E /* Loading screen */,
-				4C78EE9B28E223C900306D58 /* Navigation View */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
-				4C78EE8C28DE1E9900306D58 /* Settings View */,
-				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
 				4C78EE8A28DE1E7C00306D58 /* Map View */,
+				4C78EE9B28E223C900306D58 /* Navigation View */,
+				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
+				4C78EE8C28DE1E9900306D58 /* Settings View */,
+				4C7859E1291D880200C0C2F7 /* SignUp View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,24 +378,24 @@
 		4C78EE8A28DE1E7C00306D58 /* Map View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
-				4C434D73290C25FD005BB4F6 /* TopSchedule.swift */,
-				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
-				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
-				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
-				4C36C83128E4C5F700207EC5 /* NextClass.swift */,
-				4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */,
-				4C36C83D28E5E65300207EC5 /* TripInformation.swift */,
-				4C36C83B28E5E46100207EC5 /* StartButton.swift */,
-				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
-				4C78EEA028E2263400306D58 /* SearchBar.swift */,
-				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
-				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 				4C5B68C528F711CD00532DD2 /* BottomSheet.swift */,
+				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
+				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 				040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */,
-				040185BD291C0795003C0DB3 /* OneBuildingResult.swift */,
+				4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */,
+				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
+				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
 				049E3F7B291D920F003D8ACB /* EndRouteButton.swift */,
 				04E4D01C2925367300DB02EB /* EtaButton.swift */,
+				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
+				4C36C83128E4C5F700207EC5 /* NextClass.swift */,
+				040185BD291C0795003C0DB3 /* OneBuildingResult.swift */,
+				4C78EEA028E2263400306D58 /* SearchBar.swift */,
+				4C36C83B28E5E46100207EC5 /* StartButton.swift */,
+				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
+				4C434D73290C25FD005BB4F6 /* TopSchedule.swift */,
+				4C36C83D28E5E65300207EC5 /* TripInformation.swift */,
+				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -404,22 +404,22 @@
 			isa = PBXGroup;
 			children = (
 				4C11E85128F85CAA00710092 /* Add Class */,
-				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
-				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
+				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
+				500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */,
+				500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
 				50B55F43291420030078C231 /* ClassShellLarge.swift */,
-				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
-				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
 				50B55F45291425410078C231 /* ClassShellLargeLarge.swift */,
+				500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
+				50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */,
+				500DC3A328EA07D40085A130 /* MondayScheduleChart.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
+				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
+				50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */,
+				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
 				50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */,
-				50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */,
-				50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */,
-				500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */,
-				500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */,
-				500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */,
 			);
 			path = "Schedule View";
 			sourceTree = "<group>";
@@ -427,13 +427,13 @@
 		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
-				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
 				3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */,
-				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
-				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
+				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
+				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
+				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
 				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
+				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -441,10 +441,10 @@
 		4C78EE8D28DE1EA700306D58 /* Login View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE9028DE211B00306D58 /* LoginView.swift */,
-				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
 				4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */,
+				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
 				4C36C82D28E34A3000207EC5 /* LoginButton.swift */,
+				4C78EE9028DE211B00306D58 /* LoginView.swift */,
 				4C36C82B28E347BC00207EC5 /* PasswordView.swift */,
 				4C36C82928E3463C00207EC5 /* UsernameView.swift */,
 			);
@@ -480,8 +480,8 @@
 		4CE7168A28F107F10069D6C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4CE7168B28F108E70069D6C0 /* Objects */,
 				4C36C84128E74DE900207EC5 /* Managers */,
+				4CE7168B28F108E70069D6C0 /* Objects */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -490,8 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
-				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 				50E43B9828F8D80F00CDF4D9 /* Lecture.swift */,
+				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
