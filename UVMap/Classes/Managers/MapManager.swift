@@ -123,7 +123,6 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         if let loc = locationManager.location {
             let origin = loc
             let end = getActiveBuilding()
-            endLocation = end
             
             let request = MKDirections.Request()
             request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin.coordinate))
@@ -233,18 +232,17 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
         
         if !routes.isEmpty {
             var ended = false
-            if let end = endLocation {
-                let endCord = end.coordinate
-                let lattRange = (endCord.latitude - 0.0002)...(endCord.latitude + 0.0002)
-                let longRange = (endCord.longitude - 0.0002)...(endCord.longitude + 0.0002)
-                
-                if lattRange.contains(location.coordinate.latitude) && longRange.contains(location.coordinate.longitude) {
-                    cancelRoutes()
-                    ended = true
-                }
+            let endCord = getActiveBuilding().coordinate
+            let lattRange = (endCord.latitude - 0.0002)...(endCord.latitude + 0.0002)
+            let longRange = (endCord.longitude - 0.0002)...(endCord.longitude + 0.0002)
+            
+            if lattRange.contains(location.coordinate.latitude) && longRange.contains(location.coordinate.longitude) {
+                cancelRoutes()
+                ended = true
             }
             
             if !ended {
+                // calls async buildRoutes function
                 buildRoutes{eta in}
             }
         }

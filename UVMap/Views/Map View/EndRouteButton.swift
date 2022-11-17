@@ -9,11 +9,13 @@ import SwiftUI
 
 struct EndRouteButton: View {
     @EnvironmentObject var mapManager: MapManager
+    @Binding var bottomSheetPosition: BottomSheetPosition
     
     
     var body: some View {
         Button(role: .destructive) {
             mapManager.cancelRoutes()
+            bottomSheetPosition = mapManager.bottomSheetPosition
         } label: {
             Label("End Route", systemImage: "exclamationmark.octagon")
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.9)

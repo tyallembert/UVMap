@@ -9,10 +9,12 @@ import SwiftUI
 
 struct StartButton: View {
     @EnvironmentObject var mapManager: MapManager
+    @Binding var bottomSheetPosition: BottomSheetPosition
     
     func handleStartClicked() {
         mapManager.buildRoutes { eta in
         }
+        bottomSheetPosition = mapManager.bottomSheetPosition
         
     }
     var body: some View {
@@ -30,8 +32,8 @@ struct StartButton: View {
     }
 }
 
-struct StartButton_Previews: PreviewProvider {
-    static var previews: some View {
-        StartButton()
-    }
-}
+//struct StartButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StartButton(BottomSheetPosition: bottomSheetPosition)
+//    }
+//}

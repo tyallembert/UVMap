@@ -40,18 +40,12 @@ struct BottomWindow: View {
                             Spacer()
                         }
                         if mapManager.routes.isEmpty {
-                            StartButton()
+                            StartButton(bottomSheetPosition: $bottomSheetPosition)
                                 .environmentObject(mapManager)
-                                .onAppear {
-                                    bottomSheetPosition = mapManager.bottomSheetPosition
-                                }
                         }
                         else {
-                            EndRouteButton()
+                            EndRouteButton(bottomSheetPosition: $bottomSheetPosition)
                                 .environmentObject(mapManager)
-                                .onAppear {
-                                    bottomSheetPosition = mapManager.bottomSheetPosition
-                                }
                         }
                         TripInformation()
                     // MARK: view for when the bottom sheet is pulled down
@@ -60,18 +54,12 @@ struct BottomWindow: View {
                             ClassBuilding()
                                 .environmentObject(mapManager)
                             if mapManager.routes.isEmpty {
-                                StartButton()
+                                StartButton(bottomSheetPosition: $bottomSheetPosition)
                                     .environmentObject(mapManager)
-                                    .onAppear {
-                                        bottomSheetPosition = mapManager.bottomSheetPosition
-                                    }
                             }
                             else {
-                                EndRouteButton()
+                                EndRouteButton(bottomSheetPosition: $bottomSheetPosition)
                                     .environmentObject(mapManager)
-                                    .onAppear {
-                                        bottomSheetPosition = mapManager.bottomSheetPosition
-                                    }
                             }
                         }
                 }
