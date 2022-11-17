@@ -23,9 +23,9 @@ struct MainNavigation: View {
                     .environmentObject(classManager)
                     .environmentObject(mapManager)
             case 2:
-                //                SettingsView()
-                AddClassView()
-                    .environmentObject(classManager)
+                SettingsView()
+//                AddClassView()
+//                    .environmentObject(classManager)
             case 3:
                 AddClassView()
                     .environmentObject(classManager)

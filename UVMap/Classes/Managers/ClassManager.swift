@@ -98,13 +98,7 @@ class ClassManager: ObservableObject{
         }
         todaysClasses = []
         for aClass in studentsClasses {
-            print("------------------")
-            print("checking a class")
-            print("Title: \(aClass.title)")
-            print("days: \(aClass.days.lowercased())")
-            print("day: \(dayOfWeek)")
             if (aClass.days.lowercased().contains(dayOfWeek)) {
-                print("adding: \(aClass.title)")
                 todaysClasses.append(aClass)
             }
         }

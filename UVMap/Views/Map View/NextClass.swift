@@ -9,12 +9,13 @@ import SwiftUI
 
 struct NextClass: View {
     @EnvironmentObject var classManager: ClassManager
-    @Binding var building: Building
+//    @Binding var building: Building
     
     var body: some View {
         HStack {
             Text("Class: ")
-            Text("\(classManager.activeClass?.title)")
+//            Text("\(classManager.activeClass?.title)")
+            Text("CS 275")
                 .fontWeight(.heavy)
         }
     }

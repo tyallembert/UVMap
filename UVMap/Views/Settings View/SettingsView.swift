@@ -13,7 +13,8 @@ struct SettingsView: View {
         ZStack{
             VStack{
                 TitleBar()
-                    .padding(.top)
+//                    .padding(.top)
+                    .frame(height: 150)
                     .edgesIgnoringSafeArea(.top)
                 
                 VStack(alignment: .leading, spacing: 15) {

@@ -26,6 +26,16 @@ struct InnerBox: View {
             Spacer()
                 .frame(height: 20)
             LoginButton()
+            Spacer()
+                .frame(height: 40)
+            Button{
+                sessionManager.currentState = .signUp
+            }label:{
+                VStack {
+                    Text("Dont have an account yet?")
+                    Text("Signup")
+                }
+            }
 
         }
         .padding(20)
@@ -38,5 +48,6 @@ struct InnerBox: View {
 struct InnerBox_Previews: PreviewProvider {
     static var previews: some View {
         InnerBox()
+            .environmentObject(SessionManager())
     }
 }
