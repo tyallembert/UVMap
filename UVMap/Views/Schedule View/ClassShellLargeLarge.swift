@@ -28,7 +28,7 @@ struct ClassShellLargeLarge: View {
         //Green styling on HStack
         }.padding()
         .frame(width: 300, height: 220)
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
+        .background(Color.backgroundGreen.opacity(0.8))
         .cornerRadius(25)
         
         

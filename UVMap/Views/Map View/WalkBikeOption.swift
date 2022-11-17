@@ -16,7 +16,7 @@ struct WalkBikeOption: View {
                 ZStack {
                     Capsule()
                         .frame(width:90,height:44)
-                        .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                        .foregroundColor(Color.backgroundGreen)
                     ZStack{
                         Circle()
                             .frame(width:40, height:40)
@@ -25,11 +25,11 @@ struct WalkBikeOption: View {
                             .offset(x: userWalking ? -25: 25)
                         //image in the circle
                         Image(systemName: "figure.walk")
-                            .foregroundColor(userWalking ? Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255): .white)
+                            .foregroundColor(userWalking ? Color.backgroundGreen: .white)
                             .offset(x: -25)
                         // image outside of the circle
                         Image(systemName: "bicycle")
-                            .foregroundColor(userWalking ? .white: Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                            .foregroundColor(userWalking ? .white: Color.backgroundGreen)
                             .offset(x: 25)
                     }
                     .padding(24)

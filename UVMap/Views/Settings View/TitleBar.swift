@@ -19,7 +19,7 @@ struct TitleBar: View {
                 Spacer()
                     
             }
-            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
+            .background(Color.backgroundGreen.opacity(0.8))
         }
     }
 }

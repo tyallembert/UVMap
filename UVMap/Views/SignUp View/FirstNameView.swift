@@ -14,7 +14,7 @@ struct FirstNameView: View {
         Text("First Name")
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
-            .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+            .foregroundColor(Color.backgroundGreen)
         TextField("", text: $sessionManager.firstName)
             .foregroundColor(Color.black)
             .padding(7)
