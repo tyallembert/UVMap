@@ -40,7 +40,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var bottomSheetPosition: BottomSheetPosition = .middle
     
     private var haveShownRouteOverview: Bool = false
-    private var hasTimeElapsedForRefocus: Bool = false
+    private var hasRebounded: Bool = false
     
     
     
@@ -132,7 +132,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             updateMapView(loc)
         }
         haveShownRouteOverview = false
-        hasTimeElapsedForRefocus = false
+        hasRebounded = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -240,10 +240,11 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
         }
         else {
-            if haveShownRouteOverview {
+            if haveShownRouteOverview && !hasRebounded{
                 // Recenters the view after 3.5 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                     self.focusLocation()
+                    self.hasRebounded = true
                 }
             }
         }
