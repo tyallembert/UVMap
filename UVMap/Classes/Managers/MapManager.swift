@@ -132,7 +132,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
             updateMapView(loc)
         }
         haveShownRouteOverview = false
-        hasTimeElapsedForRefocus = false
+        hasRebounded = false
     }
     
     func buildRoutes(completion: @escaping (Int) -> Void){
@@ -244,7 +244,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
                 // Recenters the view after 3.5 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                     self.focusLocation()
-                    hasRebounded = true
+                    self.hasRebounded = true
                 }
             }
         }
