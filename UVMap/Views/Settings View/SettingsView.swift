@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @StateObject var settingsManager = SettingsManager()// = SettingsManager()
-    @State var howEarly: Int = settingsManager.early//SettingsManager().early
+    @State var howEarly: Int = 10//settingsManager.early//SettingsManager().early
     var body: some View {
         ZStack(alignment: .trailing){
             
