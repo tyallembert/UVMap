@@ -14,40 +14,53 @@
 import SwiftUI
 
 struct ScheduleChart: View {
+    @EnvironmentObject var classManager: ClassManager
+    var times = ["8AM", "9AM", "10AM", "11AM","12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM"]
     var body: some View {
-        
-        HStack {
-            //ZStack{
-                List {
-                    Text("8AM").frame(height: 70)
-                    ClassShell()
-                    Text("9AM").frame(height: 70)
-                    Text("10AM").frame(height: 70)
-                    Text("11AM").frame(height: 70)
-                    Text("12PM").frame(height: 70)
-                    Text("1PM").frame(height: 70)
-                    Text("2PM").frame(height: 70)
-                    Text("3PM").frame(height: 70)
-                    Text("4PM").frame(height: 70)
-                    
-
-                }.frame(height: 550)
-                    .border(.black.opacity(0.8))
-                    .shadow(color: .black.opacity(0.1), radius: 3, y: -3)
-                    .padding()
-                    .offset(y:-55)
+        ScrollView {
+            ZStack(alignment: .trailing) {
+                VStack(alignment: .leading, spacing: 0) {
+                    ForEach(times, id: \.self){ time in
+                        ZStack(alignment: .leading) {
+                            Divider()
+                            Text(time)
+                                .frame(height: 100)
+                        }
+                    }
+                }
+                
+                VStack{
+                    ZStack {
+                        ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
+                                ClassShell()
+                                    .environmentObject(classManager)
+                                    .environmentObject(course)
+                                    .frame(alignment: .top)
+                                    .offset(y: classManager.getOffset(singleClass: course))
+                        }
+                    }
+                    Spacer()
+                }
+                .frame(width: 280, alignment: .leading)
+                
             }
-            
-        //}
-        
-        
+            .frame(maxWidth: 350, alignment: .center)
+            .padding()
+            .background{
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.backgroundGradient)
+                    .shadow(radius: 5)
+            }
+            .padding()
+        }
+        .padding(0)
     }
-    
 }
 
 
 struct ScheduleChart_Previews: PreviewProvider {
     static var previews: some View {
         ScheduleChart()
+            .environmentObject(ClassManager())
     }
 }

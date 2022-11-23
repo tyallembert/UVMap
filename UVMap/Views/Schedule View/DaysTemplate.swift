@@ -11,19 +11,47 @@
 import SwiftUI
 
 struct DaysTemplate: View {
+    @EnvironmentObject var classManager: ClassManager
+    
     var body: some View {
-        HStack {
-            MondayScheduleMenu()
-            TuesdayScheduleMenu()
-            WednesdayScheduleMenu()
-            ThursdayScheduleMenu()
-            FridayScheduleMenu()
-        }.frame(width: 300)
+        GeometryReader { geometry in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(classManager.currentWeek,id: \.self){day in
+                        Spacer().frame(width: 1)
+                        Button{
+                            classManager.getTodaysClasses(date: day)
+                        }label: {
+                            VStack {
+                                Text(classManager.extractDate(date: day, format: "dd"))
+                                Text(classManager.extractDate(date: day, format: "EEE"))
+                            }
+                            .padding(5)
+                            .background(classManager.activeDay == day ? Color.backgroundGreen :Color.white)
+                            .foregroundColor(classManager.activeDay == day ? Color.white :Color.backgroundGreen)
+                            .cornerRadius(5)
+                        }
+                        Spacer().frame(width: 1)
+                    }
+
+                }
+            }
+            .padding(5)
+            .overlay(
+                Rectangle()
+                    .frame(width: nil, height: 1, alignment: .bottom)
+                    .foregroundColor(Color.accentColor)
+                , alignment: .bottom
+            )
+            .frame(width: geometry.size.width, alignment: .center)
+        }
+        .frame(height: 55)
     }
 }
 
 struct DaysTemplate_Previews: PreviewProvider {
     static var previews: some View {
         DaysTemplate()
+            .environmentObject(ClassManager())
     }
 }

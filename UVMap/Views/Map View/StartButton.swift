@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct StartButton: View {
+    @EnvironmentObject var mapManager: MapManager
+    @Binding var bottomSheetPosition: BottomSheetPosition
+    
     func handleStartClicked() {
-        print("clicked")
+        // async function call to buildRoutes
+        mapManager.buildRoutes { eta in }
+        bottomSheetPosition = mapManager.bottomSheetPosition
+        
     }
     var body: some View {
         Button (action: {handleStartClicked()}){
             Text("Start")
                 .font(.title2)
                 .fontWeight(.heavy)
+                .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
         }
         .foregroundColor(.white)
         .padding()
-        .frame(maxWidth: UIScreen.main.bounds.width*0.9)
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+        .background(Color.backgroundGreen)
         .cornerRadius(10)
         .shadow(color: .black, radius: 3, x: 2, y: 3)
     }
 }
 
-struct StartButton_Previews: PreviewProvider {
-    static var previews: some View {
-        StartButton()
-    }
-}
+//struct StartButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StartButton(BottomSheetPosition: bottomSheetPosition)
+//    }
+//}

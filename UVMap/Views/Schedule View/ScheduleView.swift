@@ -12,18 +12,19 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    @EnvironmentObject var classManager: ClassManager
+    
     var body: some View {
-        VStack {
-            TitleBarSchedule()
-            Spacer()
-            DaysTemplate()
-            ScheduleChart()
-            
-            Spacer()
-            HStack{
-                Text("")
+        NavigationView {
+            VStack {
+                TitleBarSchedule()
+                    .ignoresSafeArea()
+                    .frame(height: 100)
+                DaysTemplate()
+//                    .frame(height: 60)
+                ScheduleChart()
+                
             }
-            
         }
     }
 }
@@ -31,5 +32,6 @@ struct ScheduleView: View {
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         ScheduleView()
+            .environmentObject(ClassManager())
     }
 }

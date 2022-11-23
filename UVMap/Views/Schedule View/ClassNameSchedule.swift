@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassNameSchedule: View {
     
-    var className: String = "CS 275"
+    @Binding var className: String
 //    Lecture l1(name: "CS 275",
 //               time: "8:30am - 9:20am",
 //               professor: "Jason Hibbeler",
@@ -26,8 +26,9 @@ struct ClassNameSchedule: View {
     }
 }
 
-struct ClassNameSchedule_Previews: PreviewProvider {
-    static var previews: some View {
-        ClassNameSchedule()
-    }
-}
+//struct ClassNameSchedule_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ClassNameSchedule()
+//
+//    }
+//}

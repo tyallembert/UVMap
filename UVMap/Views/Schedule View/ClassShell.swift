@@ -5,29 +5,38 @@
 //  Created by nate lalor on 10/2/22.
 //
 
+// //////////////////////////////////////////////// //
+// THIS IS A CLASS SHELL MEANT FOR: Mon/Wed/Fri CLASSES (50 minute classes) //
+// //////////////////////////////////////////////// //
+
 import SwiftUI
 
 struct ClassShell: View {
+    @EnvironmentObject var classManager: ClassManager
+    @EnvironmentObject var singleClass: SingleClass
     var body: some View {
-        HStack{
+        HStack(alignment: .top){
             //LHS
             VStack(alignment: .leading) {
-                ClassNameSchedule()
+                ClassNameSchedule(className: $singleClass.title)
                 ClassTimeSchedule()
-                ClassProfessorSchedule()
+                    .environmentObject(singleClass)
+                ClassProfessorSchedule(classProfessor: $singleClass.instructor)
                 
             }
             Spacer()
             
             //RHS
-            ClassBuildingSchedule().frame(width: 120)
+            ClassBuildingSchedule()
+                .environmentObject(singleClass)
+                .frame(width: 120)
                 
         //Green styling on HStack
-        }.padding()
-        .frame(width: 300, height: 100)
-        .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
-        .cornerRadius(25)
-        
+        }
+            .padding()
+            .frame( height: classManager.getClassShellHeight(course: singleClass))
+            .background(Color.backgroundGreen.opacity(0.8))
+            .cornerRadius(25)
         
     }
 }
@@ -35,5 +44,6 @@ struct ClassShell: View {
 struct ClassShell_Previews: PreviewProvider {
     static var previews: some View {
         ClassShell()
+            .environmentObject(ClassManager())
     }
 }

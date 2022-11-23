@@ -17,7 +17,7 @@ struct PrioritizeSchedule: View {
                 ZStack {
                     Capsule()
                         .frame(width:90,height:44)
-                        .foregroundColor(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
+                        .foregroundColor(Color.backgroundGreen)
                     ZStack{
                         Circle()
                             .frame(width:40, height:40)

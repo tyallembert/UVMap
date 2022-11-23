@@ -22,8 +22,8 @@ struct NavigationBar: View {
                         ZStack {
                             if element == 1{//the home button
                                 Circle()
-                                    .fill(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255))
-                                    .innerShadow(shape: Circle(), color: Color.innerShadow, lineWidth: 2, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.7)
+                                    .fill(Color.backgroundGreen)
+                                    .innerShadow(shape: Circle(), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.5)
                                     .frame(height: 70)
                                     .offset(y: -20)
                                     .shadow(color: Color.black, radius: 3, y: 3)

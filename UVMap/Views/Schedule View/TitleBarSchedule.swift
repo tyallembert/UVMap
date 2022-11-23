@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct TitleBarSchedule: View {
+    
+   @State var title = "Schedule"
+    
     var body: some View {
-        VStack{
-            HStack{
-                Text("Schedule")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .padding()
+            VStack{
                 Spacer()
-                Button("+") {
-                    // LINK TO ADD CLASS PAGE HERE
-                    // do we want this as navigation
-                    // instead of button?
-                }.padding(30)
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
+                HStack{
+                    Text("Schedule")
+                        .frame(height: 40)
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .padding()
+                    Spacer()
+                    
+                    NavigationLink {
+                        AddClassView()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    
+                }
+    
             }
-            .background(Color(red: 41 / 255, green: 97 / 255, blue: 54 / 255).opacity(0.8))
-        }
+            .padding()
+                .foregroundColor(.white)
+                .background(Color.backgroundGreen)
     }
 }
 

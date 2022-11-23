@@ -23,9 +23,15 @@ struct TripInformation: View {
                         .offset(x: -30)
                 }
                 .padding()
-                .background(Color("BG2"))
-                .cornerRadius(10)
-                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
+                .background(Color.backgroundDarker)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .overlay{
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.textGreenWhite, lineWidth: 2)
+                }
+//                .background(Color("BG2"))
+//                .cornerRadius(10)
+//                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
                     VStack {
                         Text("Suggested Leave Time")
@@ -34,10 +40,13 @@ struct TripInformation: View {
                             .fontWeight(.heavy)
                     }
                     .padding()
-                    .frame(width: geometry.size.width * 0.42)
-                    .background(Color("BG2"))
-                    .cornerRadius(10)
-                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
+                    .background(Color.backgroundDarker)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay{
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.textGreenWhite, lineWidth: 2)
+                    }
+                    
                     Spacer()
                     VStack {
                         Text("Arrival Time if you leave now")
@@ -46,11 +55,12 @@ struct TripInformation: View {
                             .fontWeight(.heavy)
                     }
                     .padding()
-                    .frame(width: geometry.size.width * 0.42)
-                    .background(Color("BG2"))
-                    .cornerRadius(10)
-                    .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
-//                    .shadow(.inner(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0))
+                    .background(Color.backgroundDarker)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay{
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.textGreenWhite, lineWidth: 2)
+                    }
                 }
             }
             .padding()

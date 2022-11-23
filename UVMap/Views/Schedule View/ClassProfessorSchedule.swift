@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassProfessorSchedule: View {
     
-    @State var classProfessor: String = "Jason Hibbeler"
+    @Binding var classProfessor: String
     
     var body: some View {
         
@@ -21,8 +21,8 @@ struct ClassProfessorSchedule: View {
     }
 }
 
-struct ClassProfessorSchedule_Previews: PreviewProvider {
-    static var previews: some View {
-        ClassProfessorSchedule()
-    }
-}
+//struct ClassProfessorSchedule_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ClassProfessorSchedule()
+//    }
+//}

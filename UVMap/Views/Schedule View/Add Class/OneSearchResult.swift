@@ -12,7 +12,7 @@ struct OneSearchResult: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {
         HStack {
-            Text("\(singleClass.subject) \(singleClass.number)")
+            Text("\(singleClass.subject) \(singleClass.number)- \(singleClass.section)")
                 .font(.system(size: 20, weight: .semibold))
             Spacer()
             Text(singleClass.days)

@@ -9,21 +9,30 @@ import SwiftUI
 
 struct MainNavigation: View {
     @EnvironmentObject var sessionManager: SessionManager
+    @StateObject var classManager: ClassManager = ClassManager()
+    @StateObject var mapManager: MapManager = MapManager()
     
     var body: some View {
         ZStack{
             switch sessionManager.selectedNavElement {
             case 0:
                 ScheduleView()
+                    .environmentObject(classManager)
             case 1:
                 MainMapView()
+                    .environmentObject(classManager)
+                    .environmentObject(mapManager)
             case 2:
                 SettingsView()
-                //AddClassView()
+//                AddClassView()
+//                    .environmentObject(classManager)
             case 3:
                 AddClassView()
+                    .environmentObject(classManager)
             default:
                 MainMapView()
+                    .environmentObject(classManager)
+                    .environmentObject(mapManager)
             }
             // Style of Nav Bar
             NavigationBar()

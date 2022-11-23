@@ -9,27 +9,31 @@ import BottomSheet
 
 enum BottomSheetPosition: CGFloat, CaseIterable {
     case top = 0.75 //633/844
-    case middle = 0.385 //325/844
+    case middle = 0.415 //350/844
     case bottom = 0.230 //325/844
 }
 
 struct MainMapView: View {
+    @EnvironmentObject var mapManager: MapManager
+    @EnvironmentObject var classManager: ClassManager
     @State var bottomSheetPosition: BottomSheetPosition = .middle
-    @StateObject private var mapManager = MapManager()
+    
+    @StateObject private var databaseManager = DatabaseManager()
 //    @State var showingBottomWindow = true
     
     var body: some View {
         ZStack(alignment: .bottom) {
-//            Image("Login")
-//                .resizable()
-//                .ignoresSafeArea()
             TheMap()
                 .environmentObject(mapManager)
+                .environmentObject(databaseManager)
             VStack(alignment: .leading) {
-                SearchBar()
+                BuildingSearchResults()
+                    .environmentObject(mapManager)
+                    .environmentObject(databaseManager)
                 CurrentLocationButton()
                     .environmentObject(mapManager)
                     .padding()
+                
                 // MARK: draggable bottom sheet
                 BottomSheetView(position: $bottomSheetPosition){}content: {
                     BottomWindow(bottomSheetPosition: $bottomSheetPosition)

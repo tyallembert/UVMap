@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040185BC291C0700003C0DB3 /* BuildingSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */; };
+		040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040185BD291C0795003C0DB3 /* OneBuildingResult.swift */; };
+		045C393F2914510E003BD700 /* Map in Frameworks */ = {isa = PBXBuildFile; productRef = 045C393E2914510E003BD700 /* Map */; };
+		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
+		049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
+		04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D01C2925367300DB02EB /* EtaButton.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
 		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
@@ -39,10 +45,20 @@
 		4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83B28E5E46100207EC5 /* StartButton.swift */; };
 		4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C83D28E5E65300207EC5 /* TripInformation.swift */; };
 		4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C84228E74E1F00207EC5 /* SessionManager.swift */; };
+		4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C434D73290C25FD005BB4F6 /* TopSchedule.swift */; };
 		4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A229082B2700C5DE09 /* all_classes.json */; };
 		4C47B7A52909863F00C5DE09 /* student_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A42909863F00C5DE09 /* student_classes.json */; };
 		4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B68C528F711CD00532DD2 /* BottomSheet.swift */; };
 		4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C5B68C828F7120300532DD2 /* BottomSheet */; };
+		4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */; };
+		4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E3291D880200C0C2F7 /* EmailView.swift */; };
+		4C7859ED291D880200C0C2F7 /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */; };
+		4C7859EE291D880200C0C2F7 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E5291D880200C0C2F7 /* SignUpButton.swift */; };
+		4C7859EF291D880200C0C2F7 /* LastNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E6291D880200C0C2F7 /* LastNameView.swift */; };
+		4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E7291D880200C0C2F7 /* NetIDView.swift */; };
+		4C7859F1291D880200C0C2F7 /* SignUpInnerBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */; };
+		4C7859F2291D880200C0C2F7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E9291D880200C0C2F7 /* SignUpView.swift */; };
+		4C7859F3291D880200C0C2F7 /* FirstNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859EA291D880200C0C2F7 /* FirstNameView.swift */; };
 		4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */; };
 		4C78EE6228DE1D1E00306D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE6128DE1D1E00306D58 /* ContentView.swift */; };
 		4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C78EE6328DE1D2200306D58 /* Assets.xcassets */; };
@@ -50,7 +66,6 @@
 		4C78EE7128DE1D2200306D58 /* UVMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7028DE1D2200306D58 /* UVMapTests.swift */; };
 		4C78EE7B28DE1D2200306D58 /* UVMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7A28DE1D2200306D58 /* UVMapUITests.swift */; };
 		4C78EE7D28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE7C28DE1D2200306D58 /* UVMapUITestsLaunchTests.swift */; };
-		4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
 		4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9028DE211B00306D58 /* LoginView.swift */; };
 		4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9228DE9D2C00306D58 /* InnerBox.swift */; };
 		4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9428DF650D00306D58 /* SettingsView.swift */; };
@@ -64,6 +79,7 @@
 		4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */; };
 		4CAF024D28F71DA4005F605E /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024C28F71DA4005F605E /* Blur.swift */; };
 		4CAF024F28F71F2A005F605E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF024E28F71F2A005F605E /* Extensions.swift */; };
+		4CD538832915881100926C2E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD538822915881100926C2E /* LoadingView.swift */; };
 		4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168228F0B6940069D6C0 /* FirebaseAuth */; };
 		4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE7168428F0B6940069D6C0 /* FirebaseFirestore */; };
 		4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */; };
@@ -82,6 +98,8 @@
 		50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */; };
 		50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */; };
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
+		50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F43291420030078C231 /* ClassShellLarge.swift */; };
+		50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F45291425410078C231 /* ClassShellLargeLarge.swift */; };
 		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
 		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -104,6 +122,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSearchResults.swift; sourceTree = "<group>"; };
+		040185BD291C0795003C0DB3 /* OneBuildingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBuildingResult.swift; sourceTree = "<group>"; };
+		049E3F7B291D920F003D8ACB /* EndRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRouteButton.swift; sourceTree = "<group>"; };
+		04E4D01C2925367300DB02EB /* EtaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtaButton.swift; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
 		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
@@ -136,10 +158,20 @@
 		4C36C83B28E5E46100207EC5 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
 		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4C434D73290C25FD005BB4F6 /* TopSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSchedule.swift; sourceTree = "<group>"; };
 		4C47B7A229082B2700C5DE09 /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
 		4C47B7A42909863F00C5DE09 /* student_classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = student_classes.json; sourceTree = "<group>"; };
 		4C5B68C528F711CD00532DD2 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
-		4C78EE5C28DE1D1E00306D58 /* UVMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRetypePasswordView.swift; sourceTree = "<group>"; };
+		4C7859E3291D880200C0C2F7 /* EmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
+		4C7859E5291D880200C0C2F7 /* SignUpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
+		4C7859E6291D880200C0C2F7 /* LastNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastNameView.swift; sourceTree = "<group>"; };
+		4C7859E7291D880200C0C2F7 /* NetIDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetIDView.swift; sourceTree = "<group>"; };
+		4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInnerBoxes.swift; sourceTree = "<group>"; };
+		4C7859E9291D880200C0C2F7 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4C7859EA291D880200C0C2F7 /* FirstNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameView.swift; sourceTree = "<group>"; };
+		4C78EE5C28DE1D1E00306D58 /* UVMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVMapApp.swift; sourceTree = "<group>"; };
 		4C78EE6128DE1D1E00306D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C78EE6328DE1D2200306D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +195,7 @@
 		4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		4CAF024C28F71DA4005F605E /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		4CAF024E28F71F2A005F605E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4CD538822915881100926C2E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBuildingsFromJSON.swift; sourceTree = "<group>"; };
 		4CE7168C28F108FD0069D6C0 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4CF841CC28EB2144001C7F24 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
@@ -179,6 +212,8 @@
 		50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayScheduleMenu.swift; sourceTree = "<group>"; };
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
+		50B55F43291420030078C231 /* ClassShellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLarge.swift; sourceTree = "<group>"; };
+		50B55F45291425410078C231 /* ClassShellLargeLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLargeLarge.swift; sourceTree = "<group>"; };
 		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE7168328F0B6940069D6C0 /* FirebaseAuth in Frameworks */,
+				045C393F2914510E003BD700 /* Map in Frameworks */,
 				4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */,
 				4CE7168528F0B6940069D6C0 /* FirebaseFirestore in Frameworks */,
 			);
@@ -214,13 +250,13 @@
 		4C11E85128F85CAA00710092 /* Add Class */ = {
 			isa = PBXGroup;
 			children = (
-				4C11E85228F85F1F00710092 /* AddClassView.swift */,
-				4C28FF6428FF962600D75A1A /* OneSearchResult.swift */,
-				4C28FF6228FF95CE00D75A1A /* SearchResults.swift */,
 				4C28FF66290029D500D75A1A /* AddClassSubmit.swift */,
-				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
+				4C11E85228F85F1F00710092 /* AddClassView.swift */,
 				4C28FF5828FDC4E100D75A1A /* AddOneClass.swift */,
 				4C28FF5628FDC48A00D75A1A /* ClassesToBeAdded.swift */,
+				4C11E85428F8601200710092 /* ClassSearchBar.swift */,
+				4C28FF6428FF962600D75A1A /* OneSearchResult.swift */,
+				4C28FF6228FF95CE00D75A1A /* SearchResults.swift */,
 			);
 			path = "Add Class";
 			sourceTree = "<group>";
@@ -228,12 +264,12 @@
 		4C24003128EBB3EF002F7E2D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				4C47B7A229082B2700C5DE09 /* all_classes.json */,
-				4C47B7A42909863F00C5DE09 /* student_classes.json */,
-				4CA09D2728F4939400484D6D /* all_buildings.json */,
 				4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */,
+				4CA09D2728F4939400484D6D /* all_buildings.json */,
+				4C47B7A229082B2700C5DE09 /* all_classes.json */,
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
+				4C47B7A42909863F00C5DE09 /* student_classes.json */,
 				3FB14DE6290C305400DFC8A4 /* settings.json */,
 			);
 			path = Database;
@@ -242,29 +278,45 @@
 		4C36C84128E74DE900207EC5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
+				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
 				4CF841CC28EB2144001C7F24 /* MapManager.swift */,
 				4CABE58228F06C600087DD98 /* SearchBarManager.swift */,
-				4C28FF5A28FDD2DE00D75A1A /* ClassManager.swift */,
+				4C36C84228E74E1F00207EC5 /* SessionManager.swift */,
 				3FDA51ED2902F24600E85CE0 /* settingsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		4C7859E1291D880200C0C2F7 /* SignUp View */ = {
+			isa = PBXGroup;
+			children = (
+				4C7859E3291D880200C0C2F7 /* EmailView.swift */,
+				4C7859EA291D880200C0C2F7 /* FirstNameView.swift */,
+				4C7859E6291D880200C0C2F7 /* LastNameView.swift */,
+				4C7859E7291D880200C0C2F7 /* NetIDView.swift */,
+				4C7859E5291D880200C0C2F7 /* SignUpButton.swift */,
+				4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */,
+				4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */,
+				4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */,
+				4C7859E9291D880200C0C2F7 /* SignUpView.swift */,
+			);
+			path = "SignUp View";
+			sourceTree = "<group>";
+		};
 		4C78EE5328DE1D1E00306D58 = {
 			isa = PBXGroup;
 			children = (
+				4C78EE5D28DE1D1E00306D58 /* Products */,
 				4C78EE5E28DE1D1E00306D58 /* UVMap */,
 				4C78EE6F28DE1D2200306D58 /* UVMapTests */,
 				4C78EE7928DE1D2200306D58 /* UVMapUITests */,
-				4C78EE5D28DE1D1E00306D58 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		4C78EE5D28DE1D1E00306D58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE5C28DE1D1E00306D58 /* UVMap.app */,
+				4C78EE5C28DE1D1E00306D58 /* UVMaps.app */,
 				4C78EE6C28DE1D2200306D58 /* UVMapTests.xctest */,
 				4C78EE7628DE1D2200306D58 /* UVMapUITests.xctest */,
 			);
@@ -274,14 +326,14 @@
 		4C78EE5E28DE1D1E00306D58 /* UVMap */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
-				4C24003128EBB3EF002F7E2D /* Database */,
-				4CAF024B28F71D91005F605E /* Components */,
-				4CE7168A28F107F10069D6C0 /* Classes */,
-				4C78EE8928DE1E6500306D58 /* Views */,
 				4C78EE6328DE1D2200306D58 /* Assets.xcassets */,
+				4CE7168A28F107F10069D6C0 /* Classes */,
+				4CAF024B28F71D91005F605E /* Components */,
+				4C24003128EBB3EF002F7E2D /* Database */,
 				4C24002F28EBB3A7002F7E2D /* GoogleService-Info.plist */,
 				4C78EE6528DE1D2200306D58 /* Preview Content */,
+				4C78EE5F28DE1D1E00306D58 /* UVMapApp.swift */,
+				4C78EE8928DE1E6500306D58 /* Views */,
 			);
 			path = UVMap;
 			sourceTree = "<group>";
@@ -315,11 +367,13 @@
 			isa = PBXGroup;
 			children = (
 				4C78EE6128DE1D1E00306D58 /* ContentView.swift */,
-				4C78EE9B28E223C900306D58 /* Navigation View */,
+				4CD53881291587F800926C2E /* Loading screen */,
 				4C78EE8D28DE1EA700306D58 /* Login View */,
-				4C78EE8C28DE1E9900306D58 /* Settings View */,
-				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
 				4C78EE8A28DE1E7C00306D58 /* Map View */,
+				4C78EE9B28E223C900306D58 /* Navigation View */,
+				4C78EE8B28DE1E8C00306D58 /* Schedule View */,
+				4C78EE8C28DE1E9900306D58 /* Settings View */,
+				4C7859E1291D880200C0C2F7 /* SignUp View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,19 +381,24 @@
 		4C78EE8A28DE1E7C00306D58 /* Map View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
-				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
-				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
-				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
-				4C36C83128E4C5F700207EC5 /* NextClass.swift */,
-				4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */,
-				4C36C83D28E5E65300207EC5 /* TripInformation.swift */,
-				4C36C83B28E5E46100207EC5 /* StartButton.swift */,
-				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
-				4C78EEA028E2263400306D58 /* SearchBar.swift */,
-				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
-				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 				4C5B68C528F711CD00532DD2 /* BottomSheet.swift */,
+				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
+				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
+				040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */,
+				4C36C83528E4CB0700207EC5 /* ClassBuilding.swift */,
+				4C36C83328E4C72800207EC5 /* ClassTime.swift */,
+				4CF841CE28EB27FE001C7F24 /* CurrentLocationButton.swift */,
+				049E3F7B291D920F003D8ACB /* EndRouteButton.swift */,
+				04E4D01C2925367300DB02EB /* EtaButton.swift */,
+				4C78EE8E28DE1F4400306D58 /* MainMapView.swift */,
+				4C36C83128E4C5F700207EC5 /* NextClass.swift */,
+				040185BD291C0795003C0DB3 /* OneBuildingResult.swift */,
+				4C78EEA028E2263400306D58 /* SearchBar.swift */,
+				4C36C83B28E5E46100207EC5 /* StartButton.swift */,
+				4C78EE9E28E2253B00306D58 /* TheMap.swift */,
+				4C434D73290C25FD005BB4F6 /* TopSchedule.swift */,
+				4C36C83D28E5E65300207EC5 /* TripInformation.swift */,
+				4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */,
 			);
 			path = "Map View";
 			sourceTree = "<group>";
@@ -348,20 +407,22 @@
 			isa = PBXGroup;
 			children = (
 				4C11E85128F85CAA00710092 /* Add Class */,
-				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
-				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
+				500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */,
+				500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */,
 				500DC3A928EA0E8B0085A130 /* ClassShell.swift */,
+				50B55F43291420030078C231 /* ClassShellLarge.swift */,
 				50622B8128EC75B400B42A3F /* ClassBuildingSchedule.swift */,
-				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
+				50B55F45291425410078C231 /* ClassShellLargeLarge.swift */,
+				500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */,
 				500DC3A128EA06870085A130 /* DaysTemplate.swift */,
+				50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */,
+				500DC3A328EA07D40085A130 /* ScheduleChart.swift */,
 				50622B8328EC79D600B42A3F /* MondayScheduleMenu.swift */,
+				4C78EE9628DF652E00306D58 /* ScheduleView.swift */,
+				50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */,
+				50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */,
 				50622B8528EC79E100B42A3F /* TuesdayScheduleMenu.swift */,
 				50622B8728EC79EE00B42A3F /* WednesdayScheduleMenu.swift */,
-				50622B8928EC79F600B42A3F /* ThursdayScheduleMenu.swift */,
-				50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */,
-				500DC3A528EA09F60085A130 /* ClassNameSchedule.swift */,
-				500DC3A728EA0D580085A130 /* ClassTimeSchedule.swift */,
-				500DC3AB28EA12CE0085A130 /* ClassProfessorSchedule.swift */,
 			);
 			path = "Schedule View";
 			sourceTree = "<group>";
@@ -369,12 +430,16 @@
 		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
+				3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */,
 				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
 				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
 				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
-				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
+				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
+				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
+				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
 				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
+				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
 				3F649F87291C04BF006C2168 /* saveButton.swift */,
 			);
 			path = "Settings View";
@@ -383,10 +448,10 @@
 		4C78EE8D28DE1EA700306D58 /* Login View */ = {
 			isa = PBXGroup;
 			children = (
-				4C78EE9028DE211B00306D58 /* LoginView.swift */,
-				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
 				4CADAB1B2907108C00DE4F03 /* ErrorMessage.swift */,
+				4C78EE9228DE9D2C00306D58 /* InnerBox.swift */,
 				4C36C82D28E34A3000207EC5 /* LoginButton.swift */,
+				4C78EE9028DE211B00306D58 /* LoginView.swift */,
 				4C36C82B28E347BC00207EC5 /* PasswordView.swift */,
 				4C36C82928E3463C00207EC5 /* UsernameView.swift */,
 			);
@@ -411,11 +476,19 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		4CD53881291587F800926C2E /* Loading screen */ = {
+			isa = PBXGroup;
+			children = (
+				4CD538822915881100926C2E /* LoadingView.swift */,
+			);
+			path = "Loading screen";
+			sourceTree = "<group>";
+		};
 		4CE7168A28F107F10069D6C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4CE7168B28F108E70069D6C0 /* Objects */,
 				4C36C84128E74DE900207EC5 /* Managers */,
+				4CE7168B28F108E70069D6C0 /* Objects */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -424,8 +497,8 @@
 			isa = PBXGroup;
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
-				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 				50E43B9828F8D80F00CDF4D9 /* Lecture.swift */,
+				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -450,9 +523,10 @@
 				4CE7168228F0B6940069D6C0 /* FirebaseAuth */,
 				4CE7168428F0B6940069D6C0 /* FirebaseFirestore */,
 				4C5B68C828F7120300532DD2 /* BottomSheet */,
+				045C393E2914510E003BD700 /* Map */,
 			);
 			productName = UVMap;
-			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMap.app */;
+			productReference = 4C78EE5C28DE1D1E00306D58 /* UVMaps.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C78EE6B28DE1D2200306D58 /* UVMapTests */ = {
@@ -526,6 +600,7 @@
 			packageReferences = (
 				4CE7168128F0B6940069D6C0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */,
 			);
 			productRefGroup = 4C78EE5D28DE1D1E00306D58 /* Products */;
 			projectDirPath = "";
@@ -574,11 +649,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */,
+				4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */,
 				4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */,
+				049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */,
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C28FF67290029D500D75A1A /* AddClassSubmit.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
 				4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */,
+				4C7859EE291D880200C0C2F7 /* SignUpButton.swift in Sources */,
 				50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */,
 				4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */,
 				3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */,
@@ -586,11 +665,15 @@
 				4C36C83C28E5E46100207EC5 /* StartButton.swift in Sources */,
 				4C28FF5F28FEEE9000D75A1A /* AdminDatabaseManager.swift in Sources */,
 				4CF841CD28EB2144001C7F24 /* MapManager.swift in Sources */,
+				50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */,
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				3F649F88291C04BF006C2168 /* saveButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
+				4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */,
+				04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */,
+				4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
 				4C36C83628E4CB0700207EC5 /* ClassBuilding.swift in Sources */,
 				500DC3AC28EA12CE0085A130 /* ClassProfessorSchedule.swift in Sources */,
@@ -605,9 +688,13 @@
 				4C28FF5D28FDD31600D75A1A /* SingleClass.swift in Sources */,
 				4C78EE9328DE9D2D00306D58 /* InnerBox.swift in Sources */,
 				3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */,
+				040185BC291C0700003C0DB3 /* BuildingSearchResults.swift in Sources */,
 				4CADAB1C2907108C00DE4F03 /* ErrorMessage.swift in Sources */,
 				4C28FF5928FDC4E100D75A1A /* AddOneClass.swift in Sources */,
+				4C7859F2291D880200C0C2F7 /* SignUpView.swift in Sources */,
 				50622B8A28EC79F600B42A3F /* ThursdayScheduleMenu.swift in Sources */,
+				50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */,
+				040185BE291C0795003C0DB3 /* OneBuildingResult.swift in Sources */,
 				500DC3A228EA06870085A130 /* DaysTemplate.swift in Sources */,
 				50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */,
 				3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */,
@@ -617,21 +704,25 @@
 				4CE7168D28F108FD0069D6C0 /* Building.swift in Sources */,
 				4C36C82C28E347BC00207EC5 /* PasswordView.swift in Sources */,
 				50622B8428EC79D600B42A3F /* MondayScheduleMenu.swift in Sources */,
+				4C7859ED291D880200C0C2F7 /* SignUpPasswordView.swift in Sources */,
 				50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */,
-				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
+				4C7859EF291D880200C0C2F7 /* LastNameView.swift in Sources */,
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
-				4C78EE8F28DE1F4400306D58 /* MainMapView.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
 				3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
 				4C28FF5B28FDD2DE00D75A1A /* ClassManager.swift in Sources */,
+				4C7859F1291D880200C0C2F7 /* SignUpInnerBoxes.swift in Sources */,
 				50622B8228EC75B400B42A3F /* ClassBuildingSchedule.swift in Sources */,
 				4CF841CF28EB27FE001C7F24 /* CurrentLocationButton.swift in Sources */,
 				4CABE58328F06C600087DD98 /* SearchBarManager.swift in Sources */,
+				4CD538832915881100926C2E /* LoadingView.swift in Sources */,
+				4C7859F3291D880200C0C2F7 /* FirstNameView.swift in Sources */,
 				4C78EE9128DE211B00306D58 /* LoginView.swift in Sources */,
 				4C36C83E28E5E65300207EC5 /* TripInformation.swift in Sources */,
 				4C36C82E28E34A3000207EC5 /* LoginButton.swift in Sources */,
+				4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */,
 				4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */,
 				4C78EE6028DE1D1E00306D58 /* UVMapApp.swift in Sources */,
 				4CE7168728F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift in Sources */,
@@ -806,14 +897,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMap;
+				PRODUCT_NAME = UVMaps;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -838,14 +926,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.UVMapTeam.UVMap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMap;
+				PRODUCT_NAME = UVMaps;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -971,6 +1056,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pauljohanneskraft/Map";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Wouter125/BottomSheet";
@@ -990,6 +1083,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045C393E2914510E003BD700 /* Map */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045C393D2914510E003BD700 /* XCRemoteSwiftPackageReference "Map" */;
+			productName = Map;
+		};
 		4C5B68C828F7120300532DD2 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C5B68C728F7120200532DD2 /* XCRemoteSwiftPackageReference "BottomSheet" */;
