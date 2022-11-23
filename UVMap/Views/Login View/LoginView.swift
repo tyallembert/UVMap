@@ -29,7 +29,7 @@ struct LoginView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(7)
                     .frame(width: 100)
-                    .offset(y: -200)
+                    .offset(y: -240)
             }
         }
     }
