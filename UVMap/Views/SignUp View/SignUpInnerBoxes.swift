@@ -12,30 +12,31 @@ struct SignUpInnerBoxes: View {
     
     var body: some View {
         VStack {
-            FirstNameView()
-//                Spacer()
-//                    .frame(height: 20)
-            LastNameView()
-//                Spacer()
-//                    .frame(height: 20)
-            EmailView()
-//                Spacer()
-//                    .frame(height: 20)
-            NetIDView()
-//                Spacer()
-//                    .frame(height: 20)
-            PasswordView()
-//                Spacer()
-//                    .frame(height: 20)
-            SignUpRetypePasswordView()
-//                Spacer()
-//                    .frame(height: 20)
+            HStack {
+                FirstNameView()
+                LastNameView()
+            }
+            VStack(alignment: .leading) {
+                NetIDView()
+            }
+            VStack(alignment: .leading) {
+                EmailView()
+            }
+            VStack(alignment: .leading) {
+                PasswordView()
+            }
+            VStack(alignment: .leading) {
+                SignUpRetypePasswordView()
+            }
             SignUpButton()
+            Spacer()
+                .frame(height: 20)
         }
         .padding(20)
-        .frame(height: 350)
+        .frame(height: 650)
         .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
         .cornerRadius(25)
+        .offset(y: 50)
     }
 }
 

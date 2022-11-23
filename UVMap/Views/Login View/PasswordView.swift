@@ -10,7 +10,7 @@ import SwiftUI
 struct PasswordView: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
-        Text("PASSWORD")
+        Text("Password")
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color.backgroundGreen)
