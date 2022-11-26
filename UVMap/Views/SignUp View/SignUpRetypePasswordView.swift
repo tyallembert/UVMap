@@ -12,18 +12,22 @@ struct SignUpRetypePasswordView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Re-enter Password")
+            Text("Confirm Password")
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            TextField("", text: $sessionManager.retypePassword,
-                      prompt: Text("Re-type Password"))
-                .foregroundColor(Color.black)
-                .padding(7)
-                .background(Color.white)
-                .cornerRadius(100)
-                .shadow(color: .black, radius: 3, x: 1, y: 2)
-                .autocapitalization(.none)
+            SecureField("", text: $sessionManager.confirmPassword, prompt: Text("Password"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = false
+                        sessionManager.netIDInFocus = false
+                        sessionManager.emailInFocus = false
+                        sessionManager.passwordSUInFocus = false
+                        sessionManager.confirmPasswordInFocus = true
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.confirmPasswordInFocus)
         }
     }
 }

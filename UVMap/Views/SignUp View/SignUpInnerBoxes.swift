@@ -25,13 +25,21 @@ struct SignUpInnerBoxes: View {
             SignUpRetypePasswordView()
             Spacer()
                 .frame(height: 20)
-            
             SignUpButton()
             Spacer()
-                .frame(height: 20)
+                .frame(height: 40)
+            Button {
+                sessionManager.currentState = .loggedOut
+            } label: {
+                VStack {
+                    Text("Already have an account?")
+                    Text("Log-in")
+                        .underline()
+                }
+            }
         }
             .padding(20)
-            .frame(height: 500)
+            .frame(height: 560)
             .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
             .cornerRadius(25)
             .offset(y: 10)
