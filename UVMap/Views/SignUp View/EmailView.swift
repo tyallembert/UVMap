@@ -17,14 +17,19 @@ struct EmailView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            TextField("", text: $sessionManager.email,
-                      prompt: Text("Email [ @uvm.edu format ]"))
-            .foregroundColor(Color.black)
-            .padding(7)
-            .background(Color.white)
-            .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
-            .autocapitalization(.none)
+            TextField("", text: $sessionManager.email, prompt: Text("@uvm.edu"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = false
+                        sessionManager.netIDInFocus = false
+                        sessionManager.emailInFocus = true
+                        sessionManager.passwordSUInFocus = false
+                        sessionManager.confirmPasswordInFocus = false
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.emailInFocus)
+            
         }
     }
 }

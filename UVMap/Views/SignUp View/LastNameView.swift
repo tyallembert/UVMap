@@ -16,14 +16,18 @@ struct LastNameView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            TextField("", text: $sessionManager.lastName,
-                      prompt: Text("Last Name"))
-            .foregroundColor(Color.black)
-            .padding(7)
-            .background(Color.white)
-            .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
-            .autocapitalization(.none)
+            TextField("", text: $sessionManager.lastName, prompt: Text("Last Name"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = true
+                        sessionManager.netIDInFocus = false
+                        sessionManager.emailInFocus = false
+                        sessionManager.passwordSUInFocus = false
+                        sessionManager.confirmPasswordInFocus = false
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.lastNameInFocus)
         }
     }
 }
