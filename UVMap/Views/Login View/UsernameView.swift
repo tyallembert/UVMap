@@ -10,7 +10,7 @@ import SwiftUI
 struct UsernameView: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
-        Text("NetID")
+        Text("UVM Email")
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color.backgroundGreen)

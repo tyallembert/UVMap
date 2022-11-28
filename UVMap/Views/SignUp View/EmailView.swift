@@ -22,7 +22,6 @@ struct EmailView: View {
                     withAnimation{
                         sessionManager.firstNameInFocus = false
                         sessionManager.lastNameInFocus = false
-                        sessionManager.netIDInFocus = false
                         sessionManager.emailInFocus = true
                         sessionManager.passwordSUInFocus = false
                         sessionManager.confirmPasswordInFocus = false
