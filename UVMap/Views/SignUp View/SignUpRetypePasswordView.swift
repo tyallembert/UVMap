@@ -16,12 +16,11 @@ struct SignUpRetypePasswordView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            SecureField("", text: $sessionManager.confirmPassword, prompt: Text("Password"))
+            SecureField("", text: $sessionManager.confirmPassword, prompt: Text("Confirm Password"))
                 .onTapGesture {
                     withAnimation{
                         sessionManager.firstNameInFocus = false
                         sessionManager.lastNameInFocus = false
-                        sessionManager.netIDInFocus = false
                         sessionManager.emailInFocus = false
                         sessionManager.passwordSUInFocus = false
                         sessionManager.confirmPasswordInFocus = true

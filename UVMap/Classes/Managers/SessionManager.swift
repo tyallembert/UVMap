@@ -23,7 +23,6 @@ class SessionManager: ObservableObject {
    
     @Published var firstNameInFocus: Bool = false
     @Published var lastNameInFocus: Bool = false
-    @Published var netIDInFocus: Bool = false
     @Published var emailInFocus: Bool = false
     @Published var passwordSUInFocus: Bool = false
     @Published var confirmPasswordInFocus: Bool = false
@@ -37,7 +36,6 @@ class SessionManager: ObservableObject {
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
-    var netID: String = ""
     var passwordSU: String = ""
     var confirmPassword: String = ""
    
@@ -49,11 +47,6 @@ class SessionManager: ObservableObject {
         }
         if lastName.isEmpty {
             errorMessage = "Last Name is empty"
-            isError = true
-            return
-        }
-        if netID.isEmpty {
-            errorMessage = "NetID is empty"
             isError = true
             return
         }
@@ -83,7 +76,7 @@ class SessionManager: ObservableObject {
             return
         }
         
-        Auth.auth().createUser(withEmail: netID, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
                 self.errorMessage = error.localizedDescription

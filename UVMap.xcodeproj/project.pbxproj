@@ -55,7 +55,6 @@
 		4C7859ED291D880200C0C2F7 /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */; };
 		4C7859EE291D880200C0C2F7 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E5291D880200C0C2F7 /* SignUpButton.swift */; };
 		4C7859EF291D880200C0C2F7 /* LastNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E6291D880200C0C2F7 /* LastNameView.swift */; };
-		4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E7291D880200C0C2F7 /* NetIDView.swift */; };
 		4C7859F1291D880200C0C2F7 /* SignUpInnerBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */; };
 		4C7859F2291D880200C0C2F7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E9291D880200C0C2F7 /* SignUpView.swift */; };
 		4C7859F3291D880200C0C2F7 /* FirstNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859EA291D880200C0C2F7 /* FirstNameView.swift */; };
@@ -167,7 +166,6 @@
 		4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		4C7859E5291D880200C0C2F7 /* SignUpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		4C7859E6291D880200C0C2F7 /* LastNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastNameView.swift; sourceTree = "<group>"; };
-		4C7859E7291D880200C0C2F7 /* NetIDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetIDView.swift; sourceTree = "<group>"; };
 		4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInnerBoxes.swift; sourceTree = "<group>"; };
 		4C7859E9291D880200C0C2F7 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4C7859EA291D880200C0C2F7 /* FirstNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameView.swift; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				4C7859E3291D880200C0C2F7 /* EmailView.swift */,
 				4C7859EA291D880200C0C2F7 /* FirstNameView.swift */,
 				4C7859E6291D880200C0C2F7 /* LastNameView.swift */,
-				4C7859E7291D880200C0C2F7 /* NetIDView.swift */,
 				4C7859E5291D880200C0C2F7 /* SignUpButton.swift */,
 				4C7859E8291D880200C0C2F7 /* SignUpInnerBoxes.swift */,
 				4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */,
@@ -430,10 +427,6 @@
 		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
-				3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */,
-				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
-				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
-				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
 				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
@@ -671,7 +664,6 @@
 				3F649F88291C04BF006C2168 /* saveButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
-				4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */,
 				04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */,
 				4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */,
 				50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */,
@@ -889,7 +881,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = 37FUKX349X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
@@ -918,7 +910,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVMap/Preview Content\"";
-				DEVELOPMENT_TEAM = P4T7H3MJYN;
+				DEVELOPMENT_TEAM = 37FUKX349X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";

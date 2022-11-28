@@ -21,7 +21,6 @@ struct FirstNameView: View {
                     withAnimation{
                         sessionManager.firstNameInFocus = true
                         sessionManager.lastNameInFocus = false
-                        sessionManager.netIDInFocus = false
                         sessionManager.emailInFocus = false
                         sessionManager.passwordSUInFocus = false
                         sessionManager.confirmPasswordInFocus = false
