@@ -15,6 +15,7 @@ struct LoginButton: View {
     var body: some View {
         Button {
             sessionManager.signIn(database: databaseManager)
+            // TODO: Clear inputs, reset view to default
             
         } label:{
             Text("Log-in")
