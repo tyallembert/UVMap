@@ -37,10 +37,10 @@ struct SignUpInnerBoxes: View {
                 }
         }
             .padding(20)
-            .frame(height: 560)
+            .frame(height: 480)
             .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
             .cornerRadius(25)
-            .offset(y: 60)
+            .offset(y: 15)
     }
 }
 
