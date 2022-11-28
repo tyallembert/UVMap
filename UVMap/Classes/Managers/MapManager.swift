@@ -78,9 +78,13 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     }
     // returns the building after clicking one of the buildings in the side scroll menu bar
     func getBuildingFromString(buildingString: String) -> Building{
-        var theBuilding: Building = buildings[0]
+        var theBuilding: Building = activeBuilding ?? Building(id: "zero", name: "University of Vermont", abbreviation: "", coordinate: CLLocationCoordinate2D(latitude: 44.4779, longitude: -73.1965))
+        
+        let _ = print("Building: \(buildingString)")
+        
         for aBuilding in buildings {
-            if aBuilding.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines).contains(buildingString.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)){
+            let _ = print(aBuilding.abbreviation)
+            if aBuilding.abbreviation.lowercased().trimmingCharacters(in: .whitespacesAndNewlines).contains(buildingString.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)){
                 theBuilding = aBuilding
             }
         }
