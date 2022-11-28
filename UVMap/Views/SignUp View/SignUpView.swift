@@ -30,7 +30,7 @@ struct SignUpView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(7)
                     .frame(width: 100)
-                    .offset(y: -320)
+                    .offset(y: -270)
             }
         }
     }
