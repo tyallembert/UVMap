@@ -89,6 +89,7 @@ class SessionManager: ObservableObject {
                 self.errorMessage = error.localizedDescription
                 self.isError = true
             }
+            self.afterSignIn()
         }
     }
     
@@ -121,7 +122,28 @@ class SessionManager: ObservableObject {
                 self.errorMessage = error.localizedDescription
                 self.isError = true
             }
+            self.afterSignIn()
         }
+        
+        
+    }
+    
+    func afterSignIn() {
+        // Defaults this back to MapView
+        selectedNavElement = 1
+        // Clears all input boxses
+        clearInputFields()
+    }
+    
+    func clearInputFields() {
+        username = ""
+        password = ""
+        firstName = ""
+        lastName = ""
+        email = ""
+        netID = ""
+        passwordSU = ""
+        confirmPassword = ""
     }
     
 }
