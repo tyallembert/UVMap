@@ -40,6 +40,7 @@ struct MainMapView: View {
                     BottomWindow(bottomSheetPosition: $bottomSheetPosition)
                         .shadow(radius: 5)
                         .environmentObject(mapManager)
+                        .environmentObject(settingsManager)
                 }
             }
         }

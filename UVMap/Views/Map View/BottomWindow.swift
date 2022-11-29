@@ -50,7 +50,7 @@ struct BottomWindow: View {
                                 .environmentObject(mapManager)
                         }
                         TripInformation()
-                            //.environmentObject(settingsManager)
+                            .environmentObject(settingsManager)
                     // MARK: view for when the bottom sheet is pulled down
                     case .bottom:
                         HStack {

@@ -36,25 +36,30 @@ struct TripInformation: View {
 //                .cornerRadius(10)
 //                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
-                    if classManager.activeClass != nil & !mapManager.routes.isEmpty{
-                        var startTime = classManager.activeClass?.startTime
-                        var earlyOffset = settingsManager.currentSettings.howEarly
-                        var routeEta = mapManager.eta
-                        var leaveTime = startTime - earlyOffset// - routeEta
-                        VStack {
-                            Text("Suggested Leave Time")
-                            Text("test")
-                                .font(.system(size: 25))
-                                .fontWeight(.heavy)
+                    if classManager.activeClass == nil { //& !mapManager.routes.isEmpty{
+                        if !mapManager.routes.isEmpty {
+                            //var startTime =
+                            //let timeFormat = DateFormatter()
+                            //timeFormat.dateFormat = "HH:mm"
+                            //let startTime = timeFormat.date(from: classManager.activeClass!.startTime)
+                            var earlyOffset = settingsManager.currentSettings.howEarly
+                            var routeEta = mapManager.eta
+                            //var leaveTime = startTime - earlyOffset// - routeEta
+                            VStack {
+                                Text("Suggested Leave Time")
+                                Text("\(earlyOffset)")
+                                    .font(.system(size: 25))
+                                    .fontWeight(.heavy)
+                            }
+                            .padding()
+                            .background(Color.backgroundDarker)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.textGreenWhite, lineWidth: 2)
+                            }
+                            Spacer()
                         }
-                        .padding()
-                        .background(Color.backgroundDarker)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay{
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.textGreenWhite, lineWidth: 2)
-                        }
-                        Spacer()
                     }
                     
                     VStack {

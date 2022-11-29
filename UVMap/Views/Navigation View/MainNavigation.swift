@@ -23,6 +23,7 @@ struct MainNavigation: View {
                 MainMapView()
                     .environmentObject(classManager)
                     .environmentObject(mapManager)
+                    .environmentObject(settingsManager)
             case 2:
                 SettingsView()
                     .environmentObject(settingsManager)

@@ -17,9 +17,6 @@ class SettingsManager: ObservableObject{
     var newSettings: Settings
     
     @Published var currentSettings: Settings
-//    @Published var theme: Int
-//    @Published var prioritize: Bool
-//    @Published var early: Int
     @Environment(\.colorScheme) var deviceTheme: ColorScheme
     
     init(theme: Int = 1, early: Int = 10, prioritize: Bool = false){
@@ -32,6 +29,12 @@ class SettingsManager: ObservableObject{
         if let settings = self.retrieveSettingsLocally(fileName: "settings"){
             self.currentSettings = settings
         }
+    }
+    
+    func timeFormat(inTime: String, eta: ) -> String{
+        let timeFormat = DateFormatter()
+        timeFormat.dateFormat = "HH:mm"
+        let startTime = timeFormat.date(from: inTime)
     }
     
     //===Read from Json file===
