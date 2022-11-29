@@ -48,7 +48,12 @@ struct BottomWindow: View {
                             EndRouteButton(bottomSheetPosition: $bottomSheetPosition)
                                 .environmentObject(mapManager)
                         }
+                        
+                    if !mapManager.routes.isEmpty {
                         TripInformation()
+                            .environmentObject(mapManager)
+                        
+                    }
                     // MARK: view for when the bottom sheet is pulled down
                     case .bottom:
                         HStack {

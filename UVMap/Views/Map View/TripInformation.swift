@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct TripInformation: View {
+    @EnvironmentObject var mapManager: MapManager
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 HStack {
-                    Text("12 min")
+                    Text("\(mapManager.getEta()) min")
                         .font(.system(size: 25))
                         .fontWeight(.heavy)
                         .offset(x: 30)
                     Spacer()
-                    Text("0.5 mi")
+                    Text("\(String(format: "%03.1f", mapManager.getDistance())) mi")
                         .font(.system(size: 15))
                         .fontWeight(.medium)
                         .offset(x: -30)
