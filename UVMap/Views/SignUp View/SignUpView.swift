@@ -23,14 +23,14 @@ struct SignUpView: View {
                     .padding(20)
                     .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
                     .cornerRadius(20)
-                    .frame(width: 380, height: 750)
-                    .offset(y: 40)
+                    .frame(width: 310)
+                    .offset(y: 20)
                 Image("Logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(7)
                     .frame(width: 100)
-                    .offset(y: -280)
+                    .offset(y: -270)
             }
         }
     }

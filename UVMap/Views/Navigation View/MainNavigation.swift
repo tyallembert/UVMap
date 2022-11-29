@@ -26,6 +26,7 @@ struct MainNavigation: View {
             case 2:
                 SettingsView()
                     .environmentObject(settingsManager)
+
             case 3:
                 AddClassView()
                     .environmentObject(classManager)

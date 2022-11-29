@@ -17,7 +17,7 @@ struct LoginButton: View {
             sessionManager.signIn(database: databaseManager)
             
         } label:{
-            Text("Login")
+            Text("Log-in")
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(.white)

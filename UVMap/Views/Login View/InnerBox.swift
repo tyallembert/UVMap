@@ -32,11 +32,11 @@ struct InnerBox: View {
                 sessionManager.currentState = .signUp
             }label:{
                 VStack {
-                    Text("Dont have an account yet?")
-                    Text("Signup")
+                    Text("Don't have an account yet?")
+                    Text("Sign-up")
+                        .underline()
                 }
             }
-
         }
         .padding(20)
         .frame(height: 350)

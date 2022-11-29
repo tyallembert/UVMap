@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
+    @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
         ZStack(alignment: .trailing){
             
@@ -38,6 +39,10 @@ struct SettingsView: View {
                             .font(.title3)
                         ThemePicker()
                             .environmentObject(settingsManager)
+                    }
+                    VStack(alignment: .leading, spacing: 20) {
+                        SignOutButton()
+                            .environmentObject(sessionManager)
                     }
                     Spacer()
                     
