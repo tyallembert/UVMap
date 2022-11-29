@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 
 struct saveButton: View {
-    //@EnvironmentObject var settingsManager: SettingsManager
+    @EnvironmentObject var settingsManager: SettingsManager
     
-    init(){
-        print("Save Button")
-    }
     var body: some View {
-        Button(action: {SettingsManager().saveSettingsLocally()}){ Text("Save")}.foregroundColor(.white)//SettingsManager().saveSettingsLocally()
+        Button{
+            settingsManager.saveSettingsLocally()
+            
+        }label: {
+            Text("Save")
+                .foregroundColor(.white)
+                .padding()
+        }
     }
 }
