@@ -32,6 +32,12 @@ struct ContentView: View {
             }
         }
         .onAppear{
+//            if let testSettings = settingsManager.retrieveSettingsLocally(fileName:"settings"){// ?? settingsManager.init{
+//                print("Settings Retrieved")
+//                settingsManager.newSettings = testSettings
+//            } else {
+//                print("Settings not retrieved")
+//            }
             Auth.auth().addStateDidChangeListener { auth, user in
                 if user != nil {
                     sessionManager.currentState = .loggedIn
