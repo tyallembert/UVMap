@@ -27,19 +27,23 @@ struct MainMapView: View {
                 .environmentObject(mapManager)
                 .environmentObject(databaseManager)
             VStack(alignment: .leading) {
-                BuildingSearchResults()
-                    .environmentObject(mapManager)
-                    .environmentObject(databaseManager)
+                    
                 CurrentLocationButton()
                     .environmentObject(mapManager)
                     .padding()
-                
+                    .padding([.top], 50)
                 // MARK: draggable bottom sheet
                 BottomSheetView(position: $bottomSheetPosition){}content: {
                     BottomWindow(bottomSheetPosition: $bottomSheetPosition)
                         .shadow(radius: 5)
                         .environmentObject(mapManager)
                 }
+            }
+            VStack(alignment: .leading) {
+                BuildingSearchResults()
+                    .environmentObject(mapManager)
+                    .environmentObject(databaseManager)
+                Spacer()
             }
         }
     }
