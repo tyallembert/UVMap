@@ -25,12 +25,11 @@ struct SignUpInnerBoxes: View {
                     .frame(height: 20)
                 SignUpButton()
                 Spacer()
-                    .frame(height: 40)
+                    .frame(height: 30)
                 Button {
                     sessionManager.currentState = .loggedOut
                 } label: {
                     VStack {
-                        Text("Already have an account?")
                         Text("Log-in")
                             .underline()
                     }

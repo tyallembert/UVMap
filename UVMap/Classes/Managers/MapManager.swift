@@ -34,6 +34,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var buildings: [Building] = []
     @Published var searchActive: Bool = false
     @Published var etaText: String = "ETA : 0m"
+    @Published var ETA: Int = 0
     @Published var userWalking: Bool = true
     @State var eta: Int?
     @Published var endLocation: Building?
@@ -94,6 +95,20 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     }
     func calculateArrivalTime(){
         
+    }
+    
+    func getEta() -> Int {
+        return ETA
+    }
+    
+    func getDistance() -> Double {
+        let METERS_TO_MILES : Double = (1 / 1609)
+        if !routes.isEmpty {
+            return routes[0].distance * METERS_TO_MILES
+        }
+        else {
+            return 0.0
+        }
     }
     
     //--------------------------------------
@@ -170,6 +185,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
                     eta = Int(ceil(Double(eta) / 3.0))
                 }
                 etaText = "ETA: \(eta)m"
+                ETA = eta
                 completion(eta)
             }
         }

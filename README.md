@@ -23,7 +23,7 @@ Website Repository: [Github](https://github.com/tyallembert/UVMap_Website)
 
 ---
 
-### UVMap is built by students, for students.
+### UVMap is built for students, by students.
 We are a small development team of students located here, at the University of Vermont. Coming together as a group project, our main goals were convenience and support. Whether you are a first year stepping foot on campus for the first time, a transfer student still orienting yourself, or any other student who doesn't want to worry about the hastles of navigation, we built this app for you!
 
 Want to see what we're up to next? Follow along on our individual Github or LinkedIn profiles:

@@ -134,7 +134,6 @@ class SessionManager: ObservableObject {
         firstName = ""
         lastName = ""
         email = ""
-        //netID = ""
         passwordSU = ""
         confirmPassword = ""
     }
