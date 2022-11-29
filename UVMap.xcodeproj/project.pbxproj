@@ -19,7 +19,6 @@
 		3F649F88291C04BF006C2168 /* saveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F649F87291C04BF006C2168 /* saveButton.swift */; };
 		3F99AA2228F76417005AEF04 /* ArriveShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2128F76417005AEF04 /* ArriveShell.swift */; };
 		3F99AA2428F7694E005AEF04 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99AA2328F7694E005AEF04 /* TitleBar.swift */; };
-		3FB14DE7290C305400DFC8A4 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FB14DE6290C305400DFC8A4 /* settings.json */; };
 		3FDA51EE2902F24600E85CE0 /* settingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA51ED2902F24600E85CE0 /* settingsManager.swift */; };
 		4C11E85328F85F1F00710092 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85228F85F1F00710092 /* AddClassView.swift */; };
 		4C11E85528F8601200710092 /* ClassSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11E85428F8601200710092 /* ClassSearchBar.swift */; };
@@ -72,6 +71,7 @@
 		4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9628DF652E00306D58 /* ScheduleView.swift */; };
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
+		4C8785FD2936506F00F34AD2 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C8785FC2936506F00F34AD2 /* settings.json */; };
 		4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99F98829032DBC006060CB /* NavigationBar.swift */; };
 		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
 		4CA09D2A28F4978800484D6D /* BuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */; };
@@ -132,7 +132,6 @@
 		3F649F87291C04BF006C2168 /* saveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveButton.swift; sourceTree = "<group>"; };
 		3F99AA2128F76417005AEF04 /* ArriveShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveShell.swift; sourceTree = "<group>"; };
 		3F99AA2328F7694E005AEF04 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
-		3FB14DE6290C305400DFC8A4 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		3FDA51ED2902F24600E85CE0 /* settingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsManager.swift; sourceTree = "<group>"; };
 		4C11E85228F85F1F00710092 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
 		4C11E85428F8601200710092 /* ClassSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchBar.swift; sourceTree = "<group>"; };
@@ -188,6 +187,7 @@
 		4C78EE9628DF652E00306D58 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4C8785FC2936506F00F34AD2 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		4C99F98829032DBC006060CB /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
 		4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAnnotation.swift; sourceTree = "<group>"; };
@@ -267,10 +267,10 @@
 				4C28FF5E28FEEE9000D75A1A /* AdminDatabaseManager.swift */,
 				4CA09D2728F4939400484D6D /* all_buildings.json */,
 				4C47B7A229082B2700C5DE09 /* all_classes.json */,
+				4C8785FC2936506F00F34AD2 /* settings.json */,
 				4C24003228EBB41B002F7E2D /* DatabaseManager.swift */,
 				4CE7168628F0BCD10069D6C0 /* ReadBuildingsFromJSON.swift */,
 				4C47B7A42909863F00C5DE09 /* student_classes.json */,
-				3FB14DE6290C305400DFC8A4 /* settings.json */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -430,10 +430,6 @@
 		4C78EE8C28DE1E9900306D58 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
-				3F44558C28F5BCC400F06DD3 /* ArrivalSettings.swift */,
-				4C78EE9428DF650D00306D58 /* SettingsView.swift */,
-				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
-				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F99AA2128F76417005AEF04 /* ArriveShell.swift */,
 				3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */,
 				3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */,
@@ -618,10 +614,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8785FD2936506F00F34AD2 /* settings.json in Resources */,
 				4C78EE6728DE1D2200306D58 /* Preview Assets.xcassets in Resources */,
 				4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */,
 				4C78EE6428DE1D2200306D58 /* Assets.xcassets in Resources */,
-				3FB14DE7290C305400DFC8A4 /* settings.json in Resources */,
 				4C24003028EBB3A7002F7E2D /* GoogleService-Info.plist in Resources */,
 				4C47B7A52909863F00C5DE09 /* student_classes.json in Resources */,
 				4CA09D2828F4939400484D6D /* all_buildings.json in Resources */,
@@ -900,7 +896,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMaps;
 				PRODUCT_NAME = UVMaps;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -929,7 +925,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMap;
+				PRODUCT_BUNDLE_IDENTIFIER = UVMapTeam.UVMaps;
 				PRODUCT_NAME = UVMaps;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

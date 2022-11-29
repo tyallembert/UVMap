@@ -10,11 +10,10 @@ import SwiftUI
 struct HowEarlyDropDown: View {
     @EnvironmentObject var settingsManager: SettingsManager
     
-    @Binding var howEarly: Int
     
     var body: some View {
         VStack {
-            Picker(selection: $howEarly, label: Text("How early do you want to arrive to class?")) {
+            Picker(selection: $settingsManager.currentSettings.howEarly, label: Text("How early do you want to arrive to class?")) {
                 Text("1").tag(1)
                 Text("2").tag(2)
                 Text("3").tag(3)

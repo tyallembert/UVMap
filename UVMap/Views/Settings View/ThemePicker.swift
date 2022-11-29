@@ -15,7 +15,7 @@ struct ThemePicker: View{
     
     var body: some View {
         VStack {
-            Picker(selection: $settingsManager.theme, label: Text("Theme")) {
+            Picker(selection: $settingsManager.currentSettings.settingsTheme, label: Text("Theme")) {
                 Text("System Default").tag(1)
                 Text("Dark Mode").tag(2)
                 Text("Light Mode").tag(3)
