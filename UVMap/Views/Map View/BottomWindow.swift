@@ -10,6 +10,7 @@ import SwiftUI
 struct BottomWindow: View {
     @EnvironmentObject var mapManager: MapManager
     @EnvironmentObject var classManager: ClassManager
+    @EnvironmentObject var settingsManager: SettingsManager
     @Binding var bottomSheetPosition: BottomSheetPosition
     var body: some View {
         ScrollView {
@@ -49,6 +50,7 @@ struct BottomWindow: View {
                                 .environmentObject(mapManager)
                         }
                         TripInformation()
+                            //.environmentObject(settingsManager)
                     // MARK: view for when the bottom sheet is pulled down
                     case .bottom:
                         HStack {

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TripInformation: View {
+    @EnvironmentObject var settingsManager: SettingsManager
+    @EnvironmentObject var classManager: ClassManager
+    @EnvironmentObject var mapManager: MapManager
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -33,21 +36,27 @@ struct TripInformation: View {
 //                .cornerRadius(10)
 //                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
-                    VStack {
-                        Text("Suggested Leave Time")
-                        Text("8:08am")
-                            .font(.system(size: 25))
-                            .fontWeight(.heavy)
-                    }
-                    .padding()
-                    .background(Color.backgroundDarker)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.textGreenWhite, lineWidth: 2)
+                    if classManager.activeClass != nil & !mapManager.routes.isEmpty{
+                        var startTime = classManager.activeClass?.startTime
+                        var earlyOffset = settingsManager.currentSettings.howEarly
+                        var routeEta = mapManager.eta
+                        var leaveTime = startTime - earlyOffset// - routeEta
+                        VStack {
+                            Text("Suggested Leave Time")
+                            Text("test")
+                                .font(.system(size: 25))
+                                .fontWeight(.heavy)
+                        }
+                        .padding()
+                        .background(Color.backgroundDarker)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay{
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.textGreenWhite, lineWidth: 2)
+                        }
+                        Spacer()
                     }
                     
-                    Spacer()
                     VStack {
                         Text("Arrival Time if you leave now")
                         Text("7:58am")
