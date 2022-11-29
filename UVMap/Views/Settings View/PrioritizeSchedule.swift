@@ -10,7 +10,6 @@ import SwiftUI
 
 struct PrioritizeSchedule: View {
     @EnvironmentObject var settingsManager: SettingsManager
-    @State var prioritizeYes: Bool = false
     var body: some View {
         ZStack {
             VStack (){
@@ -23,21 +22,23 @@ struct PrioritizeSchedule: View {
                             .frame(width:40, height:40)
                             .foregroundColor(.backgroundLighter)
                             .shadow(color: .black.opacity(0.50), radius: 4, x: 0, y: 0)
-                            .offset(x: prioritizeYes ? -25: 25)
+                            .offset(x: settingsManager.currentSettings.prioritizeSchedule ? -25: 25)
                         //image in the circle
                         //Need to switch to text instead of image
                         Text("Yes")
-                            .foregroundColor(prioritizeYes ? Color.textGreenWhite: .white)
+                            .foregroundColor(settingsManager.currentSettings.prioritizeSchedule ? Color.textGreenWhite: .white)
                             .offset(x: -25)
                         // image outside of the circle
                         //Need to switch to text instead of image
                         Text("No")
-                            .foregroundColor(prioritizeYes ? .white: Color.textGreenWhite)
+                            .foregroundColor(settingsManager.currentSettings.prioritizeSchedule ? .white: Color.textGreenWhite)
                             .offset(x: 25)
                     }
                 }
                 .onTapGesture {
-                    self.prioritizeYes.toggle()
+                    withAnimation{
+                        self.settingsManager.currentSettings.prioritizeSchedule.toggle()
+                    }
                 }
             }
         }

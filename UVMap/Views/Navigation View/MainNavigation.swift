@@ -11,6 +11,7 @@ struct MainNavigation: View {
     @EnvironmentObject var sessionManager: SessionManager
     @StateObject var classManager: ClassManager = ClassManager()
     @StateObject var mapManager: MapManager = MapManager()
+    @StateObject var settingsManager: SettingsManager = SettingsManager()
     
     var body: some View {
         ZStack{
@@ -24,9 +25,8 @@ struct MainNavigation: View {
                     .environmentObject(mapManager)
             case 2:
                 SettingsView()
-                    .environmentObject(sessionManager)
-//                AddClassView()
-//                    .environmentObject(classManager)
+                    .environmentObject(settingsManager)
+
             case 3:
                 AddClassView()
                     .environmentObject(classManager)

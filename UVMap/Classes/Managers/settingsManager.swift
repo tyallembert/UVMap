@@ -16,18 +16,22 @@ class SettingsManager: ObservableObject{
     }
     var newSettings: Settings
     
-    @Published var settings: [Settings] = []
-    @Published var theme: Int
-    @Published var prioritize: Bool
-    @Published var early: Int
+    @Published var currentSettings: Settings
+//    @Published var theme: Int
+//    @Published var prioritize: Bool
+//    @Published var early: Int
     @Environment(\.colorScheme) var deviceTheme: ColorScheme
     
     init(theme: Int = 1, early: Int = 10, prioritize: Bool = false){
-        self.theme = theme
-        self.early = early
-        self.prioritize = prioritize
-        newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
-        self.settings.append(newSettings)
+//        self.theme = theme
+//        self.early = early
+//        self.prioritize = prioritize
+//        self.settings.append(newSettings)
+        self.newSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
+        self.currentSettings = Settings(settingsTheme: theme, prioritizeSchedule: prioritize, howEarly: early)
+        if let settings = self.retrieveSettingsLocally(fileName: "settings"){
+            self.currentSettings = settings
+        }
     }
     
     //===Read from Json file===
@@ -67,9 +71,10 @@ class SettingsManager: ObservableObject{
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        print("Originial settings: \(self.settings)")
-        var changedSettings = Settings(settingsTheme: self.theme, prioritizeSchedule: self.prioritize, howEarly: self.early)
-        print("ChangedSettings: \(changedSettings)")
+//        print("Originial settings: \(self.settings)")
+//        var changedSettings = Settings(settingsTheme: self.theme, prioritizeSchedule: self.prioritize, howEarly: self.early)
+//        print("ChangedSettings: \(changedSettings)")
+        
         
         //let jsonData = try! JSONEncoder().encode(settings)
         
@@ -84,13 +89,18 @@ class SettingsManager: ObservableObject{
 //        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
         
         do {
-            let data = try encoder.encode(newSettings)
+//            var newSettingsArray: [Settings] = []
+//            newSettingsArray.append(newSettings)
+            
+//            let data = try encoder.encode(newSettingsArray)
+            let data = try encoder.encode(currentSettings)
             try data.write(to: filePath)
             print(String(data: data, encoding: .utf8)!)
-            if retrieveSettingsLocally(fileName: "settings") != nil {
+            if let settings = retrieveSettingsLocally(fileName: "settings") {
                 print("Files saved")
-                self.newSettings = changedSettings
-                self.settings = [changedSettings]
+                self.currentSettings = settings
+//                self.newSettings = newSettings
+//                self.settings = [changedSettings]
             } else {
                 print("File not saved")
             }
