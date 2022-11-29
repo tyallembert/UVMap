@@ -31,10 +31,17 @@ class SettingsManager: ObservableObject{
         }
     }
     
-    func timeFormat(inTime: String, eta: ) -> String{
+    func earlyCalculation(inTime: String, eta: Int, earlyOffset: Int) -> String{
+        let time = inTime
         let timeFormat = DateFormatter()
         timeFormat.dateFormat = "HH:mm"
-        let startTime = timeFormat.date(from: inTime)
+        if var startTime = timeFormat.date(from: time) {
+            let timeToRemove = eta + earlyOffset
+            let modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime)
+            return ("\(modifiedDate)")
+        } else {
+            return ("In time not formatted")
+        }
     }
     
     //===Read from Json file===
