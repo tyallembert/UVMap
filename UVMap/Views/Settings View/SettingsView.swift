@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var sessionManager: SessionManager
     @StateObject var settingsManager = SettingsManager()// = SettingsManager()
     @State var howEarly: Int = 10//settingsManager.early//SettingsManager().early
     var body: some View {
@@ -39,6 +40,10 @@ struct SettingsView: View {
                             .font(.title3)
                         ThemePicker()
                             .environmentObject(settingsManager)
+                    }
+                    VStack(alignment: .leading, spacing: 20) {
+                        SignOutButton()
+                            .environmentObject(sessionManager)
                     }
                     Spacer()
                     

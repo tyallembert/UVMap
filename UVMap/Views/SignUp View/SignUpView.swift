@@ -20,16 +20,17 @@ struct SignUpView: View {
                 VStack {
                     SignUpInnerBoxes()
                 }
-                .padding(20)
-                .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
-                .cornerRadius(20)
-                .frame(width: 310)
+                    .padding(20)
+                    .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
+                    .cornerRadius(20)
+                    .frame(width: 310)
+                    .offset(y: 20)
                 Image("Logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(7)
                     .frame(width: 100)
-                    .offset(y: -200)
+                    .offset(y: -270)
             }
         }
     }

@@ -11,17 +11,23 @@ struct LastNameView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
-        Text("Last Name")
-            .fontWeight(.medium)
-            .offset(x: 8, y: 12)
-            .foregroundColor(Color.backgroundGreen)
-        TextField("", text: $sessionManager.lastName)
-            .foregroundColor(Color.black)
-            .padding(7)
-            .background(Color.white)
-            .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
-            .autocapitalization(.none)
+        VStack(alignment: .leading) {
+            Text("Last Name")
+                .fontWeight(.medium)
+                .offset(x: 8, y: 12)
+                .foregroundColor(Color.backgroundGreen)
+            TextField("", text: $sessionManager.lastName, prompt: Text("Last Name"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = true
+                        sessionManager.emailInFocus = false
+                        sessionManager.passwordSUInFocus = false
+                        sessionManager.confirmPasswordInFocus = false
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.lastNameInFocus)
+        }
     }
 }
 

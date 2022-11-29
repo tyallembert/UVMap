@@ -12,17 +12,24 @@ struct EmailView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
-        Text("UVM Email")
-            .fontWeight(.medium)
-            .offset(x: 8, y: 12)
-            .foregroundColor(Color.backgroundGreen)
-        TextField("", text: $sessionManager.email)
-            .foregroundColor(Color.black)
-            .padding(7)
-            .background(Color.white)
-            .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
-            .autocapitalization(.none)
+        VStack(alignment: .leading) {
+            Text("UVM Email")
+                .fontWeight(.medium)
+                .offset(x: 8, y: 12)
+                .foregroundColor(Color.backgroundGreen)
+            TextField("", text: $sessionManager.email, prompt: Text("@uvm.edu"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = false
+                        sessionManager.emailInFocus = true
+                        sessionManager.passwordSUInFocus = false
+                        sessionManager.confirmPasswordInFocus = false
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.emailInFocus)
+            
+        }
     }
 }
 

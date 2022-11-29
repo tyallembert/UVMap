@@ -7,22 +7,26 @@
 
 import SwiftUI
 
+
 struct SignUpButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager
     
     var body: some View {
-        Button (action: { sessionManager.signIn(database: databaseManager) } ) {
-            Text("Sign Up")
+        Button {
+            sessionManager.signIn(database: databaseManager)
+            
+        } label:{
+            Text("Sign-up")
                 .font(.title2)
                 .fontWeight(.heavy)
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 200)
+                .background(Color("AccentColor"))
+                .cornerRadius(10)
+                .shadow(color: .black, radius: 3, x: 2, y: 3)
         }
-        .foregroundColor(.white)
-        .padding()
-        .frame(width: 200)
-        .background(Color.backgroundGreen)
-        .cornerRadius(10)
-        .shadow(color: .black, radius: 3, x: 2, y: 3)
     }
 }
 

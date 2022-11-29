@@ -11,17 +11,23 @@ struct SignUpPasswordView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
-        Text("Password")
-            .fontWeight(.medium)
-            .offset(x: 8, y: 12)
-            .foregroundColor(Color.backgroundGreen)
-        TextField("", text: $sessionManager.password)
-            .foregroundColor(Color.black)
-            .padding(7)
-            .background(Color.white)
-            .cornerRadius(100)
-            .shadow(color: .black, radius: 3, x: 1, y: 2)
-            .autocapitalization(.none)
+        VStack(alignment: .leading) {
+            Text("Password")
+                .fontWeight(.medium)
+                .offset(x: 8, y: 12)
+                .foregroundColor(Color.backgroundGreen)
+            SecureField("", text: $sessionManager.passwordSU, prompt: Text("Password"))
+                .onTapGesture {
+                    withAnimation{
+                        sessionManager.firstNameInFocus = false
+                        sessionManager.lastNameInFocus = false
+                        sessionManager.emailInFocus = false
+                        sessionManager.passwordSUInFocus = true
+                        sessionManager.confirmPasswordInFocus = false
+                    }
+                }
+                .roundedTextField(inFocus: sessionManager.passwordSUInFocus)
+        }
     }
 }
 
