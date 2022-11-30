@@ -32,6 +32,7 @@ struct BottomWindow: View {
                                 }
                                 HStack {
                                     ClassTime()
+                                        .environmentObject(classManager)
                                     Spacer()
                                 }
                             }

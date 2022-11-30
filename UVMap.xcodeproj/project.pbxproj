@@ -100,6 +100,7 @@
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
 		50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F43291420030078C231 /* ClassShellLarge.swift */; };
 		50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F45291425410078C231 /* ClassShellLargeLarge.swift */; };
+		50DFDB782937B25400FE65E0 /* PullFirebaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */; };
 		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
 		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -156,7 +157,7 @@
 		4C36C83728E4CC2500207EC5 /* BottomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomWindow.swift; sourceTree = "<group>"; };
 		4C36C83928E4CC9500207EC5 /* WalkBikeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkBikeOption.swift; sourceTree = "<group>"; };
 		4C36C83B28E5E46100207EC5 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
-		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
+		4C36C83D28E5E65300207EC5 /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		4C36C84228E74E1F00207EC5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4C434D73290C25FD005BB4F6 /* TopSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSchedule.swift; sourceTree = "<group>"; };
 		4C47B7A229082B2700C5DE09 /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
 		50B55F43291420030078C231 /* ClassShellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLarge.swift; sourceTree = "<group>"; };
 		50B55F45291425410078C231 /* ClassShellLargeLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLargeLarge.swift; sourceTree = "<group>"; };
+		50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullFirebaseButton.swift; sourceTree = "<group>"; };
 		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -437,6 +439,7 @@
 				045AFA43293511A800DA0229 /* SignOutButton.swift */,
 				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
 				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
+				50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
 				4C28FF6328FF95CE00D75A1A /* SearchResults.swift in Sources */,
 				4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */,
+				50DFDB782937B25400FE65E0 /* PullFirebaseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

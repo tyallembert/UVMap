@@ -35,13 +35,25 @@ class SettingsManager: ObservableObject{
         let time = inTime
         let timeToRemove = eta + earlyOffset
         let timeFormat = DateFormatter()
+        let minuteFormat = DateFormatter()
+        minuteFormat.dateFormat = "mm"
+        let hourFormat = DateFormatter()
+        hourFormat.dateFormat = "hh"
+        
         timeFormat.dateFormat = "HH:mm"
         if let startTime = timeFormat.date(from: time) {
             
             if let modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime){
                 let calendar = Calendar.current
-                let outDate = ("\(calendar.component(.hour, from: modifiedDate)):\(calendar.component(.minute, from: modifiedDate))")
-                timeFormat.date(from: outDate)
+                var minute = ("\(calendar.component(.minute, from: modifiedDate))")
+                var hour = ("\(calendar.component(.hour, from: modifiedDate))")
+                if minute.count < 2 {
+                    minute = "0\(minute)"
+                }
+                if hour.count < 2 {
+                    hour = "0\(hour)"
+                }
+                let outDate = ("\(hour):\(minute)")
                 print(String(describing: modifiedDate))
                 print(outDate)
                 return outDate
@@ -61,7 +73,15 @@ class SettingsManager: ObservableObject{
         let calendar = Calendar.current
         let date = Date()
         if let modifiedDate = Calendar.current.date(byAdding: .minute, value: eta, to: date){
-            return ("\(calendar.component(.hour, from: modifiedDate)):\(calendar.component(.minute, from: modifiedDate))")
+            var minute = ("\(calendar.component(.minute, from: modifiedDate))")
+            var hour = ("\(calendar.component(.hour, from: modifiedDate))")
+            if minute.count < 2 {
+                minute = "0\(minute)"
+            }
+            if hour.count < 2 {
+                hour = "0\(hour)"
+            }
+            return ("\(hour):\(minute)")
         } else {
             return ("Arrival fail 1")
         }

@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ClassTime: View {
+    @EnvironmentObject var classManager: ClassManager
     @State var startTime: String = "8:30 AM"
     
     var body: some View {
         HStack {
             Text("Start Time: ")
-            Text(startTime)
-                .fontWeight(.heavy)
+            if let active = classManager.activeClass{
+                let newStartTime = active.startTime
+                Text(newStartTime)
+                    .fontWeight(.heavy)
+            } else {
+                Text("No active class")
+                    .fontWeight(.heavy)
+            }
         }
     }
 }

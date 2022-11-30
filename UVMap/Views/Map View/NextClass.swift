@@ -15,8 +15,15 @@ struct NextClass: View {
         HStack {
             Text("Class: ")
 //            Text("\(classManager.activeClass?.title)")
-            Text("CS 275")
-                .fontWeight(.heavy)
+            if let active = classManager.activeClass {
+                let title = active.title
+                Text(title)
+                    .fontWeight(.heavy)
+            } else {
+                Text("No active class")
+                    .fontWeight(.heavy)
+            }
+            
         }
     }
 }

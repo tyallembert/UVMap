@@ -33,7 +33,7 @@ class ClassManager: ObservableObject{
         
 //        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
         studentsClasses = [
-            SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "8:30", endTime: "9:30", instructor: "Jason", email: "example"),
+            SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "08:30", endTime: "9:30", instructor: "Jason", email: "example"),
             SingleClass(CRN: 6328675, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
         ]
         
