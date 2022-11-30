@@ -35,7 +35,7 @@ class SettingsManager: ObservableObject{
         let time = inTime
         let timeFormat = DateFormatter()
         timeFormat.dateFormat = "HH:mm"
-        if var startTime = timeFormat.date(from: time) {
+        if let startTime = timeFormat.date(from: time) {
             let timeToRemove = eta + earlyOffset
             let modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime)
             return ("\(modifiedDate)")
