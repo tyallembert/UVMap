@@ -40,6 +40,11 @@ struct SettingsView: View {
                         ThemePicker()
                             .environmentObject(settingsManager)
                     }
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 20) {
+                        PullFirebaseButton()
+                            .environmentObject(sessionManager)
+                    }
                     VStack(alignment: .leading, spacing: 20) {
                         SignOutButton()
                             .environmentObject(sessionManager)
@@ -55,9 +60,11 @@ struct SettingsView: View {
     }
 
 
-//struct SettingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//            .environment(\.colorScheme, .dark)
-//    }
-//}
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsView()
+            .environment(\.colorScheme, .dark)
+            .environmentObject(SettingsManager())
+            .environmentObject(SessionManager())
+    }
+}
