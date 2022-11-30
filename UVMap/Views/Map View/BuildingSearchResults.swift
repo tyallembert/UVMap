@@ -10,6 +10,7 @@ import SwiftUI
 struct BuildingSearchResults: View {
     @EnvironmentObject var mapManager: MapManager
     @EnvironmentObject var databaseManager: DatabaseManager
+    @EnvironmentObject var classManager: ClassManager
     
     @State var search: String = ""
     
@@ -26,6 +27,7 @@ struct BuildingSearchResults: View {
                                 .environmentObject(mapManager)
                                 .onTapGesture {
                                     mapManager.setActiveBuilding(building: building)
+                                    classManager.getActiveClassFromBuilding(building: building)
                                     withAnimation{
                                         mapManager.searchActive = false
                                         mapManager.searchText = ""

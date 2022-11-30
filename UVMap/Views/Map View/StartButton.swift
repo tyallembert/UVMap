@@ -13,12 +13,15 @@ struct StartButton: View {
     
     func handleStartClicked() {
         // async function call to buildRoutes
+        mapManager.buildings = [mapManager.getActiveBuilding()]
         mapManager.buildRoutes { eta in }
         bottomSheetPosition = mapManager.bottomSheetPosition
         
     }
     var body: some View {
-        Button (action: {handleStartClicked()}){
+        Button (action: {
+            handleStartClicked()
+        }){
             Text("Start")
                 .font(.title2)
                 .fontWeight(.heavy)

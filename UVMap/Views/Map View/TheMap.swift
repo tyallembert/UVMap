@@ -25,24 +25,26 @@ struct TheMap: View {
                 annotationContent: { location in
                 ViewMapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
-//                        .scaleEffect(mapManager.activeBuilding == location ? 1.4 : 1.0)
-//                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
-//                        .animation(.spring(), value: mapManager.activeBuilding)
+                        .scaleEffect(mapManager.activeBuilding == location ? 1.4 : 1.0)
+                    //                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
+                        .animation(.spring(), value: mapManager.activeBuilding)
+                        .environmentObject(mapManager)
+                        .environmentObject(location)
                 }
-               },
+            },
                 overlays: mapManager.routes.map { $0.polyline },
                 overlayContent: { overlay in
-                    RendererMapOverlay(overlay: overlay) { mapView, overlay in
-                        guard let polyline = overlay as? MKPolyline else {
-                            assertionFailure("Unknown overlay type encountered.")
-                            return MKOverlayRenderer(overlay: overlay)
-                        }
-                        let renderer = MKPolylineRenderer(polyline: polyline)
-                        renderer.lineWidth = 3
-                        renderer.strokeColor = UIColor(named: "UVM_Gold")
-                        return renderer
+                RendererMapOverlay(overlay: overlay) { mapView, overlay in
+                    guard let polyline = overlay as? MKPolyline else {
+                        assertionFailure("Unknown overlay type encountered.")
+                        return MKOverlayRenderer(overlay: overlay)
                     }
-                })
+                    let renderer = MKPolylineRenderer(polyline: polyline)
+                    renderer.lineWidth = 5
+                    renderer.strokeColor = UIColor(named: "UVM_Gold")
+                    return renderer
+                }
+            })
             .edgesIgnoringSafeArea(.all)
             .accentColor(Color("AccentColor"))
             .onAppear {
