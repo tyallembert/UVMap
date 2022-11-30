@@ -100,6 +100,7 @@
 		50622B8C28EC79FE00B42A3F /* FridayScheduleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */; };
 		50B55F44291420040078C231 /* ClassShellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F43291420030078C231 /* ClassShellLarge.swift */; };
 		50B55F46291425410078C231 /* ClassShellLargeLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B55F45291425410078C231 /* ClassShellLargeLarge.swift */; };
+		50DFDB782937B25400FE65E0 /* PullFirebaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */; };
 		50E43B9928F8D80F00CDF4D9 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E43B9828F8D80F00CDF4D9 /* Lecture.swift */; };
 		50FEBF1828F8540700EC0F50 /* TitleBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -214,6 +215,7 @@
 		50622B8B28EC79FE00B42A3F /* FridayScheduleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayScheduleMenu.swift; sourceTree = "<group>"; };
 		50B55F43291420030078C231 /* ClassShellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLarge.swift; sourceTree = "<group>"; };
 		50B55F45291425410078C231 /* ClassShellLargeLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassShellLargeLarge.swift; sourceTree = "<group>"; };
+		50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullFirebaseButton.swift; sourceTree = "<group>"; };
 		50E43B9828F8D80F00CDF4D9 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		50FEBF1728F8540700EC0F50 /* TitleBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -437,6 +439,7 @@
 				045AFA43293511A800DA0229 /* SignOutButton.swift */,
 				3F4E9F6028F85C0A00815202 /* ThemePicker.swift */,
 				3F99AA2328F7694E005AEF04 /* TitleBar.swift */,
+				50DFDB772937B25400FE65E0 /* PullFirebaseButton.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -667,7 +670,6 @@
 				3F649F88291C04BF006C2168 /* saveButton.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
-				4C7859F0291D880200C0C2F7 /* NetIDView.swift in Sources */,
 				045AFA44293511A800DA0229 /* SignOutButton.swift in Sources */,
 				04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */,
 				4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */,
@@ -727,6 +729,7 @@
 				4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */,
 				4C28FF6328FF95CE00D75A1A /* SearchResults.swift in Sources */,
 				4C36C83228E4C5F700207EC5 /* NextClass.swift in Sources */,
+				50DFDB782937B25400FE65E0 /* PullFirebaseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
