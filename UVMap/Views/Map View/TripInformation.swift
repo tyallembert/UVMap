@@ -37,51 +37,52 @@ struct TripInformation: View {
                 //                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
                     if let routeEta = mapManager.ETA {
-                        if classManager.activeClass != nil { //& !mapManager.routes.isEmpty{
-                            //if let routeEta = mapManager.ETA {
-                            //var startTime =
-                            //let timeFormat = DateFormatter()
-                            //timeFormat.dateFormat = "HH:mm"
-                            //let startTime = timeFormat.date(from: classManager.activeClass!.startTime)
-                            
-                            let earlyOffset = settingsManager.currentSettings.howEarly
-                            //let routeEta = mapManager.ETA
-                            if let toClass = classManager.activeClass?.startTime{
-                                //let startTime = toClass.startTime
-                                let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: toClass, eta: routeEta, earlyOffset: earlyOffset)
-                                VStack {
-                                    Text("Suggested Leave Time")
-                                    Text("\(suggestedLeaveTime)")
-                                        .font(.system(size: 25))
-                                        .fontWeight(.heavy)
-                                }
-                                .padding()
-                                .background(Color.backgroundDarker)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .overlay{
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.textGreenWhite, lineWidth: 2)
-                                }
-                            } else {
-                                VStack {
-                                    Text("Suggested Leave Time")
-                                    Text("Test1")
-                                        .font(.system(size: 25))
-                                        .fontWeight(.heavy)
-                                }
-                            }
-                            //var leaveTime = startTime - earlyOffset// - routeEta
-                            
-                            Spacer()
-                            //}
-                        } else {
-                            VStack {
-                                Text("Suggested Leave Time")
-                                Text("Test")
-                                    .font(.system(size: 25))
-                                    .fontWeight(.heavy)
-                            }
+                        //if classManager.activeClass != nil { //& !mapManager.routes.isEmpty{
+                        //if let routeEta = mapManager.ETA {
+                        //var startTime =
+                        //let timeFormat = DateFormatter()
+                        //timeFormat.dateFormat = "HH:mm"
+                        //let startTime = timeFormat.date(from: classManager.activeClass!.startTime)
+                        
+                        let earlyOffset = settingsManager.currentSettings.howEarly
+                        //let routeEta = mapManager.ETA
+                        //if let toClass = classManager.activeClass?.startTime{
+                        //let startTime = toClass.startTime
+                        let suggestedLeaveTime = settingsManager.earlyCalculation(eta: routeEta, earlyOffset: earlyOffset)
+                        VStack {
+                            Text("Suggested Leave Time")
+                            Text("\(suggestedLeaveTime)")
+                                .font(.system(size: 25))
+                                .fontWeight(.heavy)
                         }
+                        .padding()
+                        .background(Color.backgroundDarker)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay{
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.textGreenWhite, lineWidth: 2)
+                        }
+                        //                            } else {
+                        //                                VStack {
+                        //                                    Text("Suggested Leave Time")
+                        //                                    Text("Test1")
+                        //                                        .font(.system(size: 25))
+                        //                                        .fontWeight(.heavy)
+                        //                                }
+                        //                            }
+                        //var leaveTime = startTime - earlyOffset// - routeEta
+                        
+                        Spacer()
+                        //}
+                        //                        } else {
+                        //                            VStack {
+                        //                                Text("Suggested Leave Time")
+                        //                                Text("Test")
+                        //                                    .font(.system(size: 25))
+                        //                                    .fontWeight(.heavy)
+                        //                            }
+                        //                        }
+                        //                    }
                     }
                         
                     VStack {
