@@ -31,17 +31,19 @@ class SettingsManager: ObservableObject{
         }
     }
     
-    func earlyCalculation(inTime: String = "10:05", eta: Int, earlyOffset: Int) -> String{
+    func earlyCalculation(inTime: String, eta: Int, earlyOffset: Int) -> String{
         let time = inTime
         let timeToRemove = eta + earlyOffset
         let timeFormat = DateFormatter()
         timeFormat.dateFormat = "HH:mm"
         if let startTime = timeFormat.date(from: time) {
             
-            if var modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime){
-                //modifiedDate = timeFormat.date(from: modifiedDate)
-                print(modifiedDate)
-                return (String(describing:modifiedDate))
+            if let modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime){
+                let calendar = Calendar.current
+                let outDate = ("\(calendar.component(.hour, from: modifiedDate)):\(calendar.component(.minute, from: modifiedDate))")
+                print(String(describing: modifiedDate))
+                print(outDate)
+                return outDate
             } else {
                 print("Early calc fail 2")
                 return ("Early calc fail 2")
@@ -53,6 +55,12 @@ class SettingsManager: ObservableObject{
             return ("In time not formatted")
         }
     }
+    
+//    func arrivalIfLeaveNow (eta: Int) -> String{
+//        let calendar = Calendar.current
+//        let date = Date()
+//        
+//    }
     
     //===Read from Json file===
     func retrieveSettingsLocally(fileName: String) -> Settings?{
