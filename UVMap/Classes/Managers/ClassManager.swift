@@ -103,6 +103,9 @@ class ClassManager: ObservableObject{
             }
         }
     }
+    func setActiveClass(course: SingleClass){
+        self.activeClass = course
+    }
     func getActiveClassFromBuilding(building: Building){
         for aCourse in todaysClasses{
             //change building.name to the building abbreviation

@@ -22,6 +22,7 @@ struct TopSchedule: View {
                         Spacer()
                         Button{
                             mapManager.setActiveBuilding(building: mapManager.getBuildingFromString(buildingString: course.building))
+                            classManager.setActiveClass(course: course)
                         }label: {
                             HStack(alignment: .center) {
                                 Text(course.subject)
