@@ -46,7 +46,7 @@ struct TripInformation: View {
                         //if let toClass = classManager.activeClass?.startTime{
                         //let startTime = toClass.startTime
                         //let startTime = classManager.activeClass.startTime
-                        
+                       
                         if let activeClass = classManager.activeClass {
                             let _ = print("ActiveClass worked")
                             let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
@@ -63,44 +63,24 @@ struct TripInformation: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.textGreenWhite, lineWidth: 2)
                             }
+                            Spacer()
+                          VStack {
+                              Text("Arrival Time if you leave now")
+                              let arrivalTime = settingsManager.arrivalIfLeaveNow(eta: routeEta)
+                              Text("\(arrivalTime)")
+                                  .font(.system(size: 25))
+                                  .fontWeight(.heavy)
+                          }
+                          .padding()
+                          .background(Color.backgroundDarker)
+                          .clipShape(RoundedRectangle(cornerRadius: 10))
+                          .overlay{
+                              RoundedRectangle(cornerRadius: 10)
+                                  .stroke(Color.textGreenWhite, lineWidth: 2)
+                          }
                         }
                     }
-                    
-                    //                        else {
-                    //                            VStack {
-                    //                                Text("Suggested Leave Time")
-                    //                                Text("Test1")
-                    //                                    .font(.system(size: 25))
-                    //                                    .fontWeight(.heavy)
-                    //                            }
-                    //                        }
-                    
-                    Spacer()
-                    //                        } else {
-                    //                            VStack {
-                    //                                Text("Suggested Leave Time")
-                    //                                Text("Test")
-                    //                                    .font(.system(size: 25))
-                    //                                    .fontWeight(.heavy)
-                    //                            }
-                    //                        }
-                    //                    }
                 }
-                
-                //                    VStack {
-                //                        Text("Arrival Time if you leave now")
-                //                        Text("7:58am")
-                //                            .font(.system(size: 25))
-                //                            .fontWeight(.heavy)
-                //                    }
-                //                    .padding()
-                //                    .background(Color.backgroundDarker)
-                //                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                //                    .overlay{
-                //                        RoundedRectangle(cornerRadius: 10)
-                //                            .stroke(Color.textGreenWhite, lineWidth: 2)
-                //                    }
-
             }
             .padding()
         }
