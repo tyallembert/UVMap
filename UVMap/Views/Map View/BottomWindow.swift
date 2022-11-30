@@ -54,6 +54,7 @@ struct BottomWindow: View {
                         TripInformation()
                             .environmentObject(settingsManager)
                             .environmentObject(mapManager)
+                            .environmentObject(classManager)
                         
                     }
                     // MARK: view for when the bottom sheet is pulled down
