@@ -56,11 +56,15 @@ class SettingsManager: ObservableObject{
         }
     }
     
-//    func arrivalIfLeaveNow (eta: Int) -> String{
-//        let calendar = Calendar.current
-//        let date = Date()
-//        
-//    }
+    func arrivalIfLeaveNow (eta: Int) -> String{
+        let calendar = Calendar.current
+        let date = Date()
+        if let modifiedDate = Calendar.current.date(byAdding: .minute, value: eta, to: date){
+            return ("\(calendar.component(.hour, from: modifiedDate)):\(calendar.component(.minute, from: modifiedDate))")
+        } else {
+            return ("Arrival fail 1")
+        }
+    }
     
     //===Read from Json file===
     func retrieveSettingsLocally(fileName: String) -> Settings?{

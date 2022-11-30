@@ -61,20 +61,20 @@ struct TripInformation: View {
                         }
                         
                         Spacer()
-                    }
-                    
-                    VStack {
-                        Text("Arrival Time if you leave now")
-                        Text("7:58am")
-                            .font(.system(size: 25))
-                            .fontWeight(.heavy)
-                    }
-                    .padding()
-                    .background(Color.backgroundDarker)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.textGreenWhite, lineWidth: 2)
+                        VStack {
+                            Text("Arrival Time if you leave now")
+                            let arrivalTime = settingsManager.arrivalIfLeaveNow(eta: routeEta)
+                            Text("\(arrivalTime)")
+                                .font(.system(size: 25))
+                                .fontWeight(.heavy)
+                        }
+                        .padding()
+                        .background(Color.backgroundDarker)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay{
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.textGreenWhite, lineWidth: 2)
+                        }
                     }
                 }
                 
