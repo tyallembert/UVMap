@@ -39,15 +39,12 @@ struct TripInformation: View {
                     if let routeEta = mapManager.ETA {
                         //if classManager.activeClass != nil { //& !mapManager.routes.isEmpty{
                         //if let routeEta = mapManager.ETA {
-                        //var startTime =
-                        //let timeFormat = DateFormatter()
-                        //timeFormat.dateFormat = "HH:mm"
-                        //let startTime = timeFormat.date(from: classManager.activeClass!.startTime)
                         
                         let earlyOffset = settingsManager.currentSettings.howEarly
                         //let routeEta = mapManager.ETA
                         //if let toClass = classManager.activeClass?.startTime{
                         //let startTime = toClass.startTime
+                        //let startTime = classManager.activeClass.startTime
                         let suggestedLeaveTime = settingsManager.earlyCalculation(eta: routeEta, earlyOffset: earlyOffset)
                         VStack {
                             Text("Suggested Leave Time")
@@ -70,19 +67,17 @@ struct TripInformation: View {
                         //                                        .fontWeight(.heavy)
                         //                                }
                         //                            }
-                        //var leaveTime = startTime - earlyOffset// - routeEta
                         
                         Spacer()
-                        //}
-                        //                        } else {
-                        //                            VStack {
-                        //                                Text("Suggested Leave Time")
-                        //                                Text("Test")
-                        //                                    .font(.system(size: 25))
-                        //                                    .fontWeight(.heavy)
-                        //                            }
-                        //                        }
-                        //                    }
+//                        } else {
+//                            VStack {
+//                                Text("Suggested Leave Time")
+//                                Text("Test")
+//                                    .font(.system(size: 25))
+//                                    .fontWeight(.heavy)
+//                            }
+//                        }
+//                    }
                     }
                         
                     VStack {
