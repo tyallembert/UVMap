@@ -37,6 +37,7 @@ struct TripInformation: View {
                 //                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
                     if let routeEta = mapManager.ETA {
+                        let _ = print("ETA worked")
                         //if classManager.activeClass != nil { //& !mapManager.routes.isEmpty{
                         //if let routeEta = mapManager.ETA {
                         
@@ -45,56 +46,60 @@ struct TripInformation: View {
                         //if let toClass = classManager.activeClass?.startTime{
                         //let startTime = toClass.startTime
                         //let startTime = classManager.activeClass.startTime
-                        let suggestedLeaveTime = settingsManager.earlyCalculation(eta: routeEta, earlyOffset: earlyOffset)
-                        VStack {
-                            Text("Suggested Leave Time")
-                            Text("\(suggestedLeaveTime)")
-                                .font(.system(size: 25))
-                                .fontWeight(.heavy)
-                        }
-                        .padding()
-                        .background(Color.backgroundDarker)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay{
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.textGreenWhite, lineWidth: 2)
-                        }
                         
-//                        else {
-//                            VStack {
-//                                Text("Suggested Leave Time")
-//                                Text("Test1")
-//                                    .font(.system(size: 25))
-//                                    .fontWeight(.heavy)
-//                            }
-//                        }
-                        
-                        Spacer()
-//                        } else {
-//                            VStack {
-//                                Text("Suggested Leave Time")
-//                                Text("Test")
-//                                    .font(.system(size: 25))
-//                                    .fontWeight(.heavy)
-//                            }
-//                        }
-//                    }
+                        if let activeClass = classManager.activeClass {
+                            let _ = print("ActiveClass worked")
+                            let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
+                            VStack {
+                                Text("Suggested Leave Time")
+                                Text("\(suggestedLeaveTime)")
+                                    .font(.system(size: 25))
+                                    .fontWeight(.heavy)
+                            }
+                            .padding()
+                            .background(Color.backgroundDarker)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.textGreenWhite, lineWidth: 2)
+                            }
+                        }
                     }
-                        
-//                    VStack {
-//                        Text("Arrival Time if you leave now")
-//                        Text("7:58am")
-//                            .font(.system(size: 25))
-//                            .fontWeight(.heavy)
-//                    }
-//                    .padding()
-//                    .background(Color.backgroundDarker)
-//                    .clipShape(RoundedRectangle(cornerRadius: 10))
-//                    .overlay{
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .stroke(Color.textGreenWhite, lineWidth: 2)
-//                    }
+                    
+                    //                        else {
+                    //                            VStack {
+                    //                                Text("Suggested Leave Time")
+                    //                                Text("Test1")
+                    //                                    .font(.system(size: 25))
+                    //                                    .fontWeight(.heavy)
+                    //                            }
+                    //                        }
+                    
+                    Spacer()
+                    //                        } else {
+                    //                            VStack {
+                    //                                Text("Suggested Leave Time")
+                    //                                Text("Test")
+                    //                                    .font(.system(size: 25))
+                    //                                    .fontWeight(.heavy)
+                    //                            }
+                    //                        }
+                    //                    }
                 }
+                
+                //                    VStack {
+                //                        Text("Arrival Time if you leave now")
+                //                        Text("7:58am")
+                //                            .font(.system(size: 25))
+                //                            .fontWeight(.heavy)
+                //                    }
+                //                    .padding()
+                //                    .background(Color.backgroundDarker)
+                //                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                //                    .overlay{
+                //                        RoundedRectangle(cornerRadius: 10)
+                //                            .stroke(Color.textGreenWhite, lineWidth: 2)
+                //                    }
             }
             .padding()
         }
