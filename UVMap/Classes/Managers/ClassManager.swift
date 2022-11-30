@@ -111,8 +111,10 @@ class ClassManager: ObservableObject{
             //change building.name to the building abbreviation
             if building.name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == aCourse.building.lowercased().trimmingCharacters(in: .whitespacesAndNewlines){
                 activeClass = aCourse
+                return
             }
         }
+        activeClass = nil
     }
     //===Changes the height of the class object===
     func getClassShellHeight(course: SingleClass) -> CGFloat{
@@ -142,27 +144,51 @@ class ClassManager: ObservableObject{
     func retrieveClasssesLocally(fileName: String) -> [SingleClass]{
         let data: Data
         
-        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
-        else{
-            print("Couldn't find \(fileName) in main bundle.")
-            return []
-        }
-        
-        do {
-            data = try Data(contentsOf: filePath)
-        } catch {
-            print("Couldn't load \(fileName) from main bundle:\n\(error)")
-            return []
-        }
+        if fileName == "all_classes"{ //read file from bundle for all classes
+            guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
+            else{
+                print("Couldn't find \(fileName) in main bundle.")
+                return []
+            }
+            let _ = print("File path: \(filePath)")
+            
+            do {
+                data = try Data(contentsOf: filePath)
+            } catch {
+                print("Couldn't load \(fileName) from main bundle:\n\(error)")
+                return []
+            }
 
-        do {
-            let decoder = JSONDecoder()
-//            return try decoder.decode(T.self, from: data)
-            return try decoder.decode([SingleClass].self, from: data)
-        } catch {
-            print("File is Empty: \(error)")
-            return []
+            do {
+                let decoder = JSONDecoder()
+    //            return try decoder.decode(T.self, from: data)
+                return try decoder.decode([SingleClass].self, from: data)
+            } catch {
+                print("File is Empty: \(error)")
+                return []
+            }
+        }else{//if file is named students_classes read from documents
+            if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                                in: .userDomainMask).first {
+                let pathWithFilename = documentDirectory.appendingPathComponent(fileName + ".json")
+                let _ = print("Read path: \(pathWithFilename)")
+                
+                do {
+                    data = try Data(contentsOf: pathWithFilename)
+                } catch {
+                    print("Couldn't load \(fileName) from main bundle:\n\(error)")
+                    return []
+                }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    return try decoder.decode([SingleClass].self, from: data)
+                } catch {
+                    fatalError("Cannot save to file:\n\(error)")
+                }
+            }
         }
+        return []
     }
     // Helper function to save locally
     func getDocumentsDirectoryUrl() -> URL {
@@ -174,22 +200,37 @@ class ClassManager: ObservableObject{
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         
-        let fileName = "student_classes"
-        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
-        else{
-            print("Couldn't find \(fileName) in main bundle.")
-            return
+        let fileName = "student_classes.json"
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                            in: .userDomainMask).first {
+            let pathWithFilename = documentDirectory.appendingPathComponent(fileName)
+            let _ = print("Write path: \(pathWithFilename)")
+            do {
+                let data = try encoder.encode(studentsClasses)
+                try data.write(to: pathWithFilename)
+                print(String(data: data, encoding: .utf8)!)
+                studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
+            } catch {
+                fatalError("Cannot save to file:\n\(error)")
+            }
         }
-//        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
+
         
-        do {
-            let data = try encoder.encode(studentsClasses)
-            try data.write(to: filePath)
-            print(String(data: data, encoding: .utf8)!)
-            studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
-        } catch {
-            fatalError("Cannot save to file:\n\(error)")
-        }
+//        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
+//        else{
+//            print("Couldn't find \(fileName) in main bundle.")
+//            return
+//        }
+////        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
+//
+//        do {
+//            let data = try encoder.encode(studentsClasses)
+//            try data.write(to: filePath)
+//            print(String(data: data, encoding: .utf8)!)
+//            studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
+//        } catch {
+//            fatalError("Cannot save to file:\n\(error)")
+//        }
         
     }
     func saveClassesToFirebase(){
