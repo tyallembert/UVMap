@@ -53,9 +53,11 @@ struct TripInformation: View {
                             let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
                             VStack {
                                 Text("Suggested Leave Time")
+                                    .fixedSize(horizontal: false, vertical: true)
                                 Text("\(suggestedLeaveTime)")
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
+                                    
                             }
                             .padding()
                             .background(Color.backgroundDarker)
@@ -67,6 +69,7 @@ struct TripInformation: View {
                             Spacer()
                             VStack {
                                 Text("Arrival Time if you leave now")
+                                    .fixedSize(horizontal: false, vertical: true)
                                 let arrivalTime = settingsManager.arrivalIfLeaveNow(eta: routeEta)
                                 Text("\(arrivalTime)")
                                     .font(.system(size: 25))
