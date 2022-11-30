@@ -33,14 +33,24 @@ class SettingsManager: ObservableObject{
     
     func earlyCalculation(inTime: String = "10:05", eta: Int, earlyOffset: Int) -> String{
         let time = inTime
+        let timeToRemove = eta + earlyOffset
         let timeFormat = DateFormatter()
         timeFormat.dateFormat = "HH:mm"
         if let startTime = timeFormat.date(from: time) {
-            let timeToRemove = eta + earlyOffset
-            let modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime)
-            return (String(describing:modifiedDate))
+            
+            if var modifiedDate = Calendar.current.date(byAdding: .minute, value: -timeToRemove, to: startTime){
+                //modifiedDate = timeFormat.date(from: modifiedDate)
+                print(modifiedDate)
+                return (String(describing:modifiedDate))
+            } else {
+                print("Early calc fail 2")
+                return ("Early calc fail 2")
+            }
+            
 
-        } else {            return ("In time not formatted")
+        } else {
+            print("Early calculation fail")
+            return ("In time not formatted")
         }
     }
     
