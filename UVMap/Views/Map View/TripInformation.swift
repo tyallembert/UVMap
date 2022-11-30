@@ -100,6 +100,7 @@ struct TripInformation: View {
                 //                        RoundedRectangle(cornerRadius: 10)
                 //                            .stroke(Color.textGreenWhite, lineWidth: 2)
                 //                    }
+
             }
             .padding()
         }
