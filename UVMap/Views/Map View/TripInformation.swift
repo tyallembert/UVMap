@@ -49,6 +49,7 @@ struct TripInformation: View {
                        
                         if let activeClass = classManager.activeClass {
                             let _ = print("ActiveClass worked")
+                            let _ = print(activeClass.startTime)
                             let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
                             VStack {
                                 Text("Suggested Leave Time")
@@ -64,20 +65,20 @@ struct TripInformation: View {
                                     .stroke(Color.textGreenWhite, lineWidth: 2)
                             }
                             Spacer()
-                          VStack {
-                              Text("Arrival Time if you leave now")
-                              let arrivalTime = settingsManager.arrivalIfLeaveNow(eta: routeEta)
-                              Text("\(arrivalTime)")
-                                  .font(.system(size: 25))
-                                  .fontWeight(.heavy)
-                          }
-                          .padding()
-                          .background(Color.backgroundDarker)
-                          .clipShape(RoundedRectangle(cornerRadius: 10))
-                          .overlay{
-                              RoundedRectangle(cornerRadius: 10)
-                                  .stroke(Color.textGreenWhite, lineWidth: 2)
-                          }
+                            VStack {
+                                Text("Arrival Time if you leave now")
+                                let arrivalTime = settingsManager.arrivalIfLeaveNow(eta: routeEta)
+                                Text("\(arrivalTime)")
+                                    .font(.system(size: 25))
+                                    .fontWeight(.heavy)
+                            }
+                            .padding()
+                            .background(Color.backgroundDarker)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay{
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.textGreenWhite, lineWidth: 2)
+                            }
                         }
                     }
                 }
