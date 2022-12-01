@@ -53,13 +53,14 @@ struct TripInformation: View {
                             let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
                             VStack {
                                 Text("Suggested Leave Time")
-                                    .fixedSize(horizontal: false, vertical: true)
+                                    
                                 Text("\(suggestedLeaveTime)")
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
                                     
                             }
-                            .frame(width:geometry.size.width/2 - 5)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(width:geometry.size.width/2)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -76,7 +77,7 @@ struct TripInformation: View {
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
                             }
-                            .frame(width:geometry.size.width/2 - 5)
+                            .frame(width:geometry.size.width/2)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))

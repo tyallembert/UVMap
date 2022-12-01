@@ -51,7 +51,8 @@ struct SettingsView: View {
                     }
                     Spacer()
                     
-                }.padding()
+                }.padding(.leading)
+                    .padding(.trailing)
             }
             
         }

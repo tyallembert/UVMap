@@ -19,7 +19,7 @@ struct BottomWindow: View {
                     // MARK: view for when the bottom sheet is pulled up
                     case .top, .middle:
                         if mapManager.routes.isEmpty {
-                            if settingsManager.currentSettings.prioritizeSchedule == true {
+                            if settingsManager.currentSettings.prioritizeSchedule == false {
                                 TopSchedule()
                             }
                         }
@@ -30,7 +30,7 @@ struct BottomWindow: View {
                                         .environmentObject(mapManager)
                                     Spacer()
                                 }
-                                if settingsManager.currentSettings.prioritizeSchedule == true {
+                                if settingsManager.currentSettings.prioritizeSchedule == false {
                                     HStack {
                                         NextClass()
                                         Spacer()
