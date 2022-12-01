@@ -18,7 +18,11 @@ struct BottomWindow: View {
                 switch bottomSheetPosition{
                     // MARK: view for when the bottom sheet is pulled up
                     case .top, .middle:
-                        if mapManager.routes.isEmpty { TopSchedule() }
+                        if mapManager.routes.isEmpty {
+                            if settingsManager.currentSettings.prioritizeSchedule == true {
+                                TopSchedule()
+                            }
+                        }
                         HStack {
                             VStack(alignment: .leading) {
                                 HStack {
@@ -26,14 +30,16 @@ struct BottomWindow: View {
                                         .environmentObject(mapManager)
                                     Spacer()
                                 }
-                                HStack {
-                                    NextClass()
-                                    Spacer()
-                                }
-                                HStack {
-                                    ClassTime()
-                                        .environmentObject(classManager)
-                                    Spacer()
+                                if settingsManager.currentSettings.prioritizeSchedule == true {
+                                    HStack {
+                                        NextClass()
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        ClassTime()
+                                            .environmentObject(classManager)
+                                        Spacer()
+                                    }
                                 }
                             }
                             if mapManager.routes.isEmpty {

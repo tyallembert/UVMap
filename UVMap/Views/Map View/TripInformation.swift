@@ -59,6 +59,7 @@ struct TripInformation: View {
                                     .fontWeight(.heavy)
                                     
                             }
+                            .frame(width:geometry.size.width/2 - 5)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -75,9 +76,11 @@ struct TripInformation: View {
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
                             }
+                            .frame(width:geometry.size.width/2 - 5)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                            
                             .overlay{
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.textGreenWhite, lineWidth: 2)
