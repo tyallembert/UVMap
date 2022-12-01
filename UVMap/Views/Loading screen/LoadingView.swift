@@ -10,10 +10,10 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         VStack {
-            Image("UVMap_Logo")
+            Image("AppIconTransparent")
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color.backgroundGreen)
+        .background(Color.uvmGreen)
     }
 }
 
