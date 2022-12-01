@@ -32,35 +32,26 @@ struct TripInformation: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.textGreenWhite, lineWidth: 2)
                 }
-                //                .background(Color("BG2"))
-                //                .cornerRadius(10)
-                //                .shadow(color: Color.black.opacity(0.30), radius: 5, x: 0, y: 0)
                 HStack {
                     if let routeEta = mapManager.ETA {
                         let _ = print("ETA worked")
-                        //if classManager.activeClass != nil { //& !mapManager.routes.isEmpty{
-                        //if let routeEta = mapManager.ETA {
                         
                         let earlyOffset = settingsManager.currentSettings.howEarly
-                        //let routeEta = mapManager.ETA
-                        //if let toClass = classManager.activeClass?.startTime{
-                        //let startTime = toClass.startTime
-                        //let startTime = classManager.activeClass.startTime
-                       
+                        
                         if let activeClass = classManager.activeClass {
                             let _ = print("ActiveClass worked")
                             let _ = print(activeClass.startTime)
                             let suggestedLeaveTime = settingsManager.earlyCalculation(inTime: activeClass.startTime,eta: routeEta, earlyOffset: earlyOffset)
                             VStack {
                                 Text("Suggested Leave Time")
-                                    
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    //.frame(width:geometry.size.width/4)
                                 Text("\(suggestedLeaveTime)")
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
-                                    
                             }
+                            .frame(width:geometry.size.width/2.75)
                             .fixedSize(horizontal: false, vertical: true)
-                            .frame(width:geometry.size.width/2)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -77,7 +68,8 @@ struct TripInformation: View {
                                     .font(.system(size: 25))
                                     .fontWeight(.heavy)
                             }
-                            .frame(width:geometry.size.width/2)
+                            .frame(width:geometry.size.width/2.75)
+                            .fixedSize(horizontal: false, vertical: true)
                             .padding()
                             .background(Color.backgroundDarker)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -88,7 +80,7 @@ struct TripInformation: View {
                             }
                         }
                     }
-                }
+                }.frame(width:geometry.size.width/1.25)
             }
             .padding()
         }
