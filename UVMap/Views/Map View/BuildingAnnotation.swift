@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BuildingAnnotation: View {
+    @EnvironmentObject var mapManager: MapManager
+    @EnvironmentObject var building: Building
     let gradientWithFourColors = Gradient(colors: [
         Color("AccentColor"),
         Color(red: 250, green: 250, blue: 250)
@@ -24,6 +26,9 @@ struct BuildingAnnotation: View {
                 .scaledToFit()
                 .frame(width: 15, height: 15)
                 .foregroundColor(.white)
+        }
+        .onTapGesture {
+            mapManager.setActiveBuilding(building: building)
         }
         .shadow(radius: 3, y: 3)
     }

@@ -90,27 +90,27 @@ class SettingsManager: ObservableObject{
     //===Read from Json file===
     func retrieveSettingsLocally(fileName: String) -> Settings?{
         let data: Data
-        
-        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
-        else{
-            print("Couldn't find \(fileName) in main bundle.")
-            return nil
+        let fileName = "settings.json"
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                            in: .userDomainMask).first {
+            let pathWithFilename = documentDirectory.appendingPathComponent(fileName)
+            let _ = print("Read path: \(pathWithFilename)")
+            
+            do {
+                data = try Data(contentsOf: pathWithFilename)
+            } catch {
+                print("Couldn't load \(fileName) from main bundle:\n\(error)")
+                return nil
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                return try decoder.decode(Settings.self, from: data)
+            } catch {
+                fatalError("Cannot save to file:\n\(error)")
+            }
         }
-        
-        do {
-            data = try Data(contentsOf: filePath)
-        } catch {
-            print("Couldn't load \(fileName) from main bundle:\n\(error)")
-            return nil
-        }
-
-        do {
-            let decoder = JSONDecoder()
-//            return try decoder.decode(T.self, from: data)
-            return try decoder.decode(Settings.self, from: data)
-        } catch {
-            print("File is Empty: \(error)")
-            return nil        }
+        return nil
     }
     
     // Helper function to save locally
@@ -121,46 +121,26 @@ class SettingsManager: ObservableObject{
     //===Save to Json file===
     func saveSettingsLocally(){
         
+        let fileName = "settings.json"
         let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
         
-//        print("Originial settings: \(self.settings)")
-//        var changedSettings = Settings(settingsTheme: self.theme, prioritizeSchedule: self.prioritize, howEarly: self.early)
-//        print("ChangedSettings: \(changedSettings)")
-        
-        
-        //let jsonData = try! JSONEncoder().encode(settings)
-        
-        //let saveSettings: Settings = [saveTheme, saveEarly, savePrioritize]
-        
-        let fileName = "settings"
-        guard let filePath = Bundle.main.url(forResource: fileName, withExtension: "json")
-        else{
-            print("Couldn't find \(fileName) in main bundle.")
-            return
-        }
-//        let filePath = self.getDocumentsDirectoryUrl().appendingPathComponent(fileName)
-        
-        do {
-//            var newSettingsArray: [Settings] = []
-//            newSettingsArray.append(newSettings)
-            
-//            let data = try encoder.encode(newSettingsArray)
-            let data = try encoder.encode(currentSettings)
-            try data.write(to: filePath)
-            print(String(data: data, encoding: .utf8)!)
-            if let settings = retrieveSettingsLocally(fileName: "settings") {
-                print("Files saved")
-                self.currentSettings = settings
-//                self.newSettings = newSettings
-//                self.settings = [changedSettings]
-            } else {
-                print("File not saved")
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                            in: .userDomainMask).first {
+            let pathWithFilename = documentDirectory.appendingPathComponent(fileName)
+            let _ = print("Write path: \(pathWithFilename)")
+            do {
+                let data = try encoder.encode(currentSettings)
+                try data.write(to: pathWithFilename)
+                print(String(data: data, encoding: .utf8)!)
+                if let settings = retrieveSettingsLocally(fileName: "settings") {
+                    print("Files saved")
+                    self.currentSettings = settings
+                } else {
+                    print("File not saved")
+                }
+            } catch {
+                fatalError("Cannot save to file:\n\(error)")
             }
-        } catch {
-            fatalError("Cannot save to file:\n\(error)")
         }
     }
-    
-    
 }

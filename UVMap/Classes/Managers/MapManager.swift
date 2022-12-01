@@ -40,7 +40,7 @@ class MapManager: NSObject, ObservableObject, CLLocationManagerDelegate, MKMapVi
     @Published var endLocation: Building?
     @Published var bottomSheetPosition: BottomSheetPosition = .middle
     
-    private var haveShownRouteOverview: Bool = false
+    @Published var haveShownRouteOverview: Bool = false
     private var hasRebounded: Bool = false
     
     
