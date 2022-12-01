@@ -41,36 +41,43 @@ class SessionManager: ObservableObject {
    
     func signUp(database: DatabaseManager) {
         if firstName.isEmpty {
+            self.currentState = .signUp
             errorMessage = "First Name is empty"
             isError = true
             return
         }
         if lastName.isEmpty {
+            self.currentState = .signUp
             errorMessage = "Last Name is empty"
             isError = true
             return
         }
         if email.isEmpty {
+            self.currentState = .signUp
             errorMessage = "Email is empty"
             isError = true
             return
         }
         if !email.contains("@uvm.edu") {
+            self.currentState = .signUp
             errorMessage = "Email not in correct UVM format"
             isError = true
             return
         }
         if password.isEmpty {
+            self.currentState = .signUp
             errorMessage = "Password is empty"
             isError = true
             return
         }
         if confirmPassword.isEmpty {
+            self.currentState = .signUp
             errorMessage = "Confirm Password is empty"
             isError = true
             return
         }
         if password != confirmPassword {
+            self.currentState = .signUp
             errorMessage = "Passwords don't match"
             isError = true
             return
@@ -81,6 +88,7 @@ class SessionManager: ObservableObject {
                 print("Error: \(error.localizedDescription)")
                 self.errorMessage = error.localizedDescription
                 self.isError = true
+                self.currentState = .signUp
             }
             self.afterSignIn()
         }
@@ -102,11 +110,13 @@ class SessionManager: ObservableObject {
         if username.isEmpty {
             errorMessage = "Email is empty"
             isError = true
+            self.currentState = .loggedOut
             return
         }
         if password.isEmpty {
             errorMessage = "Password is empty"
             isError = true
+            self.currentState = .loggedOut
             return
         }
         Auth.auth().signIn(withEmail: username, password: password) { result, error in
@@ -114,6 +124,7 @@ class SessionManager: ObservableObject {
                 print("ERROR: \(error.localizedDescription)")
                 self.errorMessage = error.localizedDescription
                 self.isError = true
+                self.currentState = .loggedOut
             }
             self.afterSignIn()
         }
@@ -122,6 +133,7 @@ class SessionManager: ObservableObject {
     }
     
     func afterSignIn() {
+        self.currentState = .loggedIn
         // Defaults this back to MapView
         selectedNavElement = 1
         // Clears all input boxses

@@ -14,6 +14,7 @@ struct SignUpButton: View {
     
     var body: some View {
         Button {
+            sessionManager.currentState = .loading
             sessionManager.signIn(database: databaseManager)
             
         } label:{
