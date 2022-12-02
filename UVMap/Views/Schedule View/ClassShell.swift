@@ -24,20 +24,22 @@ struct ClassShell: View {
                 ClassProfessorSchedule(classProfessor: $singleClass.instructor)
                 
             }
-            Spacer()
+            .fixedSize(horizontal: false, vertical: true)
+            //Spacer()
             
             //RHS
             ClassBuildingSchedule()
+                .fixedSize(horizontal: false, vertical: true)
                 .environmentObject(singleClass)
-                .frame(width: 120)
+                .frame(width: 95)
                 
         //Green styling on HStack
         }
-            .padding()
-            .frame( height: classManager.getClassShellHeight(course: singleClass))
-            .background(Color.backgroundGreen.opacity(0.8))
-            .cornerRadius(25)
-        
+        //.fixedSize(horizontal: false, vertical: true)
+        .padding()
+        .frame( height: classManager.getClassShellHeight(course: singleClass))
+        .background(Color.backgroundGreen.opacity(0.8))
+        .cornerRadius(25)
     }
 }
 

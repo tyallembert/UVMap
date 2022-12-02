@@ -17,7 +17,7 @@ struct TopSchedule: View {
                 .foregroundColor(Color.textGreenWhite)
                 .offset(x: 20, y: 5)
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                LazyHStack {
                     ForEach(classManager.todaysClasses, id: \.self.CRN) { course in
                         Spacer()
                         Button{
