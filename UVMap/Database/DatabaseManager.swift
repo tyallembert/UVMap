@@ -14,6 +14,7 @@ class DatabaseManager: ObservableObject{
     
     let fireStoreDB = Firestore.firestore()
     @Published var buildings: [Building] = []
+    var 🤫 = "shush"
     
     init(){
 //        self.queryBuildings()
@@ -27,6 +28,7 @@ class DatabaseManager: ObservableObject{
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print(error.localizedDescription)
+                print(self.🤫)
             }
         }
         
