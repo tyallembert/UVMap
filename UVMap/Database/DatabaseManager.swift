@@ -48,16 +48,8 @@ class DatabaseManager: ObservableObject{
             if let snapshot = snapshot {
                 for document in snapshot.documents {
                     let data = document.data()
-                    
-//                    let emailDatabase = data["email"] as? String ?? ""
-//                    let _ = print("Type:\(type(of: emailDatabase))")
                     if let emailDatabase : String = data["email"] as? String {
-                        let _ = print("===================================")
-                        let _ = print("Database email: \(emailDatabase)")
-                        let _ = print("Database email: \(email)")
-                        let _ = print("===================================")
                         if emailDatabase.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == email.lowercased().trimmingCharacters(in: .whitespacesAndNewlines){
-                            let _ = print("got into final if")
                             let firstNameDatabase = data["firstName"] as? String ?? ""
                             let lastNameDatabase = data["lastName"] as? String ?? ""
                             user = User(email: emailDatabase, firstName: firstNameDatabase, lastName: lastNameDatabase)
