@@ -24,18 +24,41 @@ class DatabaseManager: ObservableObject{
     //      ===User Functions===
     // --------------------------------
     func signUp(firstName: String, lastName: String, email: String, password: String, retypePassword: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            }
+//        }
         
         let ref = fireStoreDB.collection("userInfo").document()
-        ref.setData(["first_name": firstName, "last_name": lastName, "email": email]) {error in
+        ref.setData(["email": email, "firstName": firstName, "lastName": lastName]) {error in
             if let error = error {
                 print(error.localizedDescription)
             }
         }
+    }
+    func getCurrentUser(email: String) -> User{
+        var user: User = User()
+        let ref = fireStoreDB.collection("userInfo")
+        ref.getDocuments{ snapshot, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            if let snapshot = snapshot {
+                for document in snapshot.documents {
+                    let data = document.data()
+                    if data["email"] as? String == email {
+                        let emailDatabase = data["email"] as? String ?? ""
+                        let firstNameDatabase = data["firstName"] as? String ?? ""
+                        let lastNameDatabase = data["lastName"] as? String ?? ""
+                        
+                        user = User(email: emailDatabase, firstName: firstNameDatabase, lastName: lastNameDatabase)
+                    }
+                }
+            }
+        }
+        return user
     }
     
     // --------------------------------

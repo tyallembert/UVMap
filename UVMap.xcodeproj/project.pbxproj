@@ -72,6 +72,7 @@
 		4C78EE9F28E2253B00306D58 /* TheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE9E28E2253B00306D58 /* TheMap.swift */; };
 		4C78EEA128E2263400306D58 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EEA028E2263400306D58 /* SearchBar.swift */; };
 		4C83C3FE293989EB00549395 /* settingsUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83C3FD293989EA00549395 /* settingsUserInfo.swift */; };
+		4C83C400293A54B200549395 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83C3FF293A54B200549395 /* User.swift */; };
 		4C8785FD2936506F00F34AD2 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C8785FC2936506F00F34AD2 /* settings.json */; };
 		4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99F98829032DBC006060CB /* NavigationBar.swift */; };
 		4CA09D2828F4939400484D6D /* all_buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA09D2728F4939400484D6D /* all_buildings.json */; };
@@ -190,6 +191,9 @@
 		4C78EE9E28E2253B00306D58 /* TheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMap.swift; sourceTree = "<group>"; };
 		4C78EEA028E2263400306D58 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4C83C3FD293989EA00549395 /* settingsUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsUserInfo.swift; sourceTree = "<group>"; };
+		4C83C3FF293A54B200549395 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4C83C401293A634000549395 /* UVMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UVMap.entitlements; sourceTree = "<group>"; };
+		4C83C402293A641C00549395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C8785FC2936506F00F34AD2 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		4C99F98829032DBC006060CB /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		4CA09D2728F4939400484D6D /* all_buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_buildings.json; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 		4C78EE5E28DE1D1E00306D58 /* UVMap */ = {
 			isa = PBXGroup;
 			children = (
+				4C83C402293A641C00549395 /* Info.plist */,
+				4C83C401293A634000549395 /* UVMap.entitlements */,
 				4C78EE6328DE1D2200306D58 /* Assets.xcassets */,
 				4CE7168A28F107F10069D6C0 /* Classes */,
 				4CAF024B28F71D91005F605E /* Components */,
@@ -500,6 +506,7 @@
 			children = (
 				4CE7168C28F108FD0069D6C0 /* Building.swift */,
 				50E43B9828F8D80F00CDF4D9 /* Lecture.swift */,
+				4C83C3FF293A54B200549395 /* User.swift */,
 				4C28FF5C28FDD31600D75A1A /* SingleClass.swift */,
 			);
 			path = Objects;
@@ -671,6 +678,7 @@
 				4C99F98929032DBC006060CB /* NavigationBar.swift in Sources */,
 				3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */,
 				3F649F88291C04BF006C2168 /* saveButton.swift in Sources */,
+				4C83C400293A54B200549395 /* User.swift in Sources */,
 				4C36C82A28E3463C00207EC5 /* UsernameView.swift in Sources */,
 				500DC3A428EA07D40085A130 /* ScheduleChart.swift in Sources */,
 				045AFA44293511A800DA0229 /* SignOutButton.swift in Sources */,
@@ -889,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UVMap/UVMap.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -896,6 +905,7 @@
 				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UVMap/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to accurately guide you to class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -918,6 +928,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UVMap/UVMap.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -925,6 +936,7 @@
 				DEVELOPMENT_TEAM = P4T7H3MJYN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UVMap/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to accurately guide you to class";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
