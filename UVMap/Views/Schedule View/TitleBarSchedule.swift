@@ -15,23 +15,28 @@ struct TitleBarSchedule: View {
             VStack{
                 Spacer()
                 HStack{
+                    Spacer()
+                        .frame(width: 15)
                     Text("Schedule")
-                        .frame(height: 40)
+//                        .frame(height: 40)
                         .foregroundColor(.white)
-                        .font(.largeTitle)
-                        .padding()
+                        .font(.system(size: 50, weight: .bold))
+                        .shadow(radius: 5, x: 5, y: 10)
                     Spacer()
                     
                     NavigationLink {
                         AddClassView()
                     } label: {
                         Image(systemName: "plus")
+                            .padding()
+                            .font(.system(size: 22, weight: .semibold))
                     }
+                    Spacer()
+                        .frame(width: 15)
                     
                 }
     
             }
-            .padding()
                 .foregroundColor(.white)
                 .background(Color.backgroundGreen)
     }

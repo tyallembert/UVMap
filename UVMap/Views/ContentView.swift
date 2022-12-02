@@ -30,10 +30,12 @@ struct ContentView: View {
                     .transition(.opacity)
             default:
                 // Splash Screen
-                withAnimation(.easeInOut(duration: 2.0)){
-                    LoadingView()
-                        .transition(.opacity)
-                }
+                LoadingView()
+                    .transition(
+                        withAnimation(.easeInOut(duration: 10.0)){
+                            .opacity
+                        }
+                    )
             }
         }
         .onAppear{
