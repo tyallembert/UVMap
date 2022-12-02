@@ -20,13 +20,13 @@ struct settingsUserInfo: View {
                         .stroke(Color.textGreenWhite, lineWidth: 3)
                         .backgroundBlur(radius: 20, opaque: false)
                 }
-            Text("John")
+            Text(sessionManager.currentUser.firstName)
                 .font(.system(size: 30, weight: .semibold))
                 .foregroundColor(Color.textGreenWhite)
-            Text("Doe")
+            Text(sessionManager.currentUser.lastName)
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(Color.textGreenWhite)
-            Text("netid@uvm.edu")
+            Text(sessionManager.currentUser.email)
                 .font(.system(size: 15, weight: .medium))
                 .foregroundColor(Color.textGreenWhite)
         }
@@ -61,5 +61,6 @@ struct settingsUserInfo: View {
 struct settingsUserInfo_Previews: PreviewProvider {
     static var previews: some View {
         settingsUserInfo()
+            .environmentObject(SessionManager())
     }
 }

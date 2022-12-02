@@ -65,7 +65,7 @@ class SessionManager: ObservableObject {
             isError = true
             return
         }
-        if password.isEmpty {
+        if passwordSU.isEmpty {
             self.currentState = .signUp
             errorMessage = "Password is empty"
             isError = true
@@ -77,7 +77,7 @@ class SessionManager: ObservableObject {
             isError = true
             return
         }
-        if password != confirmPassword {
+        if passwordSU != confirmPassword {
             self.currentState = .signUp
             errorMessage = "Passwords don't match"
             isError = true
@@ -92,15 +92,14 @@ class SessionManager: ObservableObject {
                 self.isError = true
                 self.currentState = .signUp
             }
-//            database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
-//            self.currentUser = database.getCurrentUser(email: self.email)
+            database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
             self.afterSignIn()
         }
     }
-    
     func signOut() {
         do {
             try Auth.auth().signOut()
+            clearInputFields()
         }
         catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
@@ -130,7 +129,6 @@ class SessionManager: ObservableObject {
                 self.isError = true
                 self.currentState = .loggedOut
             }
-            self.currentUser = database.getCurrentUser(email: self.email)
             self.afterSignIn()
         }
         
@@ -142,9 +140,12 @@ class SessionManager: ObservableObject {
         // Defaults this back to MapView
         selectedNavElement = 1
         // Clears all input boxses
-        clearInputFields()
+        clearPasswords()
     }
-    
+    func clearPasswords() {
+        passwordSU = ""
+        confirmPassword = ""
+    }
     func clearInputFields() {
         username = ""
         password = ""

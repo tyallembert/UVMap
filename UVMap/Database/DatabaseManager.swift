@@ -38,7 +38,7 @@ class DatabaseManager: ObservableObject{
             }
         }
     }
-    func getCurrentUser(email: String) -> User{
+    func getCurrentUser(email: String, sessionManager: SessionManager){
         var user: User = User()
         let ref = fireStoreDB.collection("userInfo")
         ref.getDocuments{ snapshot, error in
@@ -49,17 +49,17 @@ class DatabaseManager: ObservableObject{
             if let snapshot = snapshot {
                 for document in snapshot.documents {
                     let data = document.data()
-                    if data["email"] as? String == email {
-                        let emailDatabase = data["email"] as? String ?? ""
-                        let firstNameDatabase = data["firstName"] as? String ?? ""
-                        let lastNameDatabase = data["lastName"] as? String ?? ""
-                        
-                        user = User(email: emailDatabase, firstName: firstNameDatabase, lastName: lastNameDatabase)
+                    if let emailDatabase : String = data["email"] as? String {
+                        if emailDatabase.lowercased().trimmingCharacters(in: .whitespacesAndNewlines) == email.lowercased().trimmingCharacters(in: .whitespacesAndNewlines){
+                            let firstNameDatabase = data["firstName"] as? String ?? ""
+                            let lastNameDatabase = data["lastName"] as? String ?? ""
+                            user = User(email: emailDatabase, firstName: firstNameDatabase, lastName: lastNameDatabase)
+                            sessionManager.currentUser = user
+                        }
                     }
                 }
             }
         }
-        return user
     }
     
     // --------------------------------
@@ -104,7 +104,7 @@ class DatabaseManager: ObservableObject{
 //                    let id = document.documentID
 //                    let name = data["name"] as? String ?? ""
 //                    let address = data["address"] as? String ?? ""
-//                    
+//
 //                    var coordinate = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
 //                    if let latitude = Double(data["latitude"] as! Substring){
 //                        if let longitude = Double(data["longitude"] as! Substring){
@@ -117,7 +117,7 @@ class DatabaseManager: ObservableObject{
 //                    }
 ////                    as? Double ?? 0.0
 ////                    let longitude = Double(data["longitude"]) as? Double ?? 0.0
-//                    
+//
 //                    let aBuilding = Building(id: id, name: name, address: address, coordinate: coordinate)
 //                    self.buildings.append(aBuilding)
 //                }
