@@ -29,6 +29,7 @@ class DatabaseManager: ObservableObject{
                 print(error.localizedDescription)
             }
         }
+        
         let ref = fireStoreDB.collection("userInfo").document()
         ref.setData(["first_name": firstName, "last_name": lastName, "email": email]) {error in
             if let error = error {

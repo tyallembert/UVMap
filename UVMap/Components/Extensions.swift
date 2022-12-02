@@ -13,6 +13,7 @@ extension Color {
     static let backgroundLighter = Color("BG1")
     static let backgroundDarker = Color("BG2")
     static let backgroundGreen = Color("AccentColor")
+    static let uvmGreen = Color("UVM_Green")
     //Text
     static let textBlackWhite = Color("TXT1")
     static let textGreenWhite = Color("TXT2")

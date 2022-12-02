@@ -13,10 +13,12 @@ struct TitleBar: View {
         VStack{
             Spacer()
             HStack {
+                Spacer()
+                    .frame(width: 15)
                 Text("Settings")
                     .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .padding()
+                    .font(.system(size: 50, weight: .bold))
+                    .shadow(radius: 5, x: 5, y: 10)
                 Spacer()
                 saveButton()
                     .padding()

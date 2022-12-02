@@ -25,22 +25,25 @@ struct NavigationBar: View {
                                     .fill(Color.backgroundGreen)
                                     .innerShadow(shape: Circle(), color: Color.innerShadow, lineWidth: 1, offsetX: 0, offsetY: 1, blur: 2, blendMode: .overlay, opacity: 0.5)
                                     .frame(height: 70)
-                                    .offset(y: -20)
+                                    .offset(y: -40)
                                     .shadow(color: Color.black, radius: 3, y: 3)
                             }
                             Image(systemName: tabBarImageNames[element])
                                 .foregroundColor(
                                     element == 1 ? Color.white: Color.textGreenWhite)
-                                .offset(y: element == 1 ? -20: 0)
+                                .offset(y: element == 1 ? -40: -10)
                         }
                     })
                     Spacer()
                 }
             }
             .padding()
-            .frame(height: 70)
-            .background(.ultraThinMaterial)
-            .shadow(radius: 4)
+            .frame(height: 100)
+            .background(
+                Rectangle()
+                    .fill(.ultraThinMaterial)
+                    .shadow(radius: 4)
+            )
         }
         .ignoresSafeArea()
     }

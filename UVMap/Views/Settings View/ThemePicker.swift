@@ -11,7 +11,6 @@ import SwiftUI
 struct ThemePicker: View{
     @EnvironmentObject var settingsManager:
     SettingsManager
-    //@Binding var theme: Int
     
     var body: some View {
         VStack {
@@ -20,11 +19,13 @@ struct ThemePicker: View{
                 Text("Dark Mode").tag(2)
                 Text("Light Mode").tag(3)
             }
+            .font(.system(size: 15))
             .accentColor(.white)
-            .padding()
-            .frame(width:200)
+            .padding(7)
+            .frame(width: 180)
+            .scaleEffect(0.9)
         }
-        .background(Color("AccentColor"))
+        .background(Color.backgroundGreen)
         .cornerRadius(25)
     }
 }
@@ -32,5 +33,6 @@ struct ThemePicker: View{
 struct ThemePicker_Previews: PreviewProvider {
     static var previews: some View {
         ThemePicker()
+            .environmentObject(SettingsManager())
     }
 }

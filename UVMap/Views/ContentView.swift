@@ -17,9 +17,11 @@ struct ContentView: View {
         VStack{
             switch sessionManager.currentState {
             case .loggedIn:
-                MainNavigation()
-                    .transition(.opacity)
-                    .environmentObject(sessionManager)
+                withAnimation(.easeInOut(duration: 2.0)){
+                    MainNavigation()
+                        .transition(.opacity)
+                        .environmentObject(sessionManager)
+                }
             case .loggedOut:
                 LoginView()
                     .transition(.opacity)
@@ -29,15 +31,14 @@ struct ContentView: View {
             default:
                 // Splash Screen
                 LoadingView()
+                    .transition(
+                        withAnimation(.easeInOut(duration: 10.0)){
+                            .opacity
+                        }
+                    )
             }
         }
         .onAppear{
-//            if let testSettings = settingsManager.retrieveSettingsLocally(fileName:"settings"){// ?? settingsManager.init{
-//                print("Settings Retrieved")
-//                settingsManager.newSettings = testSettings
-//            } else {
-//                print("Settings not retrieved")
-//            }
             Auth.auth().addStateDidChangeListener { auth, user in
                 if user != nil {
                     sessionManager.currentState = .loggedIn
