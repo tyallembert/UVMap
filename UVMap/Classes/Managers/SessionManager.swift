@@ -30,9 +30,10 @@ class SessionManager: ObservableObject {
     @Published var isError: Bool = false
     @Published var errorMessage: String = ""
     
+    @Published var currentUser: User = User(email: "", firstName: "", lastName: "")
+    
     var username: String = ""
     var password: String = ""
-
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
@@ -82,14 +83,17 @@ class SessionManager: ObservableObject {
             isError = true
             return
         }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        let _ = print("Email: \(email)")
+        let _ = print("Email: \(passwordSU)")
+        Auth.auth().createUser(withEmail: email, password: passwordSU) { result, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
                 self.errorMessage = error.localizedDescription
                 self.isError = true
                 self.currentState = .signUp
             }
+//            database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
+//            self.currentUser = database.getCurrentUser(email: self.email)
             self.afterSignIn()
         }
     }
@@ -126,6 +130,7 @@ class SessionManager: ObservableObject {
                 self.isError = true
                 self.currentState = .loggedOut
             }
+            self.currentUser = database.getCurrentUser(email: self.email)
             self.afterSignIn()
         }
         

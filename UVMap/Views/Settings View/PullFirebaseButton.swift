@@ -23,7 +23,7 @@ struct PullFirebaseButton: View {
                 .alert("Classes Updated Successfully", isPresented: $ensuringUpdate, actions: { })
                 .padding(.top, 20)
                 .padding(.bottom, 20)
-                .frame(width: UIScreen.main.bounds.width/2.2)
+                .frame(width: UIScreen.main.bounds.width/2.4)
                 .backgroundBlur(radius: 25, opaque: true)
                 .background(Color.backgroundGreen)
                 .foregroundColor(.white)
@@ -40,14 +40,14 @@ struct PullFirebaseButton: View {
                 .alert("Buildings Updated Successfully", isPresented: $ensuringUpdate, actions: { })
                 .padding(.top, 20)
                 .padding(.bottom, 20)
-                .frame(width: UIScreen.main.bounds.width/2.2)
+                .frame(width: UIScreen.main.bounds.width/2.4)
                 .backgroundBlur(radius: 25, opaque: true)
                 .background(Color.backgroundGreen)
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .shadow(radius: 3, y: 3)
         }
-        .frame(maxWidth: .infinity)
+//        .frame(maxWidth: .infinity)
     }
                
                
