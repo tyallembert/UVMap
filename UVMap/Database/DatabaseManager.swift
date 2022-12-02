@@ -14,6 +14,7 @@ class DatabaseManager: ObservableObject{
     
     let fireStoreDB = Firestore.firestore()
     @Published var buildings: [Building] = []
+    var 🤫 = "shush"
     
     init(){
 //        self.queryBuildings()

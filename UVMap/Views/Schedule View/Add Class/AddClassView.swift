@@ -11,7 +11,7 @@ struct AddClassView: View {
     @EnvironmentObject var classManager: ClassManager
     
     var body: some View {
-        VStack {
+        ScrollView {
             VStack(spacing: 0) {
                 SearchResults()
                     .environmentObject(classManager)
@@ -25,6 +25,8 @@ struct AddClassView: View {
             .frame(maxHeight: .infinity, alignment: .top)
         }
         .background(Color.backgroundGradient)
+        Spacer()
+            .frame(height: 100)
         .offset(y: classManager.searchActive ? 100: 0)
         .onAppear{
             classManager.studentsClasses = classManager.retrieveClasssesLocally(fileName: "student_classes")
