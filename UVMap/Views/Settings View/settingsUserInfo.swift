@@ -32,12 +32,6 @@ struct settingsUserInfo: View {
         }
         .frame(maxWidth: .infinity)
         .padding(30)
-        .background{
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.backgroundGradient)
-                .shadow(radius: 5, y: 6)
-        }
-        .padding(5)
         .overlay{
             Rectangle()
                 .fill(Color.uvmGreen)
@@ -49,6 +43,16 @@ struct settingsUserInfo: View {
                 .frame(width: 250, height: 5, alignment: .top)
                 .rotationEffect(.degrees(45))
                 .offset(x: UIScreen.main.bounds.width/3, y: -50)
+            Rectangle()
+                .fill(Color.uvmGreen)
+                .frame(width: 250, height: 2, alignment: .top)
+                .rotationEffect(.degrees(45))
+                .offset(x: UIScreen.main.bounds.width/3, y: -60)
+        }
+        .background{
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.backgroundGradient)
+                .padding(3)
         }
         .clipped()
     }

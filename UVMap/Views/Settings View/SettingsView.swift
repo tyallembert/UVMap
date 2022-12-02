@@ -11,16 +11,17 @@ struct SettingsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
-            VStack{
+        VStack(spacing: 0){
                 TitleBar()
                     .frame(height: 120)
                 
                 ScrollView {
                     settingsUserInfo()
-                        .padding(20)
                         .frame(alignment: .center)
                         .environmentObject(sessionManager)
                         .zIndex(1)
+                        .shadow(radius: 5, y: 6)
+                        .padding(10)
                     
                     VStack(alignment: .leading, spacing: 20){
                         VStack(alignment: .leading, spacing: 2){
@@ -60,16 +61,17 @@ struct SettingsView: View {
                         }
                         .frame(maxWidth: .infinity)
                         Spacer()
+                            .frame(height: 50)
                     }
                     .offset(y: -10)
                     .padding()
+                    .frame(width: UIScreen.main.bounds.width*0.9)
                     .background{
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color.backgroundGradient)
                             .offset(y:-20)
                     }
                 }
-                .padding(5)
             }
         }
     }

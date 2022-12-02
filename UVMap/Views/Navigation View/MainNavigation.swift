@@ -44,5 +44,6 @@ struct MainNavigation: View {
 struct MainNavigation_Previews: PreviewProvider {
     static var previews: some View {
         MainNavigation()
+            .environmentObject(SessionManager())
     }
 }
