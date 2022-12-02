@@ -13,6 +13,8 @@ struct MainNavigation: View {
     @StateObject var mapManager: MapManager = MapManager()
     @StateObject var settingsManager: SettingsManager = SettingsManager()
     
+    @State var opacity = 0.0
+    
     var body: some View {
         ZStack{
             switch sessionManager.selectedNavElement {
@@ -38,6 +40,12 @@ struct MainNavigation: View {
             }
             // Style of Nav Bar
             NavigationBar()
+        }
+        .opacity(opacity)
+        .onAppear {
+            withAnimation(.easeIn(duration: 0.5)) {
+                opacity += 1.0
+            }
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoadingView: View {
+    @State var opacity = 0.0
+    
     var body: some View {
         VStack {
             Image("AppIconTransparent")
@@ -17,6 +19,13 @@ struct LoadingView: View {
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color.uvmGreen)
+        
+        .opacity(opacity)
+        .onAppear {
+            withAnimation(.easeIn(duration: 0.5)) {
+                opacity += 1.0
+            }
+        }
     }
 }
 

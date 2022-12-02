@@ -17,11 +17,8 @@ struct ContentView: View {
         VStack{
             switch sessionManager.currentState {
             case .loggedIn:
-                withAnimation(.easeInOut(duration: 2.0)){
-                    MainNavigation()
-                        .transition(.opacity)
-                        .environmentObject(sessionManager)
-                }
+                MainNavigation()
+                    .transition(.opacity)
             case .loggedOut:
                 LoginView()
                     .transition(.opacity)
@@ -30,10 +27,8 @@ struct ContentView: View {
                     .transition(.opacity)
             default:
                 // Splash Screen
-                withAnimation(.easeInOut(duration: 2.0)){
                     LoadingView()
-                        .transition(.opacity)
-                }
+                    .transition(.opacity)
             }
         }
         .onAppear{

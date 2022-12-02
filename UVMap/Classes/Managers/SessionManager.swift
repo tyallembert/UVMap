@@ -126,6 +126,7 @@ class SessionManager: ObservableObject {
                 self.isError = true
                 self.currentState = .loggedOut
             }
+            Thread.sleep(forTimeInterval: 0.5)
             self.afterSignIn()
         }
         
