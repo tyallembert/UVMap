@@ -11,20 +11,43 @@ struct PullFirebaseButton: View {
     
     @State private var ensuringUpdate = false
     var body: some View {
-        Button{
-            ensuringUpdate = true
-//            Text(ensuringUpdate ? "Sorry, too late." : "Please enter above.")
-//            .onAppear(perform: updateClasses)
-        } label: {
-            Label("Update Classes", systemImage: "tray.and.arrow.down.fill")
+        HStack {
+            Button{
+                ensuringUpdate = true
+    //            Text(ensuringUpdate ? "Sorry, too late." : "Please enter above.")
+    //            .onAppear(perform: updateClasses)
+            } label: {
+                Label("Update Classes", systemImage: "tray.and.arrow.down.fill")
+                    .font(.system(size: 15))
+            }
+                .alert("Classes Updated Successfully", isPresented: $ensuringUpdate, actions: { })
+                .padding(.top, 20)
+                .padding(.bottom, 20)
+                .frame(width: UIScreen.main.bounds.width/2.2)
+                .backgroundBlur(radius: 25, opaque: true)
+                .background(Color.backgroundGreen)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .shadow(radius: 3, y: 3)
+            Button{
+                ensuringUpdate = true
+    //            Text(ensuringUpdate ? "Sorry, too late." : "Please enter above.")
+    //            .onAppear(perform: updateClasses)
+            } label: {
+                Label("Update Building", systemImage: "tray.and.arrow.down")
+                    .font(.system(size: 15))
+            }
+                .alert("Buildings Updated Successfully", isPresented: $ensuringUpdate, actions: { })
+                .padding(.top, 20)
+                .padding(.bottom, 20)
+                .frame(width: UIScreen.main.bounds.width/2.2)
+                .backgroundBlur(radius: 25, opaque: true)
+                .background(Color.backgroundGreen)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .shadow(radius: 3, y: 3)
         }
-        .alert("Classes Updated Successfully", isPresented: $ensuringUpdate, actions: { })
-        .padding()
-            .backgroundBlur(radius: 25, opaque: true)
-            .background(Color.backgroundGreen)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .shadow(radius: 5)
+        .frame(maxWidth: .infinity)
     }
                
                

@@ -11,51 +11,66 @@ struct SettingsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
-        ZStack(alignment: .trailing){
-            
             VStack{
                 TitleBar()
-//                    .padding(.top)
-                    .frame(height: 150)
-                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: 120)
                 
-                VStack(alignment: .leading, spacing: 15) {
+                ScrollView {
+                    settingsUserInfo()
+                        .padding(20)
+                        .frame(alignment: .center)
+                        .environmentObject(sessionManager)
+                        .zIndex(1)
                     
-                    VStack(alignment: .leading, spacing: 10){
-                        Text("How early do you like to arrive to class?")
-                            .font(.title3)
-                        
-                        ArriveShell()
-                            .environmentObject(settingsManager)
-                    }
-                    VStack(alignment: .leading, spacing: 10){
-                        Text("Prioritize Schedule?")
-                            .font(.title3)
-                        PrioritizeSchedule()
-                            .environmentObject(settingsManager)
-                    }
-                    VStack(alignment: .leading, spacing: 10){
-                        Text("Theme")
-                            .font(.title3)
-                        ThemePicker()
-                            .environmentObject(settingsManager)
-                    }
-                    Spacer()
-                    VStack(alignment: .leading, spacing: 20) {
+                    VStack(alignment: .leading, spacing: 20){
+                        VStack(alignment: .leading, spacing: 2){
+                            Text("Preferred Arrival Time")
+                                .padding(.leading, 10)
+                                .font(.system(size: 18, weight: .semibold))
+                            ArriveShell()
+                                .environmentObject(settingsManager)
+                        }
+                        Divider()
+                            .overlay(Color.gray)
+                        VStack(alignment: .leading, spacing: 2){
+                            Text("Prioritize Schedule?")
+                                .padding(.leading, 10)
+                                .font(.system(size: 18, weight: .semibold))
+                            PrioritizeSchedule()
+                                .environmentObject(settingsManager)
+                        }
+                        Divider()
+                            .overlay(Color.gray)
+                        VStack(alignment: .leading, spacing: 2){
+                            Text("Theme")
+                                .padding(.leading, 10)
+                                .font(.system(size: 18, weight: .semibold))
+                            ThemePicker()
+                                .environmentObject(settingsManager)
+                        }
+                        Divider()
+                            .overlay(Color.gray)
                         PullFirebaseButton()
                             .environmentObject(sessionManager)
+                        Divider()
+                            .overlay(Color.gray)
+                        VStack(alignment: .center) {
+                            SignOutButton()
+                                .environmentObject(sessionManager)
+                        }
+                        .frame(maxWidth: .infinity)
+                        Spacer()
                     }
-                    VStack(alignment: .leading, spacing: 20) {
-                        SignOutButton()
-                            .environmentObject(sessionManager)
+                    .offset(y: -10)
+                    .padding()
+                    .background{
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.backgroundGradient)
+                            .offset(y:-20)
                     }
-                    Spacer()
-                    
-                }.padding()
+                }
+                .padding(5)
             }
-            
-        }
-        .background(Color.backgroundLighter)
         }
     }
 
@@ -63,7 +78,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environment(\.colorScheme, .dark)
+//            .environment(\.colorScheme, .dark)
             .environmentObject(SettingsManager())
             .environmentObject(SessionManager())
     }

@@ -13,7 +13,8 @@ struct HowEarlyDropDown: View {
     
     var body: some View {
         VStack {
-            Picker(selection: $settingsManager.currentSettings.howEarly, label: Text("How early do you want to arrive to class?")) {
+            Picker(selection: $settingsManager.currentSettings.howEarly)
+            {
                 Text("1").tag(1)
                 Text("2").tag(2)
                 Text("3").tag(3)
@@ -24,16 +25,22 @@ struct HowEarlyDropDown: View {
                 Text("20").tag(20)
                 Text("25").tag(25)
                 Text("30").tag(30)
+            }label: {
+                Text("How early do you want to arrive to class?")
             }
-        }.padding()
+        }
+            .padding()
+            .scaleEffect(0.9)
+            .frame(width: 92, height: 40)
             .background(Color.backgroundLighter)
             .accentColor(Color.textGreenWhite)
-            .frame(width:150, height: 50)            
+//            .frame(width:150, height: 30)
     }
 }
 
-//struct HowEarlyDropDown_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HowEarlyDropDown(howEarly: $howEarly)//.environment(\.colorScheme, .dark)
-//    }
-//}
+struct HowEarlyDropDown_Previews: PreviewProvider {
+    static var previews: some View {
+        HowEarlyDropDown()//.environment(\.colorScheme, .dark)
+            .environmentObject(SettingsManager())
+    }
+}
