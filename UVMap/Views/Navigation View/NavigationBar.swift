@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationBar: View {
     @EnvironmentObject var sessionManager: SessionManager
-    var tabBarImageNames = ["calendar", "house.fill", "person"]
+    var tabBarImageNames = ["calendar", "map.fill", "person"]
     var body: some View {
         VStack {
             Spacer()

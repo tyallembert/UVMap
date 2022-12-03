@@ -17,7 +17,7 @@ struct PullFirebaseButton: View {
     //            Text(ensuringUpdate ? "Sorry, too late." : "Please enter above.")
     //            .onAppear(perform: updateClasses)
             } label: {
-                Label("Update Classes", systemImage: "tray.and.arrow.down.fill")
+                Label("Update Classes", systemImage: "arrow.triangle.2.circlepath")
                     .font(.system(size: 15))
             }
                 .alert("Classes Updated Successfully", isPresented: $ensuringUpdate, actions: { })
@@ -34,7 +34,7 @@ struct PullFirebaseButton: View {
     //            Text(ensuringUpdate ? "Sorry, too late." : "Please enter above.")
     //            .onAppear(perform: updateClasses)
             } label: {
-                Label("Update Building", systemImage: "tray.and.arrow.down")
+                Label("Update Buildings", systemImage: "building.fill")
                     .font(.system(size: 15))
             }
                 .alert("Buildings Updated Successfully", isPresented: $ensuringUpdate, actions: { })
