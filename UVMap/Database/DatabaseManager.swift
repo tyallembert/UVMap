@@ -25,11 +25,6 @@ class DatabaseManager: ObservableObject{
     //      ===User Functions===
     // --------------------------------
     func signUp(firstName: String, lastName: String, email: String, password: String, retypePassword: String) {
-//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//        }
         
         let ref = fireStoreDB.collection("userInfo").document()
         ref.setData(["email": email, "firstName": firstName, "lastName": lastName]) {error in
