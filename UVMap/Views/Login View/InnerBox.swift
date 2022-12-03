@@ -32,7 +32,7 @@ struct InnerBox: View {
                 sessionManager.currentState = .signUp
             }label:{
                 VStack {
-                    Text("Sign-up")
+                    Text("Sign up")
                         .underline()
                 }
             }
