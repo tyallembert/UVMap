@@ -21,6 +21,7 @@ struct SignUpView: View {
                     SignUpInnerBoxes()
                 }
                     .padding(20)
+                    .padding(.bottom, 20)
                     .background(Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255).opacity(0.7))
                     .cornerRadius(20)
                     .frame(width: 310)
