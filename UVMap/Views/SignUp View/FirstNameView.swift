@@ -16,7 +16,11 @@ struct FirstNameView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            TextField("", text: $sessionManager.firstName, prompt: Text("First Name"))
+            TextField("",
+                      text: $sessionManager.firstName,
+                      prompt: Text("First Name")
+                        .foregroundColor(Color.gray)
+            )
                 .onTapGesture {
                     withAnimation{
                         sessionManager.firstNameInFocus = true

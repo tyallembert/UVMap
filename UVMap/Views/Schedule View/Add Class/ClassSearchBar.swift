@@ -47,5 +47,6 @@ struct ClassSearchBar: View {
 struct ClassSearchBar_Previews: PreviewProvider {
     static var previews: some View {
         ClassSearchBar()
+            .environmentObject(ClassManager())
     }
 }

@@ -19,7 +19,7 @@ struct ScheduleView: View {
             VStack {
                 TitleBarSchedule()
                     .ignoresSafeArea()
-                    .frame(height: 100)
+                    .frame(height: 120)
                 DaysTemplate()
 //                    .frame(height: 60)
                 ScheduleChart()

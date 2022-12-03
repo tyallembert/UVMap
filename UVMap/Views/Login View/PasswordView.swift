@@ -14,7 +14,7 @@ struct PasswordView: View {
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color.backgroundGreen)
-        SecureField("", text: $sessionManager.password)
+        SecureTextField(password: $sessionManager.password)
             .onTapGesture {
                 withAnimation{
                     sessionManager.passwordInFocus = true

@@ -11,8 +11,10 @@ struct ErrorMessage: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {
         Text(sessionManager.errorMessage)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .center)
             .foregroundColor(.white)
-            .padding()
+            .padding(10)
             .background(Color.red)
             .cornerRadius(10)
             .offset(y: 20)

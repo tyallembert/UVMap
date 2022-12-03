@@ -12,22 +12,23 @@ struct LoginButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager
     
+    var icon: String = "checkmark.circle.fill"
+    
     var body: some View {
         Button {
             sessionManager.currentState = .loading
             sessionManager.signIn(database: databaseManager)
             
-        } label:{
-            Text("Log-in")
-                .font(.title2)
-                .fontWeight(.heavy)
-                .foregroundColor(.white)
-                .padding()
-                .frame(width: 200)
-                .background(Color("AccentColor"))
-                .cornerRadius(10)
-                .shadow(color: .black, radius: 3, x: 2, y: 3)
+        } label: {
+            Label("Sign in", systemImage: icon)
         }
+        .font(.title2)
+        .padding(20)
+        .frame(width: 170, height: 60)
+        .foregroundColor(Color.white)
+        .background(Color.uvmGreen)
+        .border(Color.uvmGreen, width: 5)
+        .clipShape(Capsule())
     }
 }
 

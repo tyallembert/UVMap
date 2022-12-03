@@ -14,7 +14,7 @@ struct ContentView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     
     var body: some View {
-        VStack{
+        VStack {
             switch sessionManager.currentState {
             case .loggedIn:
                 withAnimation(.easeInOut(duration: 2.0)){
@@ -32,7 +32,7 @@ struct ContentView: View {
                 // Splash Screen
                 LoadingView()
                     .transition(
-                        withAnimation(.easeInOut(duration: 10.0)){
+                        withAnimation(.easeInOut(duration: 2.0)){
                             .opacity
                         }
                     )
@@ -40,15 +40,9 @@ struct ContentView: View {
         }
         .onAppear{
             Auth.auth().addStateDidChangeListener { auth, user in
-                if user != nil {
+                if let user = user {
+                    databaseManager.getCurrentUser(email: user.email!, sessionManager: sessionManager)
                     sessionManager.currentState = .loggedIn
-                    
-//                    if let testSettings = settingsManager.retrieveSettingsLocally(fileName:"settings"){// ?? settingsManager.init{
-//                        print("Settings Retrieved")
-//                        settingsManager.newSettings = testSettings
-//                    } else {
-//                        print("Settings not retrieved")
-//                    }
                 } else {
                     sessionManager.currentState = .loggedOut
                 }

@@ -14,7 +14,11 @@ struct UsernameView: View {
             .fontWeight(.medium)
             .offset(x: 8, y: 12)
             .foregroundColor(Color.backgroundGreen)
-        TextField("", text: $sessionManager.username)
+        TextField("",
+                  text: $sessionManager.username,
+                  prompt: Text("@uvm.edu")
+                    .foregroundColor(Color.gray)
+        )
             .onTapGesture {
                 withAnimation{
                     sessionManager.usernameInFocus = true

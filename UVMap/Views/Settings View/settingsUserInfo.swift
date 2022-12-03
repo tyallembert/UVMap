@@ -20,24 +20,20 @@ struct settingsUserInfo: View {
                         .stroke(Color.textGreenWhite, lineWidth: 3)
                         .backgroundBlur(radius: 20, opaque: false)
                 }
-            Text("John")
-                .font(.system(size: 30, weight: .semibold))
-                .foregroundColor(Color.textGreenWhite)
-            Text("Doe")
-                .font(.system(size: 20, weight: .semibold))
-                .foregroundColor(Color.textGreenWhite)
-            Text("netid@uvm.edu")
+            HStack {
+                Text(sessionManager.currentUser.firstName)
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(Color.textGreenWhite)
+                Text(sessionManager.currentUser.lastName)
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(Color.textGreenWhite)
+            }
+            Text(sessionManager.currentUser.email)
                 .font(.system(size: 15, weight: .medium))
                 .foregroundColor(Color.textGreenWhite)
         }
         .frame(maxWidth: .infinity)
         .padding(30)
-        .background{
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.backgroundGradient)
-                .shadow(radius: 5, y: 6)
-        }
-        .padding(5)
         .overlay{
             Rectangle()
                 .fill(Color.uvmGreen)
@@ -49,6 +45,16 @@ struct settingsUserInfo: View {
                 .frame(width: 250, height: 5, alignment: .top)
                 .rotationEffect(.degrees(45))
                 .offset(x: UIScreen.main.bounds.width/3, y: -50)
+            Rectangle()
+                .fill(Color.uvmGreen)
+                .frame(width: 250, height: 2, alignment: .top)
+                .rotationEffect(.degrees(45))
+                .offset(x: UIScreen.main.bounds.width/3, y: -60)
+        }
+        .background{
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.backgroundGradient)
+                .padding(3)
         }
         .clipped()
     }
@@ -57,5 +63,6 @@ struct settingsUserInfo: View {
 struct settingsUserInfo_Previews: PreviewProvider {
     static var previews: some View {
         settingsUserInfo()
+            .environmentObject(SessionManager())
     }
 }
