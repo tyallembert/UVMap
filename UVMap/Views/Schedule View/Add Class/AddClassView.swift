@@ -39,5 +39,6 @@ struct AddClassView: View {
 struct AddClassView_Previews: PreviewProvider {
     static var previews: some View {
         AddClassView()
+            .environmentObject(ClassManager())
     }
 }

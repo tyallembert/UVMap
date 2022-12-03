@@ -16,7 +16,7 @@ struct SignUpPasswordView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            SecureField("", text: $sessionManager.passwordSU, prompt: Text("Password"))
+            SecureTextField(password: $sessionManager.passwordSU)
                 .onTapGesture {
                     withAnimation{
                         sessionManager.firstNameInFocus = false

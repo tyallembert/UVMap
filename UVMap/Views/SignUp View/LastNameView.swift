@@ -16,7 +16,11 @@ struct LastNameView: View {
                 .fontWeight(.medium)
                 .offset(x: 8, y: 12)
                 .foregroundColor(Color.backgroundGreen)
-            TextField("", text: $sessionManager.lastName, prompt: Text("Last Name"))
+            TextField("",
+                      text: $sessionManager.lastName,
+                      prompt: Text("Last Name")
+                        .foregroundColor(Color.gray)
+            )
                 .onTapGesture {
                     withAnimation{
                         sessionManager.firstNameInFocus = false

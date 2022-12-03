@@ -12,28 +12,33 @@ struct SignUpInnerBoxes: View {
     
     var body: some View {
         VStack {
-                HStack {
-                    FirstNameView()
-                    Spacer()
-                        .frame(width: 10)
-                    LastNameView()
-                }
-                EmailView()
-                SignUpPasswordView()
-                SignUpRetypePasswordView()
+            if sessionManager.isErrorSignUp {
+                ErrorMessage()
+            }
+            Spacer()
+                .frame(height: 10)
+            HStack {
+                FirstNameView()
                 Spacer()
-                    .frame(height: 20)
-                SignUpButton()
-                Spacer()
-                    .frame(height: 30)
-                Button {
-                    sessionManager.currentState = .loggedOut
-                } label: {
-                    VStack {
-                        Text("Log-in")
-                            .underline()
-                    }
+                    .frame(width: 10)
+                LastNameView()
+            }
+            EmailView()
+            SignUpPasswordView()
+            SignUpRetypePasswordView()
+            Spacer()
+                .frame(height: 20)
+            SignUpButton()
+            Spacer()
+                .frame(height: 20)
+            Button {
+                sessionManager.currentState = .loggedOut
+            } label: {
+                VStack {
+                    Text("Log-in")
+                        .underline()
                 }
+            }
         }
             .padding(20)
             .frame(height: 480)

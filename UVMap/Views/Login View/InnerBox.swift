@@ -12,7 +12,7 @@ struct InnerBox: View {
     
     var body: some View {
         VStack{//inner box
-            if sessionManager.isError {
+            if sessionManager.isErrorLogIn {
                 ErrorMessage()
             }
             VStack(alignment: .leading) {
@@ -27,7 +27,7 @@ struct InnerBox: View {
                 .frame(height: 20)
             LoginButton()
             Spacer()
-                .frame(height: 30)
+                .frame(height: 20)
             Button{
                 sessionManager.currentState = .signUp
             }label:{
@@ -37,7 +37,7 @@ struct InnerBox: View {
                 }
             }
         }
-        .padding(20)
+        .padding(15)
         .frame(height: 350)
         .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
         .cornerRadius(25)

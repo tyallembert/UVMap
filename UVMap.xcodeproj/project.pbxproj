@@ -14,6 +14,7 @@
 		049E3F7C291D920F003D8ACB /* EndRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E3F7B291D920F003D8ACB /* EndRouteButton.swift */; };
 		049E3F7D291E14DE003D8ACB /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78EE8E28DE1F4400306D58 /* MainMapView.swift */; };
 		04E4D01D2925367300DB02EB /* EtaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D01C2925367300DB02EB /* EtaButton.swift */; };
+		275F8550293B13CD0086B9F7 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F854F293B13CD0086B9F7 /* SecureTextField.swift */; };
 		3F44558B28F5BB1600F06DD3 /* PrioritizeSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */; };
 		3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */; };
 		3F4E9F6128F85C0A00815202 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E9F6028F85C0A00815202 /* ThemePicker.swift */; };
@@ -130,6 +131,7 @@
 		045AFA43293511A800DA0229 /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		049E3F7B291D920F003D8ACB /* EndRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRouteButton.swift; sourceTree = "<group>"; };
 		04E4D01C2925367300DB02EB /* EtaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtaButton.swift; sourceTree = "<group>"; };
+		275F854F293B13CD0086B9F7 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		3F44558A28F5BB1600F06DD3 /* PrioritizeSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritizeSchedule.swift; sourceTree = "<group>"; };
 		3F44558E28F5BE1600F06DD3 /* HowEarlyDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowEarlyDropDown.swift; sourceTree = "<group>"; };
 		3F4E9F6028F85C0A00815202 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */,
 				4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */,
 				4C7859E9291D880200C0C2F7 /* SignUpView.swift */,
+				275F854F293B13CD0086B9F7 /* SecureTextField.swift */,
 			);
 			path = "SignUp View";
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				4C7859EF291D880200C0C2F7 /* LastNameView.swift in Sources */,
 				500DC3AA28EA0E8B0085A130 /* ClassShell.swift in Sources */,
 				4C78EE9728DF652E00306D58 /* ScheduleView.swift in Sources */,
+				275F8550293B13CD0086B9F7 /* SecureTextField.swift in Sources */,
 				3F44558F28F5BE1600F06DD3 /* HowEarlyDropDown.swift in Sources */,
 				50622B8628EC79E100B42A3F /* TuesdayScheduleMenu.swift in Sources */,
 				4C78EE9528DF650D00306D58 /* SettingsView.swift in Sources */,
