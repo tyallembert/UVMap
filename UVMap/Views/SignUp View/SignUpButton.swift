@@ -20,7 +20,7 @@ struct SignUpButton: View {
             sessionManager.signIn(database: databaseManager)
             
         } label: {
-            Label("Sign-up", systemImage: icon)
+            Label("Sign up", systemImage: icon)
         }
         .font(.title2)
         .padding(20)

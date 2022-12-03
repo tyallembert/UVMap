@@ -12,7 +12,7 @@ struct LoginButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager
     
-    var icon = "rectangle.portrait.and.arrow.right.fill"
+    var icon: String = "checkmark.circle.fill"
     
     var body: some View {
         Button {
@@ -20,7 +20,7 @@ struct LoginButton: View {
             sessionManager.signIn(database: databaseManager)
             
         } label: {
-            Label("Log-in", systemImage: icon)
+            Label("Sign in", systemImage: icon)
         }
         .font(.title2)
         .padding(20)

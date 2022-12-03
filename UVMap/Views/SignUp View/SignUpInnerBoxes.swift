@@ -35,7 +35,7 @@ struct SignUpInnerBoxes: View {
                 sessionManager.currentState = .loggedOut
             } label: {
                 VStack {
-                    Text("Log-in")
+                    Text("Sign in")
                         .underline()
                 }
             }
