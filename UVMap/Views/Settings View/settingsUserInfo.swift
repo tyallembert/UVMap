@@ -20,12 +20,14 @@ struct settingsUserInfo: View {
                         .stroke(Color.textGreenWhite, lineWidth: 3)
                         .backgroundBlur(radius: 20, opaque: false)
                 }
-            Text(sessionManager.currentUser.firstName)
-                .font(.system(size: 30, weight: .semibold))
-                .foregroundColor(Color.textGreenWhite)
-            Text(sessionManager.currentUser.lastName)
-                .font(.system(size: 20, weight: .semibold))
-                .foregroundColor(Color.textGreenWhite)
+            HStack {
+                Text(sessionManager.currentUser.firstName)
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(Color.textGreenWhite)
+                Text(sessionManager.currentUser.lastName)
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundColor(Color.textGreenWhite)
+            }
             Text(sessionManager.currentUser.email)
                 .font(.system(size: 15, weight: .medium))
                 .foregroundColor(Color.textGreenWhite)

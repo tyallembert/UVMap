@@ -42,51 +42,59 @@ class SessionManager: ObservableObject {
     var confirmPassword: String = ""
    
     func signUp(database: DatabaseManager) {
-        if firstName.isEmpty {
-            self.currentState = .signUp
-            errorMessage = "First Name is empty"
-            isErrorSignUp = true
-            return
-        }
-        if lastName.isEmpty {
-            self.currentState = .signUp
-            errorMessage = "Last Name is empty"
-            isErrorSignUp = true
-            return
-        }
-        if email.isEmpty {
-            self.currentState = .signUp
-            errorMessage = "Email is empty"
-            isErrorSignUp = true
-            return
-        }
-        if !email.contains("@uvm.edu") {
-            self.currentState = .signUp
-            errorMessage = "Email not in correct UVM format"
-            isErrorSignUp = true
-            return
-        }
-        if passwordSU.isEmpty {
-            self.currentState = .signUp
-            errorMessage = "Password is empty"
-            isErrorSignUp = true
-            return
-        }
-        if confirmPassword.isEmpty {
-            self.currentState = .signUp
-            errorMessage = "Confirm Password is empty"
-            isErrorSignUp = true
-            return
-        }
-        if passwordSU != confirmPassword {
-            self.currentState = .signUp
-            errorMessage = "Passwords don't match"
-            isErrorSignUp = true
-            return
-        }
+        firstNameInFocus = false
+        lastNameInFocus = false
+        emailInFocus = false
+        passwordSUInFocus = false
+        confirmPasswordInFocus = false
         
-        if self.currentState == .signUp || self.currentState == .loggedOut {
-            self.clearInputFields()
+        if self.currentState == .signUp {
+            if firstName.isEmpty {
+                self.currentState = .signUp
+                errorMessage = "First Name is empty"
+                isErrorSignUp = true
+                return
+            }
+            if lastName.isEmpty {
+                self.currentState = .signUp
+                errorMessage = "Last Name is empty"
+                isErrorSignUp = true
+                return
+            }
+            if email.isEmpty {
+                self.currentState = .signUp
+                errorMessage = "Email is empty"
+                isErrorSignUp = true
+                return
+            }
+            if !email.contains("@uvm.edu") {
+                self.currentState = .signUp
+                errorMessage = "Email not in correct UVM format"
+                isErrorSignUp = true
+                return
+            }
+            if passwordSU.isEmpty {
+                self.currentState = .signUp
+                errorMessage = "Password is empty"
+                isErrorSignUp = true
+                return
+            }
+            if confirmPassword.isEmpty {
+                self.currentState = .signUp
+                errorMessage = "Confirm Password is empty"
+                isErrorSignUp = true
+                return
+            }
+            if passwordSU != confirmPassword {
+                self.currentState = .signUp
+                errorMessage = "Passwords don't match"
+                isErrorSignUp = true
+                return
+            }
+            
+            if self.currentState == .signUp || self.currentState == .loggedOut {
+                self.clearInputFields()
+            }
         }
         
         let _ = print("Email: \(email)")
@@ -99,6 +107,11 @@ class SessionManager: ObservableObject {
                 self.currentState = .signUp
             }
             database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
+            
+            self.currentUser.email = self.email
+            self.currentUser.firstName = self.firstName
+            self.currentUser.lastName = self.lastName
+            
             self.afterSignIn()
         }
     }
@@ -114,19 +127,21 @@ class SessionManager: ObservableObject {
     }
  
     func signIn(database: DatabaseManager){
-    usernameInFocus = false
-    passwordInFocus = false
-        if username.isEmpty {
-            errorMessage = "Email is empty"
-            isErrorLogIn = true
-            self.currentState = .loggedOut
-            return
-        }
-        if password.isEmpty {
-            errorMessage = "Password is empty"
-            isErrorLogIn = true
-            self.currentState = .loggedOut
-            return
+        usernameInFocus = false
+        passwordInFocus = false
+        if self.currentState == .loggedOut {
+            if username.isEmpty {
+                errorMessage = "Email is empty"
+                isErrorLogIn = true
+                self.currentState = .loggedOut
+                return
+            }
+            if password.isEmpty {
+                errorMessage = "Password is empty"
+                isErrorLogIn = true
+                self.currentState = .loggedOut
+                return
+            }
         }
         Auth.auth().signIn(withEmail: username, password: password) { result, error in
             if let error = error {
@@ -135,6 +150,11 @@ class SessionManager: ObservableObject {
                 self.isErrorLogIn = true
                 self.currentState = .loggedOut
             }
+            
+            self.currentUser.email = self.username
+            self.currentUser.firstName = self.firstName
+            self.currentUser.lastName = self.lastName
+            
             self.afterSignIn()
         }
         
