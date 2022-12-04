@@ -10,7 +10,7 @@ import BottomSheet
 enum BottomSheetPosition: CGFloat, CaseIterable {
     case top = 0.75 //633/844
     case middle = 0.415 //350/844
-    case bottom = 0.230 //325/844
+    case bottom = 0.290 //325/844
 }
 
 struct MainMapView: View {

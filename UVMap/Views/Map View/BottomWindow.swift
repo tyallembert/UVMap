@@ -114,5 +114,3 @@ struct BottomWindow: View {
 //            .preferredColorScheme(.dark)
 //    }
 //}
-
-

@@ -26,7 +26,6 @@ struct TheMap: View {
                 ViewMapAnnotation(coordinate: location.coordinate){
                     BuildingAnnotation()
                         .scaleEffect(mapManager.activeBuilding == location ? 1.4 : 1.0)
-                    //                        .opacity(mapManager.activeBuilding == location ? 1 : 0.7)
                         .animation(.spring(), value: mapManager.activeBuilding)
                         .environmentObject(mapManager)
                         .environmentObject(location)
