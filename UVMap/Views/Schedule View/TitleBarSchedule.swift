@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the top menu bar of the class schedule page
 struct TitleBarSchedule: View {
     
    @State var title = "Schedule"

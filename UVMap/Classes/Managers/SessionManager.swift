@@ -15,6 +15,7 @@ class SessionManager: ObservableObject {
     }
     
   
+    // declare sessionManager fields for the current session of the app
     @Published var selectedNavElement = 1
     @Published var currentState: CurrentState?
     
@@ -41,6 +42,7 @@ class SessionManager: ObservableObject {
     var passwordSU: String = ""
     var confirmPassword: String = ""
     
+    // function to handle user sign up authentication
     func signUp(database: DatabaseManager) {
         firstNameInFocus = false
         lastNameInFocus = false
@@ -48,6 +50,7 @@ class SessionManager: ObservableObject {
         passwordSUInFocus = false
         confirmPasswordInFocus = false
         
+        // ensure the fields are all populated correctly
         if firstName.isEmpty {
             self.currentState = .signUp
             errorMessage = "First Name is empty"
@@ -98,6 +101,8 @@ class SessionManager: ObservableObject {
         
         let _ = print("Email: \(email)")
         let _ = print("Email: \(passwordSU)")
+        
+        // add user to the FireBase database
         Auth.auth().createUser(withEmail: email, password: passwordSU) { result, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
@@ -114,6 +119,8 @@ class SessionManager: ObservableObject {
             self.afterSignIn()
         }
     }
+    
+    // function handling the sign out process
     func signOut() {
         do {
             try Auth.auth().signOut()
@@ -125,9 +132,12 @@ class SessionManager: ObservableObject {
         
     }
  
+    // function handling sign in process for an existing user
     func signIn(database: DatabaseManager){
         usernameInFocus = false
         passwordInFocus = false
+        
+        // ensure fields are populated correctly
         if username.isEmpty {
             errorMessage = "Got here"
             isErrorLogIn = true
@@ -140,6 +150,8 @@ class SessionManager: ObservableObject {
             self.currentState = .loggedOut
             return
         }
+        
+        // ensure user exists in FireBase database already, and make sure sign in info is correct
         Auth.auth().signIn(withEmail: username, password: password) { result, error in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
@@ -158,6 +170,7 @@ class SessionManager: ObservableObject {
         
     }
     
+    // after sign in, change view
     func afterSignIn() {
         self.currentState = .loggedIn
         // Defaults this back to MapView
@@ -165,6 +178,8 @@ class SessionManager: ObservableObject {
         // Clears all input boxses
         clearPasswords()
     }
+    
+    // the two following functions clear the input fields for sign up and sign in fields
     func clearPasswords() {
         passwordSU = ""
         confirmPassword = ""

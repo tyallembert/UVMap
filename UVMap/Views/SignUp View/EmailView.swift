@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// change
+// the email text field of the sign up
 struct EmailView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

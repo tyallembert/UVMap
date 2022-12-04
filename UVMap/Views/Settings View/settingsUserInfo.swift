@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the displaying the user's information at the top of the settings page
 struct settingsUserInfo: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {

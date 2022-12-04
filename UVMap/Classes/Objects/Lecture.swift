@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 
+// this class describes a Lecture object
 class Lecture: NSObject, Identifiable {
     var name: String        // EX: CS 275
     var time: String        // EX: 8:30am - 9:20am

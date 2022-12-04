@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// view for the splash screen to make transitions between views smoother
 struct LoadingView: View {
     var body: some View {
         VStack {

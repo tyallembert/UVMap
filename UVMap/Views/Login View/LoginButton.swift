@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// the view of the log in button for the log in page
 struct LoginButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager

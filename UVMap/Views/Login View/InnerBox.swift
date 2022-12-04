@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// this view organizes the inner components of the log in view
 struct InnerBox: View {
     @EnvironmentObject var sessionManager: SessionManager
     

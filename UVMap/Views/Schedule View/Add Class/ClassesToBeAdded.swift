@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the selected classes that will be added to your schedule
 struct ClassesToBeAdded: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {

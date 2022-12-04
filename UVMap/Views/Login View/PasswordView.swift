@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the password input field
 struct PasswordView: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {

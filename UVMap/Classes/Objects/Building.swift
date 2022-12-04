@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 
+// this class describes a Building object
 class Building: NSObject, Identifiable, MKAnnotation, ObservableObject, Codable {
     enum CodingKeys: CodingKey {
         case id

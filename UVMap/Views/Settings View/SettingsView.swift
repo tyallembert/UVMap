@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the entire settings view
 struct SettingsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @EnvironmentObject var sessionManager: SessionManager

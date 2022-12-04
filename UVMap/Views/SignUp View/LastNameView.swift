@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the last name text field
 struct LastNameView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// this class describes a Class object
 class SingleClass: Codable, Identifiable, ObservableObject {
     enum CodingKeys: CodingKey {
         case CRN

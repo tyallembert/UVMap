@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the entire sign up view
 struct SignUpView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
