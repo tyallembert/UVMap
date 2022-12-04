@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for how the resultant classes look when you search
 struct SearchResults: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {

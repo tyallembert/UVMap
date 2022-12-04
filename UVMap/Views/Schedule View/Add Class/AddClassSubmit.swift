@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the button to add to your schedule
 struct AddClassSubmit: View {
     @EnvironmentObject var classManager: ClassManager
     @EnvironmentObject var sessionManager: SessionManager

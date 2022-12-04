@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// the view for the top bar
 struct TitleBar: View {
     var body: some View {
         VStack{

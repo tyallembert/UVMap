@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the drop down menu for how early you'd like to arrive to class
 struct HowEarlyDropDown: View {
     @EnvironmentObject var settingsManager: SettingsManager
     

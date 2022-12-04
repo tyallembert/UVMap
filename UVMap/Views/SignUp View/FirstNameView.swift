@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the first name text field
 struct FirstNameView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// making the password input fields secure and having show/hide button for what's inputted
 struct SecureTextField: View {
     
     @State var isSecureField: Bool = true

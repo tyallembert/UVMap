@@ -49,7 +49,6 @@
 		4C434D74290C25FD005BB4F6 /* TopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C434D73290C25FD005BB4F6 /* TopSchedule.swift */; };
 		4C47B7A329082B2700C5DE09 /* all_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A229082B2700C5DE09 /* all_classes.json */; };
 		4C47B7A52909863F00C5DE09 /* student_classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C47B7A42909863F00C5DE09 /* student_classes.json */; };
-		4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B68C528F711CD00532DD2 /* BottomSheet.swift */; };
 		4C5B68C928F7120300532DD2 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C5B68C828F7120300532DD2 /* BottomSheet */; };
 		4C7859EB291D880200C0C2F7 /* SignUpRetypePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */; };
 		4C7859EC291D880200C0C2F7 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7859E3291D880200C0C2F7 /* EmailView.swift */; };
@@ -166,7 +165,6 @@
 		4C434D73290C25FD005BB4F6 /* TopSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSchedule.swift; sourceTree = "<group>"; };
 		4C47B7A229082B2700C5DE09 /* all_classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_classes.json; sourceTree = "<group>"; };
 		4C47B7A42909863F00C5DE09 /* student_classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = student_classes.json; sourceTree = "<group>"; };
-		4C5B68C528F711CD00532DD2 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		4C7859E2291D880200C0C2F7 /* SignUpRetypePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRetypePasswordView.swift; sourceTree = "<group>"; };
 		4C7859E3291D880200C0C2F7 /* EmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		4C7859E4291D880200C0C2F7 /* SignUpPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 		4C78EE8A28DE1E7C00306D58 /* Map View */ = {
 			isa = PBXGroup;
 			children = (
-				4C5B68C528F711CD00532DD2 /* BottomSheet.swift */,
 				4C36C83728E4CC2500207EC5 /* BottomWindow.swift */,
 				4CA09D2928F4978800484D6D /* BuildingAnnotation.swift */,
 				040185BB291C0700003C0DB3 /* BuildingSearchResults.swift */,
@@ -668,7 +665,6 @@
 				4C36C83828E4CC2500207EC5 /* BottomWindow.swift in Sources */,
 				4C28FF67290029D500D75A1A /* AddClassSubmit.swift in Sources */,
 				4C36C84328E74E1F00207EC5 /* SessionManager.swift in Sources */,
-				4C5B68C628F711CE00532DD2 /* BottomSheet.swift in Sources */,
 				4C7859EE291D880200C0C2F7 /* SignUpButton.swift in Sources */,
 				50622B8828EC79EE00B42A3F /* WednesdayScheduleMenu.swift in Sources */,
 				4C24003328EBB41B002F7E2D /* DatabaseManager.swift in Sources */,

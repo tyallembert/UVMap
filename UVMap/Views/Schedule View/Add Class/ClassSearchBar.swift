@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the search bar for looking up a class to add
 struct ClassSearchBar: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {

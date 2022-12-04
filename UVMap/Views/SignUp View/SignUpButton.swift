@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// the view for the sign up button
 struct SignUpButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager

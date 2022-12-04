@@ -8,6 +8,7 @@
 import SwiftUI
 import Foundation
 
+// this class describes a User object
 class User: ObservableObject {
     var email: String
     var firstName: String

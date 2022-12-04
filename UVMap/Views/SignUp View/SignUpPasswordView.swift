@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the password input field for sign up
 struct SignUpPasswordView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

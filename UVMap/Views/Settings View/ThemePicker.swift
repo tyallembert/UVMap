@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// the view for choosing between what system mode
 struct ThemePicker: View{
     @EnvironmentObject var settingsManager:
     SettingsManager

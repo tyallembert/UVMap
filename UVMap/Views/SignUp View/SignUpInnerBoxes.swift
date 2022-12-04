@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// this view organizes the inner components of the sign up view
 struct SignUpInnerBoxes: View {
     @EnvironmentObject var sessionManager: SessionManager
     

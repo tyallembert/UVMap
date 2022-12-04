@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the username (email) input field of log in
 struct UsernameView: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {

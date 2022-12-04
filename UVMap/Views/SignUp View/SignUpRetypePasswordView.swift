@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the confirm password input field in sign up 
 struct SignUpRetypePasswordView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

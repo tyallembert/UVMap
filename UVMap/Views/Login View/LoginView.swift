@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the entire log in page
 struct LoginView: View {
     @EnvironmentObject var sessionManager: SessionManager
     

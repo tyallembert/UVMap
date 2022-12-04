@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// the save button in the top right of the settings view
 struct saveButton: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @State private var saveMessage = false

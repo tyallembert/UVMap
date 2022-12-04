@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for the design of the sign out button
 struct SignOutButton: View {
     @EnvironmentObject var sessionManager: SessionManager
     

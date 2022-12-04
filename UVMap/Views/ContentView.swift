@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 
+// contentView houses which the logic of view is being shown
 struct ContentView: View {
     @EnvironmentObject var sessionManager: SessionManager
     @EnvironmentObject var databaseManager: DatabaseManager

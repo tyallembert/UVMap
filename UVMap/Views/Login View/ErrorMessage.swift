@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// view for the error message that pops up if something is inputted incorrectly
 struct ErrorMessage: View {
     @EnvironmentObject var sessionManager: SessionManager
     var body: some View {

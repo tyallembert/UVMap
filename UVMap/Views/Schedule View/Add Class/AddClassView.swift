@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// the view for adding a new class
 struct AddClassView: View {
     @EnvironmentObject var classManager: ClassManager
     
