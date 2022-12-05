@@ -12,7 +12,7 @@ struct ClassesToBeAdded: View {
     @EnvironmentObject var classManager: ClassManager
     var body: some View {
         VStack {
-            Text("Selected Classes")
+            Text("All Classes")
                 .foregroundColor(Color.textGreenWhite)
                 .font(.system(size: 24, weight: .bold))
                 .frame(maxWidth: .infinity, alignment: .leading)

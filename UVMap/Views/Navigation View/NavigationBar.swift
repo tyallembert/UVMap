@@ -32,6 +32,7 @@ struct NavigationBar: View {
                                 .foregroundColor(
                                     element == 1 ? Color.white: Color.textGreenWhite)
                                 .offset(y: element == 1 ? -40: -10)
+                                .padding(30)
                         }
                     })
                     Spacer()
