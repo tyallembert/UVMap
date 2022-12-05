@@ -42,6 +42,8 @@ class SessionManager: ObservableObject {
     var passwordSU: String = ""
     var confirmPassword: String = ""
     
+    //below is a good source for user auth with firebase
+    //https://blckbirds.com/post/user-authentication-with-swiftui-and-firebase/
     // function to handle user sign up authentication
     func signUp(database: DatabaseManager) {
         firstNameInFocus = false
@@ -150,21 +152,25 @@ class SessionManager: ObservableObject {
             self.currentState = .loggedOut
             return
         }
-        
+//        Auth.auth().userAccessGroup
         // ensure user exists in FireBase database already, and make sure sign in info is correct
-        Auth.auth().signIn(withEmail: username, password: password) { result, error in
+        Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
             if let error = error {
                 print("ERROR: \(error.localizedDescription)")
                 self.errorMessage = error.localizedDescription
                 self.isErrorLogIn = true
                 self.currentState = .loggedOut
             }
+            switch authResult {
+            case .none:
+                print("Could not sign in user.")
+                self.currentState = .loggedOut
+            case .some(_):
+                print("User signed in")
+                self.afterSignIn()
+            }
+            //            let _ = print("access: \(result!.user.isAnonymous)")
             
-//            self.currentUser.email = self.username
-//            self.currentUser.firstName = self.firstName
-//            self.currentUser.lastName = self.lastName
-            
-            self.afterSignIn()
         }
         
         
@@ -192,6 +198,8 @@ class SessionManager: ObservableObject {
         email = ""
         passwordSU = ""
         confirmPassword = ""
+        self.errorMessage = ""
+        self.isErrorLogIn = false
     }
     
 }

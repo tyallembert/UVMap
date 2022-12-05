@@ -55,6 +55,26 @@ class DatabaseManager: ObservableObject{
             }
         }
     }
+    func queryUsers() -> [String]{
+        var emails:[String] = []
+        let ref = fireStoreDB.collection("userInfo")
+        ref.getDocuments{ snapshot, error in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            if let snapshot = snapshot {
+                for document in snapshot.documents {
+                    let data = document.data()
+                    if let emailDatabase : String = data["email"] as? String{
+                        emails.append(emailDatabase.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+                    }
+                    
+                }
+            }
+        }
+        return emails
+    }
     
     // --------------------------------
     //      ===Building Functions===
