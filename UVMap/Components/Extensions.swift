@@ -85,5 +85,10 @@ extension Date {
     static func - (lhs: Date, rhs: Date) -> TimeInterval {
         return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
     }
+    static func == (lhs: Date, rhs: Date) -> Bool {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.string(from: lhs) == formatter.string(from: rhs)
+    }
 
 }

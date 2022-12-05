@@ -17,6 +17,7 @@ class ClassManager: ObservableObject{
     @Published var searchText: String
     @Published var searchActive: Bool
     @Published var activeDay: Date
+    @Published var currentWeek: [Date]
     
     init(){
         //have a button in settings that can repull from firebase to update local courses if the user isnt finding a course
@@ -30,17 +31,13 @@ class ClassManager: ObservableObject{
         searchText = ""
         searchActive = false
         activeDay = Date()
+        currentWeek = []
         
-//        studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
-        studentsClasses = [
-            SingleClass(CRN: 6328674, subject: "CS", number: "275", section: "A", title: "Mobile Development", building: "Cohen", room: "120", days: "MWF", startTime: "08:30", endTime: "9:30", instructor: "Jason", email: "example"),
-            SingleClass(CRN: 6328675, subject: "CS", number: "201", section: "A", title: "Operating Systems", building: "Votey", room: "207", days: "MWF", startTime: "12:30", endTime: "13:20", instructor: "Jason", email: "example")
-        ]
+        studentsClasses = []
         
         getTodaysClasses(date: Date())
         //date week init
         fetchCurrentWeek()
-//        fetchCurrentDay()
         
     }
     
@@ -75,7 +72,6 @@ class ClassManager: ObservableObject{
         activeDay = date
         let calendar = Calendar.current
         let currentDay = calendar.component(.weekday, from: date)
-        let _ = print("Today is: \(currentDay)")
         
         var dayOfWeek: String = ""
         switch currentDay{
@@ -134,10 +130,8 @@ class ClassManager: ObservableObject{
         let rawDivision = startTime.components(separatedBy: ":")
         //since 8 is first time on calendar, minus 8 then multiply by 100 for every hour after since each hour is seperated by 100. We also add 50 because the 8 is 50 points below the top
         let hour = (Double(rawDivision[0])! - 8) * 100 + 50
-        print("hour: \(hour)")
         //Here we converts the minutes from in terms of 60(minutes in an hour) to 100(each hour is 100 points in height)
         let minutes = Double(rawDivision[1])! * 5/3
-        print("minutes: \(minutes)")
         return hour + minutes
     }
     //===Read from Json file===
@@ -150,7 +144,6 @@ class ClassManager: ObservableObject{
                 print("Couldn't find \(fileName) in main bundle.")
                 return []
             }
-            let _ = print("File path: \(filePath)")
             
             do {
                 data = try Data(contentsOf: filePath)
@@ -171,7 +164,6 @@ class ClassManager: ObservableObject{
             if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
                                                                 in: .userDomainMask).first {
                 let pathWithFilename = documentDirectory.appendingPathComponent(fileName + ".json")
-                let _ = print("Read path: \(pathWithFilename)")
                 
                 do {
                     data = try Data(contentsOf: pathWithFilename)
@@ -204,11 +196,9 @@ class ClassManager: ObservableObject{
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory,
                                                             in: .userDomainMask).first {
             let pathWithFilename = documentDirectory.appendingPathComponent(fileName)
-            let _ = print("Write path: \(pathWithFilename)")
             do {
                 let data = try encoder.encode(studentsClasses)
                 try data.write(to: pathWithFilename)
-                print(String(data: data, encoding: .utf8)!)
                 studentsClasses = retrieveClasssesLocally(fileName: "student_classes")
             } catch {
                 fatalError("Cannot save to file:\n\(error)")
@@ -236,13 +226,6 @@ class ClassManager: ObservableObject{
     func saveClassesToFirebase(){
         
     }
-    
-    // SCHEDULE STUFF:
-    // Data & Time implementation
-    
-    @Published var currentWeek: [Date] = []
-//    @Published var day: DateInterval
-    
     func fetchCurrentWeek() {
         
         let today = Date()
@@ -268,8 +251,6 @@ class ClassManager: ObservableObject{
 //        let day = calendar.dateInterval(of: .day, for: today)
         //let day = calendar.date(from: today)
         let f = DateFormatter()
-
-        print(f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1])
         
         return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1]
         // from https://stackoverflow.com/questions/41068860/get-weekday-from-date-swift-3

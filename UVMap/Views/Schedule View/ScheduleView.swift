@@ -21,7 +21,6 @@ struct ScheduleView: View {
                     .ignoresSafeArea()
                     .frame(height: 120)
                 DaysTemplate()
-//                    .frame(height: 60)
                 ScheduleChart()
                 
             }
