@@ -112,13 +112,17 @@ class SessionManager: ObservableObject {
                 self.isErrorSignUp = true
                 self.currentState = .signUp
             }
-            database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
             
-//            self.currentUser.email = self.email
-//            self.currentUser.firstName = self.firstName
-//            self.currentUser.lastName = self.lastName
+            switch result {
+            case .none:
+                print("Could not sign up user.")
+            case .some(_):
+                print("User signed up")
+                database.signUp(firstName: self.firstName, lastName: self.lastName, email: self.email, password: self.passwordSU, retypePassword: self.confirmPassword)
+                self.afterSignIn()
+            }
             
-            self.afterSignIn()
+            
         }
     }
     
