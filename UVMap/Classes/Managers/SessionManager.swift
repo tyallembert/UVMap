@@ -204,6 +204,11 @@ class SessionManager: ObservableObject {
         confirmPassword = ""
         self.errorMessage = ""
         self.isErrorLogIn = false
+        
+        // Clear user object on sign out
+        currentUser.email = ""
+        currentUser.firstName = ""
+        currentUser.lastName = ""
     }
     
 }
