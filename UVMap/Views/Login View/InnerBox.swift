@@ -39,7 +39,7 @@ struct InnerBox: View {
             }
         }
         .padding(15)
-        .frame(height: 350)
+        .frame(height: 420)
         .background(Color(red: 220 / 255, green: 220 / 255, blue: 220 / 255))
         .cornerRadius(25)
     }
